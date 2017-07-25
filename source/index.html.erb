@@ -1,0 +1,38 @@
+---
+title: elliotec
+---
+
+<div class="full">
+  <section class="home">
+    <%= image_tag("/images/groom.png", class: "headshot") %>
+    <div class="intro">
+      <h3>Mike Elliott</h3><br>
+      <p>Senior Front End Developer at Overstock.com</p>
+      <p>Available for contract work and consulting</p>
+      <br/>
+      <a class="contact-link" href="mailto:me@michaelelliott.me">Contact</a>
+      <%= link_to "Resume", "/images/MichaelElliottResume.pdf", class: "contact-link" %>
+    </div>
+  </section>
+</div>
+<section class="posts">
+  <h2>Posts</h2>
+  <ul>
+    <% blog.articles.each do |post| %>
+    <li class="post-item">
+      <%= link_to(post.title, post.url)%>
+    </li>
+    <p id="date"><%= post.date.strftime('%B %d, %Y') %></p>
+    <% end %>
+  </ul>
+</section>
+<section class="contact">
+  <h2>Contact</h2>
+  <div class="social">
+    <a href="mailto:me@michaelelliott.me">email</a>
+    <a href="http://linkedin.com/in/elliotec">linkedin</a>
+    <a href="http://github.com/elliotec">github</a>
+    <a href="http://twitter.com/elliotecweb">twitter</a>
+    <p class="copyright">&copy; elliotec</p>
+  </div>
+</section>
