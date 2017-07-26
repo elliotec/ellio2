@@ -4,6 +4,7 @@
 activate :autoprefixer do |prefix|
   prefix.browsers = 'last 2 versions'
 end
+
 activate :sprockets
 
 configure :build do
@@ -24,22 +25,10 @@ set :markdown, fenced_code_blocks: true, smartypants: true, tables: true
 
 Time.zone = 'America/Denver'
 activate :blog do |blog|
-  # This will add a prefix to all links, template references and source paths
-  # blog.prefix = 'blog'
   blog.permalink = ':title.html'
   blog.name = 'elliotec'
-  # Matcher for blog source files
   blog.sources = 'posts/{year}-{month}-{day}-{title}.html'
-  # blog.taglink = 'tags/{tag}.html'
   blog.layout = 'post'
-  # blog.summary_separator = /(READMORE)/
-  # blog.summary_length = 250
-  # blog.year_link = '{year}.html'
-  # blog.month_link = '{year}/{month}.html'
-  # blog.day_link = '{year}/{month}/{day}.html'
-
-  # blog.tag_template = 'tag.html'
-  # blog.calendar_template = 'calendar.html'
 
   # Enable pagination
   # blog.paginate = true
