@@ -45,7 +45,7 @@ header {
 
 .home {
     border-bottom: solid 1px $light-gray;
-    margin-top: 100px;
+    margin-top: 70px;
     text-align: center;
     padding-bottom: 50px;
 
@@ -81,11 +81,11 @@ header {
     }
     .contact-link {
         line-height: 1;
-        padding: 5px;
+        padding: 7px;
         margin: 10px;
         color: $emerald;
         border-radius: 5px;
-        border: 2px solid $emerald;
+        border: 1px solid $emerald;
 
         &:hover, &:focus {
             border-color: $nephritis;

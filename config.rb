@@ -2,13 +2,17 @@
 # https://middlemanapp.com/advanced/configuration/#configuring-extensions
 
 activate :autoprefixer do |prefix|
-  prefix.browsers = "last 2 versions"
+  prefix.browsers = 'last 2 versions'
 end
+activate :sprockets
 
 configure :build do
-  activate :minify_css
-  activate :minify_javascript
+  activate :minify_css, inline: true
+  activate :minify_javascript, inline: true
   activate :minify_html
+  activate :gzip
+  activate :imageoptim
+  activate :asset_hash
 end
 
 set :css_dir, 'stylesheets'
@@ -18,29 +22,29 @@ set :build_dir, 'build'
 set :markdown_engine, :redcarpet
 set :markdown, fenced_code_blocks: true, smartypants: true, tables: true
 
-Time.zone = "America/Denver"
+Time.zone = 'America/Denver'
 activate :blog do |blog|
   # This will add a prefix to all links, template references and source paths
-  # blog.prefix = "blog"
-  blog.permalink = ":title.html"
-  blog.name = "elliotec"
+  # blog.prefix = 'blog'
+  blog.permalink = ':title.html'
+  blog.name = 'elliotec'
   # Matcher for blog source files
-  blog.sources = "posts/{year}-{month}-{day}-{title}.html"
-  # blog.taglink = "tags/{tag}.html"
-  blog.layout = "post"
+  blog.sources = 'posts/{year}-{month}-{day}-{title}.html'
+  # blog.taglink = 'tags/{tag}.html'
+  blog.layout = 'post'
   # blog.summary_separator = /(READMORE)/
   # blog.summary_length = 250
-  # blog.year_link = "{year}.html"
-  # blog.month_link = "{year}/{month}.html"
-  # blog.day_link = "{year}/{month}/{day}.html"
+  # blog.year_link = '{year}.html'
+  # blog.month_link = '{year}/{month}.html'
+  # blog.day_link = '{year}/{month}/{day}.html'
 
-  # blog.tag_template = "tag.html"
-  # blog.calendar_template = "calendar.html"
+  # blog.tag_template = 'tag.html'
+  # blog.calendar_template = 'calendar.html'
 
   # Enable pagination
   # blog.paginate = true
   # blog.per_page = 10
-  # blog.page_link = "page/{num}"
+  # blog.page_link = 'page/{num}'
 end
 activate :livereload
 activate :directory_indexes

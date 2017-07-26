@@ -7,19 +7,19 @@
         <meta name="author" content="Michael Elliott" />
         <meta name="description" content="Michael Elliott, software developer." />
         <title>elliotec | Mike Elliott<%= ' - ' + current_article.title unless current_article.nil? %></title>
-        <%= stylesheet_link_tag "marx" %>
-        <%= stylesheet_link_tag "site" %>
-        <%= stylesheet_link_tag "rouge" %>
+        <%# <%= stylesheet_link_tag "marx" %> %>
+        <%# <%= stylesheet_link_tag "site" %> %>
+        <%# <%= stylesheet_link_tag "rouge" %> %>
+        <style><%= sprockets.find_asset('marx').to_s %></style>
+        <style><%= sprockets.find_asset('rouge').to_s %></style>
+        <style><%= sprockets.find_asset('site').to_s %></style>
     </head>
     <body>
         <header>
             <a href="/">{ elliotec }</a>
         </header>
-
         <%= yield %>
-
         <p class="copyright">&copy; Elliotec Software LLC</p>
-
         <a href="https://plus.google.com/+MichaelElliott-elliotec?rel=author"></a>
         <a href="https://plus.google.com/100799948688623726078?rel=publisher"></a>
         <script>
@@ -28,10 +28,7 @@
                   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
                   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
                   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-                  ga('create', 'UA-46276194-3', 'elliotec.com');
-                  ga('send', 'pageview');
-            }
+                  ga('create', 'UA-46276194-3', 'elliotec.com');ga('send', 'pageview');}
         </script>
     </body>
 </html>
