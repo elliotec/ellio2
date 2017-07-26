@@ -6,8 +6,6 @@ layout: post
 published: true
 ---
 
-## Coding For Rookies
-
 This is a collection of notes of the 6 week course I designed for the University of Utah's continuing education program.
 
 Feedback is welcome.

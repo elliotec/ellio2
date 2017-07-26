@@ -5,6 +5,45 @@ title: Writing in the Deseret Alphabet with Web Fonts
 date: 2014-06-29 09:08
 tags: utah, languages, deseret, sass, fonts
 ---
+<style>
+@font-face {
+    font-family: 'HuneyBee';
+    src: url('/fonts/Huneybee.eot'); /* IE9 Compat Modes */
+    src: url('/fonts/Huneybee.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('/fonts/Huneybee.woff') format('woff'), /* Modern Browsers */
+    url('/fonts/Huneybee.ttf')  format('truetype'), /* Safari, Android, iOS */
+    url('/fonts/Huneybee.svg') format('svg'); /* Legacy iOS */
+
+    font-style:   normal;
+    font-weight:  400;
+}
+
+@font-face {
+    font-family: 'AdamicBee';
+    src: url('/fonts/AdamicBee.eot'); /* IE9 Compat Modes */
+    src: url('/fonts/AdamicBee.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('/fonts/AdamicBee.woff') format('woff'), /* Modern Browsers */
+    url('/fonts/AdamicBee.ttf')  format('truetype'), /* Safari, Android, iOS */
+    url('/fonts/AdamicBee.svg') format('svg'); /* Legacy iOS */
+
+    font-style:   normal;
+    font-weight:  400;
+}
+
+@font-face {
+    font-family: 'Deseret-sans';
+    src: url('/fonts/deseret.eot'); /* IE9 Compat Modes */
+    src: url('/fonts/deseret.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('/fonts/deseret.woff') format('woff'), /* Modern Browsers */
+    url('/fonts/deseret.ttf')  format('truetype'), /* Safari, Android, iOS */
+    url('/fonts/deseret.svg') format('svg'); /* Legacy iOS */
+
+    font-style:   normal;
+    font-weight:  400;
+}
+
+</style>
+
 *If you're here for the code and want to skip most of the history and linguistics, <a href="#code">click here</a>.*
 
 ## The State of Deseret
@@ -15,13 +54,13 @@ Evidence of humans is found in Utah for as far back as 12,000 years ago. Various
 
 They settled in by vastly changing the desert environment into a habitable landscape with amazing feats of industry including irrigation and agriculture, timber and mining, and constructing communities from the resources around them. They created a society from scratch.
 
-The settlers were very isolated and in a political and territorial limbo that went from technically belonging to Mexico, to a near immediate statehood proposal ([The State of Deseret](http://en.wikipedia.org/wiki/State_of_Deseret)), and then remaining a U.S. territory - all the while settling most of the western United States including cities like Las Vegas, San Bernardino, most of Idaho and Nevada, a good chunk of Arizona and many other western states. 
+The settlers were very isolated and in a political and territorial limbo that went from technically belonging to Mexico, to a near immediate statehood proposal ([The State of Deseret](http://en.wikipedia.org/wiki/State_of_Deseret)), and then remaining a U.S. territory - all the while settling most of the western United States including cities like Las Vegas, San Bernardino, most of Idaho and Nevada, a good chunk of Arizona and many other western states.
 
 Brigham Young and the Mormons were the de facto government throughout this time (some say they still are) and as such were providing public necessities like schooling, and founded the precursor to the University of Utah, the University of Deseret.
 
 ## The Deseret Alphabet
 
-This was a time when there were several efforts to reform the traditional Latin English alphabet into something phonetic, more easily taught to immigrants and children, and optimized for handwriting. Brigham Young and the board of regents of the University of Deseret saw their position as an opportunity to get in on this action. 
+This was a time when there were several efforts to reform the traditional Latin English alphabet into something phonetic, more easily taught to immigrants and children, and optimized for handwriting. Brigham Young and the board of regents of the University of Deseret saw their position as an opportunity to get in on this action.
 
 In addition to the aforementioned reasons for alphabet reform, the Mormon leadership believed a new writing system would benefit them in other ways such as more unification, solidifying their unique identity, and some speculate that there was a bit of a secret-keeping draw to it as well, though that claim has been refuted by several scholars.
 
@@ -62,13 +101,13 @@ Here's a pronunciation table:
 | <i class="adamic">𐐝 </i>   | /s/  | "s" in sun  | <i class="adamic">𐐧 </i>   | /juː/ | "yew" in yew  |
 
 
-So, ostensibly thats kind of a lot. 40 new unique characters and sounds to replace a very well known system seems a bit daunting, which may be part of the reason it had a hard time getting adopted by the intended users and audience. 
+So, ostensibly thats kind of a lot. 40 new unique characters and sounds to replace a very well known system seems a bit daunting, which may be part of the reason it had a hard time getting adopted by the intended users and audience.
 
 In my opinion, other than the glyphs looking nothing at all like their Latin counterparts, the alphabet is rather easy to learn since you are just reassigning a symbol to a sound in English. There is no grammar or syntax change, it's really just like mind-mapping 40 pictures to 40 words for which a few hours of flash card study would be quite sufficient. (Though, this isn't the first time I've learned a dead script for no reason. I once became fluent in the ancient [Baybayin Tagalog script](http://en.wikipedia.org/wiki/Baybayin) in a strange bout of manic overachievement.)
 
 ## Limitations of the alphabet
 
-The alphabet in its official form was created to emulate the pronunciation of the settlers, who came primarily from New England. This means when you read out loud a publication in the Deseret Alphabet, it's going to sound like you're talking with the accent of a North Easterner in the 1860's. 
+The alphabet in its official form was created to emulate the pronunciation of the settlers, who came primarily from New England. This means when you read out loud a publication in the Deseret Alphabet, it's going to sound like you're talking with the accent of a North Easterner in the 1860's.
 
 A good example of change is <i class="adamic">"𐐃"</i>, which in present-day Utah essentially doesn't exist. Think of a Long Island native saying something like "I thought you caught it when you fought it," or something along those lines. You know what I mean about the vowels in those words being non-existent and replaced simply with "ah" in the western United States.
 
@@ -87,7 +126,7 @@ Another limitation is the lack of a schwa (/ə/) vowel. It sounds like the "e" i
 
 <p class="deseret-sans">3. DEZÒRET: ABCDEFGHIJKLMNOPQRSTUVWXYZÅÆÈÊÌÍÒØÛŒˉ </p>
 
-Unfortunately 2 and 3 (the two sans-serif) are mapped to two separate and seemingly arbitrary encodings rather than the proper Deseret Unicode characters like the serif font at the top of that list. So even though 2 (HuneyBee) is my favorite of the three, its nowhere near as easy to implement as 1 (AdamicBee). 
+Unfortunately 2 and 3 (the two sans-serif) are mapped to two separate and seemingly arbitrary encodings rather than the proper Deseret Unicode characters like the serif font at the top of that list. So even though 2 (HuneyBee) is my favorite of the three, its nowhere near as easy to implement as 1 (AdamicBee).
 
 Here is the HTML source of those example fonts:
 
@@ -163,7 +202,7 @@ This compiles the following CSS:
        url('/fonts/Huneybee.woff') format('woff'), /* Modern Browsers */
        url('/fonts/Huneybee.ttf')  format('truetype'), /* Safari, Android, iOS */
        url('/fonts/Huneybee.svg#aa041304602ddc161943388b95e8c94f') format('svg'); /* Legacy iOS */
-       
+
   font-style:   normal;
   font-weight:  400;
 }
@@ -175,7 +214,7 @@ This compiles the following CSS:
        url('/fonts/AdamicBee.woff') format('woff'), /* Modern Browsers */
        url('/fonts/AdamicBee.ttf')  format('truetype'), /* Safari, Android, iOS */
        url('/fonts/AdamicBee.svg#159e7fbb74bf1cefffafc0996ebf38fb') format('svg'); /* Legacy iOS */
-       
+
   font-style:   normal;
   font-weight:  400;
 }
@@ -187,7 +226,7 @@ This compiles the following CSS:
        url('/fonts/deseret.woff') format('woff'), /* Modern Browsers */
        url('/fonts/deseret.ttf')  format('truetype'), /* Safari, Android, iOS */
        url('/fonts/deseret.svg#c44a3474510e076f453a95eeee3a1178') format('svg'); /* Legacy iOS */
-       
+
   font-style:   normal;
   font-weight:  400;
 }
@@ -215,20 +254,18 @@ It should also be noted that I'm using Markdown for these posts, which means in 
 
 <blockquote class="adamic">𐐁 𐐐𐐧𐐣𐐊𐐤 𐐒𐐀𐐏𐐀𐐥 𐐟𐐋𐐔 𐐒𐐀 𐐁𐐒𐐋𐐢 𐐓𐐅 𐐕𐐁𐐤𐐖 𐐊 𐐔𐐌𐐑𐐋𐐡, 𐐑𐐢𐐈𐐤 𐐊𐐤 𐐆𐐤𐐚𐐁𐐠𐐊𐐤, 𐐒𐐋𐐕𐐋𐐡 𐐊 𐐐𐐉𐐘, 𐐗𐐂𐐤 𐐊 𐐟𐐆𐐑, 𐐔𐐆𐐞𐐌𐐤 𐐊 𐐒𐐆𐐢𐐔𐐀𐐥, 𐐡𐐌𐐓 𐐊 𐐝𐐂𐐤𐐆𐐓, 𐐒𐐈𐐢𐐈𐐤𐐝 𐐊𐐗𐐍𐐤𐐓𐐝, 𐐒𐐆𐐢𐐔 𐐊 𐐎𐐉𐐢, 𐐝𐐇𐐓 𐐊 𐐒𐐄𐐤, 𐐗𐐊𐐣𐐙𐐋𐐡𐐓 𐐜𐐋 𐐔𐐌𐐀𐐥, 𐐓𐐁𐐗 𐐃𐐡𐐔𐐋𐐡𐐝, 𐐘𐐆𐐚 𐐃𐐡𐐔𐐋𐐡𐐝, 𐐗𐐄𐐂𐐑𐐋𐐡𐐁𐐓, 𐐈𐐗𐐓 𐐊𐐢𐐄𐐤, 𐐝𐐂𐐢𐐚 𐐀𐐗𐐎𐐁𐐠𐐊𐐤𐐝, 𐐈𐐤𐐊𐐢𐐌𐐞 𐐊 𐐤𐐅 𐐑𐐡𐐂𐐒𐐢𐐆𐐣, 𐐑𐐆𐐕 𐐣𐐊𐐤𐐧𐐡, 𐐑𐐡𐐄𐐘𐐡𐐈𐐣 𐐊 𐐗𐐊𐐣𐐑𐐧𐐓𐐋𐐡, 𐐗𐐋𐐗 𐐊 𐐓𐐁𐐝𐐓𐐀 𐐣𐐀𐐢, 𐐙𐐌𐐓 𐐀𐐙𐐆𐐟𐐆𐐤𐐓𐐢𐐀, 𐐔𐐌 𐐘𐐈𐐢𐐈𐐤𐐓𐐢𐐀. 𐐝𐐑𐐇𐐟𐐋𐐢𐐌𐐞𐐁𐐟𐐊𐐤 𐐆𐐞 𐐙𐐄𐐡 𐐆𐐤𐐝𐐇𐐗𐐓𐐝.<br><br>－ 𐐡𐐉𐐒𐐋𐐡𐐓 𐐐𐐌𐐤𐐢𐐌𐐤</blockquote>
 
-That says: 
+That says:
 >A human being should be able to change a diaper, plan an invasion, butcher a hog, conn a ship, design a building, write a sonnet, balance accounts, build a wall, set a bone, comfort the dying, take orders, give orders, cooperate, act alone, solve equations, analyze a new problem, pitch manure, program a computer, cook a tasty meal, fight efficiently, die gallantly. Specialization is for insects.<br><br>
 - Robert Heinlein
 
 You might not notice, but the Deseret version of this quote uses 48 fewer characters than our alphabet. There's a real argument for efficiency there. You're never doubling characters or organizing odd vowels into diphthongs, saving lots of space.
 
-<blockquote class="adamic">𐐎𐐀 𐐂𐐡 𐐖𐐋𐐝𐐓 𐐊𐐤 𐐈𐐔𐐚𐐈𐐤𐐝𐐓 𐐒𐐡𐐀𐐔 𐐊𐐚 𐐣𐐊𐐥𐐗𐐀𐐞 𐐂𐐤 𐐊 𐐣𐐌𐐤𐐋𐐡 𐐑𐐢𐐈𐐤𐐆𐐓 𐐊𐐚 𐐊 𐐚𐐇𐐡𐐀 𐐈𐐚𐐋𐐡𐐆𐐖 𐐝𐐓𐐂𐐡. 𐐜𐐈𐐓 𐐣𐐁𐐗𐐝 𐐊𐐝 𐐝𐐊𐐣𐐛𐐀𐐥 𐐚𐐇𐐡𐐀 𐐝𐐑𐐇𐐟𐐋𐐢.<br><br>－𐐝𐐓𐐀𐐚𐐆𐐤 𐐐𐐃𐐗𐐀𐐥</blockquote>
+<blockquote class="adamic">𐐎𐐀 𐐂𐐡 𐐖𐐋𐐝𐐓 𐐊𐐤 𐐈𐐔𐐚𐐈𐐤𐐝𐐓 𐐒𐐡𐐀𐐔 𐐊𐐚 𐐣𐐊𐐥𐐗𐐀𐐞 𐐂𐐤 𐐊 𐐣𐐌𐐤𐐋𐐡 𐐑𐐢𐐈𐐤𐐆𐐓 𐐊𐐚 𐐊 𐐚𐐇𐐡𐐀 𐐈𐐚𐐋𐐡𐐆𐐖 𐐝𐐓𐐂𐐡.   𐐒𐐊𐐓 𐐎𐐀 𐐗𐐈𐐤 𐐊𐐤𐐔𐐊𐐡𐐝𐐓𐐈𐐤𐐔 𐐜 𐐏𐐅𐐤𐐊𐐚𐐊𐐡𐐝. 𐐜𐐈𐐓 𐐣𐐁𐐗𐐝 𐐊𐐝 𐐝𐐊𐐣𐐛𐐀𐐥 𐐚𐐇𐐡𐐀 𐐝𐐑𐐇𐐟𐐋𐐢.<b<br><br>－𐐝𐐓𐐀𐐚𐐆𐐤 𐐐𐐃𐐗𐐀𐐥</blockquote>
 
 >We are just an advanced breed of monkeys on a minor planet of a very average star. But we can understand the Universe. That makes us something very special.<br><br>
 - Steven Hawking
 
-That example saved 51 characters, down nearly a third of the characters used in the current alphabet.
-
-This is very tedious to type, however. I mapped my keys to each of the Deseret characters using [Better Touch Tool](http://www.boastr.net/), a handy tool for lots of things, but it totally wasn't worth it as I ended up being faster by just copy/pasting the characters from the chart in order. 
+This is very tedious to type, however. I mapped my keys to each of the Deseret characters using [Better Touch Tool](http://www.boastr.net/), a handy tool for lots of things, but it totally wasn't worth it as I ended up being faster by just copy/pasting the characters from the chart in order.
 
 I thought about writing little sticky note characters and putting them on their corresponding keys, but I figured I already spent this much time learning a dead alphabet and my use of it will most likely die with the end of this post.
 
@@ -260,7 +297,7 @@ If you want to learn more about the Deseret Alphabet, here are some resources I 
 
 - [The Deseret Alphabet Translator](http://deseret.in/) *Still in beta, and some of the translations are pretty broken. I submitted a [pull request](https://github.com/sam1am/deseret.in/pull/1) with a few fixes that would hopefully improve it, if he merges it. (Update: disregard this resource and redirect yourself [here](http://2deseret.com))*
 
-Anyway, thats enough of that. I probably should've spent this time learning a new programming language or something, but I learned a ton about my homeland's history, web fonts, typography, linguistics, and encoding so there was no lack of intellectual stimulation. 
+Anyway, thats enough of that. I probably should've spent this time learning a new programming language or something, but I learned a ton about my homeland's history, web fonts, typography, linguistics, and encoding so there was no lack of intellectual stimulation.
 
 Hope you learned something too.
 

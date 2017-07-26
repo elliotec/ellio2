@@ -12,7 +12,7 @@ I've always loved data visualization done well and admired interactive graphs an
 I finally made an excuse for myself to take a couple days and learn what D3 is all about in the form of a web app that maps a [force-directed graph](https://en.wikipedia.org/wiki/Force-directed_graph_drawing) of related artists to the artist the user inputs.
 
 <a href="https://elliotec.com/visuify">
-    <img src="../images/visuify.png"/>
+    <img src="../images/visuify-small.png"/>
     <h2>PLAY WITH VISUIFY</h2>
 </a>
 

@@ -3,17 +3,35 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <meta name="viewport"
-              content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title><%= current_page.data.title || "elliotec | Mike Elliott -" %></title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="author" content="Michael Elliott" />
+        <meta name="description" content="Michael Elliott, software developer." />
+        <title>elliotec | Mike Elliott<%= ' - ' + current_article.title unless current_article.nil? %></title>
         <%= stylesheet_link_tag "marx" %>
         <%= stylesheet_link_tag "site" %>
-        <%= javascript_include_tag "site" %>
+        <%= stylesheet_link_tag "rouge" %>
     </head>
     <body>
         <header>
             <a href="/">{ elliotec }</a>
         </header>
+
         <%= yield %>
+
+        <p class="copyright">&copy; Elliotec Software LLC</p>
+
+        <a href="https://plus.google.com/+MichaelElliott-elliotec?rel=author"></a>
+        <a href="https://plus.google.com/100799948688623726078?rel=publisher"></a>
+        <script>
+            if(navigator.userAgent.indexOf("Speed Insights") == -1) {
+                  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+                  ga('create', 'UA-46276194-3', 'elliotec.com');
+                  ga('send', 'pageview');
+            }
+        </script>
     </body>
 </html>
