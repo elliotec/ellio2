@@ -6,42 +6,51 @@ date: 2014-06-29 09:08
 tags: utah, languages, deseret, sass, fonts
 ---
 <style>
-@font-face {
-    font-family: 'HuneyBee';
-    src: url('/fonts/Huneybee.eot'); /* IE9 Compat Modes */
-    src: url('/fonts/Huneybee.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-    url('/fonts/Huneybee.woff') format('woff'), /* Modern Browsers */
-    url('/fonts/Huneybee.ttf')  format('truetype'), /* Safari, Android, iOS */
-    url('/fonts/Huneybee.svg') format('svg'); /* Legacy iOS */
+    @font-face {
+        font-family: 'HuneyBee';
+        src: url('/fonts/Huneybee.eot'); /* IE9 Compat Modes */
+        src: url('/fonts/Huneybee.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+        url('/fonts/Huneybee.woff') format('woff'), /* Modern Browsers */
+        url('/fonts/Huneybee.ttf')  format('truetype'), /* Safari, Android, iOS */
+        url('/fonts/Huneybee.svg') format('svg'); /* Legacy iOS */
 
-    font-style:   normal;
-    font-weight:  400;
-}
+        font-style:   normal;
+        font-weight:  400;
+    }
 
-@font-face {
-    font-family: 'AdamicBee';
-    src: url('/fonts/AdamicBee.eot'); /* IE9 Compat Modes */
-    src: url('/fonts/AdamicBee.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-    url('/fonts/AdamicBee.woff') format('woff'), /* Modern Browsers */
-    url('/fonts/AdamicBee.ttf')  format('truetype'), /* Safari, Android, iOS */
-    url('/fonts/AdamicBee.svg') format('svg'); /* Legacy iOS */
+    @font-face {
+        font-family: 'AdamicBee';
+        src: url('/fonts/AdamicBee.eot'); /* IE9 Compat Modes */
+        src: url('/fonts/AdamicBee.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+        url('/fonts/AdamicBee.woff') format('woff'), /* Modern Browsers */
+        url('/fonts/AdamicBee.ttf')  format('truetype'), /* Safari, Android, iOS */
+        url('/fonts/AdamicBee.svg') format('svg'); /* Legacy iOS */
 
-    font-style:   normal;
-    font-weight:  400;
-}
+        font-style:   normal;
+        font-weight:  400;
+    }
 
-@font-face {
-    font-family: 'Deseret-sans';
-    src: url('/fonts/deseret.eot'); /* IE9 Compat Modes */
-    src: url('/fonts/deseret.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-    url('/fonts/deseret.woff') format('woff'), /* Modern Browsers */
-    url('/fonts/deseret.ttf')  format('truetype'), /* Safari, Android, iOS */
-    url('/fonts/deseret.svg') format('svg'); /* Legacy iOS */
+    @font-face {
+        font-family: 'Deseret-sans';
+        src: url('/fonts/deseret.eot'); /* IE9 Compat Modes */
+        src: url('/fonts/deseret.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+        url('/fonts/deseret.woff') format('woff'), /* Modern Browsers */
+        url('/fonts/deseret.ttf')  format('truetype'), /* Safari, Android, iOS */
+        url('/fonts/deseret.svg') format('svg'); /* Legacy iOS */
 
-    font-style:   normal;
-    font-weight:  400;
-}
+        font-style:   normal;
+        font-weight:  400;
+    }
 
+    .huney {
+        font-family: "HuneyBee";
+    }
+    .deseret-sans {
+        font-family: "deseret";
+    }
+    .adamic {
+        font-family: "AdamicBee";
+    }
 </style>
 
 *If you're here for the code and want to skip most of the history and linguistics, <a href="#code">click here</a>.*
@@ -50,7 +59,7 @@ tags: utah, languages, deseret, sass, fonts
 
 This past weekend I went camping in the [San Rafael Swell](http://en.wikipedia.org/wiki/San_Rafael_Swell) and became interested in my native state of Utah's history and unique culture.
 
-Evidence of humans is found in Utah for as far back as 12,000 years ago. Various Native American tribes and cultures (Freemont, Puebloan, etc.) solely occupied the land until the first of the Mormon pioneers arrived with their leader [Brigham Young](http://en.wikipedia.org/wiki/Brigham_Young) in 1847.
+Evidence of humans is found in Utah for as far back as 12,000 years ago. Various Native American tribes and cultures (Freemont, Puebloan, etc.) occupied the land until the first of the Mormon pioneers arrived with their leader [Brigham Young](http://en.wikipedia.org/wiki/Brigham_Young) in 1847.
 
 They settled in by vastly changing the desert environment into a habitable landscape with amazing feats of industry including irrigation and agriculture, timber and mining, and constructing communities from the resources around them. They created a society from scratch.
 

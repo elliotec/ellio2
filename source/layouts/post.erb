@@ -2,7 +2,7 @@
     <main class="post">
         <article>
             <h1><%= current_page.title %></h1>
-            <p><%= current_page.date.strftime('%B %d, %Y') %>
+            <p class="date"><%= current_page.date.strftime('%B %d, %Y') %>
             <%= yield %>
         </article>
     </main>
