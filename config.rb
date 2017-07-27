@@ -1,6 +1,5 @@
 # Activate and configure extensions
 # https://middlemanapp.com/advanced/configuration/#configuring-extensions
-
 activate :autoprefixer do |prefix|
   prefix.browsers = 'last 2 versions'
 end
@@ -38,6 +37,13 @@ end
 activate :livereload
 activate :directory_indexes
 activate :syntax
+
+activate :deploy do |deploy|
+  deploy.deploy_method = :git
+  deploy.remote = 'git@github.com:elliotec/ellio2.git'
+  deploy.branch = 'master'
+  deploy.build_before = true
+end
 
 # Per-page layout changes
 page '/*.xml', layout: false
