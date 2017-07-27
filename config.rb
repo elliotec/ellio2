@@ -40,9 +40,8 @@ activate :syntax
 
 activate :deploy do |deploy|
   deploy.deploy_method = :git
-  deploy.remote = 'git@github.com:elliotec/ellio2.git'
+  deploy.remote = 'https://github.com/elliotec/ellio2.git'
   deploy.branch = 'master'
-  deploy.build_before = true
 end
 
 # Per-page layout changes
