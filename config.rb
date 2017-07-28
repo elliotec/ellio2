@@ -28,6 +28,7 @@ activate :blog do |blog|
   blog.name = 'elliotec'
   blog.sources = 'posts/{year}-{month}-{day}-{title}.html'
   blog.layout = 'post'
+  blog.summary_length = '150'
 
   # Enable pagination
   # blog.paginate = true
