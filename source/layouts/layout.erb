@@ -7,9 +7,6 @@
         <meta name="author" content="Michael Elliott" />
         <meta name="description" content="Michael Elliott, software developer." />
         <title>elliotec | Mike Elliott<%= ' - ' + current_article.title unless current_article.nil? %></title>
-        <%# <%= stylesheet_link_tag "marx" %> %>
-        <%# <%= stylesheet_link_tag "site" %> %>
-        <%# <%= stylesheet_link_tag "rouge" %> %>
         <style><%= sprockets.find_asset('marx').to_s %></style>
         <style><%= sprockets.find_asset('rouge').to_s %></style>
         <style><%= sprockets.find_asset('site').to_s %></style>

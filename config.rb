@@ -6,21 +6,21 @@ end
 
 activate :sprockets
 
-configure :build do
-  activate :minify_css, inline: true
-  activate :minify_javascript, inline: true
-  activate :minify_html
-  activate :gzip
-  activate :imageoptim
-  activate :asset_hash
-end
-
 set :css_dir, 'stylesheets'
 set :js_dir, 'javascripts'
 set :images_dir, 'images'
 set :build_dir, 'build'
 set :markdown_engine, :redcarpet
 set :markdown, fenced_code_blocks: true, smartypants: true, tables: true
+
+configure :build do
+  activate :minify_css, inline: true
+  # activate :minify_javascript, inline: true
+  activate :minify_html
+  activate :gzip
+  activate :imageoptim
+  activate :asset_hash
+end
 
 Time.zone = 'America/Denver'
 activate :blog do |blog|
