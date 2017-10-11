@@ -21,13 +21,13 @@ tags: yaml, middleman
 ---
 ```
 
-This makes it super easy to have various HTML layouts that you can assign to any page on your site. It also gives us the date and title options which are useful for the index, file structure, and other obvious benefits. 
+This makes it super easy to have various HTML layouts that you can assign to any page on your site. It also gives us the date and title options which are useful for the index, file structure, and other obvious benefits.
 
 ##Setting Custom Variables
 
-I have 4 social media icon SVGs on my portfolio/main index page, and I'm currently using each of them twice - one for the contact drop-down menu, and another for the contact section at the bottom. 
+I have 4 social media icon SVGs on my portfolio/main index page, and I'm currently using each of them twice - one for the contact drop-down menu, and another for the contact section at the bottom.
 
-As you can imagine, that clunked up the HTML pretty bad and it was immediately a giant pain to try and find or move anything. I wanted to DRY it up, and I knew that I could do that with Middleman. 
+As you can imagine, that clunked up the HTML pretty bad and it was immediately a giant pain to try and find or move anything. I wanted to DRY it up, and I knew that I could do that with Middleman.
 
 It only took 3 steps.
 
@@ -35,7 +35,7 @@ It only took 3 steps.
 
 ```yaml
 ---
-github: 
+github:
 
 linkedin:
 
@@ -69,10 +69,10 @@ linkedin: <svg> ...
 ```erb
 <a href="http://github.com/elliotec"><%= current_page.data.github %>Github</a>
 ```
-Now the code base is much more DRY and modular, and the generated HTML is producing the expected behavior. 
+Now the code base is much more DRY and modular, and the generated HTML is producing the expected behavior.
 
-You can do this in Jekyll too, but there are a few differences (basically just step 3) so [check out their docs if thats what you're into](http://jekyllrb.com/docs/frontmatter/). 
+You can do this in Jekyll too, but there are a few differences (basically just step 3) so [check out their docs if thats what you're into](http://jekyllrb.com/docs/frontmatter/).
 
-For more info on the Middleman front matter, [see the relavent section in the Middleman docs](http://middlemanapp.com/basics/frontmatter/).
+For more info on the Middleman front matter, [see the relevant section in the Middleman docs](http://middlemanapp.com/basics/frontmatter/).
 
 -- Mike
