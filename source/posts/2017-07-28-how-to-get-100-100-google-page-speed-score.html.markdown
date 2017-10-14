@@ -53,7 +53,123 @@ Additionally, you'll need full control of the server hosting your files. I use n
 Let's get into some details now.
 
 #### 1. Avoid landing page redirects
-This first item is mostly self explanatory. You don't want to land on a page and redirect a user as much as possible. This is relatively common when a desktop site redirects to mobile, and it is very expensive in terms of performance. If possible, build a site that is mobile-first and responsive to prevent necessity of redirects to mobile versions of the site.
+This first item is mostly self explanatory. You don't want to land on a page and redirect a user as much as possible. This is relatively common when a desktop site redirects to mobile, and it is very expensive in terms of performance. If possible, build a site that is designed mobile-first and responsive to prevent necessity of redirects to mobile versions of the site.
 
 #### 2. Enable Compression
-Here we already need control of the server.
+Here we already need control of the server. Since http supports sending compressed files over the network for faster transfers, we should take advantage of Gzipping everything we can before it gets sent to the browser. It's super easy to enable with nginx.
+
+#### My global nginx.conf
+```nginx
+user www-data;
+worker_processes auto;
+pid /run/nginx.pid;
+
+events {
+	worker_connections 768;
+}
+
+http {
+
+	##
+	# Basic Settings
+	##
+
+	sendfile on;
+	tcp_nopush on;
+	tcp_nodelay on;
+	keepalive_timeout 65;
+	types_hash_max_size 2048;
+
+	server_names_hash_bucket_size 128;
+
+	include /etc/nginx/mime.types;
+	default_type application/octet-stream;
+
+	##
+	# SSL Settings
+	##
+
+	ssl_protocols TLSv1 TLSv1.1 TLSv1.2; # Dropping SSLv3, ref: POODLE
+	ssl_prefer_server_ciphers on;
+
+	##
+	# Logging Settings
+	##
+
+	access_log /var/log/nginx/access.log;
+	error_log /var/log/nginx/error.log;
+
+	##
+	# Gzip Settings
+	##
+
+	gzip on;
+	gzip_disable "msie6";
+
+	 gzip_vary on;
+	 gzip_proxied any;
+	 gzip_comp_level 6;
+	 gzip_buffers 16 8k;
+	 gzip_http_version 1.1;
+	 gzip_min_length 256;
+	 gzip_types text/plain text/css application/json application/javascript text/xml application/xml application/xml+rss text/javascript application/x-font-ttf font/opentype image/svg+xml image/x-icon;
+
+	##
+	# Virtual Host Configs
+	##
+
+	include /etc/nginx/conf.d/*.conf;
+	include /etc/nginx/sites-enabled/*;
+}
+```
+#### My website's nginx server conf
+```nginx
+#expiry map
+map $sent_http_content_type $expires {
+    default                     off;
+    text/html                   epoch;
+    text/css                    max;
+    application/javascript      max;
+    application/x-font-ttf      max;
+    application/x-font-otf      max;
+    application/font-woff       max;
+    application/font-woff2      max;
+    ~image/                     max;
+}
+
+server {
+	listen 80;
+	listen [::]:80;
+	server_name elliotec.com www.elliotec.com;
+    expires $expires;
+    return 301 https://$server_name$request_uri;
+}
+
+server {
+    # SSL configuration
+
+    listen 443 ssl http2;
+    listen [::]:443 ssl http2;
+    include snippets/ssl-elliotec.com.conf;
+    include snippets/ssl-params.conf;
+	server_name elliotec.com www.elliotec.com;
+    ssl on;
+
+    location ~ /.well-known {
+        allow all;
+    }
+	index index.html index.js;
+
+    root /srv/www/elliotec.com/;
+	location / {
+		try_files $uri $uri/ =404;
+	}
+
+    error_page 404 /floatin-in-space/index.html;
+    location = /floatin-in-space/index.html {
+        root /srv/www/elliotec.com/;
+        internal;
+    }
+    expires $expires;
+}
+```
