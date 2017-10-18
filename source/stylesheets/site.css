@@ -113,7 +113,7 @@ header a:hover {
   color: #2ecc71;
   text-decoration: none;
 }
-.post pre, .post code {
+.post pre code {
   padding: 10px;
   border-radius: 10%;
   font-family: "Lucida Console", Monaco, monospace, "AdamicBee";

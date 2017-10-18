@@ -2,7 +2,7 @@
 title: How to Get 100/100 Google Page Speed Score with Middleman and Nginx
 date: 2017-10-18 12:26 MDT
 tags: performance, speed, blogging, google, seo
-published: false
+published: true
 ---
 ### Everyone hates slow websites. Everyone likes fast websites.
 
@@ -59,37 +59,42 @@ Here we already need control of the server. Since http supports sending compress
 
 http {
 ...
-	sendfile on;
-	types_hash_max_size 2048;
-	server_names_hash_bucket_size 128;
-	include /etc/nginx/mime.types;
-	default_type application/octet-stream;
+    sendfile on;
+    types_hash_max_size 2048;
+    server_names_hash_bucket_size 128;
+    include /etc/nginx/mime.types;
+    default_type application/octet-stream;
 
-	gzip on;
-	gzip_disable "msie6";
-  gzip_vary on;
-  gzip_proxied any;
-  gzip_comp_level 6;
-  gzip_buffers 16 8k;
-  gzip_http_version 1.1;
-  gzip_min_length 256;
-  gzip_types text/plain text/css application/json application/javascript text/xml application/xml application/xml+rss text/javascript application/x-font-ttf font/opentype image/svg+xml image/x-icon;
+    gzip on;
+    gzip_disable "msie6";
+    gzip_vary on;
+    gzip_proxied any;
+    gzip_comp_level 6;
+    gzip_buffers 16 8k;
+    gzip_http_version 1.1;
+    gzip_min_length 256;
+    gzip_types text/plain text/css application/json application/javascript text/xml application/xml application/xml+rss text/javascript application/x-font-ttf font/opentype image/svg+xml image/x-icon;
 }
+
 ```
 
 And in my middleman config:
+
 ```ruby
+
 # config.rb
 configure :build do
   activate :gzip
   ...
 end
+
 ```
 
 #### Leverage browser caching
 Caching allows the browser to keep downloaded assets for a set period of time so that it doesn't have to keep downloading the same files over and over. This is again quite easy to do with nginx by setting expirations for different filetypes, like how I have in my local nginx conf for this website:
 
 ```nginx
+
 #expiry map
 map $sent_http_content_type $expires {
     default                     off;
@@ -115,18 +120,21 @@ server {
 You can also ensure you are caching only files that haven't changed by setting unique asset hashes on the filenames, which is done in Middleman with a simple addition to the build config like so:
 
 ```ruby
+
 # config.rb
 ...
 configure :build do
   activate :asset_hash
   ...
 end
+
 ```
 
 #### Minify assets
 One of the more well known and simple page speed strategies is minifying your assets. Having a build step that minifies your HTML, CSS, and JavaScript is essential in modern web development, but it gets skipped a lot. You can drastically decrease your bundle sizes with minification. In Middleman, all you have to do is put a couple lines in your `config.rb` to do the work for you, like this:
 
 ```ruby
+
 # config.rb
 ...
 configure :build do
@@ -135,6 +143,7 @@ configure :build do
   activate :minify_html
   ...
 end
+
 ```
 
 The CSS and JS minification comes free with Middleman, but you'll have to add `gem middleman-minify-html` for the HTML piece which you definitely want even though it wont be giving you as large of gains as the other assets.
@@ -143,11 +152,13 @@ The CSS and JS minification comes free with Middleman, but you'll have to add `g
 Images are usually the most expensive files for a browser to download as far as size and speed, so this is one of the areas that you can get some of the most performance gains for the effort. To start out, you'll usually want to have images at their lowest viable size and quality. Tools like Photoshop have the ability to do a lot of powerful work around this, but you can optimize them even more in a build step using a tool like imageoptim. Of course with Middleman this is pretty effortless. First you'll want to add `gem 'middleman-imageoptim', git: 'https://github.com/plasticine/middleman-imageoptim', branch: 'master'` to your gemfile, then:
 
 ```ruby
+
 # config.rb
 ...
 configure :build do
   activate :imageoptim
 end
+
 ```
 Nice, you just shaved a ton of weight off those heavy images.
 
@@ -162,9 +173,11 @@ This is probably the trickiest item on the list, and it's related to the previou
 
 Then, inline your CSS and JS instead of making external resource calls to them. Doing this by hand would be terrible and ugly, but we have tools to do this for us. There's a couple steps to get all your assets inlined on your pages.
 
-1. You'll first need to add sprockets (`gem 'middleman-sprockets'`) to your app because we are hijacking Middleman's asset pipeline.
-2. Then in your `config.rb` add the `inline: true` hash to each minify build step like this:
+- You'll first need to add sprockets (`gem 'middleman-sprockets'`) to your app because we are hijacking Middleman's asset pipeline.
+- Then in your `config.rb` add the `inline: true` hash to each minify build step like this:
+
 ```ruby
+
 # config.rb
 ...
 
@@ -173,23 +186,30 @@ configure :build do
   activate :minify_javascript, inline: true
   ...
 end
+
 ```
-3. Last, in your layout template where you pull in your CSS (wherever your `<head>` tag is probably):
+
+- Last, in your layout template where you pull in your CSS (wherever your `<head>` tag is probably):
+
 ```html
+
 <style><%= sprockets.find_asset('site').to_s %></style>
+
 ```
 and likewise for any scripts you want to inline, in `<script>` tags of course.
 
 Finally, I was having a lot of trouble getting the Google Analytics script on my site to not be render-blocking. It was the last thing on the list that I hadn't achieved, and I was pretty annoyed that I wasn't seeing that 100/100 score. Since my real goal was the number, and it was clear that my site was pretty fast already, [I found a silly hack online](https://stackoverflow.com/questions/29162881/pagespeed-insights-99-100-because-of-google-analytics-how-can-i-cache-ga) to trick the Page Speed Insights tool to ignore the Google Analytics script. If they can contradict themselves I figure I can do this, and You Can Too!
 
-```JavaScript
+```javascript
+
 if(navigator.userAgent.indexOf("Speed Insights") == -1) {
 // Your Google Analytics Code Here
 }
+
 ```
 
 ### All done!
 
 There ya go. If you followed the instructions in this post for your own self-hosted static site, you'll get 100/100 score on Google Page Speed.
-That's good for everyone using your website, and it's also gotta be good for some SEO, right?
+The speed is what matters and that's good for everyone using your website, and it's also gotta be good for some SEO, right?
 
