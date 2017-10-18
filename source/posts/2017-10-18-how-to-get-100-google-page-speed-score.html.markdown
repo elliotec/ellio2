@@ -1,6 +1,6 @@
 ---
 title: How to Get 100/100 Google Page Speed Score with Middleman and Nginx
-date: 2017-10-18 12:26 MDT
+date: 2017-10-18 12:01 MDT
 tags: performance, speed, blogging, google, seo
 published: true
 ---
