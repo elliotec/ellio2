@@ -32,6 +32,7 @@ I wanted a fast website, and I like to get 100% on things occasionally, so I set
 <a href="https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Felliotec.com">
     <img src="../images/pagespeed.png"/>
 </a>
+
 ### Page size
 
 Before getting into any of these rules in particular, lets talk about page size in general.
@@ -39,26 +40,24 @@ Make your codebase small. If you don't need all of Bootstrap's enormous CSS code
 
 ### Client and Server Control
 
-One thing you'll need to get the 100/100 score is direct control of the front end assets and build tools around them. I used the static site generator Middleman to build this site with my configurations to increase the performance as much as possible. This website has virtually no JavaScript (other than the Squaresend plugin for email), but if I needed it I'd be handling it like the rest of my assets.
+One thing you'll need to get the 100/100 score is direct control of the front end assets and build tools around them. I used the static site generator Middleman to build this site with my configurations to increase the performance as much as possible. This website has virtually no JavaScript (other than the Squaresend plugin for email), but if I needed it I'd be handling it like the rest of my assets. [Here's the link to my full Middleman config.rb](https://github.com/elliote/ellio2/blob/source/config.rb) for your reference.
 
-Additionally, you'll need full control of the server hosting your files. I use nginx on Digital Ocean when I want full control of my servers, and since it's just static files I don't actually have to setup a database or backend other than the nginx piece which is where a good chunk of the work here is.
+Additionally, you'll need full control of the server hosting your files. I use Nginx on Digital Ocean when I want full control of my servers, and since it's just static files I don't actually have to setup a database or backend other than the Nginx piece which is where a good chunk of the work here is.
 
 ### Breaking down the metrics
 
 Let's get into some details now.
 
-#### Avoid landing page redirects
+##### Avoid landing page redirects
 This first item is mostly self explanatory. You don't want to land on a page and redirect a user as much as possible. This is relatively common when a desktop site redirects to mobile, and it is very expensive in terms of performance. If possible, build a site that is designed mobile-first and responsive to prevent necessity of redirects to mobile versions of the site.
 
-#### Enable Compression
-Here we already need control of the server. Since http supports sending compressed files over the network for faster transfers, we should take advantage of Gzipping everything we can before it gets sent to the browser. It's super easy to enable with nginx and Middleman. In my global nginx conf, I have:
+##### Enable Compression
+Here we already need control of the server. Since http supports sending compressed files over the network for faster transfers, we should take advantage of gzipping everything we can before it gets sent to the browser. It's super easy to enable with Nginx and Middleman. In my global nginx.conf, I have:
 
-```nginx
+```text
 #nginx.conf
-...
 
 http {
-...
     sendfile on;
     types_hash_max_size 2048;
     server_names_hash_bucket_size 128;
@@ -75,26 +74,21 @@ http {
     gzip_min_length 256;
     gzip_types text/plain text/css application/json application/javascript text/xml application/xml application/xml+rss text/javascript application/x-font-ttf font/opentype image/svg+xml image/x-icon;
 }
-
 ```
 
-And in my middleman config:
+And in my Middleman config:
 
 ```ruby
-
 # config.rb
 configure :build do
   activate :gzip
-  ...
 end
-
 ```
 
 #### Leverage browser caching
-Caching allows the browser to keep downloaded assets for a set period of time so that it doesn't have to keep downloading the same files over and over. This is again quite easy to do with nginx by setting expirations for different filetypes, like how I have in my local nginx conf for this website:
+Caching allows the browser to keep downloaded assets for a set period of time so that it doesn't have to keep downloading the same files over and over. This is again quite easy to do with Nginx by setting expirations for different filetypes, like how I have in my local nginx.conf for this website:
 
-```nginx
-
+```text
 #expiry map
 map $sent_http_content_type $expires {
     default                     off;
@@ -115,35 +109,26 @@ server {
     expires $expires;
     return 301 https://$server_name$request_uri;
 }
-
 ```
 You can also ensure you are caching only files that haven't changed by setting unique asset hashes on the filenames, which is done in Middleman with a simple addition to the build config like so:
 
 ```ruby
-
 # config.rb
-...
 configure :build do
   activate :asset_hash
-  ...
 end
-
 ```
 
 #### Minify assets
 One of the more well known and simple page speed strategies is minifying your assets. Having a build step that minifies your HTML, CSS, and JavaScript is essential in modern web development, but it gets skipped a lot. You can drastically decrease your bundle sizes with minification. In Middleman, all you have to do is put a couple lines in your `config.rb` to do the work for you, like this:
 
 ```ruby
-
 # config.rb
-...
 configure :build do
   activate :minify_css
   activate :minify_javascript
   activate :minify_html
-  ...
 end
-
 ```
 
 The CSS and JS minification comes free with Middleman, but you'll have to add `gem middleman-minify-html` for the HTML piece which you definitely want even though it wont be giving you as large of gains as the other assets.
@@ -152,13 +137,10 @@ The CSS and JS minification comes free with Middleman, but you'll have to add `g
 Images are usually the most expensive files for a browser to download as far as size and speed, so this is one of the areas that you can get some of the most performance gains for the effort. To start out, you'll usually want to have images at their lowest viable size and quality. Tools like Photoshop have the ability to do a lot of powerful work around this, but you can optimize them even more in a build step using a tool like imageoptim. Of course with Middleman this is pretty effortless. First you'll want to add `gem 'middleman-imageoptim', git: 'https://github.com/plasticine/middleman-imageoptim', branch: 'master'` to your gemfile, then:
 
 ```ruby
-
 # config.rb
-...
 configure :build do
   activate :imageoptim
 end
-
 ```
 Nice, you just shaved a ton of weight off those heavy images.
 
@@ -177,35 +159,26 @@ Then, inline your CSS and JS instead of making external resource calls to them. 
 - Then in your `config.rb` add the `inline: true` hash to each minify build step like this:
 
 ```ruby
-
 # config.rb
-...
-
 configure :build do
   activate :minify_css, inline: true
   activate :minify_javascript, inline: true
-  ...
 end
-
 ```
 
 - Last, in your layout template where you pull in your CSS (wherever your `<head>` tag is probably):
 
 ```html
-
 <style><%= sprockets.find_asset('site').to_s %></style>
-
 ```
 and likewise for any scripts you want to inline, in `<script>` tags of course.
 
 Finally, I was having a lot of trouble getting the Google Analytics script on my site to not be render-blocking. It was the last thing on the list that I hadn't achieved, and I was pretty annoyed that I wasn't seeing that 100/100 score. Since my real goal was the number, and it was clear that my site was pretty fast already, [I found a silly hack online](https://stackoverflow.com/questions/29162881/pagespeed-insights-99-100-because-of-google-analytics-how-can-i-cache-ga) to trick the Page Speed Insights tool to ignore the Google Analytics script. If they can contradict themselves I figure I can do this, and You Can Too!
 
 ```javascript
-
 if(navigator.userAgent.indexOf("Speed Insights") == -1) {
 // Your Google Analytics Code Here
 }
-
 ```
 
 ### All done!
