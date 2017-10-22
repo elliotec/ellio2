@@ -40,7 +40,7 @@ Make your codebase small. If you don't need all of Bootstrap's enormous CSS code
 
 ### Client and Server Control
 
-One thing you'll need to get the 100/100 score is direct control of the front end assets and build tools around them. I used the static site generator Middleman to build this site with my configurations to increase the performance as much as possible. This website has virtually no JavaScript (other than the Squaresend plugin for email), but if I needed it I'd be handling it like the rest of my assets. [Here's the link to my full Middleman config.rb](https://github.com/elliote/ellio2/blob/source/config.rb) for your reference.
+One thing you'll need to get the 100/100 score is direct control of the front end assets and build tools around them. I used the static site generator Middleman to build this site with my configurations to increase the performance as much as possible. This website has virtually no JavaScript (other than the Squaresend plugin for email), but if I needed it I'd be handling it like the rest of my assets. [Here's the link to my full Middleman config.rb](https://github.com/elliotec/ellio2/blob/source/config.rb) for your reference.
 
 Additionally, you'll need full control of the server hosting your files. I use Nginx on Digital Ocean when I want full control of my servers, and since it's just static files I don't actually have to setup a database or backend other than the Nginx piece which is where a good chunk of the work here is.
 
@@ -186,3 +186,5 @@ if(navigator.userAgent.indexOf("Speed Insights") == -1) {
 There ya go. If you followed the instructions in this post for your own self-hosted static site, you'll get 100/100 score on Google Page Speed.
 The speed is what matters and that's good for everyone using your website, and it's also gotta be good for some SEO, right?
 
+
+Join the discussion [on Hacker News](https://news.ycombinator.com/item?id=15516957).
