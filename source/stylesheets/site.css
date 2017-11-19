@@ -3,7 +3,7 @@ body {
   font-family: "Helvetica Neue", "Helvetica", "Oxygen", "Ubuntu", sans-serif;
 }
 
-h1 {
+h1, h2 {
   line-height: 1.25;
 }
 
@@ -169,4 +169,14 @@ main {
 
 .post article .date {
   font-size: 14px;
+}
+.rss {
+  text-align: center;
+  font-size: 12px;
+}
+.rss a {
+  color: #27ae60;
+}
+.rss a:hover {
+  color:#2ecc71;
 }
