@@ -1,7 +1,7 @@
 ---
 title: A Hacker News Reader For No Reason - In 5 KB of Vanilla JS, HTML, & CSS
 date: 2017-11-18 13:23 MST
-tags: javascript, hacker news
+tags: javascript, hacker news, css, performance
 published: true
 ---
 
@@ -9,7 +9,7 @@ The title is only half true.
 
 The other night I was thinking about how my experience being fully entrenched in React and the modern JavaScript ecosystem lately might have influenced how I'd write an app by hand in vanilla HTML, CSS, and JS with no libraries or anything.
 
-Within the same hour I was looking at [Hacker News](https://news.ycombinator.com/) and some of it's reader clients, noting how they all kind of sucked as far as UX (including HN itself - still without mobile support and only recently adding comment collapsing), and discovered [the Hacker News API](https://hacker-news.firebaseio.com/v0/).
+Within the same hour I was looking at [Hacker News](https://news.ycombinator.com/) and some of it's reader clients, noting how they all kind of sucked as far as UX (including HN itself - only recently adding comment collapsing and mobile support), and discovered [the Hacker News API](https://hacker-news.firebaseio.com/v0/).
 
 Clearly this presented an opportunity to build my own HN reader in the lightest way I could - fully client side, no libraries, totally vanilla.
 
