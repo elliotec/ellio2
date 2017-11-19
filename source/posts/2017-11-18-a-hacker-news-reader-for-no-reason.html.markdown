@@ -38,7 +38,7 @@ To save you the arithmetic, that's a grand total of 5 KB on the initial load.
 
 - Since I'm using modern ECMAScript features, only more modern browsers will support it, but my audience should be fine with that.
 - Only shows the top stories - no Ask HN, new, jobs, etc. unless they're on the front page. This is not a limitation to me personally since I spend 99% of my HN time just on the front page.
-- No login, upvote, or posting functionality. Unfortunately the HN API doesn't support this yet, but if/when it does, maybe I'll try to get the all that in another 99 lines.
+- No login, upvote, or posting functionality. Unfortunately the HN API doesn't support this yet, but if/when it does, maybe I'll try to get all that in with another 99 lines :D
 - I'm not a designer. This was styled with my typical aesthetic of a minimal dark theme with green all over. Probably not everyone's favorite but certainly mine, and it's mine, so whatever.
 
 ### The code
