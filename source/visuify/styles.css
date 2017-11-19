@@ -7,26 +7,18 @@ body {
     font-family: 'Helvetica', sans-serif;
     line-height: 1.5em;
 }
-header.navigation {
-    background-color: #333;
-    font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
-    height: 50px;
-    width: 100%;
-    z-index: 999;
-    margin: 0 auto 1em;
-    text-align: center;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    right: 0;
+header {
+  height: 40px;
+  background-color: #333;
+  text-align: center;
+  width: 100%;
+  z-index: 999;
+  position: fixed;
+  top: 0;
 }
-header.navigation a {
-    text-decoration: none;
-    display: inline-block;
-    margin-top: .4em;
-    max-height: 50px;
-    font-size: 1.75em;
-    color: #27ae60;
+header a {
+  color: #27ae60;
+  font-size: 22px;
 }
 input, button {
     border-radius: 20px;
