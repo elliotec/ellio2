@@ -1,0 +1,1527 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>elliotec | Mike Elliott</title>
+  <subtitle></subtitle>
+  <id>http://elliotec.com/</id>
+  <link href="http://elliotec.com/"/>
+  <link href="http://elliotec.com/feed.xml" rel="self"/>
+  <updated>2017-11-18T13:23:00-07:00</updated>
+  <author>
+    <name>Mike Elliott</name>
+  </author>
+  <entry>
+    <title>A Hacker News Reader For No Reason - In 5 KB of Vanilla JS, HTML, &amp; CSS</title>
+    <link rel="alternate" href="http://elliotec.com/a-hacker-news-reader-for-no-reason/"/>
+    <id>http://elliotec.com/a-hacker-news-reader-for-no-reason/</id>
+    <published>2017-11-18T13:23:00-07:00</published>
+    <updated>2017-11-19T14:38:07-07:00</updated>
+    <author>
+      <name>Mike Elliott</name>
+    </author>
+    <content type="html">&lt;p&gt;The title is only half true.&lt;/p&gt;
+
+&lt;p&gt;The other night I was thinking about how my experience being fully entrenched in React and the modern JavaScript ecosystem lately might have influenced how I&amp;rsquo;d write an app by hand in vanilla HTML, CSS, and JS with no libraries or anything.&lt;/p&gt;
+
+&lt;p&gt;Within the same hour I was looking at &lt;a href="https://news.ycombinator.com/"&gt;Hacker News&lt;/a&gt; and some of it&amp;rsquo;s reader clients, noting how they all kind of sucked as far as UX (including HN itself - only recently adding comment collapsing and mobile support), and discovered &lt;a href="https://hacker-news.firebaseio.com/v0/"&gt;the Hacker News API&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Clearly this presented an opportunity to build my own HN reader in the lightest way I could - fully client side, no libraries, totally vanilla.&lt;/p&gt;
+
+&lt;p&gt;So I did it in 2 files, 99 lines of JavaScript, and 99 lines of HTML/CSS.&lt;/p&gt;
+
+&lt;p&gt;The files will automatically go through my build script since they&amp;rsquo;re hosted on this site (&lt;a href="https://elliotec.com/how-to-get-100-google-page-speed-score/"&gt;as explained here&lt;/a&gt;). The JS is only 4.4 KB in the first place, but minifying it and gzipping it brought it down to 1.5 KB which is pretty significant. The HTML file is 3.5 KB minified and gzipped.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;ll save you the arithmetic, that&amp;rsquo;s a grand total of &lt;em&gt;5 KB&lt;/em&gt; on the initial load.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="/hn-no-reason" target='_blank'&gt;
+    &lt;h2&gt;Go to A Hacker News Reader For No Reason!&lt;/h2&gt;
+    &lt;img src="../images/hn-no-reason.png" alt='HN App Image' /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3&gt;Features&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Gets the top 30 stories in order with their points, just like the front page of HN.&lt;/li&gt;
+&lt;li&gt;If the story has a URL, the title will take you to a new tab with the URL, otherwise it will toggle the text content of the story (like Ask, Show, Jobs, etc.).&lt;/li&gt;
+&lt;li&gt;If the story has comments, there&amp;rsquo;s a link to toggle the comments.&lt;/li&gt;
+&lt;li&gt;Each comment and their children are collapsible.&lt;/li&gt;
+&lt;li&gt;There&amp;rsquo;s a link to the original story on HN, and to the user that submitted the story or comments.&lt;/li&gt;
+&lt;li&gt;Looks decent on all devices.&lt;/li&gt;
+&lt;li&gt;Super tiny and pretty fast.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;Limitations&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Since I&amp;rsquo;m using modern ECMAScript features, only more modern browsers will support it, but most of my audience is probably fine with that.&lt;/li&gt;
+&lt;li&gt;It only shows the top stories - no support for New, Ask, Jobs, etc. unless they&amp;rsquo;re on the front page. This is not a limitation to me personally since I spend 99% of my HN time just on the front page.&lt;/li&gt;
+&lt;li&gt;No login, upvote/downvote, or posting functionality. Unfortunately the HN API doesn&amp;rsquo;t support this yet, but if/when it does, maybe I&amp;rsquo;ll try to get all that in with another 99 lines :D&lt;/li&gt;
+&lt;li&gt;I&amp;rsquo;m not a designer. This was styled with my typical aesthetic of a minimal dark theme with green all over. Probably not everyone&amp;rsquo;s favorite but certainly mine, and it&amp;rsquo;s mine, so whatever.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;The Code&lt;/h3&gt;
+
+&lt;p&gt;I wrote the styles in a &lt;code&gt;&amp;lt;style&amp;gt;&lt;/code&gt; tag in &lt;code&gt;index.html&lt;/code&gt;. Since one of the goals I had with this was to keep it super small and light, I characteristically set an arbitrary limit of lines for myself at a number I figured seemed reasonable to finish it within.&lt;/p&gt;
+
+&lt;p&gt;I fudged some of my usual code style guidelines and there were a few times I disrespected the 80-character line rule I prefer to abide by in order to hit the 99 line mark in both files, but nothing too crazy and I&amp;rsquo;m not crossing any hard bad-practice lines.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="https://github.com/elliotec/hn-no-reason"&gt;You can check out the repo here&lt;/a&gt; -
+but since it&amp;rsquo;s only 99 lines, I&amp;rsquo;ve posted the contents of JS file below.&lt;/p&gt;
+
+&lt;p&gt;Note the use of several ES6+ features and the resemblance to React and JSX with the templating. Of course, there&amp;rsquo;s no fancy Virtual DOM or anything here and it&amp;rsquo;s simply manipulating the DOM as needed. I&amp;rsquo;m using functional and immutable patterns where applicable, in the parlance of our time.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre class="highlight javascript"&gt;&lt;code&gt;
+&lt;span class="kd"&gt;const&lt;/span&gt; &lt;span class="nx"&gt;hnBaseUrl&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'https://hacker-news.firebaseio.com/v0'&lt;/span&gt;
+&lt;span class="kd"&gt;const&lt;/span&gt; &lt;span class="nx"&gt;state&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{}&lt;/span&gt;
+&lt;span class="kd"&gt;function&lt;/span&gt; &lt;span class="nx"&gt;fetchTopStories&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+  &lt;span class="kd"&gt;const&lt;/span&gt; &lt;span class="nx"&gt;topStoriesUrl&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;`&lt;/span&gt;&lt;span class="p"&gt;${&lt;/span&gt;&lt;span class="nx"&gt;hnBaseUrl&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;/topstories.json`&lt;/span&gt;
+  &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nx"&gt;fetch&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;topStoriesUrl&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nx"&gt;then&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;response&lt;/span&gt; &lt;span class="o"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="nx"&gt;response&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;json&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
+    &lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;then&lt;/span&gt;&lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="nx"&gt;data&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="nx"&gt;fetchStories&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;data&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="kd"&gt;function&lt;/span&gt; &lt;span class="nx"&gt;fetchStories&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;data&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+  &lt;span class="kd"&gt;const&lt;/span&gt; &lt;span class="nx"&gt;topStories&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;data&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;slice&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;29&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+  &lt;span class="kd"&gt;const&lt;/span&gt; &lt;span class="nx"&gt;storyIds&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;topStories&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;map&lt;/span&gt;&lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="nx"&gt;storyId&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="kd"&gt;const&lt;/span&gt; &lt;span class="nx"&gt;storyUrl&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;`&lt;/span&gt;&lt;span class="p"&gt;${&lt;/span&gt;&lt;span class="nx"&gt;hnBaseUrl&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;/item/&lt;/span&gt;&lt;span class="p"&gt;${&lt;/span&gt;&lt;span class="nx"&gt;storyId&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;.json`&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nx"&gt;fetch&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;storyUrl&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nx"&gt;then&lt;/span&gt;&lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="nx"&gt;response&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="nx"&gt;response&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;json&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
+      &lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;then&lt;/span&gt;&lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="nx"&gt;story&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="nx"&gt;story&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+  &lt;span class="p"&gt;})&lt;/span&gt;
+  &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nb"&gt;Promise&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;all&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;storyIds&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nx"&gt;then&lt;/span&gt;&lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="nx"&gt;stories&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="nx"&gt;state&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;stories&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;stories&lt;/span&gt;
+    &lt;span class="nx"&gt;renderStories&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;stories&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+  &lt;span class="p"&gt;})&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="kd"&gt;function&lt;/span&gt; &lt;span class="nx"&gt;renderStories&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;stories&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+  &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nx"&gt;stories&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;map&lt;/span&gt;&lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="nx"&gt;story&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="kd"&gt;const&lt;/span&gt; &lt;span class="nx"&gt;userUrl&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;`https://news.ycombinator.com/user?id=&lt;/span&gt;&lt;span class="p"&gt;${&lt;/span&gt;&lt;span class="nx"&gt;story&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;by&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;`&lt;/span&gt;
+    &lt;span class="kd"&gt;const&lt;/span&gt; &lt;span class="nx"&gt;storyItemUrl&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;`https://news.ycombinator.com/item?id=&lt;/span&gt;&lt;span class="p"&gt;${&lt;/span&gt;&lt;span class="nx"&gt;story&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;id&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;`&lt;/span&gt;
+    &lt;span class="kd"&gt;const&lt;/span&gt; &lt;span class="nx"&gt;html&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;`
+      &amp;lt;div class='story' id='&lt;/span&gt;&lt;span class="p"&gt;${&lt;/span&gt;&lt;span class="nx"&gt;story&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;id&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;'&amp;gt;
+        &amp;lt;h3 class='title'&amp;gt;
+          &lt;/span&gt;&lt;span class="p"&gt;${&lt;/span&gt;&lt;span class="nx"&gt;story&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;url&lt;/span&gt; &lt;span class="p"&gt;?&lt;/span&gt; &lt;span class="s2"&gt;`&amp;lt;a href='&lt;/span&gt;&lt;span class="p"&gt;${&lt;/span&gt;&lt;span class="nx"&gt;story&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;url&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;' target='_blank'&amp;gt;&lt;/span&gt;&lt;span class="p"&gt;${&lt;/span&gt;&lt;span class="nx"&gt;story&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;title&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;&amp;lt;/a&amp;gt;`&lt;/span&gt;
+            &lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;`&amp;lt;a href='javascript:void(0)' onclick="toggleStoryText('&lt;/span&gt;&lt;span class="p"&gt;${&lt;/span&gt;&lt;span class="nx"&gt;story&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;id&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;')" &amp;gt;&lt;/span&gt;&lt;span class="p"&gt;${&lt;/span&gt;&lt;span class="nx"&gt;story&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;title&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;&amp;lt;/a&amp;gt;`&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;
+        &amp;lt;/h3&amp;gt;
+        &amp;lt;span class='score'&amp;gt; &lt;/span&gt;&lt;span class="p"&gt;${&lt;/span&gt;&lt;span class="nx"&gt;story&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;score&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="s2"&gt; &amp;lt;/span&amp;gt; points by
+        &amp;lt;a href='&lt;/span&gt;&lt;span class="p"&gt;${&lt;/span&gt;&lt;span class="nx"&gt;userUrl&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;' target='_blank' class='story-by'&amp;gt; &lt;/span&gt;&lt;span class="p"&gt;${&lt;/span&gt;&lt;span class="nx"&gt;story&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;by&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;&amp;lt;/a&amp;gt;
+        &amp;lt;div class='toggle-view'&amp;gt;
+          &lt;/span&gt;&lt;span class="p"&gt;${&lt;/span&gt;&lt;span class="nx"&gt;story&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;kids&lt;/span&gt; &lt;span class="p"&gt;?&lt;/span&gt; &lt;span class="s2"&gt;`
+            &amp;lt;span
+              onclick="fetchOrToggleComments('&lt;/span&gt;&lt;span class="p"&gt;${&lt;/span&gt;&lt;span class="nx"&gt;story&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;kids&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;','&lt;/span&gt;&lt;span class="p"&gt;${&lt;/span&gt;&lt;span class="nx"&gt;story&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;id&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;')"
+              class='comments'
+            &amp;gt; [toggle &lt;/span&gt;&lt;span class="p"&gt;${&lt;/span&gt;&lt;span class="nx"&gt;story&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;descendants&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="s2"&gt; comments] &amp;lt;/span&amp;gt;`&lt;/span&gt;
+          &lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;''&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;
+          &amp;lt;a href='&lt;/span&gt;&lt;span class="p"&gt;${&lt;/span&gt;&lt;span class="nx"&gt;storyItemUrl&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;' target='_blank' class='hnLink'&amp;gt;[view on HN]&amp;lt;/a&amp;gt;
+        &amp;lt;/div&amp;gt;
+        &lt;/span&gt;&lt;span class="p"&gt;${&lt;/span&gt;&lt;span class="nx"&gt;story&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;text&lt;/span&gt; &lt;span class="p"&gt;?&lt;/span&gt;
+          &lt;span class="s2"&gt;`&amp;lt;div class='storyText' id='storyText-&lt;/span&gt;&lt;span class="p"&gt;${&lt;/span&gt;&lt;span class="nx"&gt;story&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;id&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;' style='display:none;'&amp;gt;
+            &lt;/span&gt;&lt;span class="p"&gt;${&lt;/span&gt;&lt;span class="nx"&gt;story&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;text&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="s2"&gt; &amp;lt;/div&amp;gt;`&lt;/span&gt; &lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;''&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;
+        &amp;lt;div id='comments-&lt;/span&gt;&lt;span class="p"&gt;${&lt;/span&gt;&lt;span class="nx"&gt;story&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;id&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;' style='display: block;'&amp;gt;&amp;lt;/div&amp;gt;
+      &amp;lt;/div&amp;gt; `&lt;/span&gt;
+    &lt;span class="nb"&gt;document&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;getElementById&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'hn'&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nx"&gt;insertAdjacentHTML&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'beforeend'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;html&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+  &lt;span class="p"&gt;})&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="kd"&gt;function&lt;/span&gt; &lt;span class="nx"&gt;toggleStoryText&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;storyId&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+  &lt;span class="kd"&gt;const&lt;/span&gt; &lt;span class="nx"&gt;storyText&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;document&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;getElementById&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;`storyText-&lt;/span&gt;&lt;span class="p"&gt;${&lt;/span&gt;&lt;span class="nx"&gt;storyId&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;`&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+  &lt;span class="nx"&gt;storyText&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;style&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;display&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;storyText&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;style&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;display&lt;/span&gt; &lt;span class="o"&gt;===&lt;/span&gt; &lt;span class="s1"&gt;'block'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;?&lt;/span&gt; &lt;span class="s1"&gt;'none'&lt;/span&gt; &lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;'block'&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="kd"&gt;function&lt;/span&gt; &lt;span class="nx"&gt;fetchComments&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;kids&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;storyId&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+  &lt;span class="kd"&gt;const&lt;/span&gt; &lt;span class="nx"&gt;commentIds&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;kids&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;split&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;','&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+  &lt;span class="kd"&gt;const&lt;/span&gt; &lt;span class="nx"&gt;allComments&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;commentIds&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;map&lt;/span&gt;&lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="nx"&gt;commentId&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="kd"&gt;const&lt;/span&gt; &lt;span class="nx"&gt;commentUrl&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;`&lt;/span&gt;&lt;span class="p"&gt;${&lt;/span&gt;&lt;span class="nx"&gt;hnBaseUrl&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;/item/&lt;/span&gt;&lt;span class="p"&gt;${&lt;/span&gt;&lt;span class="nx"&gt;commentId&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;.json`&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nx"&gt;fetch&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;commentUrl&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nx"&gt;then&lt;/span&gt;&lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="nx"&gt;response&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="nx"&gt;response&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;json&lt;/span&gt;&lt;span class="p"&gt;()).&lt;/span&gt;&lt;span class="nx"&gt;then&lt;/span&gt;&lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="nx"&gt;comment&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="nx"&gt;comment&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+  &lt;span class="p"&gt;})&lt;/span&gt;
+  &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nb"&gt;Promise&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;all&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;allComments&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nx"&gt;then&lt;/span&gt;&lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="nx"&gt;comments&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="nx"&gt;state&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;storyId&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;comments&lt;/span&gt;
+    &lt;span class="nx"&gt;renderComments&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;comments&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;storyId&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+  &lt;span class="p"&gt;})&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="kd"&gt;function&lt;/span&gt; &lt;span class="nx"&gt;fetchOrToggleComments&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;kids&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;storyId&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+  &lt;span class="kd"&gt;function&lt;/span&gt; &lt;span class="nx"&gt;toggleAllComments&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;storyId&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="kd"&gt;const&lt;/span&gt; &lt;span class="nx"&gt;allComments&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;document&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;getElementById&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;`comments-&lt;/span&gt;&lt;span class="p"&gt;${&lt;/span&gt;&lt;span class="nx"&gt;storyId&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;`&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="nx"&gt;allComments&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;style&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;display&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;allComments&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;style&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;display&lt;/span&gt; &lt;span class="o"&gt;===&lt;/span&gt; &lt;span class="s1"&gt;'block'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;?&lt;/span&gt; &lt;span class="s1"&gt;'none'&lt;/span&gt; &lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;'block'&lt;/span&gt;
+  &lt;span class="p"&gt;}&lt;/span&gt;
+  &lt;span class="nx"&gt;state&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;storyId&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="p"&gt;?&lt;/span&gt; &lt;span class="nx"&gt;toggleAllComments&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;storyId&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;fetchComments&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;kids&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;storyId&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="kd"&gt;function&lt;/span&gt; &lt;span class="nx"&gt;toggleComment&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;commentId&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+  &lt;span class="kd"&gt;const&lt;/span&gt; &lt;span class="nx"&gt;comment&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;document&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;getElementById&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;commentId&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+  &lt;span class="kd"&gt;const&lt;/span&gt; &lt;span class="nx"&gt;toggle&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;document&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;getElementById&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;`toggle-&lt;/span&gt;&lt;span class="p"&gt;${&lt;/span&gt;&lt;span class="nx"&gt;commentId&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;`&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+  &lt;span class="nx"&gt;comment&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;style&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;display&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;comment&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;style&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;display&lt;/span&gt; &lt;span class="o"&gt;===&lt;/span&gt; &lt;span class="s1"&gt;'block'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;?&lt;/span&gt; &lt;span class="s1"&gt;'none'&lt;/span&gt; &lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;'block'&lt;/span&gt;
+  &lt;span class="nx"&gt;toggle&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;innerHTML&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;toggle&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;innerHTML&lt;/span&gt; &lt;span class="o"&gt;===&lt;/span&gt; &lt;span class="s1"&gt;'[ - ]'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;?&lt;/span&gt; &lt;span class="s1"&gt;'[ + ]'&lt;/span&gt; &lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;'[ - ]'&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="kd"&gt;function&lt;/span&gt; &lt;span class="nx"&gt;renderComments&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;comments&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;storyId&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+  &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nx"&gt;comments&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;map&lt;/span&gt;&lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="nx"&gt;comment&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="kd"&gt;const&lt;/span&gt; &lt;span class="nx"&gt;userUrl&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;`https://news.ycombinator.com/user?id=&lt;/span&gt;&lt;span class="p"&gt;${&lt;/span&gt;&lt;span class="nx"&gt;comment&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;by&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;`&lt;/span&gt;
+    &lt;span class="kd"&gt;const&lt;/span&gt; &lt;span class="nx"&gt;html&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;comment&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;deleted&lt;/span&gt; &lt;span class="o"&gt;||&lt;/span&gt; &lt;span class="nx"&gt;comment&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;dead&lt;/span&gt; &lt;span class="p"&gt;?&lt;/span&gt; &lt;span class="s1"&gt;''&lt;/span&gt; &lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;`
+      &amp;lt;div class='comment'&amp;gt;
+        &amp;lt;span
+          onclick='toggleComment("&lt;/span&gt;&lt;span class="p"&gt;${&lt;/span&gt;&lt;span class="nx"&gt;comment&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;id&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;")'
+          href='javascript:void(0)'
+          id='toggle-&lt;/span&gt;&lt;span class="p"&gt;${&lt;/span&gt;&lt;span class="nx"&gt;comment&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;id&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;'
+          class='toggle-comment'
+        &amp;gt;[ - ]&amp;lt;/span&amp;gt;
+        &amp;lt;a href='&lt;/span&gt;&lt;span class="p"&gt;${&lt;/span&gt;&lt;span class="nx"&gt;userUrl&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;' class='comment-by'&amp;gt; &lt;/span&gt;&lt;span class="p"&gt;${&lt;/span&gt;&lt;span class="nx"&gt;comment&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;by&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;&amp;lt;/a&amp;gt;
+        &amp;lt;div id=&lt;/span&gt;&lt;span class="p"&gt;${&lt;/span&gt;&lt;span class="nx"&gt;comment&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;id&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="s2"&gt; class='comment-text' style='display:block;'&amp;gt;
+          &lt;/span&gt;&lt;span class="p"&gt;${&lt;/span&gt;&lt;span class="nx"&gt;comment&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;text&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;
+        &amp;lt;/div&amp;gt;
+      &amp;lt;/div&amp;gt; `&lt;/span&gt;
+    &lt;span class="nx"&gt;comment&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;parent&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="nx"&gt;storyId&lt;/span&gt; &lt;span class="p"&gt;?&lt;/span&gt;
+      &lt;span class="nb"&gt;document&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;getElementById&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;`comments-&lt;/span&gt;&lt;span class="p"&gt;${&lt;/span&gt;&lt;span class="nx"&gt;storyId&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;`&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nx"&gt;insertAdjacentHTML&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'beforeend'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;html&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+      &lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nb"&gt;document&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;getElementById&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;comment&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;parent&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nx"&gt;insertAdjacentHTML&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'beforeend'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;html&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;comment&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;kids&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nx"&gt;fetchComments&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;comment&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;kids&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;toString&lt;/span&gt;&lt;span class="p"&gt;(),&lt;/span&gt; &lt;span class="nx"&gt;storyId&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+  &lt;span class="p"&gt;})&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="nx"&gt;fetchTopStories&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;There you have it. Maybe someone else will also find a reason to use &lt;a href="https://elliotec.com/hn-no-reason"&gt;A Hacker News Reader For No Reason&lt;/a&gt;.&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>How to Get 100/100 Google Page Speed Score with Middleman and Nginx</title>
+    <link rel="alternate" href="http://elliotec.com/how-to-get-100-google-page-speed-score/"/>
+    <id>http://elliotec.com/how-to-get-100-google-page-speed-score/</id>
+    <published>2017-10-17T12:01:00-06:00</published>
+    <updated>2017-10-22T16:17:51-06:00</updated>
+    <author>
+      <name>Mike Elliott</name>
+    </author>
+    <content type="html">&lt;h3&gt;Everyone hates slow websites. Everyone likes fast websites.&lt;/h3&gt;
+
+&lt;p&gt;I recently worked on a Google AMP (Accelerated Mobile Pages) project, which was created to mitigate bloated websites from being at the top of Google results on their mobile web index. I personally think AMP is a &lt;a href="https://danielmiessler.com/blog/google-amp-not-good-thing/#gs.co7smnc"&gt;bad&lt;/a&gt; &lt;a href="https://www.theregister.co.uk/2017/05/19open_source_insider_google_amp_bad_bad_bad/"&gt;thing&lt;/a&gt; &lt;a href="https://daringfireball.net/linked/2017/01/17/schreiber-amp"&gt;for us&lt;/a&gt; but that&amp;rsquo;s beside the point of this article.&lt;/p&gt;
+
+&lt;p&gt;The point of this article is that you can get a better user experience by just building websites that are fast, and you don&amp;rsquo;t need to use AMP. But if you wanted to, the methods in this post could also be a good starting point for getting your pages into AMP with minimal effort.&lt;/p&gt;
+
+&lt;p&gt;I use the static site generator Middleman for the front end of the website you&amp;rsquo;re currently reading, and host it on a Digital Ocean Droplet in an Nginx server, so I&amp;rsquo;ll give some examples of how I achieved the perfect score in the context of this blog and its stack.&lt;/p&gt;
+
+&lt;h3&gt;Google PageSpeed Insights&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href="https://developers.google.com/speed/pagespeed/insights/"&gt;Google PageSpeed Insights&lt;/a&gt; is a tool Google provides to score the speed of a website based on specific metrics including:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Avoid landing page redirects&lt;/li&gt;
+&lt;li&gt;Eliminate render-blocking JavaScript and CSS in above-the-fold content&lt;/li&gt;
+&lt;li&gt;Enable compression&lt;/li&gt;
+&lt;li&gt;Leverage browser caching&lt;/li&gt;
+&lt;li&gt;Minify CSS&lt;/li&gt;
+&lt;li&gt;Minify HTML&lt;/li&gt;
+&lt;li&gt;Minify JavaScript&lt;/li&gt;
+&lt;li&gt;Optimize images&lt;/li&gt;
+&lt;li&gt;Prioritize visible content&lt;/li&gt;
+&lt;li&gt;Reduce server response time&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I wanted a fast website, and I like to get 100% on things occasionally, so I set out on a quest to get elliotec.com the 100/100 score. So I got it. Now I&amp;rsquo;m going to tell you how to get it.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Felliotec.com"&gt;
+    &lt;img src="../images/pagespeed.png"/&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3&gt;Page size&lt;/h3&gt;
+
+&lt;p&gt;Before getting into any of these rules in particular, lets talk about page size in general.
+Make your codebase small. If you don&amp;rsquo;t need all of Bootstrap&amp;rsquo;s enormous CSS codebase loading on all your pages, use something lighter and customize up. If you don&amp;rsquo;t need a bunch of JavaScript on your page, like for a blog, then don&amp;rsquo;t put it on there. Having a few little fancy animations at the expense of hundreds of milliseconds is usually not worth it to a user. That said, if a core part of the brand or requirements put you in a place where heavy JavaScript is necessary, there are still strategies you can use to keep it slim and fast.&lt;/p&gt;
+
+&lt;h3&gt;Client and Server Control&lt;/h3&gt;
+
+&lt;p&gt;One thing you&amp;rsquo;ll need to get the 100/100 score is direct control of the front end assets and build tools around them. I used the static site generator Middleman to build this site with my configurations to increase the performance as much as possible. This website has virtually no JavaScript (other than the Squaresend plugin for email), but if I needed it I&amp;rsquo;d be handling it like the rest of my assets. &lt;a href="https://github.com/elliotec/ellio2/blob/source/config.rb"&gt;Here&amp;rsquo;s the link to my full Middleman config.rb&lt;/a&gt; for your reference.&lt;/p&gt;
+
+&lt;p&gt;Additionally, you&amp;rsquo;ll need full control of the server hosting your files. I use Nginx on Digital Ocean when I want full control of my servers, and since it&amp;rsquo;s just static files I don&amp;rsquo;t actually have to setup a database or backend other than the Nginx piece which is where a good chunk of the work here is.&lt;/p&gt;
+
+&lt;h3&gt;Breaking down the metrics&lt;/h3&gt;
+
+&lt;p&gt;Let&amp;rsquo;s get into some details now.&lt;/p&gt;
+
+&lt;h5&gt;Avoid landing page redirects&lt;/h5&gt;
+
+&lt;p&gt;This first item is mostly self explanatory. You don&amp;rsquo;t want to land on a page and redirect a user as much as possible. This is relatively common when a desktop site redirects to mobile, and it is very expensive in terms of performance. If possible, build a site that is designed mobile-first and responsive to prevent necessity of redirects to mobile versions of the site.&lt;/p&gt;
+
+&lt;h5&gt;Enable Compression&lt;/h5&gt;
+
+&lt;p&gt;Here we already need control of the server. Since http supports sending compressed files over the network for faster transfers, we should take advantage of gzipping everything we can before it gets sent to the browser. It&amp;rsquo;s super easy to enable with Nginx and Middleman. In my global nginx.conf, I have:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre class="highlight plaintext"&gt;&lt;code&gt;#nginx.conf
+
+http {
+    sendfile on;
+    types_hash_max_size 2048;
+    server_names_hash_bucket_size 128;
+    include /etc/nginx/mime.types;
+    default_type application/octet-stream;
+
+    gzip on;
+    gzip_disable "msie6";
+    gzip_vary on;
+    gzip_proxied any;
+    gzip_comp_level 6;
+    gzip_buffers 16 8k;
+    gzip_http_version 1.1;
+    gzip_min_length 256;
+    gzip_types text/plain text/css application/json application/javascript text/xml application/xml application/xml+rss text/javascript application/x-font-ttf font/opentype image/svg+xml image/x-icon;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;And in my Middleman config:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre class="highlight ruby"&gt;&lt;code&gt;&lt;span class="c1"&gt;# config.rb&lt;/span&gt;
+&lt;span class="n"&gt;configure&lt;/span&gt; &lt;span class="ss"&gt;:build&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt;
+  &lt;span class="n"&gt;activate&lt;/span&gt; &lt;span class="ss"&gt;:gzip&lt;/span&gt;
+&lt;span class="k"&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h4&gt;Leverage browser caching&lt;/h4&gt;
+
+&lt;p&gt;Caching allows the browser to keep downloaded assets for a set period of time so that it doesn&amp;rsquo;t have to keep downloading the same files over and over. This is again quite easy to do with Nginx by setting expirations for different filetypes, like how I have in my local nginx.conf for this website:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre class="highlight plaintext"&gt;&lt;code&gt;#expiry map
+map $sent_http_content_type $expires {
+    default                     off;
+    text/html                   epoch;
+    text/css                    max;
+    application/javascript      max;
+    application/x-font-ttf      max;
+    application/x-font-otf      max;
+    application/font-woff       max;
+    application/font-woff2      max;
+    ~image/                     max;
+}
+
+server {
+    listen 80;
+    listen [::]:80;
+    server_name elliotec.com www.elliotec.com;
+    expires $expires;
+    return 301 https://$server_name$request_uri;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;You can also ensure you are caching only files that haven&amp;rsquo;t changed by setting unique asset hashes on the filenames, which is done in Middleman with a simple addition to the build config like so:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre class="highlight ruby"&gt;&lt;code&gt;&lt;span class="c1"&gt;# config.rb&lt;/span&gt;
+&lt;span class="n"&gt;configure&lt;/span&gt; &lt;span class="ss"&gt;:build&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt;
+  &lt;span class="n"&gt;activate&lt;/span&gt; &lt;span class="ss"&gt;:asset_hash&lt;/span&gt;
+&lt;span class="k"&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h4&gt;Minify assets&lt;/h4&gt;
+
+&lt;p&gt;One of the more well known and simple page speed strategies is minifying your assets. Having a build step that minifies your HTML, CSS, and JavaScript is essential in modern web development, but it gets skipped a lot. You can drastically decrease your bundle sizes with minification. In Middleman, all you have to do is put a couple lines in your &lt;code&gt;config.rb&lt;/code&gt; to do the work for you, like this:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre class="highlight ruby"&gt;&lt;code&gt;&lt;span class="c1"&gt;# config.rb&lt;/span&gt;
+&lt;span class="n"&gt;configure&lt;/span&gt; &lt;span class="ss"&gt;:build&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt;
+  &lt;span class="n"&gt;activate&lt;/span&gt; &lt;span class="ss"&gt;:minify_css&lt;/span&gt;
+  &lt;span class="n"&gt;activate&lt;/span&gt; &lt;span class="ss"&gt;:minify_javascript&lt;/span&gt;
+  &lt;span class="n"&gt;activate&lt;/span&gt; &lt;span class="ss"&gt;:minify_html&lt;/span&gt;
+&lt;span class="k"&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;The CSS and JS minification comes free with Middleman, but you&amp;rsquo;ll have to add &lt;code&gt;gem middleman-minify-html&lt;/code&gt; for the HTML piece which you definitely want even though it wont be giving you as large of gains as the other assets.&lt;/p&gt;
+
+&lt;h4&gt;Optimize images&lt;/h4&gt;
+
+&lt;p&gt;Images are usually the most expensive files for a browser to download as far as size and speed, so this is one of the areas that you can get some of the most performance gains for the effort. To start out, you&amp;rsquo;ll usually want to have images at their lowest viable size and quality. Tools like Photoshop have the ability to do a lot of powerful work around this, but you can optimize them even more in a build step using a tool like imageoptim. Of course with Middleman this is pretty effortless. First you&amp;rsquo;ll want to add &lt;code&gt;gem &amp;#39;middleman-imageoptim&amp;#39;, git: &amp;#39;https://github.com/plasticine/middleman-imageoptim&amp;#39;, branch: &amp;#39;master&amp;#39;&lt;/code&gt; to your gemfile, then:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre class="highlight ruby"&gt;&lt;code&gt;&lt;span class="c1"&gt;# config.rb&lt;/span&gt;
+&lt;span class="n"&gt;configure&lt;/span&gt; &lt;span class="ss"&gt;:build&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt;
+  &lt;span class="n"&gt;activate&lt;/span&gt; &lt;span class="ss"&gt;:imageoptim&lt;/span&gt;
+&lt;span class="k"&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Nice, you just shaved a ton of weight off those heavy images.&lt;/p&gt;
+
+&lt;h4&gt;Reduce server response time&lt;/h4&gt;
+
+&lt;p&gt;Google has a pretty strict threshold on the acceptable server response time - keep it under 200ms. For a static site like this, that is basically a non-issue. If I were hosting dozens of server blocks on this same Digital Ocean Droplet, they could be fighting for resources and slowing things down so I wouldn&amp;rsquo;t recommend that. If you have a backend doing DB queries and such, there are numerous other reasons why your server could be slower than the 200ms threshold and you&amp;rsquo;ll definitely want to spend time analyzing and improving that.&lt;/p&gt;
+
+&lt;h4&gt;Prioritize visible content&lt;/h4&gt;
+
+&lt;p&gt;Prioritizing visible content means that the above-the-fold content should be small enough in size to not require additional round trips to the server in order to render. This can be done by doing things like loading third party scripts later, and generally keeping the above-the-fold content small and fast. A lot of the other items in here will help with this, but sometimes it&amp;rsquo;s really difficult to get this one perfect, especially if you have images as the initial visible content.&lt;/p&gt;
+
+&lt;h4&gt;Eliminate render-blocking JavaScript and CSS in above-the-fold content&lt;/h4&gt;
+
+&lt;p&gt;This is probably the trickiest item on the list, and it&amp;rsquo;s related to the previous one. There are a few strategies I used to get this one to pass. One, if you require third party JavaScripts or add the &lt;code&gt;async&lt;/code&gt; attribute to all &lt;code&gt;script&lt;/code&gt; tags like this: &lt;code&gt;&amp;lt;script async src=&amp;quot;main.js&amp;quot;&amp;gt;&lt;/code&gt;, so that external JavaScript files aren&amp;rsquo;t blocking the loading and rendering of the other content and load asynchronously.&lt;/p&gt;
+
+&lt;p&gt;Then, inline your CSS and JS instead of making external resource calls to them. Doing this by hand would be terrible and ugly, but we have tools to do this for us. There&amp;rsquo;s a couple steps to get all your assets inlined on your pages.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;You&amp;rsquo;ll first need to add sprockets (&lt;code&gt;gem &amp;#39;middleman-sprockets&amp;#39;&lt;/code&gt;) to your app because we are hijacking Middleman&amp;rsquo;s asset pipeline.&lt;/li&gt;
+&lt;li&gt;Then in your &lt;code&gt;config.rb&lt;/code&gt; add the &lt;code&gt;inline: true&lt;/code&gt; hash to each minify build step like this:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre class="highlight ruby"&gt;&lt;code&gt;&lt;span class="c1"&gt;# config.rb&lt;/span&gt;
+&lt;span class="n"&gt;configure&lt;/span&gt; &lt;span class="ss"&gt;:build&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt;
+  &lt;span class="n"&gt;activate&lt;/span&gt; &lt;span class="ss"&gt;:minify_css&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="ss"&gt;inline: &lt;/span&gt;&lt;span class="kp"&gt;true&lt;/span&gt;
+  &lt;span class="n"&gt;activate&lt;/span&gt; &lt;span class="ss"&gt;:minify_javascript&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="ss"&gt;inline: &lt;/span&gt;&lt;span class="kp"&gt;true&lt;/span&gt;
+&lt;span class="k"&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;Last, in your layout template where you pull in your CSS (wherever your &lt;code&gt;&amp;lt;head&amp;gt;&lt;/code&gt; tag is probably):&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre class="highlight html"&gt;&lt;code&gt;&lt;span class="nt"&gt;&amp;lt;style&amp;gt;&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;%=&lt;/span&gt; &lt;span class="nt"&gt;sprockets&lt;/span&gt;&lt;span class="nc"&gt;.find_asset&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;'site'&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;&lt;span class="nc"&gt;.to_s&lt;/span&gt; &lt;span class="o"&gt;%&amp;gt;&lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;/style&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;and likewise for any scripts you want to inline, in &lt;code&gt;&amp;lt;script&amp;gt;&lt;/code&gt; tags of course.&lt;/p&gt;
+
+&lt;p&gt;Finally, I was having a lot of trouble getting the Google Analytics script on my site to not be render-blocking. It was the last thing on the list that I hadn&amp;rsquo;t achieved, and I was pretty annoyed that I wasn&amp;rsquo;t seeing that 100/100 score. Since my real goal was the number, and it was clear that my site was pretty fast already, &lt;a href="https://stackoverflow.com/questions/29162881/pagespeed-insights-99-100-because-of-google-analytics-how-can-i-cache-ga"&gt;I found a silly hack online&lt;/a&gt; to trick the Page Speed Insights tool to ignore the Google Analytics script. If they can contradict themselves I figure I can do this, and You Can Too!&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre class="highlight javascript"&gt;&lt;code&gt;&lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;navigator&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;userAgent&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;indexOf&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"Speed Insights"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="c1"&gt;// Your Google Analytics Code Here&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;All done!&lt;/h3&gt;
+
+&lt;p&gt;There ya go. If you followed the instructions in this post for your own self-hosted static site, you&amp;rsquo;ll get 100/100 score on Google Page Speed.
+The speed is what matters and that&amp;rsquo;s good for everyone using your website, and it&amp;rsquo;s also gotta be good for some SEO, right?&lt;/p&gt;
+
+&lt;p&gt;Join the discussion &lt;a href="https://news.ycombinator.com/item?id=15516957"&gt;on Hacker News&lt;/a&gt;.&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Coding For Rookies</title>
+    <link rel="alternate" href="http://elliotec.com/coding-for-rookies/"/>
+    <id>http://elliotec.com/coding-for-rookies/</id>
+    <published>2017-06-24T12:58:00-06:00</published>
+    <updated>2017-07-26T00:42:38-06:00</updated>
+    <author>
+      <name>Mike Elliott</name>
+    </author>
+    <content type="html">&lt;p&gt;This is a collection of notes of the 6 week course I designed for the University of Utah&amp;rsquo;s continuing education program.&lt;/p&gt;
+
+&lt;p&gt;Feedback is welcome.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://www.codingforrookies.com"&gt;Go to CodingForRookies.com&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://www.codingforrookies.com"&gt;&lt;img class="" src="../images/cfr.png"&gt;&lt;/a&gt;&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Visuify - the force-directed relationship graph with D3.js and Spotify</title>
+    <link rel="alternate" href="http://elliotec.com/force-directed-artist-relationship-graph-with-d3-js-and-the-spotify-api/"/>
+    <id>http://elliotec.com/force-directed-artist-relationship-graph-with-d3-js-and-the-spotify-api/</id>
+    <published>2017-01-30T22:13:00-07:00</published>
+    <updated>2017-11-18T19:30:06-07:00</updated>
+    <author>
+      <name>Mike Elliott</name>
+    </author>
+    <content type="html">&lt;p&gt;I&amp;rsquo;ve always loved data visualization done well and admired interactive graphs and maps seen on &lt;a href="https://www.nytimes.com/interactive/2016/12/21/upshot/Mapping-the-Shadows-of-New-York-City.html"&gt;The New York Times&lt;/a&gt; and elsewhere.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="https://d3js.org/"&gt;D3.js&lt;/a&gt; is a powerful data visualization library in JavaScript written by the former editor of the New York Times graphics department. It uses a jQuery-like syntax to create and manipulate interactive charts on the web.&lt;/p&gt;
+
+&lt;p&gt;I finally made an excuse for myself to take a couple days and learn what D3 is all about in the form of a web app that maps a &lt;a href="https://en.wikipedia.org/wiki/Force-directed_graph_drawing"&gt;force-directed graph&lt;/a&gt; of related artists to the artist the user inputs.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="https://elliotec.com/visuify"&gt;
+    &lt;h2&gt;Play with Visuify!&lt;/h2&gt;
+    &lt;img src="../images/visuify-small.png"/&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Click the link above to play around with it. Open the artist page in Spotify by clicking the artist name above the chart and hovering, clicking, and dragging the nodes and links do stuff too.&lt;/p&gt;
+
+&lt;p&gt;The flow of the program is:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;User inputs and submits the name of an artist&lt;/li&gt;
+&lt;li&gt;A query for the artist is made to the &lt;a href="https://developer.spotify.com/web-api/"&gt;Spotify Web API&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;The artist is stored, and another request is made for that artist&amp;rsquo;s related artists&lt;/li&gt;
+&lt;li&gt;Each related artist to the original query is stored along with their relationships, and another request is made for the second degree of related artists to the original - that is, the related artists of each related artist to the original query&lt;/li&gt;
+&lt;li&gt;Nodes and Links are drawn by D3 with specified interactions and styles based on the objects built in the previous step&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;The most difficult part was structuring the data properly synchronously before executing D3 to draw the graph from it. I enlisted help from a few friends and my buddy Michal Scienski helped me get the promise chain to work properly, so kudos to him.&lt;/p&gt;
+
+&lt;p&gt;After the data structure was sorted out, it was pretty fast and fun to get D3 to do what I wanted with it. Between the excellent documentation and the &lt;a href="https://gist.github.com/mbostock"&gt;creator&amp;rsquo;s examples&lt;/a&gt;, I was able to build most of the features and functionality I wanted in a couple spare evenings. It was quickly apparent how powerful D3 can be and how many useful applications it has.&lt;/p&gt;
+
+&lt;p&gt;Ideas for its future include routing by artist query and rewriting it in ES-Latest without jQuery or Lodash.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="https://github.com/elliotec/visuify"&gt;See the code on Github&lt;/a&gt;&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Modules and Monoliths</title>
+    <link rel="alternate" href="http://elliotec.com/modules-and-monoliths/"/>
+    <id>http://elliotec.com/modules-and-monoliths/</id>
+    <published>2016-02-20T20:06:00-07:00</published>
+    <updated>2017-07-25T01:39:30-06:00</updated>
+    <author>
+      <name>Mike Elliott</name>
+    </author>
+    <content type="html">&lt;p&gt;&lt;em&gt;&amp;ldquo;Jack of all trades, master of none &amp;ndash; though oftentimes better than
+master of one.&amp;rdquo; - Someone&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2&gt;The Full Stack Developer&lt;/h2&gt;
+
+&lt;p&gt;Those words are met with controversy in the industry.&lt;/p&gt;
+
+&lt;p&gt;A lot of developers are quite annoyed with the term. They argue that it
+ isn&amp;rsquo;t possible to be truly full stack, whatever their definition of
+ &amp;ldquo;truly&amp;rdquo; might be.&lt;/p&gt;
+
+&lt;p&gt;They believe that mastery of a specific skill set within a software
+stack is more valuable than being decent at all of it. This can be true,
+especially in large corporations and enterprise systems with hundreds of
+developers that are assigned specific tasks and siloed by their
+specialization.&lt;/p&gt;
+
+&lt;p&gt;Mastering one specific language or piece of the stack certainly has many
+benefits. Masters of JavaScript have tons of knowledge about the quirks of
+the language and clever ways to get complex UIs to do their and the user&amp;rsquo;s
+bidding. Likewise with DBAs and data architects on the other side;
+structuring huge amounts of data and connecting the data by its
+relationships is quite an impressive feat.&lt;/p&gt;
+
+&lt;p&gt;But if the JavaScript master had to analyze and structure and join and
+relate tables, she feels out of her element and may seize up citing
+ignorance in all things non-JavaScript. The DBA might say, &amp;ldquo;this isn&amp;rsquo;t
+SQL.&amp;rdquo; And leave.&lt;/p&gt;
+
+&lt;p&gt;Some people take the love and science of the craft very seriously and
+aspire to reach sensei-level software mastery, and think this usually
+requires a specialization to get anywhere.&lt;/p&gt;
+
+&lt;p&gt;But looking at examples like David Hienemer Hansson and
+hundreds of other startup founders and programming legends, we can see
+that gaining that level of knowledge of the full stack is attainable and
+accessible and rewarding.&lt;/p&gt;
+
+&lt;p&gt;People can be modules or monoliths. Many choose specialization and corner themselves as &amp;ldquo;JavaScript Developers&amp;rdquo; or &amp;ldquo;Rails Developers.&amp;rdquo; My advice is to stay away from this and keep your options open with something like &amp;ldquo;software developer,&amp;rdquo; highlighting your experience in your preferred fields without removing yourself from opportunities to grow and gain new technical skills.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://dilbertblog.typepad.com/the_dilbert_blog/2007/07/career-advice.html"&gt;Some of the best career advice I&amp;rsquo;ve read came from Scott Adams which says that in order to become extraordinary, you have two paths:&lt;/a&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Become the best at one specific thing.&lt;/li&gt;
+&lt;li&gt;Become very good at two or more things.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;The first is almost impossible, so I&amp;rsquo;ll be sticking to the second.&lt;/p&gt;
+
+&lt;p&gt;People often tout the &amp;ldquo;T-shaped&amp;rdquo; metaphor for one&amp;rsquo;s skill levels,
+meaning that they have expertise in a vertical and the horizontal is the
+broad but lesser knowledge of other disciplines. I agree with this, and
+don&amp;rsquo;t see why it can&amp;rsquo;t be more common for someone to have an engineering
+vertical with for example, a strong business/operations/etc. horizontal.
+It&amp;rsquo;s definitely a thing, tons of successful founders of companies do
+exactly that. So why are the developers in the front end community
+isolating themselves into their own little specializations and modules
+that they spend lots of time learning and configuring?&lt;/p&gt;
+
+&lt;h2&gt;The Full Stack Framework&lt;/h2&gt;
+
+&lt;p&gt;This is why I still love &lt;a href="http://rubyonrails.org"&gt;Ruby on Rails&lt;/a&gt;, which turned 10 this year.&lt;/p&gt;
+
+&lt;p&gt;Rails created a layer of abstraction that eliminated much of
+the monotony, repetition, and difficult integrations that web development
+requires. Building, integrating, and distributing packages of
+functionality (gems) became a breeze. It made developing rich applications
+on the web much more accessible to people with or without programming
+skills, and drastically increased the speed of doing so.&lt;/p&gt;
+
+&lt;p&gt;I hear a lot of people that don&amp;rsquo;t like Rails give their primary reason for disliking it as &amp;ldquo;It&amp;rsquo;s just too much magic.&amp;rdquo; What the hell is that supposed to mean!? Who doesn&amp;rsquo;t love magic? Why would you want to waste time configuring things and wiring up stuff under the hood when you can scaffold and ship a product much sooner? Rails was built to remove the repetition of common architecture patterns, and did it very well. It baffles me that people want to redo this because they&amp;rsquo;re afraid of &amp;ldquo;magic.&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;You still have to know a bit of HTML, CSS, and JavaScript to get your way
+around Rails, but you can take shortcuts with those too, like templating
+with ERB, using CSS frameworks like Bootstrap or &lt;a href="http://refills.bourbon.io"&gt;Thoughtbot&amp;rsquo;s Refills&lt;/a&gt;, and
+of course jQuery, which has become startlingly rejected recently by a lot
+of the JavaScript community.&lt;/p&gt;
+
+&lt;p&gt;Some proponents of the full stack JavaScript world are attracted to the
+&amp;ldquo;one language to rule them all&amp;rdquo; idea, but most implementations of JS
+frameworks lack any structure or standardization or convention and take so
+much time to configure that shipping a product is arduous. (If you like
+the idea of developing entirely in one language, I recommend looking into
+Clojure and Luminus which is fast and expressive and uses some
+awesome truly full-stack patterns).&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://emberjs.com/"&gt;Ember&lt;/a&gt; is an outlier here, and deserves credit for taking a lot of the good ideas Rails popularized and put it in a JS framework with an amazing CLI tool. But unfortunately they don&amp;rsquo;t have marketing expert giants like Facebook (for React) or Google (for Angular) pushing the Ember framework, so naturally it gets pushed aside.&lt;/p&gt;
+
+&lt;p&gt;Stuff like Ember and &lt;a href="http://yeoman.io"&gt;Yeoman&lt;/a&gt; ease the pain a little bit sometimes, but the
+fragmentation and the dramatic fiasco that has become of the
+JavaScript framework/library/etc world is becoming a defining characteristic of the community. These frameworks inaccessibility often require
+that one be an expert just in JavaScript in order to properly implement. Why?&lt;/p&gt;
+
+&lt;p&gt;Full stack development is really just combining the concepts of
+&amp;ldquo;standing on the shoulders of giants&amp;rdquo; and &lt;a href="http://fourhourworkweek.com/2014/08/25/the-art-of-strategic-laziness/"&gt;&amp;ldquo;strategic laziness.&amp;rdquo;&lt;/a&gt; We take what we&amp;rsquo;ve learned from the past, and use it to strategically avoid decisions that have already been made and proven by people smarter than us.&lt;/p&gt;
+
+&lt;h2&gt;Effort For its Own Sake&lt;/h2&gt;
+
+&lt;p&gt;Many JavaScript frameworks are implementing patterns like MV-star or MVVM
+. They take the solid tried and true MVC pattern that most developers are
+familiar with and start scrambling up the acronyms and implementing them
+poorly and without conventions (I know MVVM was created before the JS
+frameworks, but the creator of the pattern has himself criticized it as
+a bad idea for these UI implementations).&lt;/p&gt;
+
+&lt;p&gt;Why are we spending time re-inventing the wheel under the guise of
+innovation and re-solving solved problems for its own sake?&lt;/p&gt;
+
+&lt;p&gt;SQL is another example. The problem of organizing data rationally and querying it
+was solved decades ago, and any worthy modern framework can interact with
+this data and create rich APIs if need be.&lt;/p&gt;
+
+&lt;p&gt;Yet the hot shit these days is NoSQL, which shuns decades of work for &lt;a href="http://www.sarahmei.com/blog/2013/11/11/why-you-should-never-use-mongodb/"&gt;a
+markedly worse solution&lt;/a&gt;. This trend is very limiting, and any SQL DB can produce JSON anyway, so what is the point?&lt;/p&gt;
+
+&lt;h2&gt;Servers are our friends&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href="https://ponyfoo.com/articles/stop-breaking-the-web"&gt;Single Page Apps are almost never necessary.&lt;/a&gt;
+ Your users don&amp;rsquo;t care about two-way data
+binding or one-way data flow. I promise. Neither does your pointy-haired boss.
+They care that the data they are getting or posting is getting got or posted.&lt;/p&gt;
+
+&lt;p&gt;&amp;ldquo;Isomorphic&amp;rdquo; (which is quite a pretentious word for running on the client and server) JavaScript is an idea that removes the logical separation of client and server so that all the code is tightly coupled and stored together in a repo. This is an interesting solution to the problem that we are now having with SPAs bloating up and slowing down the browser by running the code through the server first and templating. This is, on the surface, a trend toward the monolithic architecture I&amp;rsquo;m touting in this article.&lt;/p&gt;
+
+&lt;p&gt;But, really it&amp;rsquo;s roundabout, difficult to implement, and adding complexity when we should be removing it. Like, how about just not using too much JS on the client and minimizing requests? People say it helps with SEO, but Google now crawls pages that are generated with JS, at least supposedly. If you want better SEO, don&amp;rsquo;t render all your content with JavaScript.&lt;/p&gt;
+
+&lt;p&gt;Data and content should be submitted and displayed by the client, and manipulated and stored on the server. This has worked well, and will continue to work well for the foreseeable future. Just sprinkle in the JS that is needed to make you&amp;rsquo;re app interactive and pretty and things will move along nicely.&lt;/p&gt;
+
+&lt;h2&gt;Over-modularization&lt;/h2&gt;
+
+&lt;p&gt;The Unix philosophy of &amp;ldquo;Do one thing and do it well&amp;rdquo; has been repeated to the point of overuse in the community, especially surrounding the React ecosystem. So React does the view layer well. Redux does the data flow well. Webpack does package management well, and Gulp or NPM scripts do build process well. And so on and so forth.&lt;/p&gt;
+
+&lt;p&gt;Well, Rails has many components that do their respective pieces well. Active Record does ORM and data handling &lt;em&gt;very&lt;/em&gt; well. ActionMailer does email well. The asset pipeline does asset management well. And so on and so forth.&lt;/p&gt;
+
+&lt;p&gt;But guess what? Ruby on Rails does one thing, and one thing well, and that&amp;rsquo;s &lt;em&gt;full-stack web development&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;It&amp;rsquo;s also important to remember that Unix is a family of operating systems. Operating systems do many things, and do them well. One off the top of my head might be system operation. But each of the components do their own thing well to make the monolith of Unix the magical beast that it is.&lt;/p&gt;
+
+&lt;p&gt;Microservices, containers, and &amp;ldquo;anti-monolithic&amp;rdquo; approaches to
+architecture make sense occasionally, like when you work for Netflix or
+Spotify and have teams churning out features at enormous scale that needs
+multi-threaded asynchronous load balancing and all the jazz.&lt;/p&gt;
+
+&lt;p&gt;But unless you&amp;rsquo;re a specialist in whichever micro piece of the stack and
+are sticking to it(or if you&amp;rsquo;re an architect and setting this stuff up is
+your specialty), this type of architecture is daunting and will
+unquestionably turn into an unmaintainable spaghetti mess.&lt;/p&gt;
+
+&lt;p&gt;The fact is we are over-modularizing things. Every time I start a new JS
+project, I feel like I just moved into a new house with nothing but
+a screwdriver and a few thousand dollars worth of Ikea furniture -I&amp;rsquo;m
+excited so I tear open the boxes and get started but building the couch
+seems more fun than the bookcase and I just stripped all the screws of the
+wardrobe which was too heavy to lift by myself anyway and I really should
+start on my desk so I can build a computer to put on it and now I lost
+that screwdriver. Before I know it, I have a room full of shredded
+cardboard under a pile of partly-assembled furniture and the rest of the
+house is still empty.&lt;/p&gt;
+
+&lt;p&gt;What if I had the option of walking into my house totally furnished to my
+exact specifications and expectations at no extra cost?&lt;/p&gt;
+
+&lt;p&gt;That&amp;rsquo;s what I think of as what some folks like to call &amp;ldquo;monoliths.&amp;rdquo; I&amp;rsquo;m
+fine with that word. If convention means monolith than I prefer monoliths
+over modules, and I think it&amp;rsquo;s odd that so many developers want to be so
+contrarian about it. I get the whole rebel spirit of the industry and
+engineering culture, but historically it hasn&amp;rsquo;t been such a hodgepodge - it has continually moved towards conventions and layers of abstraction, so
+we can be more effective and efficient and get on with innovating (or in
+most of our cases, selling something).&lt;/p&gt;
+
+&lt;p&gt;I don&amp;rsquo;t want to have containers containing NoSQL interacting with
+modularized libraries inside their own containers. It&amp;rsquo;s gonna be slow to
+develop, and slow to load. I want a monolith that I can spend more time on
+making it do a better job at what it is and ship the damn thing.&lt;/p&gt;
+
+&lt;p&gt;Doing a project in React has such a huge learning curve and the sheer
+amount of modules and libraries one must connect and configure makes my
+head spin. There are seemingly infinite combinations of libraries and
+newest things you must know to &lt;a href="http://mir.aculo.us/2015/08/25/how-to-actually-ship-software-that-actually-works/"&gt;actually ship something.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="https://medium.com/@ericclemmons/javascript-fatigue-48d4011b6fc4#.s12704ins"&gt;Some people love this constant stream of new stuff and learning, but even
+they are feeling the exhaustion.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;My buddy shaine put it well -&lt;/p&gt;
+
+&lt;blockquote class="twitter-tweet" lang="en"&gt;&lt;p lang="en" dir="ltr"&gt;Is there a way to just skip over react/webpack/es6 to the next big thing? I love those things, but theoretically I love the next thing more.&lt;/p&gt;&amp;mdash; Shaine Hatch (@ShaineHatch) &lt;a href="https://twitter.com/ShaineHatch/status/643468259375714304"&gt;September 14, 2015&lt;/a&gt;&lt;/blockquote&gt;
+
+&lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
+
+&lt;p&gt;It&amp;rsquo;s okay to love new things and be hungry for more learning, but I do
+believe that the lack of structure, conventions, and opinionated-ness is crippling
+the potential of what we can do, especially in the JS community. Not to mention
+the insane additions of features in
+ES6/ES2018/ES-whatever-we&amp;rsquo;re-calling-it-now.&lt;/p&gt;
+
+&lt;h2&gt;Lets go back to convention over configuration.&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href="https://medium.com/@wob/the-sad-state-of-web-development-1603a861d29f#.65e9l1sie"&gt;The chaos of the ultra-modularized JavaScript (and relatives) community&lt;/a&gt; can be solved by
+coming together to develop some order and re-use, so we can use
+conventions that are shared by most instead of connecting and configuring
+one library after another to re-solve solved problems. Developers are not
+happy with this churn fatigue, and users are getting shittier experiences
+from it.&lt;/p&gt;
+
+&lt;p&gt;Maybe the full-stack naysayers are saying nay because they have spent so
+much time specializing on their thing that they find it impossible to be
+as good at doing all the things. If we standardized some conventions, more
+of us would be able to specialize on the entire stack, but only because we
+are really specializing on the layer of abstraction that does all the
+full-stack stuff.&lt;/p&gt;
+
+&lt;p&gt;We in the &lt;a href="http://www.breck-mckye.com/blog/2014/12/the-state-of-javascript-in-2015/"&gt;current state of the JS world&lt;/a&gt; are lacking the glue that holds the modules that make a magnificent, magical monolith. I&amp;rsquo;m talking about the ridiculous steps of getting all the moving pieces to work together. Let&amp;rsquo;s come up with ways to fix it.&lt;/p&gt;
+
+&lt;p&gt;Undoubtedly a large percentage of you reading this will say, &amp;ldquo;If you don&amp;rsquo;t like
+it fork it, fix it, or make a better one.&amp;rdquo; But not only do I have no desire
+whatsoever to do that, I also believe this mentality is possibly the biggest
+contributor to the &lt;a href="https://xkcd.com/927/"&gt;clusterfuckification of the community&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;m ranting, but I&amp;rsquo;m also here to offer solutions. People need to stop making
+JS frameworks, and people also need to stop writing self contained libraries
+that don&amp;rsquo;t conform to any standard but their own. Follow the examples of Rails
+and Django, and SpringMVC and even jQuery. Let&amp;rsquo;s just come together to pick a framework with a high level of abstraction, so we can make the magic happen by piggybacking on the magic the frameworks provide. &lt;a href="http://blog.circleci.com/its-the-future/"&gt;It&amp;rsquo;s the future.&lt;/a&gt;&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Teach Your Skills for Fun and Profit</title>
+    <link rel="alternate" href="http://elliotec.com/teach-your-skills-for-fun-and-profit/"/>
+    <id>http://elliotec.com/teach-your-skills-for-fun-and-profit/</id>
+    <published>2015-11-10T13:49:00-07:00</published>
+    <updated>2017-07-25T01:39:30-06:00</updated>
+    <author>
+      <name>Mike Elliott</name>
+    </author>
+    <content type="html">&lt;h2&gt;An age old concept&lt;/h2&gt;
+
+&lt;p&gt;What do Alton Brown, Tim Ferris, Bob Vila, and Ryan Bates all have in common? You guessed it, they all made a small (or large) fortune off teaching the skills of their trade. They weren&amp;rsquo;t teachers initially, they were just pretty good at what they did, and thought teaching others what they knew could be beneficial to all parties. And it was.&lt;/p&gt;
+
+&lt;p&gt;Teaching your skills at any level can sharpen them dramatically and make you a decent side income. Longer term you may find it makes you more than a decent side income, and teaching becomes a skill in itself.&lt;/p&gt;
+
+&lt;p&gt;It has never been a secret that teaching is a great way to learn. The ancient Roman philosopher Seneca stated that, &amp;ldquo;While we teach, we learn&amp;rdquo;, two millennia ago. European schools started to have some version of teaching assistants or student teachers around the end of the 18th century.&lt;/p&gt;
+
+&lt;p&gt;There have been more &lt;a href="https://en.wikipedia.org/wiki/Learning_by_teaching#The_LdL_approach"&gt;recent pedagogic techniques&lt;/a&gt; focused specifically on having students teach to learn based on research that teaching is, in fact, the &lt;em&gt;best&lt;/em&gt; way to learn.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="../images/learning_pyramid.png"/&gt;&lt;/p&gt;
+
+&lt;h2&gt;Gaining expertise&lt;/h2&gt;
+
+&lt;p&gt;In his book &lt;a href="http://fourhourworkweek.com"&gt;&amp;ldquo;The 4-Hour Workweek,&amp;rdquo;&lt;/a&gt; Tim Ferris famously (and controversially) outlines how to be come an expert in anything in four weeks and six steps. Read the book if you want to know each step, but let me give you a hint: at least half of them involve teaching.&lt;/p&gt;
+
+&lt;p&gt;Think about the times you&amp;rsquo;ve had to give presentations. It&amp;rsquo;s likely that you started out methodically when you found out you were going to do it, only to find yourself scrambling the night before and doing it in a few hours college-thesis-style. But you still learned a ton! Certainly more than the people that you were presenting for.&lt;/p&gt;
+
+&lt;p&gt;Turns out, &lt;a href="http://link.springer.com/article/10.3758%2Fs13421-014-0416-z"&gt;studies show&lt;/a&gt; that even &lt;em&gt;being told&lt;/em&gt; you will have to teach a concept later improves learning and recall significantly. Maybe those of us with high willpower can trick ourselves into this, but I recommend actually putting yourself in a teaching situation to get the full effect.&lt;/p&gt;
+
+&lt;h2&gt;Tricking ourselves&lt;/h2&gt;
+
+&lt;p&gt;We trick ourselves all the time into thinking we are learning. It&amp;rsquo;s quite a conundrum - how can we have a full grasp of an idea when we don&amp;rsquo;t know what we don&amp;rsquo;t know?&lt;/p&gt;
+
+&lt;p&gt;As &lt;a href="http://artofproblemsolving.com/articles/learning-through-teaching"&gt;Richard Rusczyk says&lt;/a&gt;, &amp;ldquo;Teaching removes this possibility of self-deceit.&amp;rdquo; This happens both by us preemptively gathering more information and knowledge in anticipation of our student&amp;rsquo;s lack of understanding or questions, and also by being put on the spot by those which were not anticipated at the time of teaching.&lt;/p&gt;
+
+&lt;p&gt;Teaching also happens to be an excellent cure for an endemic of the tech world: &lt;a href="https://en.wikipedia.org/wiki/Impostor_syndrome"&gt;Impostor Syndrome&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2&gt;Start teaching when you start learning&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href="http://elliotec.com/how-i-got-a-job-in-web-development"&gt;In an earlier post&lt;/a&gt;, I laid out the steps I took in getting a job in my current field of web/software development. It is notable that quite early in the process, I was getting paid to teach people what I had been learning, almost in tandem. I recall my instructor at the bootcamp I was enrolled in mention something in passing about learning by teaching and I really took it to heart.&lt;/p&gt;
+
+&lt;p&gt;I started a gig as a personal tutor for a Computer Science grad student at UW in Ruby on Rails before finishing the course, and then was an assistant instructor for the following bootcamp after mine. I believe these two jobs were an early immunization for the impostor syndrome I may have had if I didn&amp;rsquo;t do them. It might have been a little too far on the ego boost, but thats another problem.&lt;/p&gt;
+
+&lt;p&gt;Point is, I started teaching for purely selfish reasons - &lt;a href="https://www.youtube.com/watch?v=2Nx-sH0kn6E"&gt;make money, and get learnt&lt;/a&gt;. (sorry)&lt;/p&gt;
+
+&lt;p&gt;That&amp;rsquo;s not to say I haven&amp;rsquo;t had lots of rewarding experiences teaching what I do. I was surprised at the amount of attention my post on how I got my job was getting, and how many folks emailed me that it was an inspiration boost, or they got into a course they&amp;rsquo;ve been excited about, or they got their dream job, etc. Knowing you&amp;rsquo;ve helped someone achieve something is a sweet feeling.&lt;/p&gt;
+
+&lt;p&gt;And I guarantee I learned more than my audience just by writing that.&lt;/p&gt;
+
+&lt;h2&gt;&amp;ldquo;I know that I know nothing&amp;rdquo;&lt;/h2&gt;
+
+&lt;p&gt;Since then, I&amp;rsquo;ve started working as a mentor for &lt;a href="http://thinkful.com"&gt;Thinkful&lt;/a&gt; on the weekends. This, plus being the development lead of a team at my full time spot gives me plentiful teaching, and therefore learning, opportunities.&lt;/p&gt;
+
+&lt;p&gt;I am consistently stumped by questions my students and teammates ask me. Sometimes it feels good when they have an easy question that I&amp;rsquo;m well prepared for, but that is rarely the case. More often, I&amp;rsquo;ll have to look up pieces of answers and help them and myself connect the dots.&lt;/p&gt;
+
+&lt;p&gt;Surprise! Thats what I do in my real life job anyway!&lt;/p&gt;
+
+&lt;p&gt;So, if you&amp;rsquo;re a blossoming developer or recent grad that is stuck in the awful, seemingly infinite loop of, &amp;ldquo;I need experience to get a job to get experience so I can get a job,&amp;rdquo; like me and so many have been in the past, try your hand at teaching. Some good places to start would be TA-ing for some classes, private tutoring, or even just blogging.&lt;/p&gt;
+
+&lt;p&gt;Or, if you&amp;rsquo;ve got tons of experience and are feeling a bit stale on your skills or just plain bored, try teaching! Some good places to start could be assisting at a university, private teaching facility like bootcamps, blogging, or best of all, be a true mentor for someone.&lt;/p&gt;
+
+&lt;p&gt;A true mentorship experience is hard to find without contriving it, but I have had some unbelievable mentors in my life that have been far more influential than they know, and have shaped me and my character immensely. I strive to be that person for someone else someday, but I may not even know it if it happens.&lt;/p&gt;
+
+&lt;p&gt;Being a teacher implies mastery of the subject even though to be a decent teacher you must acknowledge that the more you know, the more you realize you know very little.&lt;/p&gt;
+
+&lt;p&gt;It&amp;rsquo;s usually humbling. It&amp;rsquo;s often lucrative. And it&amp;rsquo;s always going to be a better learning experience for you than your student.&lt;/p&gt;
+
+&lt;h3&gt;Other references and sources&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href="https://en.wikipedia.org/wiki/Learning_by_teaching#The_LdL_approach"&gt;The LdL Approach&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="https://www.nde-ed.org/TeachingResources/ClassroomTips/Constructivist%20_Learning.htm"&gt;Constructivist Learning&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://lifehacker.com/teach-others-what-you-know-to-make-connections-and-lear-1639560273"&gt;Teach what you know&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://ideas.time.com/2011/11/30/the-protege-effect/"&gt;The Protoge Effect&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://www.sciencedirect.com/science/article/pii/S0160289607000062"&gt;Birth Order and Intelligence&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://www.agent4change.net/grapevine/platform/1646-i-learn-more-by-teaching-than-learning-gavin-dykes.html"&gt;I learn more by teaching than learning&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://ww2.kqed.org/mindshift/2015/09/14/lesson-study-technique-what-teachers-can-learn-from-one-another/"&gt;Lesson Study Technique&lt;/a&gt;&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Music, Art, &amp; Web Apps in Clojure</title>
+    <link rel="alternate" href="http://elliotec.com/art-music-web-clojure/"/>
+    <id>http://elliotec.com/art-music-web-clojure/</id>
+    <published>2015-05-27T00:17:00-06:00</published>
+    <updated>2017-07-25T01:39:30-06:00</updated>
+    <author>
+      <name>Mike Elliott</name>
+    </author>
+    <content type="html">&lt;iframe src="//slides.com/michaelelliott/art-music-webapps-clojure/embed" scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+</content>
+  </entry>
+  <entry>
+    <title>How I Got a Job in Web Development</title>
+    <link rel="alternate" href="http://elliotec.com/how-i-got-a-job-in-web-development/"/>
+    <id>http://elliotec.com/how-i-got-a-job-in-web-development/</id>
+    <published>2015-01-27T06:12:00-07:00</published>
+    <updated>2017-07-25T16:48:58-06:00</updated>
+    <author>
+      <name>Mike Elliott</name>
+    </author>
+    <content type="html">&lt;h2&gt;Why I&amp;rsquo;m writing this&lt;/h2&gt;
+
+&lt;p&gt;This post is an attempt to explain how I got a position as a professional web developer with just over a year of experience programming and a degree in psychology. I&amp;rsquo;m writing in hopes that it will help anyone else along a similar path, or those who don&amp;rsquo;t know where to start. This is by no means a surefire plan to get anyone a job in a year or ever. But maybe someone aspiring to become a web developer can take a few resources or find something useful here.&lt;/p&gt;
+
+&lt;p&gt;If you want to skip to a summarized list of things I did, &lt;a href="#thechase"&gt;click here to cut to the chase&lt;/a&gt;. But you might want to come back and see the rest of the story to fill in the details.&lt;/p&gt;
+
+&lt;h2&gt;My first exposure&lt;/h2&gt;
+
+&lt;p&gt;As far as I knew growing up, the Internet was made out of magic. I had taken apart my family computers out of curiosity a few times but had never heard of HTML, or pondered the concept of what software development really was. Most of the technical experience in my life was my enjoyment of building and breaking things, playing with Knex and Erector sets, and growing up with the Internet. Just after high school I was lucky enough to land a job as a contractor for my neighbor soldering circuit boards and electronics for various products he made.&lt;/p&gt;
+
+&lt;p&gt;That was a pretty cool job, but it certainly didn&amp;rsquo;t make me want to study electrical engineering. I went into psychology thinking it would supplement my intent of going to medical school and becoming a psychiatrist. That dream died fast for numerous reasons, and I ended up rushing to finish my degree ASAP. I then started work at Starbucks in addition to helping out the neighbor with soldering and testing his products after leaving my student job upon graduation.&lt;/p&gt;
+
+&lt;p&gt;That same month I learned about &lt;a href="http://www.linuxfoundation.org/"&gt;Linux&lt;/a&gt; and decided to install &lt;a href="http://www.ubuntu.com/desktop"&gt;Ubuntu&lt;/a&gt; on an old Dell I inherited from my parents. In order to get things installed and working properly I had to open the command line and actually use Unix commands, some of them often enough to start understanding what they did and remembering them. I was just getting into Minecraft at the time and wanted my girlfriend to play with me, and I figured with a little googling it would be easy enough to setup a local server on that Ubuntu machine. It was, and I consider that my first real and aware exposure to programming.&lt;/p&gt;
+
+&lt;h2&gt;Finding the time&lt;/h2&gt;
+
+&lt;p&gt;Over the next few months I dabbled in various tutorials on HTML and CSS recommended by Reddit but struggled finding time and motivation to just sit down and get through them. I attempted to complete the &lt;a href="http://www.codecademy.com"&gt;Codecademy&lt;/a&gt; courses multiple times but found them boring and purposeless. The idea sort of went to the back burner as I worked full-time, moved into a new place, and wanted to relax and enjoy my time off. I was doing just that at the climbing gym on June 1st when I clumsily stumbled off the mat at the base of the wall and dramatically broke the cartilage in my ankle. Somehow I didn&amp;rsquo;t need surgery but the doctor said it had to be non-weight bearing for 12 weeks.&lt;/p&gt;
+
+&lt;p&gt;So I called my boss and broke the news, she reminded me of one of the benefits of working at Starbucks: Short-term disability insurance. It got signed off no problem. The first couple weeks were mostly spent sleeping away the pain and playing through various video games, pretty much just lazing around. But one day when the Lortab wore off I was feeling very unproductive and lazy, so I decided to set a goal of getting through those HTML and CSS Codecademy courses the next week. At the same time we moved into my girlfriend&amp;rsquo;s parents&amp;rsquo; house while they were abroad so that eliminated rent and some other expenses for the few months I was out. My girlfriend also deserves a lot of credit for working and helping me out during this time. I became acutely aware of how fortunate I was to be in a position where I was essentially getting paid to chill at home and have 3 months of free time to spend however I wanted.&lt;/p&gt;
+
+&lt;p&gt;This awareness led me to feel like I owed it to karma or whatever powers that were to spend a good chunk of my time out on productive endeavors and keep setting goals like the Codecademy one. I blew through those courses, still feeling annoyed with their seeming lack of purpose and context, but appreciated the introduction to something I knew I wanted to spend more time on.&lt;/p&gt;
+
+&lt;h2&gt;Learning front end fundamentals&lt;/h2&gt;
+
+&lt;p&gt;I soon asked the almighty Google for some more of the top HTML &amp;amp; CSS resources. It wasn&amp;rsquo;t long before I saw the book, aptly titled &lt;a href="http://www.htmlandcssbook.com/"&gt;HTML &amp;amp; CSS&lt;/a&gt;, by Jon Duckett. I chose this book almost exclusively based on the way it looks. The design wowed me, and the content was just what I was looking for. Rather than the piecemeal abstractions and micro lessons on Codecademy, I found Duckett&amp;rsquo;s book to be a refreshing whole-picture approach with real world examples. I went through it in a week and built a custom, useful website from scratch for the first time the following week. I credit this book with teaching me a lot of the foundational knowledge I needed to learn further concepts and build upon. (Duckett has since published another book that I highly recommend, and wish I had at this time: &lt;a href="http://www.javascriptbook.com/"&gt;JavaScript &amp;amp; jQuery&lt;/a&gt;.)&lt;/p&gt;
+
+&lt;p&gt;My next step was to search through my network for advice. I thought of everyone I knew, went through my Facebook friends, and found someone I could contact that was involved in the industry. So I messaged him and told him about my interest and quickly got a response. He happened to be in a senior position at a very well known company but took the time to give me a little project to work on with a loose deadline. Still being in the first third of my confinement to the couch, I was able to spend two weeks working exclusively on this. I learned a lot about modern best practices and got some great career advice.&lt;/p&gt;
+
+&lt;h2&gt;&lt;a href="http://rubyonrails.org"&gt;Rails&lt;/a&gt; and a development environment&lt;/h2&gt;
+
+&lt;p&gt;At this point I felt comfortable enough to tell my friends and family about my pursuit, and let them know that I was looking for work and projects. A good friend gave me the login to a tutorial series called &lt;a href="http://onemonth.com"&gt;One Month Rails&lt;/a&gt; he bought but never found time for. I certainly had time for it, so I did it.&lt;/p&gt;
+
+&lt;p&gt;This tutorial introduced me to a vast world that I&amp;rsquo;d never seen before. It guided me through setting up a development environment that consisted primarily of &lt;a href="http://www.sublimetext.com"&gt;Sublime Text&lt;/a&gt; and the command line, and helped me get a bunch of other tools set up. I learned about version control and &lt;a href="http://git-scm.com"&gt;git&lt;/a&gt; (and by extension, &lt;a href="http://github.com"&gt;Github&lt;/a&gt;) through repetition in the course, and got a grasp on most aspects of the tech stack in Rails. I finished it in about 2 weeks and had a fully functioning app replicating Pintrest, hosted on &lt;a href="http://heroku.com"&gt;Heroku&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I used jQuery a little bit during the tutorial, which was a nice intro to JavaScript. I realized how useful and necessary it is and wanted to use some other plugins in my future projects.&lt;/p&gt;
+
+&lt;h2&gt;Starting a freelancing business&lt;/h2&gt;
+
+&lt;p&gt;I was super excited about programming and my new prospects for income. I decided I wanted to start a freelance business doing this, and my first step was getting some more projects and clients. The first few were not as hard to get as I had been led to believe. My family and friends already knew I was doing this, so I asked some of them if they needed a website.&lt;/p&gt;
+
+&lt;p&gt;Then, the neighbor who I worked for offered to pay me to make the website for company. I jumped at the idea and finished it in a few weeks, referring back to the books and tutorials, coming out having learned quite a bit.&lt;/p&gt;
+
+&lt;p&gt;After that, I did one for free, one as a trade, and then started charging (not very much). My first three clients were close friends or family, and after that I indiscriminately offered my services to anyone and everyone. One of my first non-family/friend clients was an HVAC contractor that was fixing the furnace in the house I was renting at the time. He saw me working on a different project, asked what I was doing, and told me he needed a website. I gave him a cheap quote, and promptly had another check in my pocket.&lt;/p&gt;
+
+&lt;p&gt;It was time to legitimize my business; I had started making enough money to open up a bank account and register a sole proprietorship. I finally got around to making myself a (pretty rudimentary) personal website and got my girlfriend&amp;rsquo;s help in designing a logo in Illustrator. We designed business cards at the same time and got a cheap bulk order from FedEx. I still use them and they look like this:&lt;/p&gt;
+
+&lt;p&gt;&lt;img class="cards" src="../images/cardfront.png"&gt;&lt;/p&gt;
+
+&lt;p&gt;Little did I know that these cards would be instrumental in getting me my current job.&lt;/p&gt;
+
+&lt;h2&gt;Expediting my learning&lt;/h2&gt;
+
+&lt;p&gt;I continued to get a client here and there after my ankle had fully healed and I started work again part time at Starbucks, and a little for my neighbor. It wasn&amp;rsquo;t enough to pay the bills though, and at this point I was dedicated to becoming a professional web developer. I looked around for some dev roles in my area and came up short. Most required a level of proficiency that I wasn&amp;rsquo;t totally confident I had.&lt;/p&gt;
+
+&lt;p&gt;I mentioned to the same friend who introduced me to the Rails tutorial that I wanted to somehow expedite my learning to get to a professional skill level. He told me about these code schools that had been popping up around the country taking after the tech company incubator model and their apparent success. He had been working at a venture impact fund, and was tasked to get information about these schools for possible investments. He emailed me a spreadsheet with some basic info about each code school he looked into (which was immensely helpful - something similar can now be found &lt;a href="http://www.skilledup.com/learn/programming/the-ultimate-guide-to-coding-bootcamps-the-exhaustive-list/"&gt;here&lt;/a&gt;) and I did my own research on which would be the best for me.&lt;/p&gt;
+
+&lt;p&gt;That October, after much deliberation I decided to apply to &lt;a href="http://www.codefellows.org"&gt;Code Fellows&lt;/a&gt; in Seattle. I chose this particular code school mainly because they guaranteed a job in software development within 9 months or I paid nothing. Another reason was its relatively low price compared to some of the others like Hack Reactor, which at the time I was applying was more expensive than grad school plus the cost and hassle of moving to San Fransisco. Also, I had never been to Seattle and was in great need of an adventure to a place I had heard only good things about.&lt;/p&gt;
+
+&lt;p&gt;The application and interview process was pretty intense. After an initial application assessing my skills and aptitude I was moved on to another stage that required a submission of a one-minute video of me explaining &amp;ldquo;something technical.&amp;rdquo; I chose jQuery and probably did it 10 times before feeling I had done an adequate job. I soon got another email requesting a time for an interview, and I got on Skype with the CEO at the alloted time.&lt;/p&gt;
+
+&lt;p&gt;The interview was absolutely terrible. There were connectivity issues which amplified the fact that I had absolutely no clue what I was talking about. He was asking me questions about data structures and algorithms and how I&amp;rsquo;d model real life objects and items in code. I found myself literally speechless multiple times during the call. I had a few acceptable answers but mostly it was pretty embarrassing and I was sure I wouldn&amp;rsquo;t move further. But he must&amp;rsquo;ve had some faith in me, and said he&amp;rsquo;d send me a code challenge to complete as soon as possible.&lt;/p&gt;
+
+&lt;p&gt;It was a Friday, and I started working on it immediately and through the weekend. It was very challenging. There were three individual challenges - they went something like this:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Make a simple page to manage a todo list where users can input todos and check them off upon completion.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Model a public library with object oriented Ruby including Library, Shelf, and Book objects that has &amp;ldquo;enshelf&amp;rdquo; and &amp;ldquo;unshelf&amp;rdquo; methods and essentially keeps track of inventory.(The actual description was way more technical for this one.)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Generate and deploy a publicly available Rails app on Heroku that can create, edit, update, and destroy users. First name is required, and email must be valid. Add more features if it was easy.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;The first challenge was not too difficult for me, because I&amp;rsquo;d been doing front end the most up to that point. I recall getting slightly hung up on a piece of the problem, but I think I solved it in the first night after the interview.&lt;/p&gt;
+
+&lt;p&gt;I then skipped to the third challenge knowing number 2 would take me much longer. There were a few tricky parts, but I made it work with time to spare for a quick Bootstrap UI and some funny pictures. You can find the code for that app &lt;a href="https://github.com/elliotec/codefellows_crud"&gt;here on my Github&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;And finally, the public library. This was by far the most difficult part of the challenge and up to that point the most complicated programming I&amp;rsquo;d been tasked to do, and it&amp;rsquo;d be a long time before I did anything that difficult again. This is the point where I realized that I&amp;rsquo;d been learning Rails without hardly learning any Ruby at all - hence the namesake &amp;ldquo;on Rails.&amp;rdquo; I was determined to submit the challenges by Monday, and was sincerely worried that wasn&amp;rsquo;t going to happen when I read the description of the challenge. So I immediately started looking around for tutorials that would help me with plain Ruby. I did &lt;a href="http://tryruby.org"&gt;CodeSchool&amp;rsquo;s Try Ruby&lt;/a&gt; which was introductory and ultimately not very helpful when it came to what I was trying to accomplish.&lt;/p&gt;
+
+&lt;p&gt;I came across &lt;a href="http://tutorials.jumpstartlab.com/projects/ruby_in_100_minutes.html"&gt;Ruby in 100 Minutes&lt;/a&gt; which is quite different now than when I used it as a resource. At the time, it modeled a personal chef that made things for you, and the resulting program &lt;a href="https://github.com/elliotec/100_min_ruby/blob/master/personal_chef.rb"&gt;looked like this&lt;/a&gt;. It still is probably worth reading through, but it doesn&amp;rsquo;t seem quite as helpful for writing a real Ruby program as it used to be.&lt;/p&gt;
+
+&lt;p&gt;After going through that tutorial, I perused Github looking for real world examples I could use to model my program after. I found about 5 or 6 that I looked at several times and sort of made the brain connections I needed to translate into the public library. It took me from Saturday night until Sunday night to do this whole thing, and with minimal to zero sleep (I don&amp;rsquo;t think this was necessary, I probably would have been fine if I took another day, but I was determined). &lt;a href="https://github.com/elliotec/cfruby_public_library/blob/master/cfruby_public_library.rb"&gt;This is how it turned out&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2&gt;Code Fellows&lt;/h2&gt;
+
+&lt;p&gt;A bit to my surprise, I got in, and bought a one way ticket to Seattle arriving the day before the start of my cohort on January 6th. Finding a place to stay wasn&amp;rsquo;t terribly difficult (but it was pretty expensive compared to what I was used to in Utah) and I signed a 3 month lease in a tiny 10 x 10 apartment about a 20 minute walk from their facility.&lt;/p&gt;
+
+&lt;p&gt;The first day started out with a little bit of housekeeping/logistics, but then we were immediately thrown into the fire. So many things to configure and download, all in a whirlwind couple hours. Before the end of the day, we started our first assignment on behavior driven development in Rails. It was immediately and continuously super intense.&lt;/p&gt;
+
+&lt;p&gt;I learned &lt;em&gt;a lot&lt;/em&gt; during my time at Code Fellows. I was spending no less than 100 hours a week totally immersed in code and the community. I would barely have enough time to take off my shoes at the end of each day before immediately passing out from expending all the energy I had.&lt;/p&gt;
+
+&lt;p&gt;The curriculum itself was very rigorous (most of my projects and assignments can be found on my Github if you&amp;rsquo;re interested), but I feel some of the material we were taught was not as impactful to me as what I learned from interacting with my peers and instructors and going to meetups almost every night, brushing elbows with some of the biggest names in the tech community and absorbing everything I could from everyone I could. I also had a great mentor from a local startup that really helped me tie a few loose ends in the directions I was heading.&lt;/p&gt;
+
+&lt;p&gt;Another really useful aspect was the increasing of our web presence. I never had a &lt;a href="http://linkedin.com/in/elliotec"&gt;Linkedin&lt;/a&gt; account up until then, which I had come to find out is an absolutely essential tool in job searching. There was staff there tasked with helping us maximize the efficacy of our web presence and resumes, and doing mock interviews both technical and general.&lt;/p&gt;
+
+&lt;p&gt;During the course I was contacted with a few contract opportunities that I took, even though I really didn&amp;rsquo;t have the time. One was as a personal tutor for someone with a MS in computer science learning Rails in a certificate program at UW. I had minimal credentials, and I got paid the most money I&amp;rsquo;d ever charged up to that point to help a comp sci grad student. This put things in an interesting perspective - that the practical knowledge I&amp;rsquo;d been working on gaining might just be more useful than the expensive and dense theory taught in academia.&lt;/p&gt;
+
+&lt;p&gt;Toward the end of the course, I was asked by an instructor if I&amp;rsquo;d be interested in being a teaching assistant for a new month long class they were doing on the fundamentals of computer science and web development. They were going to pay me and I still had a month left on my lease, so I jumped at the opportunity. It was taught in JavaScript. I learned so much by being put in a position where students looked up to me and I was tasked with being their first resource for help and knowledge.&lt;/p&gt;
+
+&lt;p&gt;I had a few interviews in Seattle, but even though I had made tons of friends the transient nature of my situation was a major barrier in landing a spot right away. A few students got jobs almost immediately after graduation, and others slowly trickled along roughly biweekly. We lost 3 classmates half way through the course, but most of us have jobs now or are making a decent living consulting.&lt;/p&gt;
+
+&lt;h2&gt;Startup Weekend&lt;/h2&gt;
+
+&lt;p&gt;Something I really wanted to do before I left Seattle was participate in a &lt;a href="http://startupweekend.org/"&gt;Startup Weekend&lt;/a&gt; event. There was only one more before my return to Salt Lake in April and it was unfortunately sold out. I got in contact with an instructor at Code Fellows who I knew was partnering with the event and he pulled a couple strings and got me a ticket as a designer. So I went and pitched my first startup idea which I made up on the spot and failed magnificently at.&lt;/p&gt;
+
+&lt;p&gt;I was baffled by how few developers were there when it was time to choose teams. Even though I had a designer ticket, it was clear my coding skills were needed (not to mention my design skills were nowhere near most of the others there). Due to the lack of developers, there were several teams that were asking me to join them, offering one incentive or another, and at least one major altercation between two team leaders over me. It was awkward.&lt;/p&gt;
+
+&lt;p&gt;So I chose a team (who has since gone on to be a &lt;a href="http://getfastbar.com"&gt;real company&lt;/a&gt;), and had an absolutely great time. I met some really smart, interesting people. I wrote the back end of the app in Rails that connected to an iOS app. I learned so much from the team and working closely with the iOS developer. We stay in contact and I credit him with leading me to much of the interest and knowledge I have now.&lt;/p&gt;
+
+&lt;p&gt;Startup Weekend really put my skills to the limit, pushed me in ways I&amp;rsquo;d never been pushed before, and introduced me to lasting relationships that remain beneficial. I also had a really interesting and legitimate project for my portfolio that would attract future employers.&lt;/p&gt;
+
+&lt;h2&gt;Returning home&lt;/h2&gt;
+
+&lt;p&gt;I got back to Salt Lake the first week of April and immediately started sending applications to companies in SLC and Seattle. The first couple weeks were slow with responses, and I was busy updating my own portfolio site anyway. Things went much quicker once my site was ready and some projects were up. Between both cities, I sent out about 100 resumes and applications. The majority of those did not get any response. I had much better luck when I started to beef up my Linkedin again, posted on the job hunting subreddits, and used social media to expose myself and my interest in finding a job.&lt;/p&gt;
+
+&lt;p&gt;I went through roughly 20 phone interviews. The majority of the phone interviews led to the next step, usually either a code challenge of some sort, or an in-person interview.&lt;/p&gt;
+
+&lt;p&gt;At first, the code challeneges were pretty tough for me. Usually the at-home ones had something to do with their company. Literally every single at home challenge for a company required consuming data from an API. I was uncomfortable at first with it. It sounds pretty weird to say now, but I really hadn&amp;rsquo;t been exposed to consuming data from an API until code challenges for jobs. It&amp;rsquo;s strange that I didn&amp;rsquo;t learn it before, since it is such an essential skill.&lt;/p&gt;
+
+&lt;p&gt;Most of the in person interviews had a white board challenge involved, which is honestly in my opinion not a good or accurate measure of a person&amp;rsquo;s coding skill. I actually was prepared for this by Code Fellows, and did quite well on most of them.&lt;/p&gt;
+
+&lt;p&gt;I got a false alarm offer from a local startup I interviewed with for a Rails job in early May. It was a big disappointment when they went dark on me but I recovered and threw myself out there again by putting my site on Reddit job subs and reaching out to people at attractive companies on Linkedin.&lt;/p&gt;
+
+&lt;h2&gt;The first job&lt;/h2&gt;
+
+&lt;p&gt;The first week of June brought me 2 official offers within days of each other. One was for a software development contractor company that contracts people to other companies for long periods of time. I was offered a senior position in ruby, Rails, and front end development. The other offer was for a front end role on a .Net stack. The Rails one was for more money. I chose the other one because I met both teams and liked them more. I don&amp;rsquo;t regret that decision at all, and I&amp;rsquo;ve kept a good relationship with the other company.&lt;/p&gt;
+
+&lt;p&gt;Interestingly, both companies that gave me an offer reached out to me rather than the other way around. One was a recruiter who found me on Linkedin and the other was the dev manager who saw my post on Reddit. Both asked me lots of technical questions, and even code questions, but neither gave me a white board nor take home code challenge.&lt;/p&gt;
+
+&lt;p&gt;I enjoyed my first job as a developer. I was introduced to a lot of technologies I wouldn&amp;rsquo;t have been otherwise. They worked in a Windows environment, so I had to learn Visual Studio, C#, .Net, Razor, etc. and how to plug Coffeescript and Sass into the stack. It was a great learning experience and I made good friends there, but soon I had a lot of recruiters contacting me and I wasn&amp;rsquo;t a huge fan of the industry the company was in. It made me curious about opportunities that might have better suited me. I read &lt;a href="http://www.theatlantic.com/business/archive/2014/11/quit-your-job/382402/"&gt;this article on the benefits of early career job-hopping&lt;/a&gt; which eased the feeling of guilt I had while considering new opportunities.&lt;/p&gt;
+
+&lt;p&gt;So 4 months after my first job in web development, I accepted another offer at a &lt;a href="http://www.overstock.com"&gt;well known company&lt;/a&gt; in the area. Now, 4 months since starting the new job, I am quite content with where I&amp;rsquo;m at.&lt;/p&gt;
+
+&lt;p&gt;&lt;a class="anchor" id="thechase"&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2&gt;Cut to the chase!&lt;/h2&gt;
+
+&lt;p&gt;Okay, maybe that was too long, so here&amp;rsquo;s a summarized tl;dr list of the steps I took to get a job as a web developer a year from deciding to do so.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Exposed myself to seemingly complicated tech tasks for the purpose of exploration. This included hacking my Wii, setting up a Minecraft server, and getting familiar with various flavors of Linux. Generally being curious about technology and the internet and how it all works.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Gained a real interest in the idea of web development and programming in general. Money was of course a motivator, but certainly not enough to create the passion I eventually found in the actual craft.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Got introduced to front end fundamentals by trying things like &lt;a href="http://codecademy.com"&gt;Codecademy&lt;/a&gt;. Personally I didn&amp;rsquo;t like the little teasers and if I could start over would skip straight to reading &lt;a href="http://htmlandcssbook.com"&gt;HTML &amp;amp; CSS&lt;/a&gt; and &lt;a href="http://javascriptbook.com"&gt;JavaScript &amp;amp; jQuery&lt;/a&gt; by John Duckett. These are from what I&amp;rsquo;ve seen the most accessible and practical books written on front end web development.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Made some websites. My first was one for a real company which ended up not needing or using it. I did it for free to learn. This is unquestionably (hopefully obviously) the most important step I took. I then started reaching out to my network for people who needed websites and made some for friends and family.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Learned about server side scripting and full stack frameworks. I went through &lt;a href="http://onemonth.com"&gt;One Month Rails&lt;/a&gt; mostly due to a generous friend giving me his login. It was excellent and totally worth whatever they are charging. I then built another full stack web app.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Started a freelancing business. This really helped me legitimize myself, if only &lt;em&gt;for&lt;/em&gt; myself, and made me feel official and that I was all-in on my decision to make this my career. I made business cards, a portfolio site, a bank account, and registered my business name. Then I actually found clients and got paid to do what I had decided I wanted to get paid to do.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Created a web presence. Made sure I had accounts on Twitter, Linkedin, Github, Hacker News, Designer News, and a portfolio site, and tried to sharpen them all up. This was vastly beneficial, one of the most important things I did next to actually making websites and roughly equal to networking.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Attended a code school. I chose &lt;a href="http://codefellows.org"&gt;Code Fellows&lt;/a&gt; in Seattle because of it&amp;rsquo;s job guarantee and location. Learned a ton, made lots of friends, would do it over again in a heartbeat. Absolutely worth the investment. I took advantage of a lot of great career opportunities offered to me because of this, including assisting in teaching a class and being a personal tutor to a CS grad student.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Networked. I asked everyone I knew what they knew about the industry and craft, and went to every &lt;a href="http://www.meetup.com"&gt;meetup&lt;/a&gt; that I could. The conversations I had (and still have) at these events are invaluable. You learn shockingly more from talking with people in the community than you would sitting in any combination of classes. It also helped me with social skills, which even as a programmer is surprisingly important.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Applied, interviewed, practiced, repeat. I sent out tons of applications and put myself out there in every way I could think of. Ultimately Linkedin, Reddit, and meetups were the channels that actually got me job offers. I practiced whiteboarding algorithms and solving problems, had a lot of interviews (each better than the previous, for the most part) and continuously kept up to date on current trends and technologies.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;A year is a relatively short time to have gotten where I did, and I am certain I wouldn&amp;rsquo;t have gotten there without the series of fortunate events (yes, I consider the destruction of my ankle as a fortunate event in hindsight) that allowed me to focus obsessively and full time on this pursuit. But passion is a lot stronger then luck and if one has the drive, they shouldn&amp;rsquo;t need any fortune to make things happen on their own timeline.&lt;/p&gt;
+
+&lt;p&gt;Join the discussion &lt;a href="https://news.ycombinator.com/item?id=8954348"&gt;here on Hacker News&lt;/a&gt;.&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Using Sass in Visual Studio</title>
+    <link rel="alternate" href="http://elliotec.com/using-sass-in-visual-studio/"/>
+    <id>http://elliotec.com/using-sass-in-visual-studio/</id>
+    <published>2014-11-12T10:10:00-07:00</published>
+    <updated>2017-07-25T01:39:30-06:00</updated>
+    <author>
+      <name>Mike Elliott</name>
+    </author>
+    <content type="html">&lt;p&gt;Some may find themselves developing the front end of web applications in .NET and Visual Studio. If that&amp;rsquo;s you, I&amp;rsquo;m sorry (at least until the new &lt;a href="http://news.microsoft.com/2014/11/12/microsoft-takes-net-open-source-and-cross-platform-adds-new-development-capabilities-with-visual-studio-2015-net-2015-and-visual-studio-online/"&gt;cross platform open source versions&lt;/a&gt; come out).&lt;/p&gt;
+
+&lt;p&gt;If you use Sass, as hopefully you do if you&amp;rsquo;re reading this, you will find yourself frustrated by the fact that Web Essentials for VS advertised as being capable of Sass compilation, but actually isn&amp;rsquo;t. The following outline is the only way I&amp;rsquo;ve been able to get Sass working in Visual Studio. This has been tested in VS 2012 and 2013.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href="https://visualstudiogallery.msdn.microsoft.com/2b96d16a-c986-4501-8f97-8008f9db141a"&gt;Download Mindscape Web Workbench here&lt;/a&gt; and make sure to enable it in VS at &lt;code&gt;Tools &amp;gt; Extenstions and Updates&lt;/code&gt;. You might have to restart VS.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Hopefully you have a &amp;ldquo;main.scss&amp;rdquo; type file in your stylesheets directory that contains all your imports and will eventually compile into a singular minified file called in your markup (this can be added by right-clicking the stylesheets folder, and going to &lt;code&gt;Add &amp;gt; New Item &amp;gt; SCSS Stylesheet (Sass)&lt;/code&gt;, then name appropriately):&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="../images/mainsass.png" /&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Go to &lt;code&gt;Tools &amp;gt; Options&lt;/code&gt; and select Web Workbench from the list. Adjust the settings so that:&lt;/p&gt;
+
+&lt;p&gt;Compilation &amp;gt; Trigger compile on build = True&lt;/p&gt;
+
+&lt;p&gt;Compilation &amp;gt; Disable Sass compilation = False&lt;/p&gt;
+
+&lt;p&gt;Sass &amp;gt; Produce .css file = True&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="../images/workbench.png"/&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;In the toolbar, got to &lt;code&gt;Mindscape &amp;gt; Web Workbench Settings&lt;/code&gt; and make sure the only checkbox selected under Compile is your &amp;ldquo;main.scss&amp;rdquo; file mentioned earlier. Uncheck all the rest unless you want a million extra css files and an hour-long build:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="../images/settings.png"/&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Now your main.scss file will compile on build (and save, depending on your settings) and generate a main.css file in the same directory that is minifiable and browser-readable.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;And thats it. Now you can write your Sass and keep your modular style structure nice and happy in Visual Studio and .NET projects. Hopefully this post will be deprecated at the release of the new versions.&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Writing in the Deseret Alphabet with Web Fonts</title>
+    <link rel="alternate" href="http://elliotec.com/writing-in-the-deseret-alphabet/"/>
+    <id>http://elliotec.com/writing-in-the-deseret-alphabet/</id>
+    <published>2014-06-29T09:08:00-06:00</published>
+    <updated>2017-07-25T20:31:26-06:00</updated>
+    <author>
+      <name>Mike Elliott</name>
+    </author>
+    <content type="html">&lt;style&gt;
+    @font-face {
+        font-family: 'HuneyBee';
+        src: url('/fonts/Huneybee.eot'); /* IE9 Compat Modes */
+        src: url('/fonts/Huneybee.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+        url('/fonts/Huneybee.woff') format('woff'), /* Modern Browsers */
+        url('/fonts/Huneybee.ttf')  format('truetype'), /* Safari, Android, iOS */
+        url('/fonts/Huneybee.svg') format('svg'); /* Legacy iOS */
+
+        font-style:   normal;
+        font-weight:  400;
+    }
+
+    @font-face {
+        font-family: 'AdamicBee';
+        src: url('/fonts/AdamicBee.eot'); /* IE9 Compat Modes */
+        src: url('/fonts/AdamicBee.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+        url('/fonts/AdamicBee.woff') format('woff'), /* Modern Browsers */
+        url('/fonts/AdamicBee.ttf')  format('truetype'), /* Safari, Android, iOS */
+        url('/fonts/AdamicBee.svg') format('svg'); /* Legacy iOS */
+
+        font-style:   normal;
+        font-weight:  400;
+    }
+
+    @font-face {
+        font-family: 'Deseret-sans';
+        src: url('/fonts/deseret.eot'); /* IE9 Compat Modes */
+        src: url('/fonts/deseret.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+        url('/fonts/deseret.woff') format('woff'), /* Modern Browsers */
+        url('/fonts/deseret.ttf')  format('truetype'), /* Safari, Android, iOS */
+        url('/fonts/deseret.svg') format('svg'); /* Legacy iOS */
+
+        font-style:   normal;
+        font-weight:  400;
+    }
+
+    .huney {
+        font-family: "HuneyBee";
+    }
+    .deseret-sans {
+        font-family: "deseret";
+    }
+    .adamic {
+        font-family: "AdamicBee";
+    }
+&lt;/style&gt;
+
+&lt;p&gt;&lt;em&gt;If you&amp;rsquo;re here for the code and want to skip most of the history and linguistics, &lt;a href="#code"&gt;click here&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2&gt;The State of Deseret&lt;/h2&gt;
+
+&lt;p&gt;This past weekend I went camping in the &lt;a href="http://en.wikipedia.org/wiki/San_Rafael_Swell"&gt;San Rafael Swell&lt;/a&gt; and became interested in my native state of Utah&amp;rsquo;s history and unique culture.&lt;/p&gt;
+
+&lt;p&gt;Evidence of humans is found in Utah for as far back as 12,000 years ago. Various Native American tribes and cultures (Freemont, Puebloan, etc.) occupied the land until the first of the Mormon pioneers arrived with their leader &lt;a href="http://en.wikipedia.org/wiki/Brigham_Young"&gt;Brigham Young&lt;/a&gt; in 1847.&lt;/p&gt;
+
+&lt;p&gt;They settled in by vastly changing the desert environment into a habitable landscape with amazing feats of industry including irrigation and agriculture, timber and mining, and constructing communities from the resources around them. They created a society from scratch.&lt;/p&gt;
+
+&lt;p&gt;The settlers were very isolated and in a political and territorial limbo that went from technically belonging to Mexico, to a near immediate statehood proposal (&lt;a href="http://en.wikipedia.org/wiki/State_of_Deseret"&gt;The State of Deseret&lt;/a&gt;), and then remaining a U.S. territory - all the while settling most of the western United States including cities like Las Vegas, San Bernardino, most of Idaho and Nevada, a good chunk of Arizona and many other western states.&lt;/p&gt;
+
+&lt;p&gt;Brigham Young and the Mormons were the de facto government throughout this time (some say they still are) and as such were providing public necessities like schooling, and founded the precursor to the University of Utah, the University of Deseret.&lt;/p&gt;
+
+&lt;h2&gt;The Deseret Alphabet&lt;/h2&gt;
+
+&lt;p&gt;This was a time when there were several efforts to reform the traditional Latin English alphabet into something phonetic, more easily taught to immigrants and children, and optimized for handwriting. Brigham Young and the board of regents of the University of Deseret saw their position as an opportunity to get in on this action.&lt;/p&gt;
+
+&lt;p&gt;In addition to the aforementioned reasons for alphabet reform, the Mormon leadership believed a new writing system would benefit them in other ways such as more unification, solidifying their unique identity, and some speculate that there was a bit of a secret-keeping draw to it as well, though that claim has been refuted by several scholars.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://en.wikipedia.org/wiki/Deseret_alphabet"&gt;The Deseret Alphabet&lt;/a&gt; was developed over the course of several years and iterations beginning before the pioneers made their way across the plains, and finally had its first printing in 1859 by the &lt;a href="http://en.wikipedia.org/wiki/Deseret_News"&gt;Deseret News&lt;/a&gt;. Periodic sample prints of the alphabet came in the newspaper until the first books were published in the late 1860&amp;rsquo;s which sold very poorly. The alphabet died with Brigham Young in 1877.&lt;/p&gt;
+
+&lt;p&gt;It is amazing how much research there is on the Deseret Alphabet, with how few people seem to know about it. There has even been &lt;a href="http://www.deseretalphabet.info/classics/"&gt;an effort to print many classic literary masterpieces&lt;/a&gt; in the alphabet. It was introduced in Unicode in 2001, allowing for hobbyists, linguists, and historians to use the alphabet more easily.&lt;/p&gt;
+
+&lt;h2&gt;Learning the alphabet&lt;/h2&gt;
+
+&lt;p&gt;Here&amp;rsquo;s a pronunciation table:&lt;/p&gt;
+
+&lt;table&gt;&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Glyph&lt;/th&gt;
+&lt;th&gt;IPA&lt;/th&gt;
+&lt;th&gt;Sound&lt;/th&gt;
+&lt;th&gt;Glyph&lt;/th&gt;
+&lt;th&gt;IPA&lt;/th&gt;
+&lt;th&gt;Sound&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;i class="adamic"&gt; 𐐀&lt;/i&gt;&lt;/td&gt;
+&lt;td&gt;/iː/&lt;/td&gt;
+&lt;td&gt;&amp;ldquo;e&amp;rdquo; in me&lt;/td&gt;
+&lt;td&gt;&lt;i class="adamic"&gt;𐐊&lt;/i&gt;&lt;/td&gt;
+&lt;td&gt;/ʌ/&lt;/td&gt;
+&lt;td&gt;&amp;ldquo;u&amp;rdquo; in luck&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;i class="adamic"&gt;𐐁&lt;/i&gt;&lt;/td&gt;
+&lt;td&gt;/eɪ/&lt;/td&gt;
+&lt;td&gt;&amp;ldquo;ay&amp;rdquo; in day&lt;/td&gt;
+&lt;td&gt;&lt;i class="adamic"&gt;𐐋&lt;/i&gt;&lt;/td&gt;
+&lt;td&gt;/ʊ/&lt;/td&gt;
+&lt;td&gt;&amp;ldquo;u&amp;rdquo; in pull&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;i class="adamic"&gt;𐐂&lt;/i&gt;&lt;/td&gt;
+&lt;td&gt;/ɑː/&lt;/td&gt;
+&lt;td&gt;&amp;ldquo;a&amp;rdquo; in cart&lt;/td&gt;
+&lt;td&gt;&lt;i class="adamic"&gt;𐐌&lt;/i&gt;&lt;/td&gt;
+&lt;td&gt;/aɪ/&lt;/td&gt;
+&lt;td&gt;&amp;ldquo;y&amp;rdquo; in my&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;i class="adamic"&gt;𐐃&lt;/i&gt;&lt;/td&gt;
+&lt;td&gt;/ɔː/&lt;/td&gt;
+&lt;td&gt;&amp;ldquo;au&amp;rdquo; in caught&lt;/td&gt;
+&lt;td&gt;&lt;i class="adamic"&gt;𐐍 &lt;/i&gt;&lt;/td&gt;
+&lt;td&gt;/aʊ/&lt;/td&gt;
+&lt;td&gt;&amp;ldquo;ow&amp;rdquo; in cow&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;i class="adamic"&gt;𐐄&lt;/i&gt;&lt;/td&gt;
+&lt;td&gt;/oʊ/&lt;/td&gt;
+&lt;td&gt;&amp;ldquo;o&amp;rdquo; in go&lt;/td&gt;
+&lt;td&gt;&lt;i class="adamic"&gt;𐐎&lt;/i&gt;&lt;/td&gt;
+&lt;td&gt;/w/&lt;/td&gt;
+&lt;td&gt;&amp;ldquo;w&amp;rdquo; in wow&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;i class="adamic"&gt;𐐅 &lt;/i&gt;&lt;/td&gt;
+&lt;td&gt;/uː/&lt;/td&gt;
+&lt;td&gt;&amp;ldquo;oo&amp;rdquo; in do&lt;/td&gt;
+&lt;td&gt;&lt;i class="adamic"&gt;𐐏 &lt;/i&gt;&lt;/td&gt;
+&lt;td&gt;/j/&lt;/td&gt;
+&lt;td&gt;&amp;ldquo;y&amp;rdquo; in yes&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;i class="adamic"&gt;𐐆&lt;/i&gt;&lt;/td&gt;
+&lt;td&gt;/ɪ/&lt;/td&gt;
+&lt;td&gt;&amp;ldquo;i&amp;rdquo; in sit&lt;/td&gt;
+&lt;td&gt;&lt;i class="adamic"&gt;𐐐&lt;/i&gt;&lt;/td&gt;
+&lt;td&gt;/h/&lt;/td&gt;
+&lt;td&gt;&amp;ldquo;h&amp;rdquo; in hi&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;i class="adamic"&gt;𐐇 &lt;/i&gt;&lt;/td&gt;
+&lt;td&gt;/ɛ/&lt;/td&gt;
+&lt;td&gt;&amp;ldquo;e&amp;rdquo; in bet&lt;/td&gt;
+&lt;td&gt;&lt;i class="adamic"&gt;𐐑&lt;/i&gt;&lt;/td&gt;
+&lt;td&gt;/p/&lt;/td&gt;
+&lt;td&gt;&amp;ldquo;p&amp;rdquo; in pet&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;i class="adamic"&gt;𐐈 &lt;/i&gt;&lt;/td&gt;
+&lt;td&gt;/æ/&lt;/td&gt;
+&lt;td&gt;&amp;ldquo;a&amp;rdquo; in cat&lt;/td&gt;
+&lt;td&gt;&lt;i class="adamic"&gt;𐐒&lt;/i&gt;&lt;/td&gt;
+&lt;td&gt;/b/&lt;/td&gt;
+&lt;td&gt;&amp;ldquo;b&amp;rdquo; in boy&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;i class="adamic"&gt;𐐉 &lt;/i&gt;&lt;/td&gt;
+&lt;td&gt;/ɒ/&lt;/td&gt;
+&lt;td&gt;&amp;ldquo;o&amp;rdquo; in lot&lt;/td&gt;
+&lt;td&gt;&lt;i class="adamic"&gt;𐐓&lt;/i&gt;&lt;/td&gt;
+&lt;td&gt;/t/&lt;/td&gt;
+&lt;td&gt;&amp;ldquo;t&amp;rdquo; in tank&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+
+&lt;table&gt;&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Glyph&lt;/th&gt;
+&lt;th&gt;IPA&lt;/th&gt;
+&lt;th&gt;Sound&lt;/th&gt;
+&lt;th&gt;Glyph&lt;/th&gt;
+&lt;th&gt;IPA&lt;/th&gt;
+&lt;th&gt;Sound&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;i class="adamic"&gt;𐐔&lt;/i&gt;&lt;/td&gt;
+&lt;td&gt;/d/&lt;/td&gt;
+&lt;td&gt;&amp;ldquo;d&amp;rdquo; in dog&lt;/td&gt;
+&lt;td&gt;&lt;i class="adamic"&gt;𐐞  &lt;/i&gt;&lt;/td&gt;
+&lt;td&gt;/z/&lt;/td&gt;
+&lt;td&gt;&amp;ldquo;z&amp;rdquo; in zoo&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;i class="adamic"&gt;𐐕&lt;/i&gt;&lt;/td&gt;
+&lt;td&gt;/tʃ/&lt;/td&gt;
+&lt;td&gt;&amp;ldquo;ch&amp;rdquo; in church&lt;/td&gt;
+&lt;td&gt;&lt;i class="adamic"&gt;𐐟&lt;/i&gt;&lt;/td&gt;
+&lt;td&gt;/ʃ/&lt;/td&gt;
+&lt;td&gt;&amp;ldquo;sh&amp;rdquo; in ship&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;i class="adamic"&gt;𐐖 &lt;/i&gt;&lt;/td&gt;
+&lt;td&gt;/dʒ/&lt;/td&gt;
+&lt;td&gt;&amp;ldquo;j&amp;rdquo; in jump&lt;/td&gt;
+&lt;td&gt;&lt;i class="adamic"&gt;𐐠&lt;/i&gt;&lt;/td&gt;
+&lt;td&gt;/ʒ/&lt;/td&gt;
+&lt;td&gt;&amp;ldquo;s&amp;rdquo; in measure&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;i class="adamic"&gt;𐐗 &lt;/i&gt;&lt;/td&gt;
+&lt;td&gt;/k/&lt;/td&gt;
+&lt;td&gt;&amp;ldquo;k&amp;rdquo; in kite&lt;/td&gt;
+&lt;td&gt;&lt;i class="adamic"&gt;𐐡&lt;/i&gt;&lt;/td&gt;
+&lt;td&gt;/r/&lt;/td&gt;
+&lt;td&gt;&amp;ldquo;r&amp;rdquo; in red&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;i class="adamic"&gt;𐐘&lt;/i&gt;&lt;/td&gt;
+&lt;td&gt;/ɡ/&lt;/td&gt;
+&lt;td&gt;&amp;ldquo;g&amp;rdquo; in girl&lt;/td&gt;
+&lt;td&gt;&lt;i class="adamic"&gt;𐐢&lt;/i&gt;&lt;/td&gt;
+&lt;td&gt;/l/&lt;/td&gt;
+&lt;td&gt;&amp;ldquo;l&amp;rdquo; in love&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;i class="adamic"&gt;𐐙&lt;/i&gt;&lt;/td&gt;
+&lt;td&gt;/f/&lt;/td&gt;
+&lt;td&gt;&amp;ldquo;f&amp;rdquo; in food&lt;/td&gt;
+&lt;td&gt;&lt;i class="adamic"&gt;𐐣 &lt;/i&gt;&lt;/td&gt;
+&lt;td&gt;/m/&lt;/td&gt;
+&lt;td&gt;&amp;ldquo;m&amp;rdquo; in mom&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;i class="adamic"&gt;𐐚&lt;/i&gt;&lt;/td&gt;
+&lt;td&gt;/v/&lt;/td&gt;
+&lt;td&gt;&amp;ldquo;v&amp;rdquo; in voice&lt;/td&gt;
+&lt;td&gt;&lt;i class="adamic"&gt;𐐤 &lt;/i&gt;&lt;/td&gt;
+&lt;td&gt;/n/&lt;/td&gt;
+&lt;td&gt;&amp;ldquo;n&amp;rdquo; in night&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;i class="adamic"&gt;𐐛&lt;/i&gt;&lt;/td&gt;
+&lt;td&gt;/θ/&lt;/td&gt;
+&lt;td&gt;&amp;ldquo;th&amp;rdquo; in think&lt;/td&gt;
+&lt;td&gt;&lt;i class="adamic"&gt;𐐥 &lt;/i&gt;&lt;/td&gt;
+&lt;td&gt;/ŋ/&lt;/td&gt;
+&lt;td&gt;&amp;ldquo;ng&amp;rdquo; in sing&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;i class="adamic"&gt;𐐜 &lt;/i&gt;&lt;/td&gt;
+&lt;td&gt;/ð/&lt;/td&gt;
+&lt;td&gt;&amp;ldquo;th&amp;rdquo; in that&lt;/td&gt;
+&lt;td&gt;&lt;i class="adamic"&gt;𐐦&lt;/i&gt;&lt;/td&gt;
+&lt;td&gt;/ɔɪ/&lt;/td&gt;
+&lt;td&gt;&amp;ldquo;oy&amp;rdquo; in boy&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;i class="adamic"&gt;𐐝 &lt;/i&gt;&lt;/td&gt;
+&lt;td&gt;/s/&lt;/td&gt;
+&lt;td&gt;&amp;ldquo;s&amp;rdquo; in sun&lt;/td&gt;
+&lt;td&gt;&lt;i class="adamic"&gt;𐐧 &lt;/i&gt;&lt;/td&gt;
+&lt;td&gt;/juː/&lt;/td&gt;
+&lt;td&gt;&amp;ldquo;yew&amp;rdquo; in yew&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+
+&lt;p&gt;So, ostensibly thats kind of a lot. 40 new unique characters and sounds to replace a very well known system seems a bit daunting, which may be part of the reason it had a hard time getting adopted by the intended users and audience.&lt;/p&gt;
+
+&lt;p&gt;In my opinion, other than the glyphs looking nothing at all like their Latin counterparts, the alphabet is rather easy to learn since you are just reassigning a symbol to a sound in English. There is no grammar or syntax change, it&amp;rsquo;s really just like mind-mapping 40 pictures to 40 words for which a few hours of flash card study would be quite sufficient. (Though, this isn&amp;rsquo;t the first time I&amp;rsquo;ve learned a dead script for no reason. I once became fluent in the ancient &lt;a href="http://en.wikipedia.org/wiki/Baybayin"&gt;Baybayin Tagalog script&lt;/a&gt; in a strange bout of manic overachievement.)&lt;/p&gt;
+
+&lt;h2&gt;Limitations of the alphabet&lt;/h2&gt;
+
+&lt;p&gt;The alphabet in its official form was created to emulate the pronunciation of the settlers, who came primarily from New England. This means when you read out loud a publication in the Deseret Alphabet, it&amp;rsquo;s going to sound like you&amp;rsquo;re talking with the accent of a North Easterner in the 1860&amp;rsquo;s.&lt;/p&gt;
+
+&lt;p&gt;A good example of change is &lt;i class="adamic"&gt;&amp;ldquo;𐐃&amp;rdquo;&lt;/i&gt;, which in present-day Utah essentially doesn&amp;rsquo;t exist. Think of a Long Island native saying something like &amp;ldquo;I thought you caught it when you fought it,&amp;rdquo; or something along those lines. You know what I mean about the vowels in those words being non-existent and replaced simply with &amp;ldquo;ah&amp;rdquo; in the western United States.&lt;/p&gt;
+
+&lt;p&gt;Another limitation is the lack of a schwa (/ə/) vowel. It sounds like the &amp;ldquo;e&amp;rdquo; in &amp;ldquo;the.&amp;rdquo; Historically the schwa has been written as &lt;i class="adamic"&gt;𐐊&lt;/i&gt;, which I find odd since the symbol &lt;i class="adamic"&gt;𐐋&lt;/i&gt; is much closer in my opinion. My blog, my rules, so I&amp;rsquo;ll use &lt;i class="adamic"&gt;𐐋&lt;/i&gt; as the schwa from now on. Also, Deseret is cased, but the capital letters are just bigger versions of the lower case ones. So I&amp;rsquo;m going to skip using the lower case for readability and ease of use.&lt;/p&gt;
+
+&lt;p&gt;&lt;a class="anchor" id="code"&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2&gt;Now for the fun part&lt;/h2&gt;
+
+&lt;p&gt;I went about scouring the web for better Deseret fonts. I had a lot of trouble finding a good sans-serif font. The primary resource for these and the serif fonts I found were by &lt;a href="http://copper.chem.ucla.edu/~jericks/index.html"&gt;Joshua Erickson&lt;/a&gt;, but alas, the entire sans-serif collection has been disabled. Bummer. At least I could use some of his serif fonts that were less harsh on the eyes than the default, and there were a few sans-serif fonts his site led me to. Here are a few font samples:&lt;/p&gt;
+
+&lt;p class="adamic"&gt;1. 𐐈𐐔𐐈𐐣𐐆𐐗𐐒𐐀： 𐐀𐐁𐐂𐐃𐐄𐐅𐐆𐐇𐐈𐐉𐐊𐐋𐐌𐐍𐐎𐐏𐐐𐐑𐐒𐐓𐐔𐐕𐐖𐐗𐐘𐐙𐐚𐐛𐐜𐐝𐐞𐐠𐐡𐐢𐐣𐐤𐐥𐐦𐐧𐐟 &lt;/p&gt;
+
+&lt;p class="huney"&gt;2. H_NIBI：ABCDEFGHIJKLMNOPQRSTUVWXYZŽÀÁÂÃÊÎÐÑÔÕÛÞ &lt;/p&gt;
+
+&lt;p class="deseret-sans"&gt;3. DEZÒRET: ABCDEFGHIJKLMNOPQRSTUVWXYZÅÆÈÊÌÍÒØÛŒˉ &lt;/p&gt;
+
+&lt;p&gt;Unfortunately 2 and 3 (the two sans-serif) are mapped to two separate and seemingly arbitrary encodings rather than the proper Deseret Unicode characters like the serif font at the top of that list. So even though 2 (HuneyBee) is my favorite of the three, its nowhere near as easy to implement as 1 (AdamicBee).&lt;/p&gt;
+
+&lt;p&gt;Here is the HTML source of those example fonts:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre class="highlight html"&gt;&lt;code&gt;&lt;span class="nt"&gt;&amp;lt;p&lt;/span&gt; &lt;span class="na"&gt;class=&lt;/span&gt;&lt;span class="s"&gt;"adamic"&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;1. 𐐈𐐔𐐈𐐣𐐆𐐗𐐒𐐀： 𐐀𐐁𐐂𐐃𐐄𐐅𐐆𐐇𐐈𐐉𐐊𐐋𐐌𐐍𐐎𐐏𐐐𐐑𐐒𐐓𐐔𐐕𐐖𐐗𐐘𐐙𐐚𐐛𐐜𐐝𐐞𐐠𐐡𐐢𐐣𐐤𐐥𐐦𐐧𐐟&lt;span class="nt"&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
+
+&lt;span class="nt"&gt;&amp;lt;p&lt;/span&gt; &lt;span class="na"&gt;class=&lt;/span&gt;&lt;span class="s"&gt;"huney"&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;2. H_NIBI：ABCDEFGHIJKLMNOPQRSTUVWXYZŽÀÁÂÃÊÎÐÑÔÕÛÞ&lt;span class="nt"&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
+
+&lt;span class="nt"&gt;&amp;lt;p&lt;/span&gt; &lt;span class="na"&gt;class=&lt;/span&gt;&lt;span class="s"&gt;"deseret-sans"&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;3. DEZÒRET: ABCDEFGHIJKLMNOPQRSTUVWXYZÅÆÈÊÌÍÒØÛŒˉ&lt;span class="nt"&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;As you can see, 1 is in the proper Deseret Unicode, and 2 and 3&amp;hellip; aren&amp;rsquo;t. Maybe they are relics of the pre-Unicode days of Deseret, but either way I&amp;rsquo;ll be leaving them out when trying to write in it.&lt;/p&gt;
+
+&lt;p&gt;Almost all of the fonts I tried were one .ttf file and I needed to convert them to web fonts. This was ridiculously easy with &lt;a href="http://fontprep.com/"&gt;FontPrep&lt;/a&gt;. All I had to do was drag the .ttf file onto the app, and it generated a whole package of web font formats with the corresponding CSS. I highly recommend that app if you ever need to generate custom web fonts.&lt;/p&gt;
+
+&lt;p&gt;While I&amp;rsquo;m at it, I may as well explain how I got these custom fonts to work in the asset pipeline using Sass.&lt;/p&gt;
+
+&lt;p&gt;First, I created a /fonts directory where the rest of my asset directories are:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre class="highlight plaintext"&gt;&lt;code&gt;(Middleman)
+-source
+  -fonts
+  -images
+  -javascripts
+  -stylesheets
+  ...etc
+
+(Rails)
+-app
+  -assets
+    -fonts
+    -images
+    -javascripts
+    -stylesheets
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Next, FontPrep generates four files when it receives a .ttf- .eot, .svg, .woff, and another .ttf. I put these files in the /fonts directory for all three fonts I&amp;rsquo;m using:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre class="highlight plaintext"&gt;&lt;code&gt;-source
+  -fonts
+    -AdamicBee.eot
+    -AdamicBee.svg
+    -AdamicBee.woff
+    -AdamicBee.ttf
+    -Huneybee.eot
+    -Huneybee.svg
+    -Huneybee.woff
+    -Huneybee.ttf
+    -deseret.eot
+    -deseret.svg
+    -deseret.woff
+    -deseret.ttf
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Since I&amp;rsquo;m using &lt;a href="http://bourbon.io"&gt;Bourbon&lt;/a&gt;, I can use the magnificent &lt;a href="http://bourbon.io/docs/#font-face"&gt;font-face mixin&lt;/a&gt; (I&amp;rsquo;m also using &lt;a href="http://bitters.bourbon.io"&gt;Bitters&lt;/a&gt;, so I placed these 3 lines at the bottom of the _typography.scss partial):&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre class="highlight scss"&gt;&lt;code&gt;&lt;span class="c1"&gt;// /bitters/_typography.scss
+&lt;/span&gt;&lt;span class="k"&gt;@include&lt;/span&gt; &lt;span class="nd"&gt;font-face&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'Huneybee'&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'/fonts/Huneybee'&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="k"&gt;@include&lt;/span&gt; &lt;span class="nd"&gt;font-face&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'AdamicBee'&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'/fonts/AdamicBee'&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="k"&gt;@include&lt;/span&gt; &lt;span class="nd"&gt;font-face&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'deseret'&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'/fonts/deseret'&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;This compiles the following CSS:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre class="highlight css"&gt;&lt;code&gt;&lt;span class="k"&gt;@font-face&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+  &lt;span class="nl"&gt;font-family&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;'HuneyBee'&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+  &lt;span class="nl"&gt;src&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="sx"&gt;url('/fonts/Huneybee.eot')&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="c"&gt;/* IE9 Compat Modes */&lt;/span&gt;
+  &lt;span class="nl"&gt;src&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="sx"&gt;url('/fonts/Huneybee.eot?#iefix')&lt;/span&gt; &lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;'embedded-opentype'&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="c"&gt;/* IE6-IE8 */&lt;/span&gt;
+       &lt;span class="sx"&gt;url('/fonts/Huneybee.woff')&lt;/span&gt; &lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;'woff'&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="c"&gt;/* Modern Browsers */&lt;/span&gt;
+       &lt;span class="sx"&gt;url('/fonts/Huneybee.ttf')&lt;/span&gt;  &lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;'truetype'&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="c"&gt;/* Safari, Android, iOS */&lt;/span&gt;
+       &lt;span class="sx"&gt;url('/fonts/Huneybee.svg#aa041304602ddc161943388b95e8c94f')&lt;/span&gt; &lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;'svg'&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt; &lt;span class="c"&gt;/* Legacy iOS */&lt;/span&gt;
+
+  &lt;span class="nl"&gt;font-style&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;   &lt;span class="nb"&gt;normal&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+  &lt;span class="nl"&gt;font-weight&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;  &lt;span class="m"&gt;400&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+
+&lt;span class="k"&gt;@font-face&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+  &lt;span class="nl"&gt;font-family&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;'AdamicBee'&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+  &lt;span class="nl"&gt;src&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="sx"&gt;url('/fonts/AdamicBee.eot')&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="c"&gt;/* IE9 Compat Modes */&lt;/span&gt;
+  &lt;span class="nl"&gt;src&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="sx"&gt;url('/fonts/AdamicBee.eot?#iefix')&lt;/span&gt; &lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;'embedded-opentype'&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="c"&gt;/* IE6-IE8 */&lt;/span&gt;
+       &lt;span class="sx"&gt;url('/fonts/AdamicBee.woff')&lt;/span&gt; &lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;'woff'&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="c"&gt;/* Modern Browsers */&lt;/span&gt;
+       &lt;span class="sx"&gt;url('/fonts/AdamicBee.ttf')&lt;/span&gt;  &lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;'truetype'&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="c"&gt;/* Safari, Android, iOS */&lt;/span&gt;
+       &lt;span class="sx"&gt;url('/fonts/AdamicBee.svg#159e7fbb74bf1cefffafc0996ebf38fb')&lt;/span&gt; &lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;'svg'&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt; &lt;span class="c"&gt;/* Legacy iOS */&lt;/span&gt;
+
+  &lt;span class="nl"&gt;font-style&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;   &lt;span class="nb"&gt;normal&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+  &lt;span class="nl"&gt;font-weight&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;  &lt;span class="m"&gt;400&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+
+&lt;span class="k"&gt;@font-face&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+  &lt;span class="nl"&gt;font-family&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;'Deseret-sans'&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+  &lt;span class="nl"&gt;src&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="sx"&gt;url('/fonts/deseret.eot')&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="c"&gt;/* IE9 Compat Modes */&lt;/span&gt;
+  &lt;span class="nl"&gt;src&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="sx"&gt;url('/fonts/deseret.eot?#iefix')&lt;/span&gt; &lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;'embedded-opentype'&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="c"&gt;/* IE6-IE8 */&lt;/span&gt;
+       &lt;span class="sx"&gt;url('/fonts/deseret.woff')&lt;/span&gt; &lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;'woff'&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="c"&gt;/* Modern Browsers */&lt;/span&gt;
+       &lt;span class="sx"&gt;url('/fonts/deseret.ttf')&lt;/span&gt;  &lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;'truetype'&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="c"&gt;/* Safari, Android, iOS */&lt;/span&gt;
+       &lt;span class="sx"&gt;url('/fonts/deseret.svg#c44a3474510e076f453a95eeee3a1178')&lt;/span&gt; &lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;'svg'&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt; &lt;span class="c"&gt;/* Legacy iOS */&lt;/span&gt;
+
+  &lt;span class="nl"&gt;font-style&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;   &lt;span class="nb"&gt;normal&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+  &lt;span class="nl"&gt;font-weight&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;  &lt;span class="m"&gt;400&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Thats about as bullet-proof cross-browser compatible as you can get. A good example for why I think Sass is indispensable in modern web development. 3 simple scss lines compile to 34 lines of css with the best of the best practices.&lt;/p&gt;
+
+&lt;p&gt;Finally, I just gave each separate font its own class in the scss that I could apply to any HTML element:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre class="highlight scss"&gt;&lt;code&gt;&lt;span class="c1"&gt;// /posts.scss
+&lt;/span&gt;  &lt;span class="nc"&gt;.huney&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="nl"&gt;font-family&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;"HuneyBee"&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+  &lt;span class="p"&gt;}&lt;/span&gt;
+  &lt;span class="nc"&gt;.deseret-sans&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="nl"&gt;font-family&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;"deseret"&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+  &lt;span class="p"&gt;}&lt;/span&gt;
+  &lt;span class="nc"&gt;.adamic&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="nl"&gt;font-family&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;"AdamicBee"&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+  &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;It should also be noted that I&amp;rsquo;m using Markdown for these posts, which means in this special case I just used the HTML you saw above in the Markdown file to apply those classes to the unique font examples.&lt;/p&gt;
+
+&lt;h2&gt;And finally, a real writing sample&lt;/h2&gt;
+
+&lt;blockquote class="adamic"&gt;𐐁 𐐐𐐧𐐣𐐊𐐤 𐐒𐐀𐐏𐐀𐐥 𐐟𐐋𐐔 𐐒𐐀 𐐁𐐒𐐋𐐢 𐐓𐐅 𐐕𐐁𐐤𐐖 𐐊 𐐔𐐌𐐑𐐋𐐡, 𐐑𐐢𐐈𐐤 𐐊𐐤 𐐆𐐤𐐚𐐁𐐠𐐊𐐤, 𐐒𐐋𐐕𐐋𐐡 𐐊 𐐐𐐉𐐘, 𐐗𐐂𐐤 𐐊 𐐟𐐆𐐑, 𐐔𐐆𐐞𐐌𐐤 𐐊 𐐒𐐆𐐢𐐔𐐀𐐥, 𐐡𐐌𐐓 𐐊 𐐝𐐂𐐤𐐆𐐓, 𐐒𐐈𐐢𐐈𐐤𐐝 𐐊𐐗𐐍𐐤𐐓𐐝, 𐐒𐐆𐐢𐐔 𐐊 𐐎𐐉𐐢, 𐐝𐐇𐐓 𐐊 𐐒𐐄𐐤, 𐐗𐐊𐐣𐐙𐐋𐐡𐐓 𐐜𐐋 𐐔𐐌𐐀𐐥, 𐐓𐐁𐐗 𐐃𐐡𐐔𐐋𐐡𐐝, 𐐘𐐆𐐚 𐐃𐐡𐐔𐐋𐐡𐐝, 𐐗𐐄𐐂𐐑𐐋𐐡𐐁𐐓, 𐐈𐐗𐐓 𐐊𐐢𐐄𐐤, 𐐝𐐂𐐢𐐚 𐐀𐐗𐐎𐐁𐐠𐐊𐐤𐐝, 𐐈𐐤𐐊𐐢𐐌𐐞 𐐊 𐐤𐐅 𐐑𐐡𐐂𐐒𐐢𐐆𐐣, 𐐑𐐆𐐕 𐐣𐐊𐐤𐐧𐐡, 𐐑𐐡𐐄𐐘𐐡𐐈𐐣 𐐊 𐐗𐐊𐐣𐐑𐐧𐐓𐐋𐐡, 𐐗𐐋𐐗 𐐊 𐐓𐐁𐐝𐐓𐐀 𐐣𐐀𐐢, 𐐙𐐌𐐓 𐐀𐐙𐐆𐐟𐐆𐐤𐐓𐐢𐐀, 𐐔𐐌 𐐘𐐈𐐢𐐈𐐤𐐓𐐢𐐀. 𐐝𐐑𐐇𐐟𐐋𐐢𐐌𐐞𐐁𐐟𐐊𐐤 𐐆𐐞 𐐙𐐄𐐡 𐐆𐐤𐐝𐐇𐐗𐐓𐐝.&lt;br&gt;&lt;br&gt;－ 𐐡𐐉𐐒𐐋𐐡𐐓 𐐐𐐌𐐤𐐢𐐌𐐤&lt;/blockquote&gt;
+
+&lt;p&gt;That says:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;A human being should be able to change a diaper, plan an invasion, butcher a hog, conn a ship, design a building, write a sonnet, balance accounts, build a wall, set a bone, comfort the dying, take orders, give orders, cooperate, act alone, solve equations, analyze a new problem, pitch manure, program a computer, cook a tasty meal, fight efficiently, die gallantly. Specialization is for insects.&lt;br&gt;&lt;br&gt;
+- Robert Heinlein&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;You might not notice, but the Deseret version of this quote uses 48 fewer characters than our alphabet. There&amp;rsquo;s a real argument for efficiency there. You&amp;rsquo;re never doubling characters or organizing odd vowels into diphthongs, saving lots of space.&lt;/p&gt;
+
+&lt;blockquote class="adamic"&gt;𐐎𐐀 𐐂𐐡 𐐖𐐋𐐝𐐓 𐐊𐐤 𐐈𐐔𐐚𐐈𐐤𐐝𐐓 𐐒𐐡𐐀𐐔 𐐊𐐚 𐐣𐐊𐐥𐐗𐐀𐐞 𐐂𐐤 𐐊 𐐣𐐌𐐤𐐋𐐡 𐐑𐐢𐐈𐐤𐐆𐐓 𐐊𐐚 𐐊 𐐚𐐇𐐡𐐀 𐐈𐐚𐐋𐐡𐐆𐐖 𐐝𐐓𐐂𐐡.   𐐒𐐊𐐓 𐐎𐐀 𐐗𐐈𐐤 𐐊𐐤𐐔𐐊𐐡𐐝𐐓𐐈𐐤𐐔 𐐜 𐐏𐐅𐐤𐐊𐐚𐐊𐐡𐐝. 𐐜𐐈𐐓 𐐣𐐁𐐗𐐝 𐐊𐐝 𐐝𐐊𐐣𐐛𐐀𐐥 𐐚𐐇𐐡𐐀 𐐝𐐑𐐇𐐟𐐋𐐢.&lt;b&lt;br&gt;&lt;br&gt;－𐐝𐐓𐐀𐐚𐐆𐐤 𐐐𐐃𐐗𐐀𐐥&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;We are just an advanced breed of monkeys on a minor planet of a very average star. But we can understand the Universe. That makes us something very special.&lt;br&gt;&lt;br&gt;
+- Steven Hawking&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;This is very tedious to type, however. I mapped my keys to each of the Deseret characters using &lt;a href="http://www.boastr.net/"&gt;Better Touch Tool&lt;/a&gt;, a handy tool for lots of things, but it totally wasn&amp;rsquo;t worth it as I ended up being faster by just copy/pasting the characters from the chart in order.&lt;/p&gt;
+
+&lt;p&gt;I thought about writing little sticky note characters and putting them on their corresponding keys, but I figured I already spent this much time learning a dead alphabet and my use of it will most likely die with the end of this post.&lt;/p&gt;
+
+&lt;p&gt;Alright, one more thing. This is the logo of one of my favorite bars in Salt Lake City, the &lt;a href="http://www.bourbonhouseslc.com/"&gt;Bourbon House&lt;/a&gt;. I&amp;rsquo;m using it without permission so if they ask me to take it down I will.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="../images/bourbon.png"&gt;&lt;/p&gt;
+
+&lt;p&gt;It&amp;rsquo;s a characature of Brigham Young holding a glass of bourbon,something he ironically was known to do (he even built the first whiskey distillery in Utah, go figure). It might be hard to see, but the Deseret there says: &lt;blockquote class="adamic"&gt;𐐒𐐁𐐁𐐡 𐐀𐐝 𐐑𐐡𐐄𐐄𐐙 𐐓𐐐𐐂𐐓 𐐘𐐄𐐔 𐐢𐐄𐐚𐐁𐐝 𐐋𐐝&lt;/blockquote&gt;&lt;/p&gt;
+
+&lt;p&gt;To a native Deseret reader, that would be utter nonsense. It sounds something like:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Be-eer eess proh-ohff t-haut gohd lohveeess oooss&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;It&amp;rsquo;s safe to assume that it&amp;rsquo;s trying to say &amp;ldquo;Beer is proof that God loves us.&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;So a more proper translation would be along the lines of:&lt;/p&gt;
+
+&lt;blockquote class="adamic"&gt;𐐒𐐁𐐡 𐐆𐐞 𐐑𐐡𐐅𐐙 𐐜𐐈𐐓 𐐘𐐉𐐔 𐐢𐐊𐐚𐐞 𐐊𐐝&lt;/blockquote&gt;
+
+&lt;p&gt;I don&amp;rsquo;t blame them for not getting a dead script kinda wrong, especially because it&amp;rsquo;s funny and I like them a lot.&lt;/p&gt;
+
+&lt;p&gt;If you want to learn more about the Deseret Alphabet, here are some resources I used:&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Update: A new, far superior &lt;a href="http://2deseret.com"&gt;Deseret Translator&lt;/a&gt; has been created by Nathan Hadfield. He referenced this article as a resource that helped him build it. Please check it out!&lt;/em&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href="http://www.deseretalphabet.org//"&gt;The quasi-official Deseret Alphabet site&lt;/a&gt; &lt;em&gt;This site had almost all the resources I used neatly in one place, and seems to be maintained quite frequently.&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href="http://deseretalphabet.blogspot.com/"&gt;Deseret Alphabet Blog&lt;/a&gt; &lt;em&gt;The owner of this blog has translated over &lt;a href="http://www.deseretalphabet.info/XKCD/1385.html"&gt;50% of the XKCD comics&lt;/a&gt; into Deseret, an impressive feat no matter how pointless.&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href="http://deseret.in/"&gt;The Deseret Alphabet Translator&lt;/a&gt; &lt;em&gt;Still in beta, and some of the translations are pretty broken. I submitted a &lt;a href="https://github.com/sam1am/deseret.in/pull/1"&gt;pull request&lt;/a&gt; with a few fixes that would hopefully improve it, if he merges it. (Update: disregard this resource and redirect yourself &lt;a href="http://2deseret.com"&gt;here&lt;/a&gt;)&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Anyway, thats enough of that. I probably should&amp;rsquo;ve spent this time learning a new programming language or something, but I learned a ton about my homeland&amp;rsquo;s history, web fonts, typography, linguistics, and encoding so there was no lack of intellectual stimulation.&lt;/p&gt;
+
+&lt;p&gt;Hope you learned something too.&lt;/p&gt;
+
+&lt;p&gt;-Mike&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Using Variables in YAML Front Matter</title>
+    <link rel="alternate" href="http://elliotec.com/using-variables-in-yaml-front-matter/"/>
+    <id>http://elliotec.com/using-variables-in-yaml-front-matter/</id>
+    <published>2014-05-30T09:08:00-06:00</published>
+    <updated>2017-09-12T20:35:08-06:00</updated>
+    <author>
+      <name>Mike Elliott</name>
+    </author>
+    <content type="html">&lt;h2&gt;What is Front Matter?&lt;/h2&gt;
+
+&lt;p&gt;I didn&amp;rsquo;t know this until just now, but &lt;a href="http://en.wikipedia.org/wiki/Book_design#Front_matter"&gt;the name comes from book design&lt;/a&gt;, where the front matter is just all the stuff before the actual body of the book. This includes the table of contents, title pages, copyright info, etc. It&amp;rsquo;s essentially all the metadata of the book.&lt;/p&gt;
+
+&lt;p&gt;Likewise, the YAML front matter common in static-site generators like Middleman is the metadata of the current page. In my case that usually ends up being post pages where some of the dynamic data is defined:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre class="highlight yaml"&gt;&lt;code&gt;&lt;span class="nn"&gt;---&lt;/span&gt;
+&lt;span class="na"&gt;layout&lt;/span&gt;&lt;span class="pi"&gt;:&lt;/span&gt; &lt;span class="s"&gt;post&lt;/span&gt;
+&lt;span class="na"&gt;title&lt;/span&gt;&lt;span class="pi"&gt;:&lt;/span&gt; &lt;span class="s"&gt;Using Variables in YAML Front Matter&lt;/span&gt;
+&lt;span class="na"&gt;date&lt;/span&gt;&lt;span class="pi"&gt;:&lt;/span&gt; &lt;span class="s"&gt;2014-05-30 09:08&lt;/span&gt;
+&lt;span class="na"&gt;tags&lt;/span&gt;&lt;span class="pi"&gt;:&lt;/span&gt; &lt;span class="s"&gt;yaml, middleman&lt;/span&gt;
+&lt;span class="nn"&gt;---&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;This makes it super easy to have various HTML layouts that you can assign to any page on your site. It also gives us the date and title options which are useful for the index, file structure, and other obvious benefits.&lt;/p&gt;
+
+&lt;h2&gt;Setting Custom Variables&lt;/h2&gt;
+
+&lt;p&gt;I have 4 social media icon SVGs on my portfolio/main index page, and I&amp;rsquo;m currently using each of them twice - one for the contact drop-down menu, and another for the contact section at the bottom.&lt;/p&gt;
+
+&lt;p&gt;As you can imagine, that clunked up the HTML pretty bad and it was immediately a giant pain to try and find or move anything. I wanted to DRY it up, and I knew that I could do that with Middleman.&lt;/p&gt;
+
+&lt;p&gt;It only took 3 steps.&lt;/p&gt;
+
+&lt;p&gt;1) The first thing I did was list each of the icons by name in the front matter:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre class="highlight yaml"&gt;&lt;code&gt;&lt;span class="nn"&gt;---&lt;/span&gt;
+&lt;span class="na"&gt;github&lt;/span&gt;&lt;span class="pi"&gt;:&lt;/span&gt;
+
+&lt;span class="na"&gt;linkedin&lt;/span&gt;&lt;span class="pi"&gt;:&lt;/span&gt;
+
+&lt;span class="na"&gt;twitter&lt;/span&gt;&lt;span class="pi"&gt;:&lt;/span&gt;
+
+&lt;span class="na"&gt;email&lt;/span&gt;&lt;span class="pi"&gt;:&lt;/span&gt;
+&lt;span class="nn"&gt;---&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;2) Then I added the cumbersome svg codes to set the variables for each:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre class="highlight yaml"&gt;&lt;code&gt;&lt;span class="nn"&gt;---&lt;/span&gt;
+&lt;span class="na"&gt;github&lt;/span&gt;&lt;span class="pi"&gt;:&lt;/span&gt; &lt;span class="s"&gt;&amp;lt;svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"&lt;/span&gt;
+                &lt;span class="s"&gt;width="22" height="20" viewBox="0 0 99.441 99.44" enable-background="new 0 0 99.441 99.44" xml:space="preserve"&amp;gt;&amp;lt;path id="github" fill="#fff" d="M64.507,95.749c-2.439,0.474-3.303-1.026-3.303-2.307c0-1.584,0.053-6.763,0.053-13.197&lt;/span&gt;
+                &lt;span class="s"&gt;c0-4.486-1.535-7.412-3.259-8.905c10.707-1.189,21.958-5.257,21.958-23.727c0-5.25-1.867-9.541-4.949-12.908&lt;/span&gt;
+                &lt;span class="s"&gt;c0.499-1.211,2.145-6.101-0.473-12.726c0,0-4.034-1.292-13.211,4.931c-3.844-1.065-7.96-1.601-12.047-1.619&lt;/span&gt;
+                &lt;span class="s"&gt;c-4.088,0.018-8.201,0.554-12.036,1.619c-9.189-6.222-13.228-4.931-13.228-4.931c-2.611,6.625-0.966,11.515-0.465,12.726&lt;/span&gt;
+                &lt;span class="s"&gt;c-3.079,3.368-4.957,7.658-4.957,12.908c0,18.428,11.228,22.55,21.91,23.767c-1.374,1.199-2.62,3.32-3.054,6.428&lt;/span&gt;
+                &lt;span class="s"&gt;c-2.745,1.23-9.705,3.356-13.993-3.996c0,0-2.543-4.615-7.373-4.956c0,0-4.69-0.061-0.329,2.923c0,0,3.152,1.479,5.339,7.036&lt;/span&gt;
+                &lt;span class="s"&gt;c0,0,2.824,8.585,16.202,5.675c0.02,4.019,0.065,7.808,0.065,8.953c0,1.27-0.881,2.758-3.286,2.312&lt;/span&gt;
+                &lt;span class="s"&gt;C14.968,89.396,1.188,71.37,1.188,50.125c0-26.56,21.533-48.089,48.089-48.089c26.558,0,48.088,21.529,48.088,48.089&lt;/span&gt;
+              &lt;span class="s"&gt;C97.364,71.366,83.604,89.382,64.507,95.749z"/&amp;gt;&amp;lt;/svg&amp;gt;&lt;/span&gt;
+&lt;span class="na"&gt;linkedin&lt;/span&gt;&lt;span class="pi"&gt;:&lt;/span&gt; &lt;span class="s"&gt;&amp;lt;svg&amp;gt; ...&lt;/span&gt;
+&lt;span class="nn"&gt;---&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;3) After that it was simply a matter of calling &amp;ldquo;current_page.data&amp;rdquo; and passing the custom variable in its place in Erb:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre class="highlight erb"&gt;&lt;code&gt;&lt;span class="nt"&gt;&amp;lt;a&lt;/span&gt; &lt;span class="na"&gt;href=&lt;/span&gt;&lt;span class="s"&gt;"http://github.com/elliotec"&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&amp;lt;%=&lt;/span&gt; &lt;span class="n"&gt;current_page&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;data&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;github&lt;/span&gt; &lt;span class="cp"&gt;%&amp;gt;&lt;/span&gt;Github&lt;span class="nt"&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Now the code base is much more DRY and modular, and the generated HTML is producing the expected behavior.&lt;/p&gt;
+
+&lt;p&gt;You can do this in Jekyll too, but there are a few differences (basically just step 3) so &lt;a href="http://jekyllrb.com/docs/frontmatter/"&gt;check out their docs if thats what you&amp;rsquo;re into&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;For more info on the Middleman front matter, &lt;a href="http://middlemanapp.com/basics/frontmatter/"&gt;see the relevant section in the Middleman docs&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&amp;ndash; Mike&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Building This Site in Middleman</title>
+    <link rel="alternate" href="http://elliotec.com/building-this-site/"/>
+    <id>http://elliotec.com/building-this-site/</id>
+    <published>2014-05-17T05:26:11-06:00</published>
+    <updated>2017-07-25T01:39:30-06:00</updated>
+    <author>
+      <name>Mike Elliott</name>
+    </author>
+    <content type="html">&lt;h2&gt;Blogging platforms vs. static site generators&lt;/h2&gt;
+
+&lt;p&gt;I had been looking around for a good way to get a portfolio site and blogging platform all in one that suited my tastes.&lt;/p&gt;
+
+&lt;p&gt;For a short time I looked into platforms such as &lt;a href="http://ghost.org"&gt;Ghost&lt;/a&gt;, &lt;a href="http://medium.com"&gt;Medium&lt;/a&gt;, and &lt;a href="http://svbtle.com"&gt;Svbtle&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I really liked the design, simplicity, and content-focus of those, but as a developer, I wanted something I could customize and design myself with minimal third-party interference.&lt;/p&gt;
+
+&lt;p&gt;Then I found &lt;a href="http://jekyllrb.com"&gt;Jekyll&lt;/a&gt;. I quickly realized that what I wanted was a &amp;ldquo;blog-aware&amp;rdquo; static site generator rather than a blogging platform alone. This would give me the ability to fully customize every aspect of my site while allowing me a place to write posts.&lt;/p&gt;
+
+&lt;p&gt;I had Jekyll installed and running on a development server in a minute or two. I was able to acquaint myself with the directory structure fairly quickly after going through the docs a bit and looking at some example sites - my favorite of which is &lt;a href="http://quaran.to"&gt;quaran.to&lt;/a&gt;, the personal blog of Nick Quaranto.&lt;/p&gt;
+
+&lt;p&gt;It uses the &lt;a href="http://liquidmarkup.org/"&gt;Liquid Templating Engine&lt;/a&gt;, which is a &amp;ldquo;Ruby library for rendering safe templates which cannot affect the security of the server they are rendered on.&amp;rdquo; It looks remarkably like erb in Handlebars. It didn&amp;rsquo;t take much getting used to, but I was slightly annoyed that a Ruby-driven framework wasn&amp;rsquo;t just using erb.&lt;/p&gt;
+
+&lt;p&gt;In addition to that slight inconvenience, I had to use the pre-release version of Jekyll in order to have Sass and CoffeeScript support - not a huge deal until I found the hard way that if hosting on Github pages (one of Jekyll&amp;rsquo;s major selling points), you are limited to the version they use.&lt;/p&gt;
+
+&lt;p&gt;So my options were:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Write a Rake task that compiles Sass and CoffeeScript&lt;/li&gt;
+&lt;li&gt;Use and configure plugins&lt;/li&gt;
+&lt;li&gt;Wait for Jekyll 2.0 to be released and then Github Pages to adopt it&lt;/li&gt;
+&lt;li&gt;Use a different generator&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;Finding Middleman&lt;/h2&gt;
+
+&lt;p&gt;I had all but given up on Jekyll when 2.0 was released. I was excited, but a bit disillusioned. I found out from &lt;a href="https://news.ycombinator.com/item?id=7708142"&gt;This Hacker News Post&lt;/a&gt;, and the top comment was the elusive solution to all my static site-generating problems: &lt;a href="http://middlemanapp.com"&gt;Middleman&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Middleman&amp;rsquo;s file structure was immediately familiar and it&amp;rsquo;s Rails-like atmosphere sold me instantly. erb instead of Liquid-Ruby-Handlebars? Check. Sass and CoffeeScript support out of the box? Check. Ability to host on Github Pages, Heroku, or any other production environment imaginable with little configuration? Check, check, and check.&lt;/p&gt;
+
+&lt;p&gt;Now I could finally get to the fun part and design my site. I came accross these two posts that were immensely helpful:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href="http://fajitanachos.com/Goodbye-jekyll/"&gt;FajitaNachos&amp;rsquo;s post entitled &amp;lsquo;Goodbye Jekyll&amp;rsquo;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href="http://robots.thoughtbot.com/middleman-bourbon-walkthrough"&gt;Thoughtbot&amp;rsquo;s post entitled &amp;lsquo;Styling a Middleman Blog with Bourbon, Neat, and Bitters&amp;rsquo;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;What you see here is the result of this process. In a future post, I&amp;rsquo;ll describe some of the methodology I used in the site&amp;rsquo;s creation and give some code samples and tips I found useful in it&amp;rsquo;s development. In the meantime, check out the code on &lt;a href="http://github.com/elliotec/middleman"&gt;my Github&lt;/a&gt; if you wish.&lt;/p&gt;
+</content>
+  </entry>
+</feed>
