@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+<url>
+  <loc>https://elliotec.com/</loc>
+  <lastmod>2017-11-19T07:04:40+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://elliotec.com/images/MichaelElliottResume.pdf</loc>
+  <lastmod>2017-11-19T07:04:40+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://elliotec.com/a-hacker-news-reader-for-no-reason/</loc>
+  <lastmod>2017-11-19T22:33:15+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://elliotec.com/how-to-get-100-google-page-speed-score/</loc>
+  <lastmod>2017-11-19T07:04:40+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://elliotec.com/coding-for-rookies/</loc>
+  <lastmod>2017-11-19T07:04:40+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://elliotec.com/force-directed-artist-relationship-graph-with-d3-js-and-the-spotify-api/</loc>
+  <lastmod>2017-11-19T07:04:40+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://elliotec.com/modules-and-monoliths/</loc>
+  <lastmod>2017-11-19T07:04:40+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://elliotec.com/teach-your-skills-for-fun-and-profit/</loc>
+  <lastmod>2017-11-19T07:04:40+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://elliotec.com/art-music-web-clojure/</loc>
+  <lastmod>2017-11-19T07:04:40+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://elliotec.com/how-i-got-a-job-in-web-development/</loc>
+  <lastmod>2017-11-19T07:04:40+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://elliotec.com/using-sass-in-visual-studio/</loc>
+  <lastmod>2017-11-19T07:04:40+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://elliotec.com/writing-in-the-deseret-alphabet/</loc>
+  <lastmod>2017-11-19T07:04:40+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://elliotec.com/using-variables-in-yaml-front-matter/</loc>
+  <lastmod>2017-11-19T07:04:40+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://elliotec.com/building-this-site/</loc>
+  <lastmod>2017-11-19T07:04:40+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://elliotec.com/hn-no-reason/</loc>
+  <lastmod>2017-11-19T01:30:30+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://elliotec.com/visuify/</loc>
+  <lastmod>2017-11-19T02:46:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+</urlset>

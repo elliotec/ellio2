@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>elliotec | Mike Elliott</title>
+  <title>elliotec | Mike Elliott, a software engineer building projects and writing posts.</title>
   <subtitle></subtitle>
   <id>http://elliotec.com/</id>
   <link href="http://elliotec.com/"/>
   <link href="http://elliotec.com/feed.xml" rel="self"/>
   <updated>2017-11-18T13:23:00-07:00</updated>
   <author>
-    <name>Mike Elliott</name>
+    <name>elliotec | Mike Elliott</name>
   </author>
   <entry>
     <title>A Hacker News Reader For No Reason - In 5 KB of Vanilla JS, HTML, &amp; CSS</title>
@@ -16,7 +16,7 @@
     <published>2017-11-18T13:23:00-07:00</published>
     <updated>2017-11-19T14:38:07-07:00</updated>
     <author>
-      <name>Mike Elliott</name>
+      <name>elliotec | Mike Elliott</name>
     </author>
     <content type="html">&lt;p&gt;The title is only half true.&lt;/p&gt;
 
@@ -179,7 +179,7 @@ but since it&amp;rsquo;s only 99 lines, I&amp;rsquo;ve posted the contents of JS
     <published>2017-10-17T12:01:00-06:00</published>
     <updated>2017-10-22T16:17:51-06:00</updated>
     <author>
-      <name>Mike Elliott</name>
+      <name>elliotec | Mike Elliott</name>
     </author>
     <content type="html">&lt;h3&gt;Everyone hates slow websites. Everyone likes fast websites.&lt;/h3&gt;
 
@@ -363,7 +363,7 @@ The speed is what matters and that&amp;rsquo;s good for everyone using your webs
     <published>2017-06-24T12:58:00-06:00</published>
     <updated>2017-07-26T00:42:38-06:00</updated>
     <author>
-      <name>Mike Elliott</name>
+      <name>elliotec | Mike Elliott</name>
     </author>
     <content type="html">&lt;p&gt;This is a collection of notes of the 6 week course I designed for the University of Utah&amp;rsquo;s continuing education program.&lt;/p&gt;
 
@@ -381,7 +381,7 @@ The speed is what matters and that&amp;rsquo;s good for everyone using your webs
     <published>2017-01-30T22:13:00-07:00</published>
     <updated>2017-11-18T19:30:06-07:00</updated>
     <author>
-      <name>Mike Elliott</name>
+      <name>elliotec | Mike Elliott</name>
     </author>
     <content type="html">&lt;p&gt;I&amp;rsquo;ve always loved data visualization done well and admired interactive graphs and maps seen on &lt;a href="https://www.nytimes.com/interactive/2016/12/21/upshot/Mapping-the-Shadows-of-New-York-City.html"&gt;The New York Times&lt;/a&gt; and elsewhere.&lt;/p&gt;
 
@@ -422,7 +422,7 @@ The speed is what matters and that&amp;rsquo;s good for everyone using your webs
     <published>2016-02-20T20:06:00-07:00</published>
     <updated>2017-07-25T01:39:30-06:00</updated>
     <author>
-      <name>Mike Elliott</name>
+      <name>elliotec | Mike Elliott</name>
     </author>
     <content type="html">&lt;p&gt;&lt;em&gt;&amp;ldquo;Jack of all trades, master of none &amp;ndash; though oftentimes better than
 master of one.&amp;rdquo; - Someone&lt;/em&gt;&lt;/p&gt;
@@ -655,7 +655,7 @@ and Django, and SpringMVC and even jQuery. Let&amp;rsquo;s just come together to
     <published>2015-11-10T13:49:00-07:00</published>
     <updated>2017-07-25T01:39:30-06:00</updated>
     <author>
-      <name>Mike Elliott</name>
+      <name>elliotec | Mike Elliott</name>
     </author>
     <content type="html">&lt;h2&gt;An age old concept&lt;/h2&gt;
 
@@ -739,7 +739,7 @@ and Django, and SpringMVC and even jQuery. Let&amp;rsquo;s just come together to
     <published>2015-05-27T00:17:00-06:00</published>
     <updated>2017-07-25T01:39:30-06:00</updated>
     <author>
-      <name>Mike Elliott</name>
+      <name>elliotec | Mike Elliott</name>
     </author>
     <content type="html">&lt;iframe src="//slides.com/michaelelliott/art-music-webapps-clojure/embed" scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
 </content>
@@ -751,7 +751,7 @@ and Django, and SpringMVC and even jQuery. Let&amp;rsquo;s just come together to
     <published>2015-01-27T06:12:00-07:00</published>
     <updated>2017-07-25T16:48:58-06:00</updated>
     <author>
-      <name>Mike Elliott</name>
+      <name>elliotec | Mike Elliott</name>
     </author>
     <content type="html">&lt;h2&gt;Why I&amp;rsquo;m writing this&lt;/h2&gt;
 
@@ -914,7 +914,7 @@ and Django, and SpringMVC and even jQuery. Let&amp;rsquo;s just come together to
     <published>2014-11-12T10:10:00-07:00</published>
     <updated>2017-07-25T01:39:30-06:00</updated>
     <author>
-      <name>Mike Elliott</name>
+      <name>elliotec | Mike Elliott</name>
     </author>
     <content type="html">&lt;p&gt;Some may find themselves developing the front end of web applications in .NET and Visual Studio. If that&amp;rsquo;s you, I&amp;rsquo;m sorry (at least until the new &lt;a href="http://news.microsoft.com/2014/11/12/microsoft-takes-net-open-source-and-cross-platform-adds-new-development-capabilities-with-visual-studio-2015-net-2015-and-visual-studio-online/"&gt;cross platform open source versions&lt;/a&gt; come out).&lt;/p&gt;
 
@@ -950,7 +950,7 @@ and Django, and SpringMVC and even jQuery. Let&amp;rsquo;s just come together to
     <published>2014-06-29T09:08:00-06:00</published>
     <updated>2017-07-25T20:31:26-06:00</updated>
     <author>
-      <name>Mike Elliott</name>
+      <name>elliotec | Mike Elliott</name>
     </author>
     <content type="html">&lt;style&gt;
     @font-face {
@@ -1412,7 +1412,7 @@ and Django, and SpringMVC and even jQuery. Let&amp;rsquo;s just come together to
     <published>2014-05-30T09:08:00-06:00</published>
     <updated>2017-09-12T20:35:08-06:00</updated>
     <author>
-      <name>Mike Elliott</name>
+      <name>elliotec | Mike Elliott</name>
     </author>
     <content type="html">&lt;h2&gt;What is Front Matter?&lt;/h2&gt;
 
@@ -1481,7 +1481,7 @@ and Django, and SpringMVC and even jQuery. Let&amp;rsquo;s just come together to
     <published>2014-05-17T05:26:11-06:00</published>
     <updated>2017-07-25T01:39:30-06:00</updated>
     <author>
-      <name>Mike Elliott</name>
+      <name>elliotec | Mike Elliott</name>
     </author>
     <content type="html">&lt;h2&gt;Blogging platforms vs. static site generators&lt;/h2&gt;
 
