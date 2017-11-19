@@ -25,6 +25,10 @@ header a:hover {
   color: #27ae60;
 }
 
+main {
+  max-width: 960px;
+}
+
 .copyright {
   text-align: center;
   margin: 25px;
@@ -113,7 +117,14 @@ header a:hover {
   color: #2ecc71;
   text-decoration: none;
 }
+.highlight > pre {
+  word-wrap: normal;
+  overflow-x: scroll;
+}
+
 .post pre code {
+  overflow-x: scroll;
+  white-space: pre;
   padding: 10px;
   border-radius: 10%;
   font-family: "Lucida Console", Monaco, monospace, "AdamicBee";

@@ -37,7 +37,7 @@ activate :blog do |blog|
 end
 activate :livereload
 activate :directory_indexes
-activate :syntax
+activate :syntax, line_numbers:false
 
 activate :deploy do |deploy|
   deploy.deploy_method = :git
