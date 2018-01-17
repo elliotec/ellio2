@@ -76,10 +76,10 @@ main {
 
 .home .contact-link {
   line-height: 1;
-  padding: 7px;
+  padding: 8px;
   margin: 10px;
   color: #2ecc71;
-  border-radius: 5px;
+  border-radius: 2px;
   border: 1px solid #2ecc71;
 }
 
