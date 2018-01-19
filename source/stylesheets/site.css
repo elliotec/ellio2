@@ -32,20 +32,20 @@ header a:hover {
 }
 
 main {
-  max-width: 960px;
+  max-width: 640px;
 }
 
 .copyright {
   text-align: center;
-  margin: 25px;
+  margin: 24px;
   font-size: 10px;
 }
 
 .home {
   border-bottom: solid 1px #DDD;
-  margin-top: 70px;
+  margin-top: 64px;
   text-align: center;
-  padding-bottom: 50px;
+  padding-bottom: 32px;
 }
 
 .home .intro {
@@ -58,11 +58,11 @@ main {
 }
 
 .home .contact {
-  padding: 10px;
+  padding: 8px;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 @media (max-width: 500px) {
@@ -77,7 +77,7 @@ main {
 .home .contact-link {
   line-height: 1;
   padding: 8px;
-  margin: 10px;
+  margin: 8px;
   color: #2ecc71;
   border-radius: 2px;
   border: 1px solid #2ecc71;
@@ -91,12 +91,13 @@ main {
 
 .posts {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 32px;
 }
 
 .posts h2 {
-  padding: 30px;
+  padding: 16px;
 }
+
 .posts ul {
   padding: 0;
 }
@@ -117,12 +118,16 @@ main {
 
 .posts ul p {
   font-size: 12px;
+  font-style: italic;
 }
 
 .post {
-  margin-top: 50px;
-  margin-bottom: 30px;
+  margin-top: 48px;
+  margin-bottom: 32px;
   line-height: 1.7;
+}
+.post h1 {
+  padding: 8px 0;
 }
 
 .post a {
@@ -142,8 +147,8 @@ main {
 .post pre code {
   overflow-x: scroll;
   white-space: pre;
-  padding: 10px;
-  border-radius: 10%;
+  padding: 8px;
+  border-radius: 2px;
   font-family: "Lucida Console", Monaco, monospace, "AdamicBee";
   color: white;
 }
@@ -154,7 +159,7 @@ main {
 }
 
 .post iframe {
-  margin-top: 20px;
+  margin-top: 24px;
   width: 100%;
   height: 500px;
 }
@@ -165,6 +170,8 @@ main {
 
 .post article .date {
   font-size: 14px;
+  display: block;
+  margin: 8px 0;
 }
 .rss {
   text-align: center;

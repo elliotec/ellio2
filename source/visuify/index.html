@@ -5,7 +5,139 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Visuify</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" />
-    <link rel="stylesheet" href="styles.css">
+  <style>
+  body {
+      background-color: #282828;
+      color: #ecf0f1;
+      margin: 0 auto;
+      margin-top: 50px;
+      text-align: center;
+      font-family: 'Helvetica', sans-serif;
+      line-height: 1.5em;
+  }
+  header {
+    height: 40px;
+    background-color: #333;
+    text-align: center;
+    width: 100%;
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    line-height: 1.5;
+  }
+  header a {
+    color: #27ae60;
+    display: inline-block;
+    font-size: 22px;
+    padding-top: 4px;
+    text-decoration: none;
+  }
+  header a:hover {
+    text-decoration: none;
+    color: #27ae60;
+  }
+
+  input, button {
+      border-radius: 2px;
+      padding: 5px;
+  }
+  input {
+      font-weight:300;
+      letter-spacing:2px;
+      font-size:.95em;
+      color:#000;
+      background:#fff;
+      border:1px solid #000;
+      width:80%;
+      height:20px;
+      margin-right:.5em;
+      margin-top: 20px;
+      padding: 8px;
+  }
+  button {
+      margin-top: 20px;
+      color:#fff;
+      background:#2ebd59;
+      text-transform:uppercase;
+      letter-spacing:2px;
+      font-size: .85em;
+      line-height: 1;
+      border-radius: 2px;
+      padding: 11px;
+      border-width:0;
+      font-weight: 500;
+      text-align: center;
+      vertical-align: middle;
+      cursor: pointer;
+  }
+  h1 {
+      padding-top: 20px;
+  }
+  svg {
+      margin: 0 auto;
+      display: block;
+      background-color: #282828;
+  }
+  p {
+      margin: 0;
+  }
+  #uri {
+      display: block;
+      color:#2AB759;
+      cursor: pointer;
+      font-size: 25px;
+      margin: 15px auto;
+  }
+  #message {
+      font-weight: 300;
+  }
+  #chart {
+      width: 100%;
+      max-height: 100%;
+      position: absolute;
+  }
+  .links line {
+      stroke: #999;
+      stroke-opacity: 0.6;
+  }
+
+  .links line:hover {
+      cursor: pointer;
+      stroke: #fff;
+      stroke-width: 4px;
+  }
+  .nodes circle {
+      stroke: #2AB759;
+      stroke-width: 3px;
+  }
+  .nodes circle:hover {
+      cursor: pointer;
+      fill: #333;
+  }
+
+  div.tooltip {
+      color: white;
+      position: absolute;
+      text-align: center;
+      min-width: 50px;
+      min-height: 18px;
+      padding: 6px;
+      font: 15px;
+      background: #666;
+      border: 0px;
+      border-radius: 5px;
+      pointer-events: none;
+  }
+
+  @media (min-width:700px){
+      input {
+          width: 400px;
+      }
+      button{
+          margin-top: 0;
+      }
+  }
+  </style>
 </head>
 <body>
     <header>
@@ -21,11 +153,11 @@
         <input type="text" id="query" placeholder="Enter artist name">
         <button id="submit">Draw Graph</button>
     </form>
+    <p style="text-align:center; font-size:10px; color:#fff; margin-top: 10px;">&copy; Elliotec Software LLC</p>
 
     <a id="uri"></a>
     <h2 id="message"></h2>
     <svg id="chart"></svg>
-    <p style="text-align:center; font-size:10px">&copy; Elliotec Software LLC</p>
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
     <script src="https://d3js.org/d3.v4.min.js"></script>

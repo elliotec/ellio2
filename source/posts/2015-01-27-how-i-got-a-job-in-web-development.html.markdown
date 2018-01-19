@@ -149,6 +149,7 @@ Okay, maybe that was too long, so here's a summarized tl;dr list of the steps I 
 2. Gained a real interest in the idea of web development and programming in general. Money was of course a motivator, but certainly not enough to create the passion I eventually found in the actual craft.
 
 3. Got introduced to front end fundamentals by trying things like [Codecademy](http://codecademy.com). Personally I didn't like the little teasers and if I could start over would skip straight to reading [HTML & CSS](http://htmlandcssbook.com) and [JavaScript & jQuery](http://javascriptbook.com) by John Duckett. These are from what I've seen the most accessible and practical books written on front end web development.
+  - **_Update January 2018_**: I've recently discovered another really robust resource for interview questions and tutorials called [CareerGuru99](https://career.guru99.com). You might find something there valuable to your journey!
 
 4. Made some websites. My first was one for a real company which ended up not needing or using it. I did it for free to learn. This is unquestionably (hopefully obviously) the most important step I took. I then started reaching out to my network for people who needed websites and made some for friends and family.
 
@@ -167,3 +168,4 @@ Okay, maybe that was too long, so here's a summarized tl;dr list of the steps I 
 A year is a relatively short time to have gotten where I did, and I am certain I wouldn't have gotten there without the series of fortunate events (yes, I consider the destruction of my ankle as a fortunate event in hindsight) that allowed me to focus obsessively and full time on this pursuit. But passion is a lot stronger then luck and if one has the drive, they shouldn't need any fortune to make things happen on their own timeline.
 
 Join the discussion [here on Hacker News](https://news.ycombinator.com/item?id=8954348).
+

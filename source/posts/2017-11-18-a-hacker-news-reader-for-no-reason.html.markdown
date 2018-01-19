@@ -1,5 +1,5 @@
 ---
-title: A Hacker News Reader For No Reason - In 5 KB of Vanilla JS, HTML, & CSS
+title: A Hacker News Reader For No Reason - In 5K of Vanilla JS, HTML, & CSS
 date: 2017-11-18 13:23 MST
 tags: javascript, hacker news, css, performance
 published: true
