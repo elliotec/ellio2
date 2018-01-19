@@ -10,11 +10,11 @@
     <name>elliotec | Mike Elliott</name>
   </author>
   <entry>
-    <title>A Hacker News Reader For No Reason - In 5 KB of Vanilla JS, HTML, &amp; CSS</title>
+    <title>A Hacker News Reader For No Reason - In 5K of Vanilla JS, HTML, &amp; CSS</title>
     <link rel="alternate" href="http://elliotec.com/a-hacker-news-reader-for-no-reason/"/>
     <id>http://elliotec.com/a-hacker-news-reader-for-no-reason/</id>
     <published>2017-11-18T13:23:00-07:00</published>
-    <updated>2017-11-19T14:38:07-07:00</updated>
+    <updated>2018-01-18T22:20:47-07:00</updated>
     <author>
       <name>elliotec | Mike Elliott</name>
     </author>
@@ -749,7 +749,7 @@ and Django, and SpringMVC and even jQuery. Let&amp;rsquo;s just come together to
     <link rel="alternate" href="http://elliotec.com/how-i-got-a-job-in-web-development/"/>
     <id>http://elliotec.com/how-i-got-a-job-in-web-development/</id>
     <published>2015-01-27T06:12:00-07:00</published>
-    <updated>2017-07-25T16:48:58-06:00</updated>
+    <updated>2018-01-18T21:07:52-07:00</updated>
     <author>
       <name>elliotec | Mike Elliott</name>
     </author>
@@ -892,7 +892,11 @@ and Django, and SpringMVC and even jQuery. Let&amp;rsquo;s just come together to
 &lt;ol&gt;
 &lt;li&gt;&lt;p&gt;Exposed myself to seemingly complicated tech tasks for the purpose of exploration. This included hacking my Wii, setting up a Minecraft server, and getting familiar with various flavors of Linux. Generally being curious about technology and the internet and how it all works.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Gained a real interest in the idea of web development and programming in general. Money was of course a motivator, but certainly not enough to create the passion I eventually found in the actual craft.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Got introduced to front end fundamentals by trying things like &lt;a href="http://codecademy.com"&gt;Codecademy&lt;/a&gt;. Personally I didn&amp;rsquo;t like the little teasers and if I could start over would skip straight to reading &lt;a href="http://htmlandcssbook.com"&gt;HTML &amp;amp; CSS&lt;/a&gt; and &lt;a href="http://javascriptbook.com"&gt;JavaScript &amp;amp; jQuery&lt;/a&gt; by John Duckett. These are from what I&amp;rsquo;ve seen the most accessible and practical books written on front end web development.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Got introduced to front end fundamentals by trying things like &lt;a href="http://codecademy.com"&gt;Codecademy&lt;/a&gt;. Personally I didn&amp;rsquo;t like the little teasers and if I could start over would skip straight to reading &lt;a href="http://htmlandcssbook.com"&gt;HTML &amp;amp; CSS&lt;/a&gt; and &lt;a href="http://javascriptbook.com"&gt;JavaScript &amp;amp; jQuery&lt;/a&gt; by John Duckett. These are from what I&amp;rsquo;ve seen the most accessible and practical books written on front end web development.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;em&gt;Update January 2018&lt;/em&gt;&lt;/strong&gt;: I&amp;rsquo;ve recently discovered another really robust resource for interview questions and tutorials called &lt;a href="https://career.guru99.com"&gt;CareerGuru99&lt;/a&gt;. You might find something there valuable to your journey!&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Made some websites. My first was one for a real company which ended up not needing or using it. I did it for free to learn. This is unquestionably (hopefully obviously) the most important step I took. I then started reaching out to my network for people who needed websites and made some for friends and family.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Learned about server side scripting and full stack frameworks. I went through &lt;a href="http://onemonth.com"&gt;One Month Rails&lt;/a&gt; mostly due to a generous friend giving me his login. It was excellent and totally worth whatever they are charging. I then built another full stack web app.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Started a freelancing business. This really helped me legitimize myself, if only &lt;em&gt;for&lt;/em&gt; myself, and made me feel official and that I was all-in on my decision to make this my career. I made business cards, a portfolio site, a bank account, and registered my business name. Then I actually found clients and got paid to do what I had decided I wanted to get paid to do.&lt;/p&gt;&lt;/li&gt;
