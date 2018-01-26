@@ -4,6 +4,8 @@ date: 2017-10-17 12:01 MDT
 tags: performance, speed, blogging, google, seo
 published: true
 ---
+_Update 2018-01-26_: For all my Russian friends and readers, this post has been graciously translated into Russian at [HowToRecover.me](http://howtorecover.me/kak-polucit-pokazatel-skorosti-google)!
+
 ### Everyone hates slow websites. Everyone likes fast websites.
 
 I recently worked on a Google AMP (Accelerated Mobile Pages) project, which was created to mitigate bloated websites from being at the top of Google results on their mobile web index. I personally think AMP is a [bad](https://danielmiessler.com/blog/google-amp-not-good-thing/#gs.co7smnc) [thing](https://www.theregister.co.uk/2017/05/19open_source_insider_google_amp_bad_bad_bad/) [for us](https://daringfireball.net/linked/2017/01/17/schreiber-amp) but that's beside the point of this article.
