@@ -5,6 +5,8 @@ tags: javascript, hacker news, css, performance
 published: true
 ---
 
+_Update 2018-03-04_: For all my Russian friends and readers, this post has been graciously translated into Russian at [clipartmag.com](http://clipartmag.com/ru-a-hacker-news-reader-for-no-reason)!
+
 The title is only half true.
 
 The other night I was thinking about how my experience being fully entrenched in React and the modern JavaScript ecosystem lately might have influenced how I'd write an app by hand in vanilla HTML, CSS, and JS with no libraries or anything.
