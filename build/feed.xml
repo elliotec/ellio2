@@ -14,11 +14,13 @@
     <link rel="alternate" href="http://elliotec.com/a-hacker-news-reader-for-no-reason/"/>
     <id>http://elliotec.com/a-hacker-news-reader-for-no-reason/</id>
     <published>2017-11-18T13:23:00-07:00</published>
-    <updated>2018-01-18T22:20:47-07:00</updated>
+    <updated>2018-03-05T00:08:02-07:00</updated>
     <author>
       <name>elliotec | Mike Elliott</name>
     </author>
-    <content type="html">&lt;p&gt;The title is only half true.&lt;/p&gt;
+    <content type="html">&lt;p&gt;&lt;em&gt;Update 2018-03-04&lt;/em&gt;: For all my Russian friends and readers, this post has been graciously translated into Russian at &lt;a href="http://clipartmag.com/ru-a-hacker-news-reader-for-no-reason"&gt;clipartmag.com&lt;/a&gt;!&lt;/p&gt;
+
+&lt;p&gt;The title is only half true.&lt;/p&gt;
 
 &lt;p&gt;The other night I was thinking about how my experience being fully entrenched in React and the modern JavaScript ecosystem lately might have influenced how I&amp;rsquo;d write an app by hand in vanilla HTML, CSS, and JS with no libraries or anything.&lt;/p&gt;
 
