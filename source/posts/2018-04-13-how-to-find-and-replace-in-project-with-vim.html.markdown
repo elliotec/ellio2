@@ -3,6 +3,7 @@
 title: How to Find and Replace Project-wide in Vim
 date: 2018-04-13 18:03 MDT
 tags: vim, neovim
+published: false
 
 ---
 
