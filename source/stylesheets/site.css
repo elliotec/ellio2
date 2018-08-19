@@ -150,12 +150,13 @@ main {
   padding: 8px;
   border-radius: 2px;
   font-family: "Lucida Console", Monaco, monospace, "AdamicBee";
-  color: white;
+  background-color: #1b1d1e;
+  color: #ddd;
 }
 
 code {
-  background-color: #333;
-  color: white;
+  background-color: #465457;
+  color: #d7d787;
   font-size: 14px;
   padding: 2px 4px;
   margin: 2px;
@@ -163,7 +164,7 @@ code {
 }
 
 .post blockquote {
-  border-left: 2px solid #DDD;
+  border-left: 2px solid #ddd;
   color: #595959;
 }
 
