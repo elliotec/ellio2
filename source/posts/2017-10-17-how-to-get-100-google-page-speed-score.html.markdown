@@ -4,7 +4,6 @@ date: 2017-10-17 12:01 MDT
 tags: performance, speed, blogging, google, seo
 published: true
 ---
-_Update 2018-01-26_: For all my Russian friends and readers, this post has been graciously translated into Russian at [HowToRecover.me](http://howtorecover.me/kak-polucit-pokazatel-skorosti-google)!
 
 ### Everyone hates slow websites. Everyone likes fast websites.
 
@@ -190,3 +189,5 @@ The speed is what matters and that's good for everyone using your website, and i
 
 
 Join the discussion [on Hacker News](https://news.ycombinator.com/item?id=15516957).
+
+_Update 2018-01-26_: This post has been translated into Russian at [HowToRecover.me](http://howtorecover.me/kak-polucit-pokazatel-skorosti-google)

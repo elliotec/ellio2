@@ -5,7 +5,6 @@ tags: javascript, hacker news, css, performance
 published: true
 ---
 
-_Update 2018-03-04_: For all my Russian friends and readers, this post has been graciously translated into Russian at [clipartmag.com](http://clipartmag.com/ru-a-hacker-news-reader-for-no-reason)!
 
 The title is only half true.
 
@@ -159,3 +158,4 @@ fetchTopStories()
 
 There you have it. Maybe someone else will also find a reason to use [A Hacker News Reader For No Reason](https://elliotec.com/hn-no-reason).
 
+_Update 2018-03-04_: This post has been translated into Russian at [clipartmag.com](http://clipartmag.com/ru-a-hacker-news-reader-for-no-reason)
