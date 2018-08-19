@@ -5,22 +5,76 @@
   <id>http://elliotec.com/</id>
   <link href="http://elliotec.com/"/>
   <link href="http://elliotec.com/feed.xml" rel="self"/>
-  <updated>2017-11-18T13:23:00-07:00</updated>
+  <updated>2018-04-13T18:03:00-06:00</updated>
   <author>
     <name>elliotec | Mike Elliott</name>
   </author>
+  <entry>
+    <title>How to Find and Replace Project-wide in Vim</title>
+    <link rel="alternate" href="http://elliotec.com/how-to-find-and-replace-in-project-with-vim/"/>
+    <id>http://elliotec.com/how-to-find-and-replace-in-project-with-vim/</id>
+    <published>2018-04-13T18:03:00-06:00</published>
+    <updated>2018-08-19T13:51:00-06:00</updated>
+    <author>
+      <name>elliotec | Mike Elliott</name>
+    </author>
+    <content type="html">&lt;h2&gt;The problem&lt;/h2&gt;
+
+&lt;p&gt;Sometimes one finds themselves with a need to search and replace some text throughout many places in a project. This often happens during a refactor, or when you made a mistake with a CLI code generator (like &lt;code&gt;rails scaffold&lt;/code&gt;), and you accidentally misspell something.&lt;/p&gt;
+
+&lt;p&gt;In most modern IDEs, &amp;ldquo;find and replace all&amp;rdquo; is pretty simple - highlight the text, &lt;code&gt;Ctrl-Shift-F&lt;/code&gt;, enter the new text, and hit enter. As you know, Vim does things a little differently.&lt;/p&gt;
+
+&lt;p&gt;You probably are already aware of how to find and replace all text within a file: &lt;code&gt;: %s/text/newText/g&lt;/code&gt; - &amp;ldquo;within this file, find all instances of &lt;code&gt;text&lt;/code&gt;, and replace it with &lt;code&gt;newText&lt;/code&gt;.&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;But doing so in multiple files at once with just one or two commands has proven difficult until &lt;a href="https://chrisarcand.com/vims-new-cdo-command/"&gt;Vim 7.4.8 released&lt;/a&gt; the &lt;code&gt;:cdo&lt;/code&gt; and &lt;code&gt;:cfdo&lt;/code&gt; commands. NeoVim with FZF and Ag makes it even easier.&lt;/p&gt;
+
+&lt;h2&gt;The solution&lt;/h2&gt;
+
+&lt;h3&gt;Setup&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Make sure you&amp;rsquo;re using &lt;a href="https://neovim.io/"&gt;Neovim&lt;/a&gt; (or Vim 7.4.8+, but really just use Neovim)&lt;/li&gt;
+&lt;li&gt;Install &lt;a href="https://github.com/junegunn/fzf#installation"&gt;FZF&lt;/a&gt; for the command line and as a &lt;a href="https://github.com/junegunn/fzf#as-vim-plugin"&gt;vim plugin&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Install &lt;a href="https://github.com/ggreer/the_silver_searcher"&gt;Ag&lt;/a&gt;, so that it&amp;rsquo;s available automatically to FZF in vim&lt;/li&gt;
+&lt;li&gt;If using iTerm2 on OSX, &lt;a href="https://github.com/junegunn/fzf.vim/issues/54#issuecomment-350417085"&gt;set the alt/option key to Esc+&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3&gt;Usage&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Search the text you want to change in the current directory and it&amp;rsquo;s children with &lt;code&gt;:Ag text&lt;/code&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Keep typing to fuzzy filter items&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Select items with &lt;code&gt;alt-a&lt;/code&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Deselect items with &lt;code&gt;alt-d&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Tab&lt;/code&gt; and &lt;code&gt;Shift-Tab&lt;/code&gt; will toggle individual items in the list&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Enter&lt;/code&gt; will populate the quickfix list&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;:cfdo %s/text/newText/g | :w&lt;/code&gt; will substitute all instances of &lt;code&gt;text&lt;/code&gt; with &lt;code&gt;newText&lt;/code&gt; that you have selected, and save each file.&lt;/li&gt;
+&lt;li&gt;Rejoice.
+
+&lt;ul&gt;
+&lt;li&gt;You can also make a macro to do cool stuff with &lt;code&gt;:cfdo&lt;/code&gt; rather than just substitution like &lt;code&gt;:cfdo {doCoolStuff} @a&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Thanks to Github user &lt;a href="https://github.com/trevordmiller"&gt;@trevordmiller&lt;/a&gt; for tips on this.&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title>A Hacker News Reader For No Reason - In 5K of Vanilla JS, HTML, &amp; CSS</title>
     <link rel="alternate" href="http://elliotec.com/a-hacker-news-reader-for-no-reason/"/>
     <id>http://elliotec.com/a-hacker-news-reader-for-no-reason/</id>
     <published>2017-11-18T13:23:00-07:00</published>
-    <updated>2018-03-05T00:08:02-07:00</updated>
+    <updated>2018-08-19T13:57:01-06:00</updated>
     <author>
       <name>elliotec | Mike Elliott</name>
     </author>
-    <content type="html">&lt;p&gt;&lt;em&gt;Update 2018-03-04&lt;/em&gt;: For all my Russian friends and readers, this post has been graciously translated into Russian at &lt;a href="http://clipartmag.com/ru-a-hacker-news-reader-for-no-reason"&gt;clipartmag.com&lt;/a&gt;!&lt;/p&gt;
-
-&lt;p&gt;The title is only half true.&lt;/p&gt;
+    <content type="html">&lt;p&gt;The title is only half true.&lt;/p&gt;
 
 &lt;p&gt;The other night I was thinking about how my experience being fully entrenched in React and the modern JavaScript ecosystem lately might have influenced how I&amp;rsquo;d write an app by hand in vanilla HTML, CSS, and JS with no libraries or anything.&lt;/p&gt;
 
@@ -172,6 +226,8 @@ but since it&amp;rsquo;s only 99 lines, I&amp;rsquo;ve posted the contents of JS
 &lt;span class="nx"&gt;fetchTopStories&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;There you have it. Maybe someone else will also find a reason to use &lt;a href="https://elliotec.com/hn-no-reason"&gt;A Hacker News Reader For No Reason&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Update 2018-03-04&lt;/em&gt;: This post has been translated into Russian at &lt;a href="http://clipartmag.com/ru-a-hacker-news-reader-for-no-reason"&gt;clipartmag.com&lt;/a&gt;&lt;/p&gt;
 </content>
   </entry>
   <entry>
@@ -179,13 +235,11 @@ but since it&amp;rsquo;s only 99 lines, I&amp;rsquo;ve posted the contents of JS
     <link rel="alternate" href="http://elliotec.com/how-to-get-100-google-page-speed-score/"/>
     <id>http://elliotec.com/how-to-get-100-google-page-speed-score/</id>
     <published>2017-10-17T12:01:00-06:00</published>
-    <updated>2018-01-26T14:53:08-07:00</updated>
+    <updated>2018-08-19T13:56:16-06:00</updated>
     <author>
       <name>elliotec | Mike Elliott</name>
     </author>
-    <content type="html">&lt;p&gt;&lt;em&gt;Update 2018-01-26&lt;/em&gt;: For all my Russian friends and readers, this post has been graciously translated into Russian at &lt;a href="http://howtorecover.me/kak-polucit-pokazatel-skorosti-google"&gt;HowToRecover.me&lt;/a&gt;!&lt;/p&gt;
-
-&lt;h3&gt;Everyone hates slow websites. Everyone likes fast websites.&lt;/h3&gt;
+    <content type="html">&lt;h3&gt;Everyone hates slow websites. Everyone likes fast websites.&lt;/h3&gt;
 
 &lt;p&gt;I recently worked on a Google AMP (Accelerated Mobile Pages) project, which was created to mitigate bloated websites from being at the top of Google results on their mobile web index. I personally think AMP is a &lt;a href="https://danielmiessler.com/blog/google-amp-not-good-thing/#gs.co7smnc"&gt;bad&lt;/a&gt; &lt;a href="https://www.theregister.co.uk/2017/05/19open_source_insider_google_amp_bad_bad_bad/"&gt;thing&lt;/a&gt; &lt;a href="https://daringfireball.net/linked/2017/01/17/schreiber-amp"&gt;for us&lt;/a&gt; but that&amp;rsquo;s beside the point of this article.&lt;/p&gt;
 
@@ -358,6 +412,8 @@ server {
 The speed is what matters and that&amp;rsquo;s good for everyone using your website, and it&amp;rsquo;s also gotta be good for some SEO, right?&lt;/p&gt;
 
 &lt;p&gt;Join the discussion &lt;a href="https://news.ycombinator.com/item?id=15516957"&gt;on Hacker News&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Update 2018-01-26&lt;/em&gt;: This post has been translated into Russian at &lt;a href="http://howtorecover.me/kak-polucit-pokazatel-skorosti-google"&gt;HowToRecover.me&lt;/a&gt;&lt;/p&gt;
 </content>
   </entry>
   <entry>
@@ -753,7 +809,7 @@ and Django, and SpringMVC and even jQuery. Let&amp;rsquo;s just come together to
     <link rel="alternate" href="http://elliotec.com/how-i-got-a-job-in-web-development/"/>
     <id>http://elliotec.com/how-i-got-a-job-in-web-development/</id>
     <published>2015-01-27T06:12:00-07:00</published>
-    <updated>2018-07-18T22:08:25-06:00</updated>
+    <updated>2018-07-18T22:07:47-06:00</updated>
     <author>
       <name>elliotec | Mike Elliott</name>
     </author>
