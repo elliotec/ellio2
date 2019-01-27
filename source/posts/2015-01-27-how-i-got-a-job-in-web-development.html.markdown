@@ -169,5 +169,7 @@ A year is a relatively short time to have gotten where I did, and I am certain I
 
 Join the discussion [here on Hacker News](https://news.ycombinator.com/item?id=8954348).
 
-_This post was translated to_ [Russian](http://getcolorings.com/ru-mike-elliott-job-in-web-development) _by_ [Colorings Blog](http://getcolorings.com)
+_This post was translated into_ [German](https://essayhilfe.de/translation/#How-I-Got-a-Job-in-Web-Development:DE) _by_ [Essay Hilfe](http://essayhilfe.de)
+
+_This post was also translated into_ [Russian](http://getcolorings.com/ru-mike-elliott-job-in-web-development) _by_ [Colorings Blog](http://getcolorings.com)
 
