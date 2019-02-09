@@ -235,13 +235,13 @@ but since it&amp;rsquo;s only 99 lines, I&amp;rsquo;ve posted the contents of JS
     <link rel="alternate" href="http://elliotec.com/how-to-get-100-google-page-speed-score/"/>
     <id>http://elliotec.com/how-to-get-100-google-page-speed-score/</id>
     <published>2017-10-17T12:01:00-06:00</published>
-    <updated>2019-02-01T00:14:43-07:00</updated>
+    <updated>2019-02-09T16:19:40-07:00</updated>
     <author>
       <name>elliotec | Mike Elliott</name>
     </author>
     <content type="html">&lt;h3&gt;Everyone hates slow websites. Everyone likes fast websites.&lt;/h3&gt;
 
-&lt;p&gt;I recently worked on a Google AMP (Accelerated Mobile Pages) project, which was created to mitigate bloated websites from being at the top of Google results on their mobile web index. I personally think AMP is a &lt;a href="https://danielmiessler.com/blog/google-amp-not-good-thing/#gs.co7smnc"&gt;bad&lt;/a&gt; &lt;a href="https://www.theregister.co.uk/2017/05/19open_source_insider_google_amp_bad_bad_bad/"&gt;thing&lt;/a&gt; &lt;a href="https://daringfireball.net/linked/2017/01/17/schreiber-amp"&gt;for us&lt;/a&gt; but that&amp;rsquo;s beside the point of this article.&lt;/p&gt;
+&lt;p&gt;I recently worked on a Google AMP (Accelerated Mobile Pages) project, which was created to mitigate bloated websites from being at the top of Google results on their mobile web index. I personally think AMP is a &lt;a href="https://danielmiessler.com/blog/google-amp-not-good-thing/#gs.co7smnc"&gt;bad thing&lt;/a&gt; &lt;a href="https://daringfireball.net/linked/2017/01/17/schreiber-amp"&gt;for us&lt;/a&gt; but that&amp;rsquo;s beside the point of this article.&lt;/p&gt;
 
 &lt;p&gt;The point of this article is that you can get a better user experience by just building websites that are fast, and you don&amp;rsquo;t need to use AMP. But if you wanted to, the methods in this post could also be a good starting point for getting your pages into AMP with minimal effort.&lt;/p&gt;
 
