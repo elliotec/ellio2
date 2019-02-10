@@ -8,7 +8,7 @@
     <meta name="description" content="elliotec | A software blog by Mike Elliott" />
     <meta name="google-site-verification" content="MFyo9_KaHWW1rrf6ct225HChB1FOm1Cf9o6Y60qyYtU" />
     <%= feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "elliotec" %>
-    <title>elliotec | Mike Elliott<%= ' - ' + current_article.title unless current_article.nil? %></title>
+    <title>elliotec<%= ' | ' + current_article.title unless current_article.nil? %></title>
     <style><%= sprockets.find_asset('marx').to_s %></style>
     <style><%= sprockets.find_asset('rouge').to_s %></style>
     <style><%= sprockets.find_asset('site').to_s %></style>
@@ -30,14 +30,6 @@
         })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
         ga('create', 'UA-46276194-3', 'elliotec.com');ga('send', 'pageview');}
     </script>
-    <script type="text/javascript">
-      if (screen.width > 768) {
-        let script = document.createElement('script');
-        script.src = '//instant.page/1.0.0';
-        script.type = 'module';
-        script.integrity = 'sha384-6w2SekMzCkuMQ9sEbq0cLviD/yR2HfA/+ekmKiBnFlsoSvb/VmQFSi/umVShadQI';
-        document.write(script.outerHTML);
-      }
-    </script>
+    <script src="//instant.page/1.0.0" type="module" integrity="sha384-6w2SekMzCkuMQ9sEbq0cLviD/yR2HfA/+ekmKiBnFlsoSvb/VmQFSi/umVShadQI"></script>
   </body>
 </html>
