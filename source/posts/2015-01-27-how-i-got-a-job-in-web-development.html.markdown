@@ -40,7 +40,7 @@ My next step was to search through my network for advice. I thought of everyone 
 
 At this point I felt comfortable enough to tell my friends and family about my pursuit, and let them know that I was looking for work and projects. A good friend gave me the login to a tutorial series called [One Month Rails](https://onemonth.com) he bought but never found time for. I certainly had time for it, so I did it.
 
-This tutorial introduced me to a vast world that I'd never seen before. It guided me through setting up a development environment that consisted primarily of [Sublime Text](https://www.sublimetext.com) and the command line, and helped me get a bunch of other tools set up. I learned about version control and [git](https://git-scm.com) (and by extension, [Github](https://github.com)) through repetition in the course, and got a grasp on most aspects of the tech stack in Rails. I finished it in about 2 weeks and had a fully functioning app replicating Pintrest, hosted on [Heroku](https://heroku.com).
+This tutorial introduced me to a vast world that I'd never seen before. It guided me through setting up a development environment that consisted primarily of [Sublime Text](https://www.sublimetext.com) and the command line, and helped me get a bunch of other tools set up. I learned about version control and [git](https://git-scm.com) (and by extension, [Github](https://github.com)) through repetition in the course, and got a grasp on most aspects of the tech stack in Rails. I finished it in about 2 weeks and had a fully functioning app replicating Pintrest, hosted on [Heroku](https://www.heroku.com).
 
 I used jQuery a little bit during the tutorial, which was a nice intro to JavaScript. I realized how useful and necessary it is and wanted to use some other plugins in my future projects.
 
@@ -148,7 +148,7 @@ Okay, maybe that was too long, so here's a summarized tl;dr list of the steps I 
 
 2. Gained a real interest in the idea of web development and programming in general. Money was of course a motivator, but certainly not enough to create the passion I eventually found in the actual craft.
 
-3. Got introduced to front end fundamentals by trying things like [Codecademy](https://codecademy.com). Personally I didn't like the little teasers and if I could start over would skip straight to reading [HTML & CSS](https://htmlandcssbook.com) and [JavaScript & jQuery](https://javascriptbook.com) by John Duckett. These are from what I've seen the most accessible and practical books written on front end web development.
+3. Got introduced to front end fundamentals by trying things like [Codecademy](https://www.codecademy.com). Personally I didn't like the little teasers and if I could start over would skip straight to reading [HTML & CSS](http://htmlandcssbook.com) and [JavaScript & jQuery](http://javascriptbook.com) by John Duckett. These are from what I've seen the most accessible and practical books written on front end web development.
   - **_Update January 2018_**: I've recently discovered another really robust resource for interview questions and tutorials called [CareerGuru99](https://career.guru99.com). You might find something there valuable to your journey!
 
 4. Made some websites. My first was one for a real company which ended up not needing or using it. I did it for free to learn. This is unquestionably (hopefully obviously) the most important step I took. I then started reaching out to my network for people who needed websites and made some for friends and family.
@@ -159,7 +159,7 @@ Okay, maybe that was too long, so here's a summarized tl;dr list of the steps I 
 
 7. Created a web presence. Made sure I had accounts on Twitter, Linkedin, Github, Hacker News, Designer News, and a portfolio site, and tried to sharpen them all up. This was vastly beneficial, one of the most important things I did next to actually making websites and roughly equal to networking.
 
-8. Attended a code school. I chose [Code Fellows](https://codefellows.org) in Seattle because of it's job guarantee and location. Learned a ton, made lots of friends, would do it over again in a heartbeat. Absolutely worth the investment. I took advantage of a lot of great career opportunities offered to me because of this, including assisting in teaching a class and being a personal tutor to a CS grad student.
+8. Attended a code school. I chose [Code Fellows](https://www.codefellows.org) in Seattle because of it's job guarantee and location. Learned a ton, made lots of friends, would do it over again in a heartbeat. Absolutely worth the investment. I took advantage of a lot of great career opportunities offered to me because of this, including assisting in teaching a class and being a personal tutor to a CS grad student.
 
 9. Networked. I asked everyone I knew what they knew about the industry and craft, and went to every [meetup](https://www.meetup.com) that I could. The conversations I had (and still have) at these events are invaluable. You learn shockingly more from talking with people in the community than you would sitting in any combination of classes. It also helped me with social skills, which even as a programmer is surprisingly important.
 

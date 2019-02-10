@@ -14,7 +14,7 @@ Teaching your skills at any level can sharpen them dramatically and make you a d
 
 It has never been a secret that teaching is a great way to learn. The ancient Roman philosopher Seneca stated that, "While we teach, we learn", two millennia ago. European schools started to have some version of teaching assistants or student teachers around the end of the 18th century.
 
-There have been more [recent pedagogic techniques](https://en.wikipedia.org/wiki/Learning_by_teaching#The_LdL_approach) focused specifically on having students teach to learn based on research that teaching is, in fact, the _best_ way to learn.
+There have been more [recent pedagogic techniques](https://en.wikipedia.org/wiki/Learning_by_teaching) focused specifically on having students teach to learn based on research that teaching is, in fact, the _best_ way to learn.
 
 <img src="../images/learning_pyramid.png"/>
 
@@ -48,7 +48,7 @@ And I guarantee I learned more than my audience just by writing that.
 
 ##"I know that I know nothing"
 
-Since then, I've started working as a mentor for [Thinkful](https://thinkful.com) on the weekends. This, plus being the development lead of a team at my full time spot gives me plentiful teaching, and therefore learning, opportunities.
+Since then, I've started working as a mentor for [Thinkful](https://www.thinkful.com) on the weekends. This, plus being the development lead of a team at my full time spot gives me plentiful teaching, and therefore learning, opportunities.
 
 I am consistently stumped by questions my students and teammates ask me. Sometimes it feels good when they have an easy question that I'm well prepared for, but that is rarely the case. More often, I'll have to look up pieces of answers and help them and myself connect the dots.
 
@@ -69,7 +69,7 @@ It's usually humbling. It's often lucrative. And it's always going to be a bette
 
 [The LdL Approach](https://en.wikipedia.org/wiki/Learning_by_teaching#The_LdL_approach)
 
-[Teach what you know](http://lifehacker.com/teach-others-what-you-know-to-make-connections-and-lear-1639560273)
+[Teach what you know](https://lifehacker.com/teach-others-what-you-know-to-make-connections-and-lear-1639560273)
 
 [The Protoge Effect](http://ideas.time.com/2011/11/30/the-protege-effect/)
 

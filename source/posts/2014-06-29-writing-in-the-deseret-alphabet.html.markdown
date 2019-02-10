@@ -75,7 +75,7 @@ In addition to the aforementioned reasons for alphabet reform, the Mormon leader
 
 [The Deseret Alphabet](https://en.wikipedia.org/wiki/Deseret_alphabet) was developed over the course of several years and iterations beginning before the pioneers made their way across the plains, and finally had its first printing in 1859 by the [Deseret News](https://en.wikipedia.org/wiki/Deseret_News). Periodic sample prints of the alphabet came in the newspaper until the first books were published in the late 1860's which sold very poorly. The alphabet died with Brigham Young in 1877.
 
-It is amazing how much research there is on the Deseret Alphabet, with how few people seem to know about it. There has even been [an effort to print many classic literary masterpieces](https://www.deseretalphabet.info/classics/) in the alphabet. It was introduced in Unicode in 2001, allowing for hobbyists, linguists, and historians to use the alphabet more easily.
+It is amazing how much research there is on the Deseret Alphabet, with how few people seem to know about it. There has even been [an effort to print many classic literary masterpieces](http://www.deseretalphabet.info/classics/) in the alphabet. It was introduced in Unicode in 2001, allowing for hobbyists, linguists, and historians to use the alphabet more easily.
 
 ## Learning the alphabet
 
@@ -125,7 +125,7 @@ Another limitation is the lack of a schwa (/ə/) vowel. It sounds like the "e" i
 <a class="anchor" id="code"></a>
 ## Now for the fun part
 
- I went about scouring the web for better Deseret fonts. I had a lot of trouble finding a good sans-serif font. The primary resource for these and the serif fonts I found were by [Joshua Erickson](https://copper.chem.ucla.edu/~jericks/index.html), but alas, the entire sans-serif collection has been disabled. Bummer. At least I could use some of his serif fonts that were less harsh on the eyes than the default, and there were a few sans-serif fonts his site led me to. Here are a few font samples:
+ I went about scouring the web for better Deseret fonts. I had a lot of trouble finding a good sans-serif font. The primary resource for these and the serif fonts I found were by [Joshua Erickson](http://copper.chem.ucla.edu/~jericks/index.html), but alas, the entire sans-serif collection has been disabled. Bummer. At least I could use some of his serif fonts that were less harsh on the eyes than the default, and there were a few sans-serif fonts his site led me to. Here are a few font samples:
 
 
 
@@ -193,7 +193,7 @@ Next, FontPrep generates four files when it receives a .ttf- .eot, .svg, .woff, 
     -deseret.ttf
 ```
 
-Since I'm using [Bourbon](https://bourbon.io), I can use the magnificent [font-face mixin](http://bourbon.io/docs/#font-face) (I'm also using [Bitters](https://bitters.bourbon.io), so I placed these 3 lines at the bottom of the _typography.scss partial):
+Since I'm using [Bourbon](https://www.bourbon.io), I can use the magnificent [font-face mixin](http://bourbon.io/docs/latest) (I'm also using [Bitters](https://bitters.bourbon.io), so I placed these 3 lines at the bottom of the _typography.scss partial):
 
 ```scss
 // /bitters/_typography.scss

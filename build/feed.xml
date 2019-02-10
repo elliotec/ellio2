@@ -439,7 +439,7 @@ The speed is what matters and that&amp;rsquo;s good for everyone using your webs
     <link rel="alternate" href="http://elliotec.com/force-directed-artist-relationship-graph-with-d3-js-and-the-spotify-api/"/>
     <id>http://elliotec.com/force-directed-artist-relationship-graph-with-d3-js-and-the-spotify-api/</id>
     <published>2017-01-30T22:13:00-07:00</published>
-    <updated>2019-02-01T00:14:43-07:00</updated>
+    <updated>2019-02-10T00:36:53-07:00</updated>
     <author>
       <name>elliotec | Mike Elliott</name>
     </author>
@@ -449,7 +449,7 @@ The speed is what matters and that&amp;rsquo;s good for everyone using your webs
 
 &lt;p&gt;I finally made an excuse for myself to take a couple days and learn what D3 is all about in the form of a web app that maps a &lt;a href="https://en.wikipedia.org/wiki/Force-directed_graph_drawing"&gt;force-directed graph&lt;/a&gt; of related artists to the artist the user inputs.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href="https://elliotec.com/visuify"&gt;
+&lt;p&gt;&lt;a href="https://elliotec.com/visuify/"&gt;
     &lt;h2&gt;Play with Visuify!&lt;/h2&gt;
     &lt;img src="../images/visuify-small.png"/&gt;
 &lt;/a&gt;&lt;/p&gt;
@@ -480,7 +480,7 @@ The speed is what matters and that&amp;rsquo;s good for everyone using your webs
     <link rel="alternate" href="http://elliotec.com/modules-and-monoliths/"/>
     <id>http://elliotec.com/modules-and-monoliths/</id>
     <published>2016-02-20T20:06:00-07:00</published>
-    <updated>2019-02-09T22:59:53-07:00</updated>
+    <updated>2019-02-10T00:40:44-07:00</updated>
     <author>
       <name>elliotec | Mike Elliott</name>
     </author>
@@ -578,7 +578,7 @@ JavaScript framework/library/etc world is becoming a defining characteristic of 
 that one be an expert just in JavaScript in order to properly implement. Why?&lt;/p&gt;
 
 &lt;p&gt;Full stack development is really just combining the concepts of
-&amp;ldquo;standing on the shoulders of giants&amp;rdquo; and &lt;a href="https://fourhourworkweek.com/2014/08/25/the-art-of-strategic-laziness/"&gt;&amp;ldquo;strategic laziness.&amp;rdquo;&lt;/a&gt; We take what we&amp;rsquo;ve learned from the past, and use it to strategically avoid decisions that have already been made and proven by people smarter than us.&lt;/p&gt;
+&amp;ldquo;standing on the shoulders of giants&amp;rdquo; and &lt;a href="https://tim.blog/2014/08/25/the-art-of-strategic-laziness/"&gt;&amp;ldquo;strategic laziness.&amp;rdquo;&lt;/a&gt; We take what we&amp;rsquo;ve learned from the past, and use it to strategically avoid decisions that have already been made and proven by people smarter than us.&lt;/p&gt;
 
 &lt;h2&gt;Effort For its Own Sake&lt;/h2&gt;
 
@@ -664,7 +664,7 @@ amount of modules and libraries one must connect and configure makes my
 head spin. There are seemingly infinite combinations of libraries and
 newest things you must know to &lt;a href="http://mir.aculo.us/2015/08/25/how-to-actually-ship-software-that-actually-works/"&gt;actually ship something.&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href="https://medium.com/@ericclemmons/javascript-fatigue-48d4011b6fc4#.s12704ins"&gt;Some people love this constant stream of new stuff and learning, but even
+&lt;p&gt;&lt;a href="https://medium.com/@ericclemmons/javascript-fatigue-48d4011b6fc4"&gt;Some people love this constant stream of new stuff and learning, but even
 they are feeling the exhaustion.&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;My buddy shaine put it well -&lt;/p&gt;
@@ -713,7 +713,7 @@ and Django, and SpringMVC and even jQuery. Let&amp;rsquo;s just come together to
     <link rel="alternate" href="http://elliotec.com/teach-your-skills-for-fun-and-profit/"/>
     <id>http://elliotec.com/teach-your-skills-for-fun-and-profit/</id>
     <published>2015-11-10T13:49:00-07:00</published>
-    <updated>2019-02-09T23:08:12-07:00</updated>
+    <updated>2019-02-10T00:41:54-07:00</updated>
     <author>
       <name>elliotec | Mike Elliott</name>
     </author>
@@ -725,7 +725,7 @@ and Django, and SpringMVC and even jQuery. Let&amp;rsquo;s just come together to
 
 &lt;p&gt;It has never been a secret that teaching is a great way to learn. The ancient Roman philosopher Seneca stated that, &amp;ldquo;While we teach, we learn&amp;rdquo;, two millennia ago. European schools started to have some version of teaching assistants or student teachers around the end of the 18th century.&lt;/p&gt;
 
-&lt;p&gt;There have been more &lt;a href="https://en.wikipedia.org/wiki/Learning_by_teaching#The_LdL_approach"&gt;recent pedagogic techniques&lt;/a&gt; focused specifically on having students teach to learn based on research that teaching is, in fact, the &lt;em&gt;best&lt;/em&gt; way to learn.&lt;/p&gt;
+&lt;p&gt;There have been more &lt;a href="https://en.wikipedia.org/wiki/Learning_by_teaching"&gt;recent pedagogic techniques&lt;/a&gt; focused specifically on having students teach to learn based on research that teaching is, in fact, the &lt;em&gt;best&lt;/em&gt; way to learn.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src="../images/learning_pyramid.png"/&gt;&lt;/p&gt;
 
@@ -759,7 +759,7 @@ and Django, and SpringMVC and even jQuery. Let&amp;rsquo;s just come together to
 
 &lt;h2&gt;&amp;ldquo;I know that I know nothing&amp;rdquo;&lt;/h2&gt;
 
-&lt;p&gt;Since then, I&amp;rsquo;ve started working as a mentor for &lt;a href="https://thinkful.com"&gt;Thinkful&lt;/a&gt; on the weekends. This, plus being the development lead of a team at my full time spot gives me plentiful teaching, and therefore learning, opportunities.&lt;/p&gt;
+&lt;p&gt;Since then, I&amp;rsquo;ve started working as a mentor for &lt;a href="https://www.thinkful.com"&gt;Thinkful&lt;/a&gt; on the weekends. This, plus being the development lead of a team at my full time spot gives me plentiful teaching, and therefore learning, opportunities.&lt;/p&gt;
 
 &lt;p&gt;I am consistently stumped by questions my students and teammates ask me. Sometimes it feels good when they have an easy question that I&amp;rsquo;m well prepared for, but that is rarely the case. More often, I&amp;rsquo;ll have to look up pieces of answers and help them and myself connect the dots.&lt;/p&gt;
 
@@ -779,7 +779,7 @@ and Django, and SpringMVC and even jQuery. Let&amp;rsquo;s just come together to
 
 &lt;p&gt;&lt;a href="https://en.wikipedia.org/wiki/Learning_by_teaching#The_LdL_approach"&gt;The LdL Approach&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href="http://lifehacker.com/teach-others-what-you-know-to-make-connections-and-lear-1639560273"&gt;Teach what you know&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://lifehacker.com/teach-others-what-you-know-to-make-connections-and-lear-1639560273"&gt;Teach what you know&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href="http://ideas.time.com/2011/11/30/the-protege-effect/"&gt;The Protoge Effect&lt;/a&gt;&lt;/p&gt;
 
@@ -805,7 +805,7 @@ and Django, and SpringMVC and even jQuery. Let&amp;rsquo;s just come together to
     <link rel="alternate" href="http://elliotec.com/how-i-got-a-job-in-web-development/"/>
     <id>http://elliotec.com/how-i-got-a-job-in-web-development/</id>
     <published>2015-01-27T06:12:00-07:00</published>
-    <updated>2019-02-09T23:19:34-07:00</updated>
+    <updated>2019-02-10T00:40:04-07:00</updated>
     <author>
       <name>elliotec | Mike Elliott</name>
     </author>
@@ -841,7 +841,7 @@ and Django, and SpringMVC and even jQuery. Let&amp;rsquo;s just come together to
 
 &lt;p&gt;At this point I felt comfortable enough to tell my friends and family about my pursuit, and let them know that I was looking for work and projects. A good friend gave me the login to a tutorial series called &lt;a href="https://onemonth.com"&gt;One Month Rails&lt;/a&gt; he bought but never found time for. I certainly had time for it, so I did it.&lt;/p&gt;
 
-&lt;p&gt;This tutorial introduced me to a vast world that I&amp;rsquo;d never seen before. It guided me through setting up a development environment that consisted primarily of &lt;a href="https://www.sublimetext.com"&gt;Sublime Text&lt;/a&gt; and the command line, and helped me get a bunch of other tools set up. I learned about version control and &lt;a href="https://git-scm.com"&gt;git&lt;/a&gt; (and by extension, &lt;a href="https://github.com"&gt;Github&lt;/a&gt;) through repetition in the course, and got a grasp on most aspects of the tech stack in Rails. I finished it in about 2 weeks and had a fully functioning app replicating Pintrest, hosted on &lt;a href="https://heroku.com"&gt;Heroku&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;This tutorial introduced me to a vast world that I&amp;rsquo;d never seen before. It guided me through setting up a development environment that consisted primarily of &lt;a href="https://www.sublimetext.com"&gt;Sublime Text&lt;/a&gt; and the command line, and helped me get a bunch of other tools set up. I learned about version control and &lt;a href="https://git-scm.com"&gt;git&lt;/a&gt; (and by extension, &lt;a href="https://github.com"&gt;Github&lt;/a&gt;) through repetition in the course, and got a grasp on most aspects of the tech stack in Rails. I finished it in about 2 weeks and had a fully functioning app replicating Pintrest, hosted on &lt;a href="https://www.heroku.com"&gt;Heroku&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;I used jQuery a little bit during the tutorial, which was a nice intro to JavaScript. I realized how useful and necessary it is and wanted to use some other plugins in my future projects.&lt;/p&gt;
 
@@ -948,7 +948,7 @@ and Django, and SpringMVC and even jQuery. Let&amp;rsquo;s just come together to
 &lt;ol&gt;
 &lt;li&gt;&lt;p&gt;Exposed myself to seemingly complicated tech tasks for the purpose of exploration. This included hacking my Wii, setting up a Minecraft server, and getting familiar with various flavors of Linux. Generally being curious about technology and the internet and how it all works.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Gained a real interest in the idea of web development and programming in general. Money was of course a motivator, but certainly not enough to create the passion I eventually found in the actual craft.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Got introduced to front end fundamentals by trying things like &lt;a href="https://codecademy.com"&gt;Codecademy&lt;/a&gt;. Personally I didn&amp;rsquo;t like the little teasers and if I could start over would skip straight to reading &lt;a href="https://htmlandcssbook.com"&gt;HTML &amp;amp; CSS&lt;/a&gt; and &lt;a href="https://javascriptbook.com"&gt;JavaScript &amp;amp; jQuery&lt;/a&gt; by John Duckett. These are from what I&amp;rsquo;ve seen the most accessible and practical books written on front end web development.&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;Got introduced to front end fundamentals by trying things like &lt;a href="https://www.codecademy.com"&gt;Codecademy&lt;/a&gt;. Personally I didn&amp;rsquo;t like the little teasers and if I could start over would skip straight to reading &lt;a href="http://htmlandcssbook.com"&gt;HTML &amp;amp; CSS&lt;/a&gt; and &lt;a href="http://javascriptbook.com"&gt;JavaScript &amp;amp; jQuery&lt;/a&gt; by John Duckett. These are from what I&amp;rsquo;ve seen the most accessible and practical books written on front end web development.&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;&lt;em&gt;Update January 2018&lt;/em&gt;&lt;/strong&gt;: I&amp;rsquo;ve recently discovered another really robust resource for interview questions and tutorials called &lt;a href="https://career.guru99.com"&gt;CareerGuru99&lt;/a&gt;. You might find something there valuable to your journey!&lt;/li&gt;
@@ -957,7 +957,7 @@ and Django, and SpringMVC and even jQuery. Let&amp;rsquo;s just come together to
 &lt;li&gt;&lt;p&gt;Learned about server side scripting and full stack frameworks. I went through &lt;a href="https://onemonth.com"&gt;One Month Rails&lt;/a&gt; mostly due to a generous friend giving me his login. It was excellent and totally worth whatever they are charging. I then built another full stack web app.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Started a freelancing business. This really helped me legitimize myself, if only &lt;em&gt;for&lt;/em&gt; myself, and made me feel official and that I was all-in on my decision to make this my career. I made business cards, a portfolio site, a bank account, and registered my business name. Then I actually found clients and got paid to do what I had decided I wanted to get paid to do.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Created a web presence. Made sure I had accounts on Twitter, Linkedin, Github, Hacker News, Designer News, and a portfolio site, and tried to sharpen them all up. This was vastly beneficial, one of the most important things I did next to actually making websites and roughly equal to networking.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Attended a code school. I chose &lt;a href="https://codefellows.org"&gt;Code Fellows&lt;/a&gt; in Seattle because of it&amp;rsquo;s job guarantee and location. Learned a ton, made lots of friends, would do it over again in a heartbeat. Absolutely worth the investment. I took advantage of a lot of great career opportunities offered to me because of this, including assisting in teaching a class and being a personal tutor to a CS grad student.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Attended a code school. I chose &lt;a href="https://www.codefellows.org"&gt;Code Fellows&lt;/a&gt; in Seattle because of it&amp;rsquo;s job guarantee and location. Learned a ton, made lots of friends, would do it over again in a heartbeat. Absolutely worth the investment. I took advantage of a lot of great career opportunities offered to me because of this, including assisting in teaching a class and being a personal tutor to a CS grad student.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Networked. I asked everyone I knew what they knew about the industry and craft, and went to every &lt;a href="https://www.meetup.com"&gt;meetup&lt;/a&gt; that I could. The conversations I had (and still have) at these events are invaluable. You learn shockingly more from talking with people in the community than you would sitting in any combination of classes. It also helped me with social skills, which even as a programmer is surprisingly important.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Applied, interviewed, practiced, repeat. I sent out tons of applications and put myself out there in every way I could think of. Ultimately Linkedin, Reddit, and meetups were the channels that actually got me job offers. I practiced whiteboarding algorithms and solving problems, had a lot of interviews (each better than the previous, for the most part) and continuously kept up to date on current trends and technologies.&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
@@ -1012,7 +1012,7 @@ and Django, and SpringMVC and even jQuery. Let&amp;rsquo;s just come together to
     <link rel="alternate" href="http://elliotec.com/writing-in-the-deseret-alphabet/"/>
     <id>http://elliotec.com/writing-in-the-deseret-alphabet/</id>
     <published>2014-06-29T09:08:00-06:00</published>
-    <updated>2019-02-09T23:33:52-07:00</updated>
+    <updated>2019-02-10T00:35:45-07:00</updated>
     <author>
       <name>elliotec | Mike Elliott</name>
     </author>
@@ -1086,7 +1086,7 @@ and Django, and SpringMVC and even jQuery. Let&amp;rsquo;s just come together to
 
 &lt;p&gt;&lt;a href="https://en.wikipedia.org/wiki/Deseret_alphabet"&gt;The Deseret Alphabet&lt;/a&gt; was developed over the course of several years and iterations beginning before the pioneers made their way across the plains, and finally had its first printing in 1859 by the &lt;a href="https://en.wikipedia.org/wiki/Deseret_News"&gt;Deseret News&lt;/a&gt;. Periodic sample prints of the alphabet came in the newspaper until the first books were published in the late 1860&amp;rsquo;s which sold very poorly. The alphabet died with Brigham Young in 1877.&lt;/p&gt;
 
-&lt;p&gt;It is amazing how much research there is on the Deseret Alphabet, with how few people seem to know about it. There has even been &lt;a href="https://www.deseretalphabet.info/classics/"&gt;an effort to print many classic literary masterpieces&lt;/a&gt; in the alphabet. It was introduced in Unicode in 2001, allowing for hobbyists, linguists, and historians to use the alphabet more easily.&lt;/p&gt;
+&lt;p&gt;It is amazing how much research there is on the Deseret Alphabet, with how few people seem to know about it. There has even been &lt;a href="http://www.deseretalphabet.info/classics/"&gt;an effort to print many classic literary masterpieces&lt;/a&gt; in the alphabet. It was introduced in Unicode in 2001, allowing for hobbyists, linguists, and historians to use the alphabet more easily.&lt;/p&gt;
 
 &lt;h2&gt;Learning the alphabet&lt;/h2&gt;
 
@@ -1292,7 +1292,7 @@ and Django, and SpringMVC and even jQuery. Let&amp;rsquo;s just come together to
 
 &lt;h2&gt;Now for the fun part&lt;/h2&gt;
 
-&lt;p&gt;I went about scouring the web for better Deseret fonts. I had a lot of trouble finding a good sans-serif font. The primary resource for these and the serif fonts I found were by &lt;a href="https://copper.chem.ucla.edu/~jericks/index.html"&gt;Joshua Erickson&lt;/a&gt;, but alas, the entire sans-serif collection has been disabled. Bummer. At least I could use some of his serif fonts that were less harsh on the eyes than the default, and there were a few sans-serif fonts his site led me to. Here are a few font samples:&lt;/p&gt;
+&lt;p&gt;I went about scouring the web for better Deseret fonts. I had a lot of trouble finding a good sans-serif font. The primary resource for these and the serif fonts I found were by &lt;a href="http://copper.chem.ucla.edu/~jericks/index.html"&gt;Joshua Erickson&lt;/a&gt;, but alas, the entire sans-serif collection has been disabled. Bummer. At least I could use some of his serif fonts that were less harsh on the eyes than the default, and there were a few sans-serif fonts his site led me to. Here are a few font samples:&lt;/p&gt;
 
 &lt;p class="adamic"&gt;1. 𐐈𐐔𐐈𐐣𐐆𐐗𐐒𐐀： 𐐀𐐁𐐂𐐃𐐄𐐅𐐆𐐇𐐈𐐉𐐊𐐋𐐌𐐍𐐎𐐏𐐐𐐑𐐒𐐓𐐔𐐕𐐖𐐗𐐘𐐙𐐚𐐛𐐜𐐝𐐞𐐠𐐡𐐢𐐣𐐤𐐥𐐦𐐧𐐟 &lt;/p&gt;
 
@@ -1349,7 +1349,7 @@ and Django, and SpringMVC and even jQuery. Let&amp;rsquo;s just come together to
     -deseret.woff
     -deseret.ttf
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Since I&amp;rsquo;m using &lt;a href="https://bourbon.io"&gt;Bourbon&lt;/a&gt;, I can use the magnificent &lt;a href="http://bourbon.io/docs/#font-face"&gt;font-face mixin&lt;/a&gt; (I&amp;rsquo;m also using &lt;a href="https://bitters.bourbon.io"&gt;Bitters&lt;/a&gt;, so I placed these 3 lines at the bottom of the _typography.scss partial):&lt;/p&gt;
+&lt;p&gt;Since I&amp;rsquo;m using &lt;a href="https://www.bourbon.io"&gt;Bourbon&lt;/a&gt;, I can use the magnificent &lt;a href="http://bourbon.io/docs/latest"&gt;font-face mixin&lt;/a&gt; (I&amp;rsquo;m also using &lt;a href="https://bitters.bourbon.io"&gt;Bitters&lt;/a&gt;, so I placed these 3 lines at the bottom of the _typography.scss partial):&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre class="highlight scss"&gt;&lt;code&gt;&lt;span class="c1"&gt;// /bitters/_typography.scss
 &lt;/span&gt;&lt;span class="k"&gt;@include&lt;/span&gt; &lt;span class="nd"&gt;font-face&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'Huneybee'&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'/fonts/Huneybee'&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 &lt;span class="k"&gt;@include&lt;/span&gt; &lt;span class="nd"&gt;font-face&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'AdamicBee'&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'/fonts/AdamicBee'&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;

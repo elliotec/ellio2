@@ -98,7 +98,7 @@ JavaScript framework/library/etc world is becoming a defining characteristic of 
 that one be an expert just in JavaScript in order to properly implement. Why?
 
 Full stack development is really just combining the concepts of
-"standing on the shoulders of giants" and ["strategic laziness."](https://fourhourworkweek.com/2014/08/25/the-art-of-strategic-laziness/) We take what we've learned from the past, and use it to strategically avoid decisions that have already been made and proven by people smarter than us.
+"standing on the shoulders of giants" and ["strategic laziness."](https://tim.blog/2014/08/25/the-art-of-strategic-laziness/) We take what we've learned from the past, and use it to strategically avoid decisions that have already been made and proven by people smarter than us.
 
 ## Effort For its Own Sake
 
@@ -185,7 +185,7 @@ head spin. There are seemingly infinite combinations of libraries and
 newest things you must know to [actually ship something.](http://mir.aculo.us/2015/08/25/how-to-actually-ship-software-that-actually-works/)
 
 [Some people love this constant stream of new stuff and learning, but even
-they are feeling the exhaustion.](https://medium.com/@ericclemmons/javascript-fatigue-48d4011b6fc4#.s12704ins)
+they are feeling the exhaustion.](https://medium.com/@ericclemmons/javascript-fatigue-48d4011b6fc4)
 
 My buddy shaine put it well -
 
