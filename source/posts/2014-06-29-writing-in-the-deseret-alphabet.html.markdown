@@ -57,13 +57,13 @@ tags: utah, languages, deseret, sass, fonts
 
 ## The State of Deseret
 
-This past weekend I went camping in the [San Rafael Swell](http://en.wikipedia.org/wiki/San_Rafael_Swell) and became interested in my native state of Utah's history and unique culture.
+This past weekend I went camping in the [San Rafael Swell](https://en.wikipedia.org/wiki/San_Rafael_Swell) and became interested in my native state of Utah's history and unique culture.
 
-Evidence of humans is found in Utah for as far back as 12,000 years ago. Various Native American tribes and cultures (Freemont, Puebloan, etc.) occupied the land until the first of the Mormon pioneers arrived with their leader [Brigham Young](http://en.wikipedia.org/wiki/Brigham_Young) in 1847.
+Evidence of humans is found in Utah for as far back as 12,000 years ago. Various Native American tribes and cultures (Freemont, Puebloan, etc.) occupied the land until the first of the Mormon pioneers arrived with their leader [Brigham Young](https://en.wikipedia.org/wiki/Brigham_Young) in 1847.
 
 They settled in by vastly changing the desert environment into a habitable landscape with amazing feats of industry including irrigation and agriculture, timber and mining, and constructing communities from the resources around them. They created a society from scratch.
 
-The settlers were very isolated and in a political and territorial limbo that went from technically belonging to Mexico, to a near immediate statehood proposal ([The State of Deseret](http://en.wikipedia.org/wiki/State_of_Deseret)), and then remaining a U.S. territory - all the while settling most of the western United States including cities like Las Vegas, San Bernardino, most of Idaho and Nevada, a good chunk of Arizona and many other western states.
+The settlers were very isolated and in a political and territorial limbo that went from technically belonging to Mexico, to a near immediate statehood proposal ([The State of Deseret](https://en.wikipedia.org/wiki/State_of_Deseret)), and then remaining a U.S. territory - all the while settling most of the western United States including cities like Las Vegas, San Bernardino, most of Idaho and Nevada, a good chunk of Arizona and many other western states.
 
 Brigham Young and the Mormons were the de facto government throughout this time (some say they still are) and as such were providing public necessities like schooling, and founded the precursor to the University of Utah, the University of Deseret.
 
@@ -73,9 +73,9 @@ This was a time when there were several efforts to reform the traditional Latin 
 
 In addition to the aforementioned reasons for alphabet reform, the Mormon leadership believed a new writing system would benefit them in other ways such as more unification, solidifying their unique identity, and some speculate that there was a bit of a secret-keeping draw to it as well, though that claim has been refuted by several scholars.
 
-[The Deseret Alphabet](http://en.wikipedia.org/wiki/Deseret_alphabet) was developed over the course of several years and iterations beginning before the pioneers made their way across the plains, and finally had its first printing in 1859 by the [Deseret News](http://en.wikipedia.org/wiki/Deseret_News). Periodic sample prints of the alphabet came in the newspaper until the first books were published in the late 1860's which sold very poorly. The alphabet died with Brigham Young in 1877.
+[The Deseret Alphabet](https://en.wikipedia.org/wiki/Deseret_alphabet) was developed over the course of several years and iterations beginning before the pioneers made their way across the plains, and finally had its first printing in 1859 by the [Deseret News](https://en.wikipedia.org/wiki/Deseret_News). Periodic sample prints of the alphabet came in the newspaper until the first books were published in the late 1860's which sold very poorly. The alphabet died with Brigham Young in 1877.
 
-It is amazing how much research there is on the Deseret Alphabet, with how few people seem to know about it. There has even been [an effort to print many classic literary masterpieces](http://www.deseretalphabet.info/classics/) in the alphabet. It was introduced in Unicode in 2001, allowing for hobbyists, linguists, and historians to use the alphabet more easily.
+It is amazing how much research there is on the Deseret Alphabet, with how few people seem to know about it. There has even been [an effort to print many classic literary masterpieces](https://www.deseretalphabet.info/classics/) in the alphabet. It was introduced in Unicode in 2001, allowing for hobbyists, linguists, and historians to use the alphabet more easily.
 
 ## Learning the alphabet
 
@@ -112,7 +112,7 @@ Here's a pronunciation table:
 
 So, ostensibly thats kind of a lot. 40 new unique characters and sounds to replace a very well known system seems a bit daunting, which may be part of the reason it had a hard time getting adopted by the intended users and audience.
 
-In my opinion, other than the glyphs looking nothing at all like their Latin counterparts, the alphabet is rather easy to learn since you are just reassigning a symbol to a sound in English. There is no grammar or syntax change, it's really just like mind-mapping 40 pictures to 40 words for which a few hours of flash card study would be quite sufficient. (Though, this isn't the first time I've learned a dead script for no reason. I once became fluent in the ancient [Baybayin Tagalog script](http://en.wikipedia.org/wiki/Baybayin) in a strange bout of manic overachievement.)
+In my opinion, other than the glyphs looking nothing at all like their Latin counterparts, the alphabet is rather easy to learn since you are just reassigning a symbol to a sound in English. There is no grammar or syntax change, it's really just like mind-mapping 40 pictures to 40 words for which a few hours of flash card study would be quite sufficient. (Though, this isn't the first time I've learned a dead script for no reason. I once became fluent in the ancient [Baybayin Tagalog script](https://en.wikipedia.org/wiki/Baybayin) in a strange bout of manic overachievement.)
 
 ## Limitations of the alphabet
 
@@ -125,7 +125,7 @@ Another limitation is the lack of a schwa (/ə/) vowel. It sounds like the "e" i
 <a class="anchor" id="code"></a>
 ## Now for the fun part
 
- I went about scouring the web for better Deseret fonts. I had a lot of trouble finding a good sans-serif font. The primary resource for these and the serif fonts I found were by [Joshua Erickson](http://copper.chem.ucla.edu/~jericks/index.html), but alas, the entire sans-serif collection has been disabled. Bummer. At least I could use some of his serif fonts that were less harsh on the eyes than the default, and there were a few sans-serif fonts his site led me to. Here are a few font samples:
+ I went about scouring the web for better Deseret fonts. I had a lot of trouble finding a good sans-serif font. The primary resource for these and the serif fonts I found were by [Joshua Erickson](https://copper.chem.ucla.edu/~jericks/index.html), but alas, the entire sans-serif collection has been disabled. Bummer. At least I could use some of his serif fonts that were less harsh on the eyes than the default, and there were a few sans-serif fonts his site led me to. Here are a few font samples:
 
 
 
@@ -193,7 +193,7 @@ Next, FontPrep generates four files when it receives a .ttf- .eot, .svg, .woff, 
     -deseret.ttf
 ```
 
-Since I'm using [Bourbon](http://bourbon.io), I can use the magnificent [font-face mixin](http://bourbon.io/docs/#font-face) (I'm also using [Bitters](http://bitters.bourbon.io), so I placed these 3 lines at the bottom of the _typography.scss partial):
+Since I'm using [Bourbon](https://bourbon.io), I can use the magnificent [font-face mixin](http://bourbon.io/docs/#font-face) (I'm also using [Bitters](https://bitters.bourbon.io), so I placed these 3 lines at the bottom of the _typography.scss partial):
 
 ```scss
 // /bitters/_typography.scss
@@ -274,11 +274,11 @@ You might not notice, but the Deseret version of this quote uses 48 fewer charac
 >We are just an advanced breed of monkeys on a minor planet of a very average star. But we can understand the Universe. That makes us something very special.<br><br>
 - Steven Hawking
 
-This is very tedious to type, however. I mapped my keys to each of the Deseret characters using [Better Touch Tool](http://www.boastr.net/), a handy tool for lots of things, but it totally wasn't worth it as I ended up being faster by just copy/pasting the characters from the chart in order.
+This is very tedious to type, however. I mapped my keys to each of the Deseret characters using [Better Touch Tool](https://folivora.ai/), a handy tool for lots of things, but it totally wasn't worth it as I ended up being faster by just copy/pasting the characters from the chart in order.
 
 I thought about writing little sticky note characters and putting them on their corresponding keys, but I figured I already spent this much time learning a dead alphabet and my use of it will most likely die with the end of this post.
 
-Alright, one more thing. This is the logo of one of my favorite bars in Salt Lake City, the [Bourbon House](http://www.bourbonhouseslc.com/). I'm using it without permission so if they ask me to take it down I will.
+Alright, one more thing. This is the logo of one of my favorite bars in Salt Lake City, the [Bourbon House](https://www.bourbonhouseslc.com/). I'm using it without permission so if they ask me to take it down I will.
 
 <img src="../images/bourbon.png">
 
@@ -304,7 +304,7 @@ If you want to learn more about the Deseret Alphabet, here are some resources I 
 
 - [Deseret Alphabet Blog](http://deseretalphabet.blogspot.com/) *The owner of this blog has translated over [50% of the XKCD comics](http://www.deseretalphabet.info/XKCD/1385.html) into Deseret, an impressive feat no matter how pointless.*
 
-- [The Deseret Alphabet Translator](http://deseret.in/) *Still in beta, and some of the translations are pretty broken. I submitted a [pull request](https://github.com/sam1am/deseret.in/pull/1) with a few fixes that would hopefully improve it, if he merges it. (Update: disregard this resource and redirect yourself [here](http://2deseret.com))*
+- [The Deseret Alphabet Translator](http://2deseret.com/)
 
 Anyway, thats enough of that. I probably should've spent this time learning a new programming language or something, but I learned a ton about my homeland's history, web fonts, typography, linguistics, and encoding so there was no lack of intellectual stimulation.
 

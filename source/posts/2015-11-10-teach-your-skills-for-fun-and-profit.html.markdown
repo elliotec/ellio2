@@ -20,7 +20,7 @@ There have been more [recent pedagogic techniques](https://en.wikipedia.org/wiki
 
 ##Gaining expertise
 
-In his book ["The 4-Hour Workweek,"](http://fourhourworkweek.com) Tim Ferris famously (and controversially) outlines how to be come an expert in anything in four weeks and six steps. Read the book if you want to know each step, but let me give you a hint: at least half of them involve teaching.
+In his book ["The 4-Hour Workweek,"](https://fourhourworkweek.com) Tim Ferris famously (and controversially) outlines how to be come an expert in anything in four weeks and six steps. Read the book if you want to know each step, but let me give you a hint: at least half of them involve teaching.
 
 Think about the times you've had to give presentations. It's likely that you started out methodically when you found out you were going to do it, only to find yourself scrambling the night before and doing it in a few hours college-thesis-style. But you still learned a ton! Certainly more than the people that you were presenting for.
 
@@ -30,15 +30,15 @@ Turns out, [studies show](http://link.springer.com/article/10.3758%2Fs13421-014-
 
 We trick ourselves all the time into thinking we are learning. It's quite a conundrum - how can we have a full grasp of an idea when we don't know what we don't know?
 
-As [Richard Rusczyk says](http://artofproblemsolving.com/articles/learning-through-teaching), "Teaching removes this possibility of self-deceit." This happens both by us preemptively gathering more information and knowledge in anticipation of our student's lack of understanding or questions, and also by being put on the spot by those which were not anticipated at the time of teaching.
+As [Richard Rusczyk says](https://artofproblemsolving.com/articles/learning-through-teaching), "Teaching removes this possibility of self-deceit." This happens both by us preemptively gathering more information and knowledge in anticipation of our student's lack of understanding or questions, and also by being put on the spot by those which were not anticipated at the time of teaching.
 
 Teaching also happens to be an excellent cure for an endemic of the tech world: [Impostor Syndrome](https://en.wikipedia.org/wiki/Impostor_syndrome).
 
 ##Start teaching when you start learning
 
-[In an earlier post](http://elliotec.com/how-i-got-a-job-in-web-development), I laid out the steps I took in getting a job in my current field of web/software development. It is notable that quite early in the process, I was getting paid to teach people what I had been learning, almost in tandem. I recall my instructor at the bootcamp I was enrolled in mention something in passing about learning by teaching and I really took it to heart.
+[In an earlier post](https://elliotec.com/how-i-got-a-job-in-web-development), I laid out the steps I took in getting a job in my current field of web/software development. It is notable that quite early in the process, I was getting paid to teach people what I had been learning, almost in tandem. I recall my instructor at the course I was enrolled in mention something in passing about learning by teaching and I really took it to heart.
 
-I started a gig as a personal tutor for a Computer Science grad student at UW in Ruby on Rails before finishing the course, and then was an assistant instructor for the following bootcamp after mine. I believe these two jobs were an early immunization for the impostor syndrome I may have had if I didn't do them. It might have been a little too far on the ego boost, but thats another problem.
+I started a gig as a personal tutor for a Computer Science grad student at UW in Ruby on Rails before finishing the course, and then was an assistant instructor for the courses following mine. I believe these two jobs were an early immunization for the impostor syndrome I may have had if I didn't do them. It might have been a little too far on the ego boost, but thats another problem.
 
 Point is, I started teaching for purely selfish reasons - [make money, and get learnt](https://www.youtube.com/watch?v=2Nx-sH0kn6E). (sorry)
 
@@ -48,7 +48,7 @@ And I guarantee I learned more than my audience just by writing that.
 
 ##"I know that I know nothing"
 
-Since then, I've started working as a mentor for [Thinkful](http://thinkful.com) on the weekends. This, plus being the development lead of a team at my full time spot gives me plentiful teaching, and therefore learning, opportunities.
+Since then, I've started working as a mentor for [Thinkful](https://thinkful.com) on the weekends. This, plus being the development lead of a team at my full time spot gives me plentiful teaching, and therefore learning, opportunities.
 
 I am consistently stumped by questions my students and teammates ask me. Sometimes it feels good when they have an easy question that I'm well prepared for, but that is rarely the case. More often, I'll have to look up pieces of answers and help them and myself connect the dots.
 
@@ -69,14 +69,10 @@ It's usually humbling. It's often lucrative. And it's always going to be a bette
 
 [The LdL Approach](https://en.wikipedia.org/wiki/Learning_by_teaching#The_LdL_approach)
 
-[Constructivist Learning](https://www.nde-ed.org/TeachingResources/ClassroomTips/Constructivist%20_Learning.htm)
-
 [Teach what you know](http://lifehacker.com/teach-others-what-you-know-to-make-connections-and-lear-1639560273)
 
 [The Protoge Effect](http://ideas.time.com/2011/11/30/the-protege-effect/)
 
 [Birth Order and Intelligence](http://www.sciencedirect.com/science/article/pii/S0160289607000062)
-
-[I learn more by teaching than learning](http://www.agent4change.net/grapevine/platform/1646-i-learn-more-by-teaching-than-learning-gavin-dykes.html)
 
 [Lesson Study Technique](http://ww2.kqed.org/mindshift/2015/09/14/lesson-study-technique-what-teachers-can-learn-from-one-another/)

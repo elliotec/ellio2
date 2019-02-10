@@ -5,11 +5,11 @@ tags: Sass, Visual Studio, .NET
 layout: post
 ---
 
-Some may find themselves developing the front end of web applications in .NET and Visual Studio. If that's you, I'm sorry (at least until the new [cross platform open source versions](http://news.microsoft.com/2014/11/12/microsoft-takes-net-open-source-and-cross-platform-adds-new-development-capabilities-with-visual-studio-2015-net-2015-and-visual-studio-online/) come out).
+Some may find themselves developing the front end of web applications in .NET and Visual Studio. If that's you, I'm sorry (at least until the new cross platform open source versions come out).
 
 If you use Sass, as hopefully you do if you're reading this, you will find yourself frustrated by the fact that Web Essentials for VS advertised as being capable of Sass compilation, but actually isn't. The following outline is the only way I've been able to get Sass working in Visual Studio. This has been tested in VS 2012 and 2013.
 
-1. [Download Mindscape Web Workbench here](https://visualstudiogallery.msdn.microsoft.com/2b96d16a-c986-4501-8f97-8008f9db141a) and make sure to enable it in VS at `Tools > Extenstions and Updates`. You might have to restart VS.
+1. Download Mindscape Web Workbench and make sure to enable it in VS at `Tools > Extenstions and Updates`. You might have to restart VS.
 
 2. Hopefully you have a "main.scss" type file in your stylesheets directory that contains all your imports and will eventually compile into a singular minified file called in your markup (this can be added by right-clicking the stylesheets folder, and going to `Add > New Item > SCSS Stylesheet (Sass)`, then name appropriately):
 

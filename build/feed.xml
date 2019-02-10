@@ -70,7 +70,7 @@
     <link rel="alternate" href="http://elliotec.com/a-hacker-news-reader-for-no-reason/"/>
     <id>http://elliotec.com/a-hacker-news-reader-for-no-reason/</id>
     <published>2017-11-18T13:23:00-07:00</published>
-    <updated>2019-02-01T00:14:43-07:00</updated>
+    <updated>2019-02-09T23:26:51-07:00</updated>
     <author>
       <name>elliotec | Mike Elliott</name>
     </author>
@@ -78,7 +78,7 @@
 
 &lt;p&gt;The other night I was thinking about how my experience being fully entrenched in React and the modern JavaScript ecosystem lately might have influenced how I&amp;rsquo;d write an app by hand in vanilla HTML, CSS, and JS with no libraries or anything.&lt;/p&gt;
 
-&lt;p&gt;Within the same hour I was looking at &lt;a href="https://news.ycombinator.com/"&gt;Hacker News&lt;/a&gt; and some of it&amp;rsquo;s reader clients, noting how they all kind of sucked as far as UX (including HN itself - only recently adding comment collapsing and mobile support), and discovered &lt;a href="https://hacker-news.firebaseio.com/v0/"&gt;the Hacker News API&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Within the same hour I was looking at &lt;a href="https://news.ycombinator.com/"&gt;Hacker News&lt;/a&gt; and some of it&amp;rsquo;s reader clients, noting how they all kind of sucked as far as UX (including HN itself - only recently adding comment collapsing and mobile support), and discovered &lt;a href="https://github.com/HackerNews/API"&gt;the Hacker News API&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Clearly this presented an opportunity to build my own HN reader in the lightest way I could - fully client side, no libraries, totally vanilla.&lt;/p&gt;
 
@@ -88,7 +88,7 @@
 
 &lt;p&gt;I&amp;rsquo;ll save you the arithmetic, that&amp;rsquo;s a grand total of &lt;em&gt;5 KB&lt;/em&gt; on the initial load.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href="/hn-no-reason" target='_blank'&gt;
+&lt;p&gt;&lt;a href="/hn-no-reason/" target='_blank'&gt;
     &lt;h2&gt;Go to A Hacker News Reader For No Reason!&lt;/h2&gt;
     &lt;img src="../images/hn-no-reason.png" alt='HN App Image' /&gt;
 &lt;/a&gt;&lt;/p&gt;
@@ -225,7 +225,7 @@ but since it&amp;rsquo;s only 99 lines, I&amp;rsquo;ve posted the contents of JS
 &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;span class="nx"&gt;fetchTopStories&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;There you have it. Maybe someone else will also find a reason to use &lt;a href="https://elliotec.com/hn-no-reason"&gt;A Hacker News Reader For No Reason&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;There you have it. Maybe someone else will also find a reason to use &lt;a href="https://elliotec.com/hn-no-reason/"&gt;A Hacker News Reader For No Reason&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;Update 2018-03-04&lt;/em&gt;: This post has been translated into Russian at &lt;a href="http://clipartmag.com/ru-a-hacker-news-reader-for-no-reason"&gt;clipartmag.com&lt;/a&gt;&lt;/p&gt;
 </content>
@@ -235,13 +235,13 @@ but since it&amp;rsquo;s only 99 lines, I&amp;rsquo;ve posted the contents of JS
     <link rel="alternate" href="http://elliotec.com/how-to-get-100-google-page-speed-score/"/>
     <id>http://elliotec.com/how-to-get-100-google-page-speed-score/</id>
     <published>2017-10-17T12:01:00-06:00</published>
-    <updated>2019-02-09T16:19:40-07:00</updated>
+    <updated>2019-02-09T23:30:00-07:00</updated>
     <author>
       <name>elliotec | Mike Elliott</name>
     </author>
     <content type="html">&lt;h3&gt;Everyone hates slow websites. Everyone likes fast websites.&lt;/h3&gt;
 
-&lt;p&gt;I recently worked on a Google AMP (Accelerated Mobile Pages) project, which was created to mitigate bloated websites from being at the top of Google results on their mobile web index. I personally think AMP is a &lt;a href="https://danielmiessler.com/blog/google-amp-not-good-thing/#gs.co7smnc"&gt;bad thing&lt;/a&gt; &lt;a href="https://daringfireball.net/linked/2017/01/17/schreiber-amp"&gt;for us&lt;/a&gt; but that&amp;rsquo;s beside the point of this article.&lt;/p&gt;
+&lt;p&gt;I recently worked on a Google AMP (Accelerated Mobile Pages) project, which was created to mitigate bloated websites from being at the top of Google results on their mobile web index. I personally think AMP is a &lt;a href="https://danielmiessler.com/blog/google-amp-not-good-thing/"&gt;bad thing&lt;/a&gt; &lt;a href="https://daringfireball.net/linked/2017/01/17/schreiber-amp"&gt;for us&lt;/a&gt; but that&amp;rsquo;s beside the point of this article.&lt;/p&gt;
 
 &lt;p&gt;The point of this article is that you can get a better user experience by just building websites that are fast, and you don&amp;rsquo;t need to use AMP. But if you wanted to, the methods in this post could also be a good starting point for getting your pages into AMP with minimal effort.&lt;/p&gt;
 
@@ -413,7 +413,7 @@ The speed is what matters and that&amp;rsquo;s good for everyone using your webs
 
 &lt;p&gt;Join the discussion &lt;a href="https://news.ycombinator.com/item?id=15516957"&gt;on Hacker News&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;Update 2018-01-26&lt;/em&gt;: This post has been translated into Russian at &lt;a href="http://howtorecover.me/kak-polucit-pokazatel-skorosti-google"&gt;HowToRecover.me&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Update 2018-01-26&lt;/em&gt;: This post has been translated into Russian at &lt;a href="https://howtorecover.me/kak-polucit-pokazatel-skorosti-google"&gt;HowToRecover.me&lt;/a&gt;&lt;/p&gt;
 </content>
   </entry>
   <entry>
@@ -480,7 +480,7 @@ The speed is what matters and that&amp;rsquo;s good for everyone using your webs
     <link rel="alternate" href="http://elliotec.com/modules-and-monoliths/"/>
     <id>http://elliotec.com/modules-and-monoliths/</id>
     <published>2016-02-20T20:06:00-07:00</published>
-    <updated>2019-02-01T00:14:43-07:00</updated>
+    <updated>2019-02-09T22:59:53-07:00</updated>
     <author>
       <name>elliotec | Mike Elliott</name>
     </author>
@@ -524,7 +524,7 @@ accessible and rewarding.&lt;/p&gt;
 
 &lt;p&gt;People can be modules or monoliths. Many choose specialization and corner themselves as &amp;ldquo;JavaScript Developers&amp;rdquo; or &amp;ldquo;Rails Developers.&amp;rdquo; My advice is to stay away from this and keep your options open with something like &amp;ldquo;software developer,&amp;rdquo; highlighting your experience in your preferred fields without removing yourself from opportunities to grow and gain new technical skills.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href="http://dilbertblog.typepad.com/the_dilbert_blog/2007/07/career-advice.html"&gt;Some of the best career advice I&amp;rsquo;ve read came from Scott Adams which says that in order to become extraordinary, you have two paths:&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://dilbertblog.typepad.com/the_dilbert_blog/2007/07/career-advice.html"&gt;Some of the best career advice I&amp;rsquo;ve read came from Scott Adams which says that in order to become extraordinary, you have two paths:&lt;/a&gt;&lt;/p&gt;
 
 &lt;ol&gt;
 &lt;li&gt;Become the best at one specific thing.&lt;/li&gt;
@@ -545,7 +545,7 @@ that they spend lots of time learning and configuring?&lt;/p&gt;
 
 &lt;h2&gt;The Full Stack Framework&lt;/h2&gt;
 
-&lt;p&gt;This is why I still love &lt;a href="http://rubyonrails.org"&gt;Ruby on Rails&lt;/a&gt;, which turned 10 this year.&lt;/p&gt;
+&lt;p&gt;This is why I still love &lt;a href="https://rubyonrails.org"&gt;Ruby on Rails&lt;/a&gt;, which turned 10 this year.&lt;/p&gt;
 
 &lt;p&gt;Rails created a layer of abstraction that eliminated much of
 the monotony, repetition, and difficult integrations that web development
@@ -558,7 +558,7 @@ skills, and drastically increased the speed of doing so.&lt;/p&gt;
 
 &lt;p&gt;You still have to know a bit of HTML, CSS, and JavaScript to get your way
 around Rails, but you can take shortcuts with those too, like templating
-with ERB, using CSS frameworks like Bootstrap or &lt;a href="http://refills.bourbon.io"&gt;Thoughtbot&amp;rsquo;s Refills&lt;/a&gt;, and
+with ERB, using CSS frameworks like Bootstrap or &lt;a href="https://refills.bourbon.io"&gt;Thoughtbot&amp;rsquo;s Refills&lt;/a&gt;, and
 of course jQuery, which has become startlingly rejected recently by a lot
 of the JavaScript community.&lt;/p&gt;
 
@@ -570,15 +570,15 @@ the idea of developing entirely in one language, I recommend looking into
 Clojure and Luminus which is fast and expressive and uses some
 awesome truly full-stack patterns).&lt;/p&gt;
 
-&lt;p&gt;&lt;a href="http://emberjs.com/"&gt;Ember&lt;/a&gt; is an outlier here, and deserves credit for taking a lot of the good ideas Rails popularized and put it in a JS framework with an amazing CLI tool. But unfortunately they don&amp;rsquo;t have marketing expert giants like Facebook (for React) or Google (for Angular) pushing the Ember framework, so naturally it gets pushed aside.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://emberjs.com/"&gt;Ember&lt;/a&gt; is an outlier here, and deserves credit for taking a lot of the good ideas Rails popularized and put it in a JS framework with an amazing CLI tool. But unfortunately they don&amp;rsquo;t have marketing expert giants like Facebook (for React) or Google (for Angular) pushing the Ember framework, so naturally it gets pushed aside.&lt;/p&gt;
 
-&lt;p&gt;Stuff like Ember and &lt;a href="http://yeoman.io"&gt;Yeoman&lt;/a&gt; ease the pain a little bit sometimes, but the
+&lt;p&gt;Stuff like Ember and &lt;a href="https://yeoman.io"&gt;Yeoman&lt;/a&gt; ease the pain a little bit sometimes, but the
 fragmentation and the dramatic fiasco that has become of the
 JavaScript framework/library/etc world is becoming a defining characteristic of the community. These frameworks inaccessibility often require
 that one be an expert just in JavaScript in order to properly implement. Why?&lt;/p&gt;
 
 &lt;p&gt;Full stack development is really just combining the concepts of
-&amp;ldquo;standing on the shoulders of giants&amp;rdquo; and &lt;a href="http://fourhourworkweek.com/2014/08/25/the-art-of-strategic-laziness/"&gt;&amp;ldquo;strategic laziness.&amp;rdquo;&lt;/a&gt; We take what we&amp;rsquo;ve learned from the past, and use it to strategically avoid decisions that have already been made and proven by people smarter than us.&lt;/p&gt;
+&amp;ldquo;standing on the shoulders of giants&amp;rdquo; and &lt;a href="https://fourhourworkweek.com/2014/08/25/the-art-of-strategic-laziness/"&gt;&amp;ldquo;strategic laziness.&amp;rdquo;&lt;/a&gt; We take what we&amp;rsquo;ve learned from the past, and use it to strategically avoid decisions that have already been made and proven by people smarter than us.&lt;/p&gt;
 
 &lt;h2&gt;Effort For its Own Sake&lt;/h2&gt;
 
@@ -681,7 +681,7 @@ ES6/ES2018/ES-whatever-we&amp;rsquo;re-calling-it-now.&lt;/p&gt;
 
 &lt;h2&gt;Lets go back to convention over configuration.&lt;/h2&gt;
 
-&lt;p&gt;&lt;a href="https://medium.com/@wob/the-sad-state-of-web-development-1603a861d29f#.65e9l1sie"&gt;The chaos of the ultra-modularized JavaScript (and relatives) community&lt;/a&gt; can be solved by
+&lt;p&gt;The chaos of the ultra-modularized JavaScript (and relatives) community could be solved by
 coming together to develop some order and re-use, so we can use
 conventions that are shared by most instead of connecting and configuring
 one library after another to re-solve solved problems. Developers are not
@@ -705,7 +705,7 @@ contributor to the &lt;a href="https://xkcd.com/927/"&gt;clusterfuckification of
 &lt;p&gt;I&amp;rsquo;m ranting, but I&amp;rsquo;m also here to offer solutions. People need to stop making
 JS frameworks, and people also need to stop writing self contained libraries
 that don&amp;rsquo;t conform to any standard but their own. Follow the examples of Rails
-and Django, and SpringMVC and even jQuery. Let&amp;rsquo;s just come together to pick a framework with a high level of abstraction, so we can make the magic happen by piggybacking on the magic the frameworks provide. &lt;a href="http://blog.circleci.com/its-the-future/"&gt;It&amp;rsquo;s the future.&lt;/a&gt;&lt;/p&gt;
+and Django, and SpringMVC and even jQuery. Let&amp;rsquo;s just come together to pick a framework with a high level of abstraction, so we can make the magic happen by piggybacking on the magic the frameworks provide. &lt;a href="https://blog.circleci.com/its-the-future/"&gt;It&amp;rsquo;s the future.&lt;/a&gt;&lt;/p&gt;
 </content>
   </entry>
   <entry>
@@ -713,7 +713,7 @@ and Django, and SpringMVC and even jQuery. Let&amp;rsquo;s just come together to
     <link rel="alternate" href="http://elliotec.com/teach-your-skills-for-fun-and-profit/"/>
     <id>http://elliotec.com/teach-your-skills-for-fun-and-profit/</id>
     <published>2015-11-10T13:49:00-07:00</published>
-    <updated>2019-02-01T00:14:43-07:00</updated>
+    <updated>2019-02-09T23:08:12-07:00</updated>
     <author>
       <name>elliotec | Mike Elliott</name>
     </author>
@@ -731,7 +731,7 @@ and Django, and SpringMVC and even jQuery. Let&amp;rsquo;s just come together to
 
 &lt;h2&gt;Gaining expertise&lt;/h2&gt;
 
-&lt;p&gt;In his book &lt;a href="http://fourhourworkweek.com"&gt;&amp;ldquo;The 4-Hour Workweek,&amp;rdquo;&lt;/a&gt; Tim Ferris famously (and controversially) outlines how to be come an expert in anything in four weeks and six steps. Read the book if you want to know each step, but let me give you a hint: at least half of them involve teaching.&lt;/p&gt;
+&lt;p&gt;In his book &lt;a href="https://fourhourworkweek.com"&gt;&amp;ldquo;The 4-Hour Workweek,&amp;rdquo;&lt;/a&gt; Tim Ferris famously (and controversially) outlines how to be come an expert in anything in four weeks and six steps. Read the book if you want to know each step, but let me give you a hint: at least half of them involve teaching.&lt;/p&gt;
 
 &lt;p&gt;Think about the times you&amp;rsquo;ve had to give presentations. It&amp;rsquo;s likely that you started out methodically when you found out you were going to do it, only to find yourself scrambling the night before and doing it in a few hours college-thesis-style. But you still learned a ton! Certainly more than the people that you were presenting for.&lt;/p&gt;
 
@@ -741,15 +741,15 @@ and Django, and SpringMVC and even jQuery. Let&amp;rsquo;s just come together to
 
 &lt;p&gt;We trick ourselves all the time into thinking we are learning. It&amp;rsquo;s quite a conundrum - how can we have a full grasp of an idea when we don&amp;rsquo;t know what we don&amp;rsquo;t know?&lt;/p&gt;
 
-&lt;p&gt;As &lt;a href="http://artofproblemsolving.com/articles/learning-through-teaching"&gt;Richard Rusczyk says&lt;/a&gt;, &amp;ldquo;Teaching removes this possibility of self-deceit.&amp;rdquo; This happens both by us preemptively gathering more information and knowledge in anticipation of our student&amp;rsquo;s lack of understanding or questions, and also by being put on the spot by those which were not anticipated at the time of teaching.&lt;/p&gt;
+&lt;p&gt;As &lt;a href="https://artofproblemsolving.com/articles/learning-through-teaching"&gt;Richard Rusczyk says&lt;/a&gt;, &amp;ldquo;Teaching removes this possibility of self-deceit.&amp;rdquo; This happens both by us preemptively gathering more information and knowledge in anticipation of our student&amp;rsquo;s lack of understanding or questions, and also by being put on the spot by those which were not anticipated at the time of teaching.&lt;/p&gt;
 
 &lt;p&gt;Teaching also happens to be an excellent cure for an endemic of the tech world: &lt;a href="https://en.wikipedia.org/wiki/Impostor_syndrome"&gt;Impostor Syndrome&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h2&gt;Start teaching when you start learning&lt;/h2&gt;
 
-&lt;p&gt;&lt;a href="http://elliotec.com/how-i-got-a-job-in-web-development"&gt;In an earlier post&lt;/a&gt;, I laid out the steps I took in getting a job in my current field of web/software development. It is notable that quite early in the process, I was getting paid to teach people what I had been learning, almost in tandem. I recall my instructor at the bootcamp I was enrolled in mention something in passing about learning by teaching and I really took it to heart.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://elliotec.com/how-i-got-a-job-in-web-development"&gt;In an earlier post&lt;/a&gt;, I laid out the steps I took in getting a job in my current field of web/software development. It is notable that quite early in the process, I was getting paid to teach people what I had been learning, almost in tandem. I recall my instructor at the course I was enrolled in mention something in passing about learning by teaching and I really took it to heart.&lt;/p&gt;
 
-&lt;p&gt;I started a gig as a personal tutor for a Computer Science grad student at UW in Ruby on Rails before finishing the course, and then was an assistant instructor for the following bootcamp after mine. I believe these two jobs were an early immunization for the impostor syndrome I may have had if I didn&amp;rsquo;t do them. It might have been a little too far on the ego boost, but thats another problem.&lt;/p&gt;
+&lt;p&gt;I started a gig as a personal tutor for a Computer Science grad student at UW in Ruby on Rails before finishing the course, and then was an assistant instructor for the courses following mine. I believe these two jobs were an early immunization for the impostor syndrome I may have had if I didn&amp;rsquo;t do them. It might have been a little too far on the ego boost, but thats another problem.&lt;/p&gt;
 
 &lt;p&gt;Point is, I started teaching for purely selfish reasons - &lt;a href="https://www.youtube.com/watch?v=2Nx-sH0kn6E"&gt;make money, and get learnt&lt;/a&gt;. (sorry)&lt;/p&gt;
 
@@ -759,7 +759,7 @@ and Django, and SpringMVC and even jQuery. Let&amp;rsquo;s just come together to
 
 &lt;h2&gt;&amp;ldquo;I know that I know nothing&amp;rdquo;&lt;/h2&gt;
 
-&lt;p&gt;Since then, I&amp;rsquo;ve started working as a mentor for &lt;a href="http://thinkful.com"&gt;Thinkful&lt;/a&gt; on the weekends. This, plus being the development lead of a team at my full time spot gives me plentiful teaching, and therefore learning, opportunities.&lt;/p&gt;
+&lt;p&gt;Since then, I&amp;rsquo;ve started working as a mentor for &lt;a href="https://thinkful.com"&gt;Thinkful&lt;/a&gt; on the weekends. This, plus being the development lead of a team at my full time spot gives me plentiful teaching, and therefore learning, opportunities.&lt;/p&gt;
 
 &lt;p&gt;I am consistently stumped by questions my students and teammates ask me. Sometimes it feels good when they have an easy question that I&amp;rsquo;m well prepared for, but that is rarely the case. More often, I&amp;rsquo;ll have to look up pieces of answers and help them and myself connect the dots.&lt;/p&gt;
 
@@ -779,15 +779,11 @@ and Django, and SpringMVC and even jQuery. Let&amp;rsquo;s just come together to
 
 &lt;p&gt;&lt;a href="https://en.wikipedia.org/wiki/Learning_by_teaching#The_LdL_approach"&gt;The LdL Approach&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href="https://www.nde-ed.org/TeachingResources/ClassroomTips/Constructivist%20_Learning.htm"&gt;Constructivist Learning&lt;/a&gt;&lt;/p&gt;
-
 &lt;p&gt;&lt;a href="http://lifehacker.com/teach-others-what-you-know-to-make-connections-and-lear-1639560273"&gt;Teach what you know&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href="http://ideas.time.com/2011/11/30/the-protege-effect/"&gt;The Protoge Effect&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href="http://www.sciencedirect.com/science/article/pii/S0160289607000062"&gt;Birth Order and Intelligence&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href="http://www.agent4change.net/grapevine/platform/1646-i-learn-more-by-teaching-than-learning-gavin-dykes.html"&gt;I learn more by teaching than learning&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href="http://ww2.kqed.org/mindshift/2015/09/14/lesson-study-technique-what-teachers-can-learn-from-one-another/"&gt;Lesson Study Technique&lt;/a&gt;&lt;/p&gt;
 </content>
@@ -809,7 +805,7 @@ and Django, and SpringMVC and even jQuery. Let&amp;rsquo;s just come together to
     <link rel="alternate" href="http://elliotec.com/how-i-got-a-job-in-web-development/"/>
     <id>http://elliotec.com/how-i-got-a-job-in-web-development/</id>
     <published>2015-01-27T06:12:00-07:00</published>
-    <updated>2019-02-01T00:14:43-07:00</updated>
+    <updated>2019-02-09T23:19:34-07:00</updated>
     <author>
       <name>elliotec | Mike Elliott</name>
     </author>
@@ -825,11 +821,11 @@ and Django, and SpringMVC and even jQuery. Let&amp;rsquo;s just come together to
 
 &lt;p&gt;That was a pretty cool job, but it certainly didn&amp;rsquo;t make me want to study electrical engineering. I went into psychology thinking it would supplement my intent of going to medical school and becoming a psychiatrist. That dream died fast for numerous reasons, and I ended up rushing to finish my degree ASAP. I then started work at Starbucks in addition to helping out the neighbor with soldering and testing his products after leaving my student job upon graduation.&lt;/p&gt;
 
-&lt;p&gt;That same month I learned about &lt;a href="http://www.linuxfoundation.org/"&gt;Linux&lt;/a&gt; and decided to install &lt;a href="http://www.ubuntu.com/desktop"&gt;Ubuntu&lt;/a&gt; on an old Dell I inherited from my parents. In order to get things installed and working properly I had to open the command line and actually use Unix commands, some of them often enough to start understanding what they did and remembering them. I was just getting into Minecraft at the time and wanted my girlfriend to play with me, and I figured with a little googling it would be easy enough to setup a local server on that Ubuntu machine. It was, and I consider that my first real and aware exposure to programming.&lt;/p&gt;
+&lt;p&gt;That same month I learned about &lt;a href="https://www.linuxfoundation.org/"&gt;Linux&lt;/a&gt; and decided to install &lt;a href="http://www.ubuntu.com/desktop"&gt;Ubuntu&lt;/a&gt; on an old Dell I inherited from my parents. In order to get things installed and working properly I had to open the command line and actually use Unix commands, some of them often enough to start understanding what they did and remembering them. I was just getting into Minecraft at the time and wanted my girlfriend to play with me, and I figured with a little googling it would be easy enough to setup a local server on that Ubuntu machine. It was, and I consider that my first real and aware exposure to programming.&lt;/p&gt;
 
 &lt;h2&gt;Finding the time&lt;/h2&gt;
 
-&lt;p&gt;Over the next few months I dabbled in various tutorials on HTML and CSS recommended by Reddit but struggled finding time and motivation to just sit down and get through them. I attempted to complete the &lt;a href="http://www.codecademy.com"&gt;Codecademy&lt;/a&gt; courses multiple times but found them boring and purposeless. The idea sort of went to the back burner as I worked full-time, moved into a new place, and wanted to relax and enjoy my time off. I was doing just that at the climbing gym on June 1st when I clumsily stumbled off the mat at the base of the wall and dramatically broke the cartilage in my ankle. Somehow I didn&amp;rsquo;t need surgery but the doctor said it had to be non-weight bearing for 12 weeks.&lt;/p&gt;
+&lt;p&gt;Over the next few months I dabbled in various tutorials on HTML and CSS recommended by Reddit but struggled finding time and motivation to just sit down and get through them. I attempted to complete the &lt;a href="https://www.codecademy.com"&gt;Codecademy&lt;/a&gt; courses multiple times but found them boring and purposeless. The idea sort of went to the back burner as I worked full-time, moved into a new place, and wanted to relax and enjoy my time off. I was doing just that at the climbing gym on June 1st when I clumsily stumbled off the mat at the base of the wall and dramatically broke the cartilage in my ankle. Somehow I didn&amp;rsquo;t need surgery but the doctor said it had to be non-weight bearing for 12 weeks.&lt;/p&gt;
 
 &lt;p&gt;So I called my boss and broke the news, she reminded me of one of the benefits of working at Starbucks: Short-term disability insurance. It got signed off no problem. The first couple weeks were mostly spent sleeping away the pain and playing through various video games, pretty much just lazing around. But one day when the Lortab wore off I was feeling very unproductive and lazy, so I decided to set a goal of getting through those HTML and CSS Codecademy courses the next week. At the same time we moved into my girlfriend&amp;rsquo;s parents&amp;rsquo; house while they were abroad so that eliminated rent and some other expenses for the few months I was out. My girlfriend also deserves a lot of credit for working and helping me out during this time. I became acutely aware of how fortunate I was to be in a position where I was essentially getting paid to chill at home and have 3 months of free time to spend however I wanted.&lt;/p&gt;
 
@@ -841,11 +837,11 @@ and Django, and SpringMVC and even jQuery. Let&amp;rsquo;s just come together to
 
 &lt;p&gt;My next step was to search through my network for advice. I thought of everyone I knew, went through my Facebook friends, and found someone I could contact that was involved in the industry. So I messaged him and told him about my interest and quickly got a response. He happened to be in a senior position at a very well known company but took the time to give me a little project to work on with a loose deadline. Still being in the first third of my confinement to the couch, I was able to spend two weeks working exclusively on this. I learned a lot about modern best practices and got some great career advice.&lt;/p&gt;
 
-&lt;h2&gt;&lt;a href="http://rubyonrails.org"&gt;Rails&lt;/a&gt; and a development environment&lt;/h2&gt;
+&lt;h2&gt;&lt;a href="https://rubyonrails.org"&gt;Rails&lt;/a&gt; and a development environment&lt;/h2&gt;
 
-&lt;p&gt;At this point I felt comfortable enough to tell my friends and family about my pursuit, and let them know that I was looking for work and projects. A good friend gave me the login to a tutorial series called &lt;a href="http://onemonth.com"&gt;One Month Rails&lt;/a&gt; he bought but never found time for. I certainly had time for it, so I did it.&lt;/p&gt;
+&lt;p&gt;At this point I felt comfortable enough to tell my friends and family about my pursuit, and let them know that I was looking for work and projects. A good friend gave me the login to a tutorial series called &lt;a href="https://onemonth.com"&gt;One Month Rails&lt;/a&gt; he bought but never found time for. I certainly had time for it, so I did it.&lt;/p&gt;
 
-&lt;p&gt;This tutorial introduced me to a vast world that I&amp;rsquo;d never seen before. It guided me through setting up a development environment that consisted primarily of &lt;a href="http://www.sublimetext.com"&gt;Sublime Text&lt;/a&gt; and the command line, and helped me get a bunch of other tools set up. I learned about version control and &lt;a href="http://git-scm.com"&gt;git&lt;/a&gt; (and by extension, &lt;a href="http://github.com"&gt;Github&lt;/a&gt;) through repetition in the course, and got a grasp on most aspects of the tech stack in Rails. I finished it in about 2 weeks and had a fully functioning app replicating Pintrest, hosted on &lt;a href="http://heroku.com"&gt;Heroku&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;This tutorial introduced me to a vast world that I&amp;rsquo;d never seen before. It guided me through setting up a development environment that consisted primarily of &lt;a href="https://www.sublimetext.com"&gt;Sublime Text&lt;/a&gt; and the command line, and helped me get a bunch of other tools set up. I learned about version control and &lt;a href="https://git-scm.com"&gt;git&lt;/a&gt; (and by extension, &lt;a href="https://github.com"&gt;Github&lt;/a&gt;) through repetition in the course, and got a grasp on most aspects of the tech stack in Rails. I finished it in about 2 weeks and had a fully functioning app replicating Pintrest, hosted on &lt;a href="https://heroku.com"&gt;Heroku&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;I used jQuery a little bit during the tutorial, which was a nice intro to JavaScript. I realized how useful and necessary it is and wanted to use some other plugins in my future projects.&lt;/p&gt;
 
@@ -867,9 +863,9 @@ and Django, and SpringMVC and even jQuery. Let&amp;rsquo;s just come together to
 
 &lt;p&gt;I continued to get a client here and there after my ankle had fully healed and I started work again part time at Starbucks, and a little for my neighbor. It wasn&amp;rsquo;t enough to pay the bills though, and at this point I was dedicated to becoming a professional web developer. I looked around for some dev roles in my area and came up short. Most required a level of proficiency that I wasn&amp;rsquo;t totally confident I had.&lt;/p&gt;
 
-&lt;p&gt;I mentioned to the same friend who introduced me to the Rails tutorial that I wanted to somehow expedite my learning to get to a professional skill level. He told me about these code schools that had been popping up around the country taking after the tech company incubator model and their apparent success. He had been working at a venture impact fund, and was tasked to get information about these schools for possible investments. He emailed me a spreadsheet with some basic info about each code school he looked into (which was immensely helpful - something similar can now be found &lt;a href="http://www.skilledup.com/learn/programming/the-ultimate-guide-to-coding-bootcamps-the-exhaustive-list/"&gt;here&lt;/a&gt;) and I did my own research on which would be the best for me.&lt;/p&gt;
+&lt;p&gt;I mentioned to the same friend who introduced me to the Rails tutorial that I wanted to somehow expedite my learning to get to a professional skill level. He told me about these code schools that had been popping up around the country taking after the tech company incubator model and their apparent success. He had been working at a venture impact fund, and was tasked to get information about these schools for possible investments. He emailed me a spreadsheet with some basic info about each code school he looked into (which was immensely helpful) and I did my own research on which would be the best for me.&lt;/p&gt;
 
-&lt;p&gt;That October, after much deliberation I decided to apply to &lt;a href="http://www.codefellows.org"&gt;Code Fellows&lt;/a&gt; in Seattle. I chose this particular code school mainly because they guaranteed a job in software development within 9 months or I paid nothing. Another reason was its relatively low price compared to some of the others like Hack Reactor, which at the time I was applying was more expensive than grad school plus the cost and hassle of moving to San Fransisco. Also, I had never been to Seattle and was in great need of an adventure to a place I had heard only good things about.&lt;/p&gt;
+&lt;p&gt;That October, after much deliberation I decided to apply to &lt;a href="https://www.codefellows.org"&gt;Code Fellows&lt;/a&gt; in Seattle. I chose this particular code school mainly because they guaranteed a job in software development within 9 months or I paid nothing. Another reason was its relatively low price compared to some of the others like Hack Reactor, which at the time I was applying was more expensive than grad school plus the cost and hassle of moving to San Fransisco. Also, I had never been to Seattle and was in great need of an adventure to a place I had heard only good things about.&lt;/p&gt;
 
 &lt;p&gt;The application and interview process was pretty intense. After an initial application assessing my skills and aptitude I was moved on to another stage that required a submission of a one-minute video of me explaining &amp;ldquo;something technical.&amp;rdquo; I chose jQuery and probably did it 10 times before feeling I had done an adequate job. I soon got another email requesting a time for an interview, and I got on Skype with the CEO at the alloted time.&lt;/p&gt;
 
@@ -887,7 +883,7 @@ and Django, and SpringMVC and even jQuery. Let&amp;rsquo;s just come together to
 
 &lt;p&gt;I then skipped to the third challenge knowing number 2 would take me much longer. There were a few tricky parts, but I made it work with time to spare for a quick Bootstrap UI and some funny pictures. You can find the code for that app &lt;a href="https://github.com/elliotec/codefellows_crud"&gt;here on my Github&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;And finally, the public library. This was by far the most difficult part of the challenge and up to that point the most complicated programming I&amp;rsquo;d been tasked to do, and it&amp;rsquo;d be a long time before I did anything that difficult again. This is the point where I realized that I&amp;rsquo;d been learning Rails without hardly learning any Ruby at all - hence the namesake &amp;ldquo;on Rails.&amp;rdquo; I was determined to submit the challenges by Monday, and was sincerely worried that wasn&amp;rsquo;t going to happen when I read the description of the challenge. So I immediately started looking around for tutorials that would help me with plain Ruby. I did &lt;a href="http://tryruby.org"&gt;CodeSchool&amp;rsquo;s Try Ruby&lt;/a&gt; which was introductory and ultimately not very helpful when it came to what I was trying to accomplish.&lt;/p&gt;
+&lt;p&gt;And finally, the public library. This was by far the most difficult part of the challenge and up to that point the most complicated programming I&amp;rsquo;d been tasked to do, and it&amp;rsquo;d be a long time before I did anything that difficult again. This is the point where I realized that I&amp;rsquo;d been learning Rails without hardly learning any Ruby at all - hence the namesake &amp;ldquo;on Rails.&amp;rdquo; I was determined to submit the challenges by Monday, and was sincerely worried that wasn&amp;rsquo;t going to happen when I read the description of the challenge. So I immediately started looking around for tutorials that would help me with plain Ruby. I did &lt;a href="https://www.pluralsight.com/search?q=ruby"&gt;CodeSchool&amp;rsquo;s Try Ruby&lt;/a&gt; which was introductory and ultimately not very helpful when it came to what I was trying to accomplish.&lt;/p&gt;
 
 &lt;p&gt;I came across &lt;a href="http://tutorials.jumpstartlab.com/projects/ruby_in_100_minutes.html"&gt;Ruby in 100 Minutes&lt;/a&gt; which is quite different now than when I used it as a resource. At the time, it modeled a personal chef that made things for you, and the resulting program &lt;a href="https://github.com/elliotec/100_min_ruby/blob/master/personal_chef.rb"&gt;looked like this&lt;/a&gt;. It still is probably worth reading through, but it doesn&amp;rsquo;t seem quite as helpful for writing a real Ruby program as it used to be.&lt;/p&gt;
 
@@ -903,7 +899,7 @@ and Django, and SpringMVC and even jQuery. Let&amp;rsquo;s just come together to
 
 &lt;p&gt;The curriculum itself was very rigorous (most of my projects and assignments can be found on my Github if you&amp;rsquo;re interested), but I feel some of the material we were taught was not as impactful to me as what I learned from interacting with my peers and instructors and going to meetups almost every night, brushing elbows with some of the biggest names in the tech community and absorbing everything I could from everyone I could. I also had a great mentor from a local startup that really helped me tie a few loose ends in the directions I was heading.&lt;/p&gt;
 
-&lt;p&gt;Another really useful aspect was the increasing of our web presence. I never had a &lt;a href="http://linkedin.com/in/elliotec"&gt;Linkedin&lt;/a&gt; account up until then, which I had come to find out is an absolutely essential tool in job searching. There was staff there tasked with helping us maximize the efficacy of our web presence and resumes, and doing mock interviews both technical and general.&lt;/p&gt;
+&lt;p&gt;Another really useful aspect was the increasing of our web presence. I never had a &lt;a href="https://linkedin.com/in/elliotec"&gt;Linkedin&lt;/a&gt; account up until then, which I had come to find out is an absolutely essential tool in job searching. There was staff there tasked with helping us maximize the efficacy of our web presence and resumes, and doing mock interviews both technical and general.&lt;/p&gt;
 
 &lt;p&gt;During the course I was contacted with a few contract opportunities that I took, even though I really didn&amp;rsquo;t have the time. One was as a personal tutor for someone with a MS in computer science learning Rails in a certificate program at UW. I had minimal credentials, and I got paid the most money I&amp;rsquo;d ever charged up to that point to help a comp sci grad student. This put things in an interesting perspective - that the practical knowledge I&amp;rsquo;d been working on gaining might just be more useful than the expensive and dense theory taught in academia.&lt;/p&gt;
 
@@ -913,11 +909,11 @@ and Django, and SpringMVC and even jQuery. Let&amp;rsquo;s just come together to
 
 &lt;h2&gt;Startup Weekend&lt;/h2&gt;
 
-&lt;p&gt;Something I really wanted to do before I left Seattle was participate in a &lt;a href="http://startupweekend.org/"&gt;Startup Weekend&lt;/a&gt; event. There was only one more before my return to Salt Lake in April and it was unfortunately sold out. I got in contact with an instructor at Code Fellows who I knew was partnering with the event and he pulled a couple strings and got me a ticket as a designer. So I went and pitched my first startup idea which I made up on the spot and failed magnificently at.&lt;/p&gt;
+&lt;p&gt;Something I really wanted to do before I left Seattle was participate in a &lt;a href="https://startupweekend.org/"&gt;Startup Weekend&lt;/a&gt; event. There was only one more before my return to Salt Lake in April and it was unfortunately sold out. I got in contact with an instructor at Code Fellows who I knew was partnering with the event and he pulled a couple strings and got me a ticket as a designer. So I went and pitched my first startup idea which I made up on the spot and failed magnificently at.&lt;/p&gt;
 
 &lt;p&gt;I was baffled by how few developers were there when it was time to choose teams. Even though I had a designer ticket, it was clear my coding skills were needed (not to mention my design skills were nowhere near most of the others there). Due to the lack of developers, there were several teams that were asking me to join them, offering one incentive or another, and at least one major altercation between two team leaders over me. It was awkward.&lt;/p&gt;
 
-&lt;p&gt;So I chose a team (who has since gone on to be a &lt;a href="http://getfastbar.com"&gt;real company&lt;/a&gt;), and had an absolutely great time. I met some really smart, interesting people. I wrote the back end of the app in Rails that connected to an iOS app. I learned so much from the team and working closely with the iOS developer. We stay in contact and I credit him with leading me to much of the interest and knowledge I have now.&lt;/p&gt;
+&lt;p&gt;So I chose a team (who has since gone on to be a &lt;a href="https://getfastbar.com"&gt;real company&lt;/a&gt;), and had an absolutely great time. I met some really smart, interesting people. I wrote the back end of the app in Rails that connected to an iOS app. I learned so much from the team and working closely with the iOS developer. We stay in contact and I credit him with leading me to much of the interest and knowledge I have now.&lt;/p&gt;
 
 &lt;p&gt;Startup Weekend really put my skills to the limit, pushed me in ways I&amp;rsquo;d never been pushed before, and introduced me to lasting relationships that remain beneficial. I also had a really interesting and legitimate project for my portfolio that would attract future employers.&lt;/p&gt;
 
@@ -939,9 +935,9 @@ and Django, and SpringMVC and even jQuery. Let&amp;rsquo;s just come together to
 
 &lt;p&gt;Interestingly, both companies that gave me an offer reached out to me rather than the other way around. One was a recruiter who found me on Linkedin and the other was the dev manager who saw my post on Reddit. Both asked me lots of technical questions, and even code questions, but neither gave me a white board nor take home code challenge.&lt;/p&gt;
 
-&lt;p&gt;I enjoyed my first job as a developer. I was introduced to a lot of technologies I wouldn&amp;rsquo;t have been otherwise. They worked in a Windows environment, so I had to learn Visual Studio, C#, .Net, Razor, etc. and how to plug Coffeescript and Sass into the stack. It was a great learning experience and I made good friends there, but soon I had a lot of recruiters contacting me and I wasn&amp;rsquo;t a huge fan of the industry the company was in. It made me curious about opportunities that might have better suited me. I read &lt;a href="http://www.theatlantic.com/business/archive/2014/11/quit-your-job/382402/"&gt;this article on the benefits of early career job-hopping&lt;/a&gt; which eased the feeling of guilt I had while considering new opportunities.&lt;/p&gt;
+&lt;p&gt;I enjoyed my first job as a developer. I was introduced to a lot of technologies I wouldn&amp;rsquo;t have been otherwise. They worked in a Windows environment, so I had to learn Visual Studio, C#, .Net, Razor, etc. and how to plug Coffeescript and Sass into the stack. It was a great learning experience and I made good friends there, but soon I had a lot of recruiters contacting me and I wasn&amp;rsquo;t a huge fan of the industry the company was in. It made me curious about opportunities that might have better suited me. I read &lt;a href="https://www.theatlantic.com/business/archive/2014/11/quit-your-job/382402/"&gt;this article on the benefits of early career job-hopping&lt;/a&gt; which eased the feeling of guilt I had while considering new opportunities.&lt;/p&gt;
 
-&lt;p&gt;So 4 months after my first job in web development, I accepted another offer at a &lt;a href="http://www.overstock.com"&gt;well known company&lt;/a&gt; in the area. Now, 4 months since starting the new job, I am quite content with where I&amp;rsquo;m at.&lt;/p&gt;
+&lt;p&gt;So 4 months after my first job in web development, I accepted another offer at a &lt;a href="https://www.overstock.com"&gt;well known company&lt;/a&gt; in the area. Now, 4 months since starting the new job, I am quite content with where I&amp;rsquo;m at.&lt;/p&gt;
 
 &lt;p&gt;&lt;a class="anchor" id="thechase"&gt;&lt;/a&gt;&lt;/p&gt;
 
@@ -952,17 +948,17 @@ and Django, and SpringMVC and even jQuery. Let&amp;rsquo;s just come together to
 &lt;ol&gt;
 &lt;li&gt;&lt;p&gt;Exposed myself to seemingly complicated tech tasks for the purpose of exploration. This included hacking my Wii, setting up a Minecraft server, and getting familiar with various flavors of Linux. Generally being curious about technology and the internet and how it all works.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Gained a real interest in the idea of web development and programming in general. Money was of course a motivator, but certainly not enough to create the passion I eventually found in the actual craft.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Got introduced to front end fundamentals by trying things like &lt;a href="http://codecademy.com"&gt;Codecademy&lt;/a&gt;. Personally I didn&amp;rsquo;t like the little teasers and if I could start over would skip straight to reading &lt;a href="http://htmlandcssbook.com"&gt;HTML &amp;amp; CSS&lt;/a&gt; and &lt;a href="http://javascriptbook.com"&gt;JavaScript &amp;amp; jQuery&lt;/a&gt; by John Duckett. These are from what I&amp;rsquo;ve seen the most accessible and practical books written on front end web development.&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;Got introduced to front end fundamentals by trying things like &lt;a href="https://codecademy.com"&gt;Codecademy&lt;/a&gt;. Personally I didn&amp;rsquo;t like the little teasers and if I could start over would skip straight to reading &lt;a href="https://htmlandcssbook.com"&gt;HTML &amp;amp; CSS&lt;/a&gt; and &lt;a href="https://javascriptbook.com"&gt;JavaScript &amp;amp; jQuery&lt;/a&gt; by John Duckett. These are from what I&amp;rsquo;ve seen the most accessible and practical books written on front end web development.&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;&lt;em&gt;Update January 2018&lt;/em&gt;&lt;/strong&gt;: I&amp;rsquo;ve recently discovered another really robust resource for interview questions and tutorials called &lt;a href="https://career.guru99.com"&gt;CareerGuru99&lt;/a&gt;. You might find something there valuable to your journey!&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Made some websites. My first was one for a real company which ended up not needing or using it. I did it for free to learn. This is unquestionably (hopefully obviously) the most important step I took. I then started reaching out to my network for people who needed websites and made some for friends and family.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Learned about server side scripting and full stack frameworks. I went through &lt;a href="http://onemonth.com"&gt;One Month Rails&lt;/a&gt; mostly due to a generous friend giving me his login. It was excellent and totally worth whatever they are charging. I then built another full stack web app.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Learned about server side scripting and full stack frameworks. I went through &lt;a href="https://onemonth.com"&gt;One Month Rails&lt;/a&gt; mostly due to a generous friend giving me his login. It was excellent and totally worth whatever they are charging. I then built another full stack web app.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Started a freelancing business. This really helped me legitimize myself, if only &lt;em&gt;for&lt;/em&gt; myself, and made me feel official and that I was all-in on my decision to make this my career. I made business cards, a portfolio site, a bank account, and registered my business name. Then I actually found clients and got paid to do what I had decided I wanted to get paid to do.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Created a web presence. Made sure I had accounts on Twitter, Linkedin, Github, Hacker News, Designer News, and a portfolio site, and tried to sharpen them all up. This was vastly beneficial, one of the most important things I did next to actually making websites and roughly equal to networking.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Attended a code school. I chose &lt;a href="http://codefellows.org"&gt;Code Fellows&lt;/a&gt; in Seattle because of it&amp;rsquo;s job guarantee and location. Learned a ton, made lots of friends, would do it over again in a heartbeat. Absolutely worth the investment. I took advantage of a lot of great career opportunities offered to me because of this, including assisting in teaching a class and being a personal tutor to a CS grad student.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Networked. I asked everyone I knew what they knew about the industry and craft, and went to every &lt;a href="http://www.meetup.com"&gt;meetup&lt;/a&gt; that I could. The conversations I had (and still have) at these events are invaluable. You learn shockingly more from talking with people in the community than you would sitting in any combination of classes. It also helped me with social skills, which even as a programmer is surprisingly important.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Attended a code school. I chose &lt;a href="https://codefellows.org"&gt;Code Fellows&lt;/a&gt; in Seattle because of it&amp;rsquo;s job guarantee and location. Learned a ton, made lots of friends, would do it over again in a heartbeat. Absolutely worth the investment. I took advantage of a lot of great career opportunities offered to me because of this, including assisting in teaching a class and being a personal tutor to a CS grad student.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Networked. I asked everyone I knew what they knew about the industry and craft, and went to every &lt;a href="https://www.meetup.com"&gt;meetup&lt;/a&gt; that I could. The conversations I had (and still have) at these events are invaluable. You learn shockingly more from talking with people in the community than you would sitting in any combination of classes. It also helped me with social skills, which even as a programmer is surprisingly important.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Applied, interviewed, practiced, repeat. I sent out tons of applications and put myself out there in every way I could think of. Ultimately Linkedin, Reddit, and meetups were the channels that actually got me job offers. I practiced whiteboarding algorithms and solving problems, had a lot of interviews (each better than the previous, for the most part) and continuously kept up to date on current trends and technologies.&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
@@ -970,7 +966,7 @@ and Django, and SpringMVC and even jQuery. Let&amp;rsquo;s just come together to
 
 &lt;p&gt;Join the discussion &lt;a href="https://news.ycombinator.com/item?id=8954348"&gt;here on Hacker News&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;This post was translated into&lt;/em&gt; &lt;a href="https://essayhilfe.de/translation/#How-I-Got-a-Job-in-Web-Development:DE"&gt;German&lt;/a&gt; &lt;em&gt;by&lt;/em&gt; &lt;a href="http://essayhilfe.de"&gt;Essay Hilfe&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;This post was translated into&lt;/em&gt; &lt;a href="https://essayhilfe.de/translation/#How-I-Got-a-Job-in-Web-Development:DE"&gt;German&lt;/a&gt; &lt;em&gt;by&lt;/em&gt; &lt;a href="https://essayhilfe.de"&gt;Essay Hilfe&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;This post was also translated into&lt;/em&gt; &lt;a href="http://getcolorings.com/ru-mike-elliott-job-in-web-development"&gt;Russian&lt;/a&gt; &lt;em&gt;by&lt;/em&gt; &lt;a href="http://getcolorings.com"&gt;Colorings Blog&lt;/a&gt;&lt;/p&gt;
 </content>
@@ -980,16 +976,16 @@ and Django, and SpringMVC and even jQuery. Let&amp;rsquo;s just come together to
     <link rel="alternate" href="http://elliotec.com/using-sass-in-visual-studio/"/>
     <id>http://elliotec.com/using-sass-in-visual-studio/</id>
     <published>2014-11-12T10:10:00-07:00</published>
-    <updated>2019-02-01T00:14:43-07:00</updated>
+    <updated>2019-02-09T23:20:59-07:00</updated>
     <author>
       <name>elliotec | Mike Elliott</name>
     </author>
-    <content type="html">&lt;p&gt;Some may find themselves developing the front end of web applications in .NET and Visual Studio. If that&amp;rsquo;s you, I&amp;rsquo;m sorry (at least until the new &lt;a href="http://news.microsoft.com/2014/11/12/microsoft-takes-net-open-source-and-cross-platform-adds-new-development-capabilities-with-visual-studio-2015-net-2015-and-visual-studio-online/"&gt;cross platform open source versions&lt;/a&gt; come out).&lt;/p&gt;
+    <content type="html">&lt;p&gt;Some may find themselves developing the front end of web applications in .NET and Visual Studio. If that&amp;rsquo;s you, I&amp;rsquo;m sorry (at least until the new cross platform open source versions come out).&lt;/p&gt;
 
 &lt;p&gt;If you use Sass, as hopefully you do if you&amp;rsquo;re reading this, you will find yourself frustrated by the fact that Web Essentials for VS advertised as being capable of Sass compilation, but actually isn&amp;rsquo;t. The following outline is the only way I&amp;rsquo;ve been able to get Sass working in Visual Studio. This has been tested in VS 2012 and 2013.&lt;/p&gt;
 
 &lt;ol&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href="https://visualstudiogallery.msdn.microsoft.com/2b96d16a-c986-4501-8f97-8008f9db141a"&gt;Download Mindscape Web Workbench here&lt;/a&gt; and make sure to enable it in VS at &lt;code&gt;Tools &amp;gt; Extenstions and Updates&lt;/code&gt;. You might have to restart VS.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Download Mindscape Web Workbench and make sure to enable it in VS at &lt;code&gt;Tools &amp;gt; Extenstions and Updates&lt;/code&gt;. You might have to restart VS.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Hopefully you have a &amp;ldquo;main.scss&amp;rdquo; type file in your stylesheets directory that contains all your imports and will eventually compile into a singular minified file called in your markup (this can be added by right-clicking the stylesheets folder, and going to &lt;code&gt;Add &amp;gt; New Item &amp;gt; SCSS Stylesheet (Sass)&lt;/code&gt;, then name appropriately):&lt;/p&gt;
 
 &lt;p&gt;&lt;img src="../images/mainsass.png" /&gt;&lt;/p&gt;&lt;/li&gt;
@@ -1016,7 +1012,7 @@ and Django, and SpringMVC and even jQuery. Let&amp;rsquo;s just come together to
     <link rel="alternate" href="http://elliotec.com/writing-in-the-deseret-alphabet/"/>
     <id>http://elliotec.com/writing-in-the-deseret-alphabet/</id>
     <published>2014-06-29T09:08:00-06:00</published>
-    <updated>2019-02-01T00:14:43-07:00</updated>
+    <updated>2019-02-09T23:33:52-07:00</updated>
     <author>
       <name>elliotec | Mike Elliott</name>
     </author>
@@ -1072,13 +1068,13 @@ and Django, and SpringMVC and even jQuery. Let&amp;rsquo;s just come together to
 
 &lt;h2&gt;The State of Deseret&lt;/h2&gt;
 
-&lt;p&gt;This past weekend I went camping in the &lt;a href="http://en.wikipedia.org/wiki/San_Rafael_Swell"&gt;San Rafael Swell&lt;/a&gt; and became interested in my native state of Utah&amp;rsquo;s history and unique culture.&lt;/p&gt;
+&lt;p&gt;This past weekend I went camping in the &lt;a href="https://en.wikipedia.org/wiki/San_Rafael_Swell"&gt;San Rafael Swell&lt;/a&gt; and became interested in my native state of Utah&amp;rsquo;s history and unique culture.&lt;/p&gt;
 
-&lt;p&gt;Evidence of humans is found in Utah for as far back as 12,000 years ago. Various Native American tribes and cultures (Freemont, Puebloan, etc.) occupied the land until the first of the Mormon pioneers arrived with their leader &lt;a href="http://en.wikipedia.org/wiki/Brigham_Young"&gt;Brigham Young&lt;/a&gt; in 1847.&lt;/p&gt;
+&lt;p&gt;Evidence of humans is found in Utah for as far back as 12,000 years ago. Various Native American tribes and cultures (Freemont, Puebloan, etc.) occupied the land until the first of the Mormon pioneers arrived with their leader &lt;a href="https://en.wikipedia.org/wiki/Brigham_Young"&gt;Brigham Young&lt;/a&gt; in 1847.&lt;/p&gt;
 
 &lt;p&gt;They settled in by vastly changing the desert environment into a habitable landscape with amazing feats of industry including irrigation and agriculture, timber and mining, and constructing communities from the resources around them. They created a society from scratch.&lt;/p&gt;
 
-&lt;p&gt;The settlers were very isolated and in a political and territorial limbo that went from technically belonging to Mexico, to a near immediate statehood proposal (&lt;a href="http://en.wikipedia.org/wiki/State_of_Deseret"&gt;The State of Deseret&lt;/a&gt;), and then remaining a U.S. territory - all the while settling most of the western United States including cities like Las Vegas, San Bernardino, most of Idaho and Nevada, a good chunk of Arizona and many other western states.&lt;/p&gt;
+&lt;p&gt;The settlers were very isolated and in a political and territorial limbo that went from technically belonging to Mexico, to a near immediate statehood proposal (&lt;a href="https://en.wikipedia.org/wiki/State_of_Deseret"&gt;The State of Deseret&lt;/a&gt;), and then remaining a U.S. territory - all the while settling most of the western United States including cities like Las Vegas, San Bernardino, most of Idaho and Nevada, a good chunk of Arizona and many other western states.&lt;/p&gt;
 
 &lt;p&gt;Brigham Young and the Mormons were the de facto government throughout this time (some say they still are) and as such were providing public necessities like schooling, and founded the precursor to the University of Utah, the University of Deseret.&lt;/p&gt;
 
@@ -1088,9 +1084,9 @@ and Django, and SpringMVC and even jQuery. Let&amp;rsquo;s just come together to
 
 &lt;p&gt;In addition to the aforementioned reasons for alphabet reform, the Mormon leadership believed a new writing system would benefit them in other ways such as more unification, solidifying their unique identity, and some speculate that there was a bit of a secret-keeping draw to it as well, though that claim has been refuted by several scholars.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href="http://en.wikipedia.org/wiki/Deseret_alphabet"&gt;The Deseret Alphabet&lt;/a&gt; was developed over the course of several years and iterations beginning before the pioneers made their way across the plains, and finally had its first printing in 1859 by the &lt;a href="http://en.wikipedia.org/wiki/Deseret_News"&gt;Deseret News&lt;/a&gt;. Periodic sample prints of the alphabet came in the newspaper until the first books were published in the late 1860&amp;rsquo;s which sold very poorly. The alphabet died with Brigham Young in 1877.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://en.wikipedia.org/wiki/Deseret_alphabet"&gt;The Deseret Alphabet&lt;/a&gt; was developed over the course of several years and iterations beginning before the pioneers made their way across the plains, and finally had its first printing in 1859 by the &lt;a href="https://en.wikipedia.org/wiki/Deseret_News"&gt;Deseret News&lt;/a&gt;. Periodic sample prints of the alphabet came in the newspaper until the first books were published in the late 1860&amp;rsquo;s which sold very poorly. The alphabet died with Brigham Young in 1877.&lt;/p&gt;
 
-&lt;p&gt;It is amazing how much research there is on the Deseret Alphabet, with how few people seem to know about it. There has even been &lt;a href="http://www.deseretalphabet.info/classics/"&gt;an effort to print many classic literary masterpieces&lt;/a&gt; in the alphabet. It was introduced in Unicode in 2001, allowing for hobbyists, linguists, and historians to use the alphabet more easily.&lt;/p&gt;
+&lt;p&gt;It is amazing how much research there is on the Deseret Alphabet, with how few people seem to know about it. There has even been &lt;a href="https://www.deseretalphabet.info/classics/"&gt;an effort to print many classic literary masterpieces&lt;/a&gt; in the alphabet. It was introduced in Unicode in 2001, allowing for hobbyists, linguists, and historians to use the alphabet more easily.&lt;/p&gt;
 
 &lt;h2&gt;Learning the alphabet&lt;/h2&gt;
 
@@ -1282,7 +1278,7 @@ and Django, and SpringMVC and even jQuery. Let&amp;rsquo;s just come together to
 
 &lt;p&gt;So, ostensibly thats kind of a lot. 40 new unique characters and sounds to replace a very well known system seems a bit daunting, which may be part of the reason it had a hard time getting adopted by the intended users and audience.&lt;/p&gt;
 
-&lt;p&gt;In my opinion, other than the glyphs looking nothing at all like their Latin counterparts, the alphabet is rather easy to learn since you are just reassigning a symbol to a sound in English. There is no grammar or syntax change, it&amp;rsquo;s really just like mind-mapping 40 pictures to 40 words for which a few hours of flash card study would be quite sufficient. (Though, this isn&amp;rsquo;t the first time I&amp;rsquo;ve learned a dead script for no reason. I once became fluent in the ancient &lt;a href="http://en.wikipedia.org/wiki/Baybayin"&gt;Baybayin Tagalog script&lt;/a&gt; in a strange bout of manic overachievement.)&lt;/p&gt;
+&lt;p&gt;In my opinion, other than the glyphs looking nothing at all like their Latin counterparts, the alphabet is rather easy to learn since you are just reassigning a symbol to a sound in English. There is no grammar or syntax change, it&amp;rsquo;s really just like mind-mapping 40 pictures to 40 words for which a few hours of flash card study would be quite sufficient. (Though, this isn&amp;rsquo;t the first time I&amp;rsquo;ve learned a dead script for no reason. I once became fluent in the ancient &lt;a href="https://en.wikipedia.org/wiki/Baybayin"&gt;Baybayin Tagalog script&lt;/a&gt; in a strange bout of manic overachievement.)&lt;/p&gt;
 
 &lt;h2&gt;Limitations of the alphabet&lt;/h2&gt;
 
@@ -1296,7 +1292,7 @@ and Django, and SpringMVC and even jQuery. Let&amp;rsquo;s just come together to
 
 &lt;h2&gt;Now for the fun part&lt;/h2&gt;
 
-&lt;p&gt;I went about scouring the web for better Deseret fonts. I had a lot of trouble finding a good sans-serif font. The primary resource for these and the serif fonts I found were by &lt;a href="http://copper.chem.ucla.edu/~jericks/index.html"&gt;Joshua Erickson&lt;/a&gt;, but alas, the entire sans-serif collection has been disabled. Bummer. At least I could use some of his serif fonts that were less harsh on the eyes than the default, and there were a few sans-serif fonts his site led me to. Here are a few font samples:&lt;/p&gt;
+&lt;p&gt;I went about scouring the web for better Deseret fonts. I had a lot of trouble finding a good sans-serif font. The primary resource for these and the serif fonts I found were by &lt;a href="https://copper.chem.ucla.edu/~jericks/index.html"&gt;Joshua Erickson&lt;/a&gt;, but alas, the entire sans-serif collection has been disabled. Bummer. At least I could use some of his serif fonts that were less harsh on the eyes than the default, and there were a few sans-serif fonts his site led me to. Here are a few font samples:&lt;/p&gt;
 
 &lt;p class="adamic"&gt;1. 𐐈𐐔𐐈𐐣𐐆𐐗𐐒𐐀： 𐐀𐐁𐐂𐐃𐐄𐐅𐐆𐐇𐐈𐐉𐐊𐐋𐐌𐐍𐐎𐐏𐐐𐐑𐐒𐐓𐐔𐐕𐐖𐐗𐐘𐐙𐐚𐐛𐐜𐐝𐐞𐐠𐐡𐐢𐐣𐐤𐐥𐐦𐐧𐐟 &lt;/p&gt;
 
@@ -1353,7 +1349,7 @@ and Django, and SpringMVC and even jQuery. Let&amp;rsquo;s just come together to
     -deseret.woff
     -deseret.ttf
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Since I&amp;rsquo;m using &lt;a href="http://bourbon.io"&gt;Bourbon&lt;/a&gt;, I can use the magnificent &lt;a href="http://bourbon.io/docs/#font-face"&gt;font-face mixin&lt;/a&gt; (I&amp;rsquo;m also using &lt;a href="http://bitters.bourbon.io"&gt;Bitters&lt;/a&gt;, so I placed these 3 lines at the bottom of the _typography.scss partial):&lt;/p&gt;
+&lt;p&gt;Since I&amp;rsquo;m using &lt;a href="https://bourbon.io"&gt;Bourbon&lt;/a&gt;, I can use the magnificent &lt;a href="http://bourbon.io/docs/#font-face"&gt;font-face mixin&lt;/a&gt; (I&amp;rsquo;m also using &lt;a href="https://bitters.bourbon.io"&gt;Bitters&lt;/a&gt;, so I placed these 3 lines at the bottom of the _typography.scss partial):&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre class="highlight scss"&gt;&lt;code&gt;&lt;span class="c1"&gt;// /bitters/_typography.scss
 &lt;/span&gt;&lt;span class="k"&gt;@include&lt;/span&gt; &lt;span class="nd"&gt;font-face&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'Huneybee'&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'/fonts/Huneybee'&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 &lt;span class="k"&gt;@include&lt;/span&gt; &lt;span class="nd"&gt;font-face&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'AdamicBee'&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'/fonts/AdamicBee'&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
@@ -1432,11 +1428,11 @@ and Django, and SpringMVC and even jQuery. Let&amp;rsquo;s just come together to
 - Steven Hawking&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;This is very tedious to type, however. I mapped my keys to each of the Deseret characters using &lt;a href="http://www.boastr.net/"&gt;Better Touch Tool&lt;/a&gt;, a handy tool for lots of things, but it totally wasn&amp;rsquo;t worth it as I ended up being faster by just copy/pasting the characters from the chart in order.&lt;/p&gt;
+&lt;p&gt;This is very tedious to type, however. I mapped my keys to each of the Deseret characters using &lt;a href="https://folivora.ai/"&gt;Better Touch Tool&lt;/a&gt;, a handy tool for lots of things, but it totally wasn&amp;rsquo;t worth it as I ended up being faster by just copy/pasting the characters from the chart in order.&lt;/p&gt;
 
 &lt;p&gt;I thought about writing little sticky note characters and putting them on their corresponding keys, but I figured I already spent this much time learning a dead alphabet and my use of it will most likely die with the end of this post.&lt;/p&gt;
 
-&lt;p&gt;Alright, one more thing. This is the logo of one of my favorite bars in Salt Lake City, the &lt;a href="http://www.bourbonhouseslc.com/"&gt;Bourbon House&lt;/a&gt;. I&amp;rsquo;m using it without permission so if they ask me to take it down I will.&lt;/p&gt;
+&lt;p&gt;Alright, one more thing. This is the logo of one of my favorite bars in Salt Lake City, the &lt;a href="https://www.bourbonhouseslc.com/"&gt;Bourbon House&lt;/a&gt;. I&amp;rsquo;m using it without permission so if they ask me to take it down I will.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src="../images/bourbon.png"&gt;&lt;/p&gt;
 
@@ -1463,7 +1459,7 @@ and Django, and SpringMVC and even jQuery. Let&amp;rsquo;s just come together to
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;&lt;a href="http://www.deseretalphabet.org//"&gt;The quasi-official Deseret Alphabet site&lt;/a&gt; &lt;em&gt;This site had almost all the resources I used neatly in one place, and seems to be maintained quite frequently.&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;a href="http://deseretalphabet.blogspot.com/"&gt;Deseret Alphabet Blog&lt;/a&gt; &lt;em&gt;The owner of this blog has translated over &lt;a href="http://www.deseretalphabet.info/XKCD/1385.html"&gt;50% of the XKCD comics&lt;/a&gt; into Deseret, an impressive feat no matter how pointless.&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href="http://deseret.in/"&gt;The Deseret Alphabet Translator&lt;/a&gt; &lt;em&gt;Still in beta, and some of the translations are pretty broken. I submitted a &lt;a href="https://github.com/sam1am/deseret.in/pull/1"&gt;pull request&lt;/a&gt; with a few fixes that would hopefully improve it, if he merges it. (Update: disregard this resource and redirect yourself &lt;a href="http://2deseret.com"&gt;here&lt;/a&gt;)&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href="http://2deseret.com/"&gt;The Deseret Alphabet Translator&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;Anyway, thats enough of that. I probably should&amp;rsquo;ve spent this time learning a new programming language or something, but I learned a ton about my homeland&amp;rsquo;s history, web fonts, typography, linguistics, and encoding so there was no lack of intellectual stimulation.&lt;/p&gt;
@@ -1478,13 +1474,13 @@ and Django, and SpringMVC and even jQuery. Let&amp;rsquo;s just come together to
     <link rel="alternate" href="http://elliotec.com/using-variables-in-yaml-front-matter/"/>
     <id>http://elliotec.com/using-variables-in-yaml-front-matter/</id>
     <published>2014-05-30T09:08:00-06:00</published>
-    <updated>2019-02-01T00:14:43-07:00</updated>
+    <updated>2019-02-09T23:00:45-07:00</updated>
     <author>
       <name>elliotec | Mike Elliott</name>
     </author>
     <content type="html">&lt;h2&gt;What is Front Matter?&lt;/h2&gt;
 
-&lt;p&gt;I didn&amp;rsquo;t know this until just now, but &lt;a href="http://en.wikipedia.org/wiki/Book_design#Front_matter"&gt;the name comes from book design&lt;/a&gt;, where the front matter is just all the stuff before the actual body of the book. This includes the table of contents, title pages, copyright info, etc. It&amp;rsquo;s essentially all the metadata of the book.&lt;/p&gt;
+&lt;p&gt;I didn&amp;rsquo;t know this until just now, but &lt;a href="https://en.wikipedia.org/wiki/Book_design#Front_matter"&gt;the name comes from book design&lt;/a&gt;, where the front matter is just all the stuff before the actual body of the book. This includes the table of contents, title pages, copyright info, etc. It&amp;rsquo;s essentially all the metadata of the book.&lt;/p&gt;
 
 &lt;p&gt;Likewise, the YAML front matter common in static-site generators like Middleman is the metadata of the current page. In my case that usually ends up being post pages where some of the dynamic data is defined:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre class="highlight yaml"&gt;&lt;code&gt;&lt;span class="nn"&gt;---&lt;/span&gt;
@@ -1531,13 +1527,13 @@ and Django, and SpringMVC and even jQuery. Let&amp;rsquo;s just come together to
 &lt;span class="nn"&gt;---&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;3) After that it was simply a matter of calling &amp;ldquo;current_page.data&amp;rdquo; and passing the custom variable in its place in Erb:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre class="highlight erb"&gt;&lt;code&gt;&lt;span class="nt"&gt;&amp;lt;a&lt;/span&gt; &lt;span class="na"&gt;href=&lt;/span&gt;&lt;span class="s"&gt;"http://github.com/elliotec"&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&amp;lt;%=&lt;/span&gt; &lt;span class="n"&gt;current_page&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;data&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;github&lt;/span&gt; &lt;span class="cp"&gt;%&amp;gt;&lt;/span&gt;Github&lt;span class="nt"&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre class="highlight erb"&gt;&lt;code&gt;&lt;span class="nt"&gt;&amp;lt;a&lt;/span&gt; &lt;span class="na"&gt;href=&lt;/span&gt;&lt;span class="s"&gt;"https://github.com/elliotec"&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&amp;lt;%=&lt;/span&gt; &lt;span class="n"&gt;current_page&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;data&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;github&lt;/span&gt; &lt;span class="cp"&gt;%&amp;gt;&lt;/span&gt;Github&lt;span class="nt"&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Now the code base is much more DRY and modular, and the generated HTML is producing the expected behavior.&lt;/p&gt;
 
-&lt;p&gt;You can do this in Jekyll too, but there are a few differences (basically just step 3) so &lt;a href="http://jekyllrb.com/docs/frontmatter/"&gt;check out their docs if thats what you&amp;rsquo;re into&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;You can do this in Jekyll too, but there are a few differences (basically just step 3) so &lt;a href="https://jekyllrb.com/docs/frontmatter/"&gt;check out their docs if thats what you&amp;rsquo;re into&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;For more info on the Middleman front matter, &lt;a href="http://middlemanapp.com/basics/frontmatter/"&gt;see the relevant section in the Middleman docs&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;For more info on the Middleman front matter, &lt;a href="https://middlemanapp.com/basics/frontmatter/"&gt;see the relevant section in the Middleman docs&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;&amp;ndash; Mike&lt;/p&gt;
 </content>
@@ -1547,7 +1543,7 @@ and Django, and SpringMVC and even jQuery. Let&amp;rsquo;s just come together to
     <link rel="alternate" href="http://elliotec.com/building-this-site/"/>
     <id>http://elliotec.com/building-this-site/</id>
     <published>2014-05-17T05:26:11-06:00</published>
-    <updated>2019-02-01T00:14:43-07:00</updated>
+    <updated>2019-02-09T23:04:53-07:00</updated>
     <author>
       <name>elliotec | Mike Elliott</name>
     </author>
@@ -1555,15 +1551,15 @@ and Django, and SpringMVC and even jQuery. Let&amp;rsquo;s just come together to
 
 &lt;p&gt;I had been looking around for a good way to get a portfolio site and blogging platform all in one that suited my tastes.&lt;/p&gt;
 
-&lt;p&gt;For a short time I looked into platforms such as &lt;a href="http://ghost.org"&gt;Ghost&lt;/a&gt;, &lt;a href="http://medium.com"&gt;Medium&lt;/a&gt;, and &lt;a href="http://svbtle.com"&gt;Svbtle&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;For a short time I looked into platforms such as &lt;a href="https://ghost.org"&gt;Ghost&lt;/a&gt;, &lt;a href="https://medium.com"&gt;Medium&lt;/a&gt;, and &lt;a href="https://svbtle.com"&gt;Svbtle&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;I really liked the design, simplicity, and content-focus of those, but as a developer, I wanted something I could customize and design myself with minimal third-party interference.&lt;/p&gt;
 
-&lt;p&gt;Then I found &lt;a href="http://jekyllrb.com"&gt;Jekyll&lt;/a&gt;. I quickly realized that what I wanted was a &amp;ldquo;blog-aware&amp;rdquo; static site generator rather than a blogging platform alone. This would give me the ability to fully customize every aspect of my site while allowing me a place to write posts.&lt;/p&gt;
+&lt;p&gt;Then I found &lt;a href="https://jekyllrb.com"&gt;Jekyll&lt;/a&gt;. I quickly realized that what I wanted was a &amp;ldquo;blog-aware&amp;rdquo; static site generator rather than a blogging platform alone. This would give me the ability to fully customize every aspect of my site while allowing me a place to write posts.&lt;/p&gt;
 
-&lt;p&gt;I had Jekyll installed and running on a development server in a minute or two. I was able to acquaint myself with the directory structure fairly quickly after going through the docs a bit and looking at some example sites - my favorite of which is &lt;a href="http://quaran.to"&gt;quaran.to&lt;/a&gt;, the personal blog of Nick Quaranto.&lt;/p&gt;
+&lt;p&gt;I had Jekyll installed and running on a development server in a minute or two. I was able to acquaint myself with the directory structure fairly quickly after going through the docs a bit and looking at some example sites - my favorite of which is &lt;a href="https://quaran.to"&gt;quaran.to&lt;/a&gt;, the personal blog of Nick Quaranto.&lt;/p&gt;
 
-&lt;p&gt;It uses the &lt;a href="http://liquidmarkup.org/"&gt;Liquid Templating Engine&lt;/a&gt;, which is a &amp;ldquo;Ruby library for rendering safe templates which cannot affect the security of the server they are rendered on.&amp;rdquo; It looks remarkably like erb in Handlebars. It didn&amp;rsquo;t take much getting used to, but I was slightly annoyed that a Ruby-driven framework wasn&amp;rsquo;t just using erb.&lt;/p&gt;
+&lt;p&gt;It uses the &lt;a href="https://liquidmarkup.org/"&gt;Liquid Templating Engine&lt;/a&gt;, which is a &amp;ldquo;Ruby library for rendering safe templates which cannot affect the security of the server they are rendered on.&amp;rdquo; It looks remarkably like erb in Handlebars. It didn&amp;rsquo;t take much getting used to, but I was slightly annoyed that a Ruby-driven framework wasn&amp;rsquo;t just using erb.&lt;/p&gt;
 
 &lt;p&gt;In addition to that slight inconvenience, I had to use the pre-release version of Jekyll in order to have Sass and CoffeeScript support - not a huge deal until I found the hard way that if hosting on Github pages (one of Jekyll&amp;rsquo;s major selling points), you are limited to the version they use.&lt;/p&gt;
 
@@ -1578,18 +1574,18 @@ and Django, and SpringMVC and even jQuery. Let&amp;rsquo;s just come together to
 
 &lt;h2&gt;Finding Middleman&lt;/h2&gt;
 
-&lt;p&gt;I had all but given up on Jekyll when 2.0 was released. I was excited, but a bit disillusioned. I found out from &lt;a href="https://news.ycombinator.com/item?id=7708142"&gt;This Hacker News Post&lt;/a&gt;, and the top comment was the elusive solution to all my static site-generating problems: &lt;a href="http://middlemanapp.com"&gt;Middleman&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I had all but given up on Jekyll when 2.0 was released. I was excited, but a bit disillusioned. I found out from &lt;a href="https://news.ycombinator.com/item?id=7708142"&gt;This Hacker News Post&lt;/a&gt;, and the top comment was the elusive solution to all my static site-generating problems: &lt;a href="https://middlemanapp.com"&gt;Middleman&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Middleman&amp;rsquo;s file structure was immediately familiar and it&amp;rsquo;s Rails-like atmosphere sold me instantly. erb instead of Liquid-Ruby-Handlebars? Check. Sass and CoffeeScript support out of the box? Check. Ability to host on Github Pages, Heroku, or any other production environment imaginable with little configuration? Check, check, and check.&lt;/p&gt;
 
 &lt;p&gt;Now I could finally get to the fun part and design my site. I came accross these two posts that were immensely helpful:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href="http://fajitanachos.com/Goodbye-jekyll/"&gt;FajitaNachos&amp;rsquo;s post entitled &amp;lsquo;Goodbye Jekyll&amp;rsquo;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href="http://robots.thoughtbot.com/middleman-bourbon-walkthrough"&gt;Thoughtbot&amp;rsquo;s post entitled &amp;lsquo;Styling a Middleman Blog with Bourbon, Neat, and Bitters&amp;rsquo;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href="https://github.com/andrewholsted/fajitanachos.com/blob/source/source/posts/2013-08-10-Goodbye-jekyll.html.markdown"&gt;FajitaNachos&amp;rsquo;s post entitled &amp;lsquo;Goodbye Jekyll&amp;rsquo;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href="https://robots.thoughtbot.com/middleman-bourbon-walkthrough"&gt;Thoughtbot&amp;rsquo;s post entitled &amp;lsquo;Styling a Middleman Blog with Bourbon, Neat, and Bitters&amp;rsquo;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;What you see here is the result of this process. In a future post, I&amp;rsquo;ll describe some of the methodology I used in the site&amp;rsquo;s creation and give some code samples and tips I found useful in it&amp;rsquo;s development. In the meantime, check out the code on &lt;a href="http://github.com/elliotec/middleman"&gt;my Github&lt;/a&gt; if you wish.&lt;/p&gt;
+&lt;p&gt;What you see here is the result of this process. In a future post, I&amp;rsquo;ll describe some of the methodology I used in the site&amp;rsquo;s creation and give some code samples and tips I found useful in it&amp;rsquo;s development. In the meantime, check out the code on &lt;a href="https://github.com/elliotec/ellio2"&gt;my Github&lt;/a&gt; if you wish.&lt;/p&gt;
 </content>
   </entry>
 </feed>

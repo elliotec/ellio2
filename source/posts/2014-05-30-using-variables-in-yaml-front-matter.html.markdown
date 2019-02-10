@@ -7,7 +7,7 @@ tags: yaml, middleman
 
 ##What is Front Matter?
 
-I didn't know this until just now, but [the name comes from book design](http://en.wikipedia.org/wiki/Book_design#Front_matter), where the front matter is just all the stuff before the actual body of the book. This includes the table of contents, title pages, copyright info, etc. It's essentially all the metadata of the book.
+I didn't know this until just now, but [the name comes from book design](https://en.wikipedia.org/wiki/Book_design#Front_matter), where the front matter is just all the stuff before the actual body of the book. This includes the table of contents, title pages, copyright info, etc. It's essentially all the metadata of the book.
 
 Likewise, the YAML front matter common in static-site generators like Middleman is the metadata of the current page. In my case that usually ends up being post pages where some of the dynamic data is defined:
 
@@ -67,12 +67,12 @@ linkedin: <svg> ...
 
 
 ```erb
-<a href="http://github.com/elliotec"><%= current_page.data.github %>Github</a>
+<a href="https://github.com/elliotec"><%= current_page.data.github %>Github</a>
 ```
 Now the code base is much more DRY and modular, and the generated HTML is producing the expected behavior.
 
-You can do this in Jekyll too, but there are a few differences (basically just step 3) so [check out their docs if thats what you're into](http://jekyllrb.com/docs/frontmatter/).
+You can do this in Jekyll too, but there are a few differences (basically just step 3) so [check out their docs if thats what you're into](https://jekyllrb.com/docs/frontmatter/).
 
-For more info on the Middleman front matter, [see the relevant section in the Middleman docs](http://middlemanapp.com/basics/frontmatter/).
+For more info on the Middleman front matter, [see the relevant section in the Middleman docs](https://middlemanapp.com/basics/frontmatter/).
 
 -- Mike

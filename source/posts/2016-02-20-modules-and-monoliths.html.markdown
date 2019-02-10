@@ -46,7 +46,7 @@ accessible and rewarding.
 
 People can be modules or monoliths. Many choose specialization and corner themselves as "JavaScript Developers" or "Rails Developers." My advice is to stay away from this and keep your options open with something like "software developer," highlighting your experience in your preferred fields without removing yourself from opportunities to grow and gain new technical skills.
 
-[Some of the best career advice I've read came from Scott Adams which says that in order to become extraordinary, you have two paths:](http://dilbertblog.typepad.com/the_dilbert_blog/2007/07/career-advice.html)
+[Some of the best career advice I've read came from Scott Adams which says that in order to become extraordinary, you have two paths:](https://dilbertblog.typepad.com/the_dilbert_blog/2007/07/career-advice.html)
 
 1. Become the best at one specific thing.
 2. Become very good at two or more things.
@@ -65,7 +65,7 @@ that they spend lots of time learning and configuring?
 
 ## The Full Stack Framework
 
-This is why I still love [Ruby on Rails](http://rubyonrails.org), which turned 10 this year.
+This is why I still love [Ruby on Rails](https://rubyonrails.org), which turned 10 this year.
 
 Rails created a layer of abstraction that eliminated much of
 the monotony, repetition, and difficult integrations that web development
@@ -78,7 +78,7 @@ I hear a lot of people that don't like Rails give their primary reason for disli
 
 You still have to know a bit of HTML, CSS, and JavaScript to get your way
 around Rails, but you can take shortcuts with those too, like templating
-with ERB, using CSS frameworks like Bootstrap or [Thoughtbot's Refills](http://refills.bourbon.io), and
+with ERB, using CSS frameworks like Bootstrap or [Thoughtbot's Refills](https://refills.bourbon.io), and
 of course jQuery, which has become startlingly rejected recently by a lot
 of the JavaScript community.
 
@@ -90,15 +90,15 @@ the idea of developing entirely in one language, I recommend looking into
 Clojure and Luminus which is fast and expressive and uses some
 awesome truly full-stack patterns).
 
-[Ember](http://emberjs.com/) is an outlier here, and deserves credit for taking a lot of the good ideas Rails popularized and put it in a JS framework with an amazing CLI tool. But unfortunately they don't have marketing expert giants like Facebook (for React) or Google (for Angular) pushing the Ember framework, so naturally it gets pushed aside.
+[Ember](https://emberjs.com/) is an outlier here, and deserves credit for taking a lot of the good ideas Rails popularized and put it in a JS framework with an amazing CLI tool. But unfortunately they don't have marketing expert giants like Facebook (for React) or Google (for Angular) pushing the Ember framework, so naturally it gets pushed aside.
 
-Stuff like Ember and [Yeoman](http://yeoman.io) ease the pain a little bit sometimes, but the
+Stuff like Ember and [Yeoman](https://yeoman.io) ease the pain a little bit sometimes, but the
 fragmentation and the dramatic fiasco that has become of the
 JavaScript framework/library/etc world is becoming a defining characteristic of the community. These frameworks inaccessibility often require
 that one be an expert just in JavaScript in order to properly implement. Why?
 
 Full stack development is really just combining the concepts of
-"standing on the shoulders of giants" and ["strategic laziness."](http://fourhourworkweek.com/2014/08/25/the-art-of-strategic-laziness/) We take what we've learned from the past, and use it to strategically avoid decisions that have already been made and proven by people smarter than us.
+"standing on the shoulders of giants" and ["strategic laziness."](https://fourhourworkweek.com/2014/08/25/the-art-of-strategic-laziness/) We take what we've learned from the past, and use it to strategically avoid decisions that have already been made and proven by people smarter than us.
 
 ## Effort For its Own Sake
 
@@ -200,7 +200,7 @@ ES6/ES2018/ES-whatever-we're-calling-it-now.
 
 ## Lets go back to convention over configuration.
 
-[The chaos of the ultra-modularized JavaScript (and relatives) community](https://medium.com/@wob/the-sad-state-of-web-development-1603a861d29f#.65e9l1sie) can be solved by
+The chaos of the ultra-modularized JavaScript (and relatives) community could be solved by
 coming together to develop some order and re-use, so we can use
 conventions that are shared by most instead of connecting and configuring
 one library after another to re-solve solved problems. Developers are not
@@ -224,5 +224,5 @@ contributor to the [clusterfuckification of the community](https://xkcd.com/927/
 I'm ranting, but I'm also here to offer solutions. People need to stop making
 JS frameworks, and people also need to stop writing self contained libraries
 that don't conform to any standard but their own. Follow the examples of Rails
-and Django, and SpringMVC and even jQuery. Let's just come together to pick a framework with a high level of abstraction, so we can make the magic happen by piggybacking on the magic the frameworks provide. [It's the future.](http://blog.circleci.com/its-the-future/)
+and Django, and SpringMVC and even jQuery. Let's just come together to pick a framework with a high level of abstraction, so we can make the magic happen by piggybacking on the magic the frameworks provide. [It's the future.](https://blog.circleci.com/its-the-future/)
 

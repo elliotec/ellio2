@@ -7,7 +7,7 @@ published: true
 
 ### Everyone hates slow websites. Everyone likes fast websites.
 
-I recently worked on a Google AMP (Accelerated Mobile Pages) project, which was created to mitigate bloated websites from being at the top of Google results on their mobile web index. I personally think AMP is a [bad thing](https://danielmiessler.com/blog/google-amp-not-good-thing/#gs.co7smnc) [for us](https://daringfireball.net/linked/2017/01/17/schreiber-amp) but that's beside the point of this article.
+I recently worked on a Google AMP (Accelerated Mobile Pages) project, which was created to mitigate bloated websites from being at the top of Google results on their mobile web index. I personally think AMP is a [bad thing](https://danielmiessler.com/blog/google-amp-not-good-thing/) [for us](https://daringfireball.net/linked/2017/01/17/schreiber-amp) but that's beside the point of this article.
 
 The point of this article is that you can get a better user experience by just building websites that are fast, and you don't need to use AMP. But if you wanted to, the methods in this post could also be a good starting point for getting your pages into AMP with minimal effort.
 
@@ -190,4 +190,4 @@ The speed is what matters and that's good for everyone using your website, and i
 
 Join the discussion [on Hacker News](https://news.ycombinator.com/item?id=15516957).
 
-_Update 2018-01-26_: This post has been translated into Russian at [HowToRecover.me](http://howtorecover.me/kak-polucit-pokazatel-skorosti-google)
+_Update 2018-01-26_: This post has been translated into Russian at [HowToRecover.me](https://howtorecover.me/kak-polucit-pokazatel-skorosti-google)

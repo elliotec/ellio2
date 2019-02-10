@@ -10,7 +10,7 @@ The title is only half true.
 
 The other night I was thinking about how my experience being fully entrenched in React and the modern JavaScript ecosystem lately might have influenced how I'd write an app by hand in vanilla HTML, CSS, and JS with no libraries or anything.
 
-Within the same hour I was looking at [Hacker News](https://news.ycombinator.com/) and some of it's reader clients, noting how they all kind of sucked as far as UX (including HN itself - only recently adding comment collapsing and mobile support), and discovered [the Hacker News API](https://hacker-news.firebaseio.com/v0/).
+Within the same hour I was looking at [Hacker News](https://news.ycombinator.com/) and some of it's reader clients, noting how they all kind of sucked as far as UX (including HN itself - only recently adding comment collapsing and mobile support), and discovered [the Hacker News API](https://github.com/HackerNews/API).
 
 Clearly this presented an opportunity to build my own HN reader in the lightest way I could - fully client side, no libraries, totally vanilla.
 
@@ -20,7 +20,7 @@ The files will automatically go through my build script since they're hosted on 
 
 I'll save you the arithmetic, that's a grand total of _5 KB_ on the initial load.
 
-<a href="/hn-no-reason" target='_blank'>
+<a href="/hn-no-reason/" target='_blank'>
     <h2>Go to A Hacker News Reader For No Reason!</h2>
     <img src="../images/hn-no-reason.png" alt='HN App Image' />
 </a>
@@ -156,6 +156,6 @@ function renderComments(comments, storyId) {
 fetchTopStories()
 ```
 
-There you have it. Maybe someone else will also find a reason to use [A Hacker News Reader For No Reason](https://elliotec.com/hn-no-reason).
+There you have it. Maybe someone else will also find a reason to use [A Hacker News Reader For No Reason](https://elliotec.com/hn-no-reason/).
 
 _Update 2018-03-04_: This post has been translated into Russian at [clipartmag.com](http://clipartmag.com/ru-a-hacker-news-reader-for-no-reason)
