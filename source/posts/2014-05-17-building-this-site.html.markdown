@@ -16,7 +16,7 @@ Then I found [Jekyll](https://jekyllrb.com). I quickly realized that what I want
 
 I had Jekyll installed and running on a development server in a minute or two. I was able to acquaint myself with the directory structure fairly quickly after going through the docs a bit and looking at some example sites - my favorite of which is [quaran.to](https://quaran.to), the personal blog of Nick Quaranto.
 
-It uses the [Liquid Templating Engine](https://liquidmarkup.org/), which is a "Ruby library for rendering safe templates which cannot affect the security of the server they are rendered on." It looks remarkably like erb in Handlebars. It didn't take much getting used to, but I was slightly annoyed that a Ruby-driven framework wasn't just using erb.
+It uses the Liquid Templating Engine, which is a "Ruby library for rendering safe templates which cannot affect the security of the server they are rendered on." It looks remarkably like erb in Handlebars. It didn't take much getting used to, but I was slightly annoyed that a Ruby-driven framework wasn't just using erb.
 
 In addition to that slight inconvenience, I had to use the pre-release version of Jekyll in order to have Sass and CoffeeScript support - not a huge deal until I found the hard way that if hosting on Github pages (one of Jekyll's major selling points), you are limited to the version they use.
 
@@ -37,6 +37,6 @@ Now I could finally get to the fun part and design my site. I came accross these
 
 - [FajitaNachos's post entitled 'Goodbye Jekyll'](https://github.com/andrewholsted/fajitanachos.com/blob/source/source/posts/2013-08-10-Goodbye-jekyll.html.markdown)
 
-- [Thoughtbot's post entitled 'Styling a Middleman Blog with Bourbon, Neat, and Bitters'](https://robots.thoughtbot.com/middleman-bourbon-walkthrough)
+- [Thoughtbot's post entitled 'Styling a Middleman Blog with Bourbon, Neat, and Bitters'](https://thoughtbot.com/blog/middleman-bourbon-walkthrough)
 
 What you see here is the result of this process. In a future post, I'll describe some of the methodology I used in the site's creation and give some code samples and tips I found useful in it's development. In the meantime, check out the code on [my Github](https://github.com/elliotec/ellio2) if you wish.

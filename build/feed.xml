@@ -480,7 +480,7 @@ The speed is what matters and that&amp;rsquo;s good for everyone using your webs
     <link rel="alternate" href="http://elliotec.com/modules-and-monoliths/"/>
     <id>http://elliotec.com/modules-and-monoliths/</id>
     <published>2016-02-20T20:06:00-07:00</published>
-    <updated>2019-02-10T00:40:44-07:00</updated>
+    <updated>2019-02-10T00:54:16-07:00</updated>
     <author>
       <name>elliotec | Mike Elliott</name>
     </author>
@@ -705,7 +705,7 @@ contributor to the &lt;a href="https://xkcd.com/927/"&gt;clusterfuckification of
 &lt;p&gt;I&amp;rsquo;m ranting, but I&amp;rsquo;m also here to offer solutions. People need to stop making
 JS frameworks, and people also need to stop writing self contained libraries
 that don&amp;rsquo;t conform to any standard but their own. Follow the examples of Rails
-and Django, and SpringMVC and even jQuery. Let&amp;rsquo;s just come together to pick a framework with a high level of abstraction, so we can make the magic happen by piggybacking on the magic the frameworks provide. &lt;a href="https://blog.circleci.com/its-the-future/"&gt;It&amp;rsquo;s the future.&lt;/a&gt;&lt;/p&gt;
+and Django, and SpringMVC and even jQuery. Let&amp;rsquo;s just come together to pick a framework with a high level of abstraction, so we can make the magic happen by piggybacking on the magic the frameworks provide. &lt;a href="https://circleci.com/blog/its-the-future/"&gt;It&amp;rsquo;s the future.&lt;/a&gt;&lt;/p&gt;
 </content>
   </entry>
   <entry>
@@ -713,7 +713,7 @@ and Django, and SpringMVC and even jQuery. Let&amp;rsquo;s just come together to
     <link rel="alternate" href="http://elliotec.com/teach-your-skills-for-fun-and-profit/"/>
     <id>http://elliotec.com/teach-your-skills-for-fun-and-profit/</id>
     <published>2015-11-10T13:49:00-07:00</published>
-    <updated>2019-02-10T00:41:54-07:00</updated>
+    <updated>2019-02-10T00:55:39-07:00</updated>
     <author>
       <name>elliotec | Mike Elliott</name>
     </author>
@@ -747,7 +747,7 @@ and Django, and SpringMVC and even jQuery. Let&amp;rsquo;s just come together to
 
 &lt;h2&gt;Start teaching when you start learning&lt;/h2&gt;
 
-&lt;p&gt;&lt;a href="https://elliotec.com/how-i-got-a-job-in-web-development"&gt;In an earlier post&lt;/a&gt;, I laid out the steps I took in getting a job in my current field of web/software development. It is notable that quite early in the process, I was getting paid to teach people what I had been learning, almost in tandem. I recall my instructor at the course I was enrolled in mention something in passing about learning by teaching and I really took it to heart.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://elliotec.com/how-i-got-a-job-in-web-development/"&gt;In an earlier post&lt;/a&gt;, I laid out the steps I took in getting a job in my current field of web/software development. It is notable that quite early in the process, I was getting paid to teach people what I had been learning, almost in tandem. I recall my instructor at the course I was enrolled in mention something in passing about learning by teaching and I really took it to heart.&lt;/p&gt;
 
 &lt;p&gt;I started a gig as a personal tutor for a Computer Science grad student at UW in Ruby on Rails before finishing the course, and then was an assistant instructor for the courses following mine. I believe these two jobs were an early immunization for the impostor syndrome I may have had if I didn&amp;rsquo;t do them. It might have been a little too far on the ego boost, but thats another problem.&lt;/p&gt;
 
@@ -777,7 +777,7 @@ and Django, and SpringMVC and even jQuery. Let&amp;rsquo;s just come together to
 
 &lt;h3&gt;Other references and sources&lt;/h3&gt;
 
-&lt;p&gt;&lt;a href="https://en.wikipedia.org/wiki/Learning_by_teaching#The_LdL_approach"&gt;The LdL Approach&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://en.wikipedia.org/wiki/Learning_by_teaching"&gt;The LdL Approach&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href="https://lifehacker.com/teach-others-what-you-know-to-make-connections-and-lear-1639560273"&gt;Teach what you know&lt;/a&gt;&lt;/p&gt;
 
@@ -1012,7 +1012,7 @@ and Django, and SpringMVC and even jQuery. Let&amp;rsquo;s just come together to
     <link rel="alternate" href="http://elliotec.com/writing-in-the-deseret-alphabet/"/>
     <id>http://elliotec.com/writing-in-the-deseret-alphabet/</id>
     <published>2014-06-29T09:08:00-06:00</published>
-    <updated>2019-02-10T00:35:45-07:00</updated>
+    <updated>2019-02-10T00:53:26-07:00</updated>
     <author>
       <name>elliotec | Mike Elliott</name>
     </author>
@@ -1292,7 +1292,7 @@ and Django, and SpringMVC and even jQuery. Let&amp;rsquo;s just come together to
 
 &lt;h2&gt;Now for the fun part&lt;/h2&gt;
 
-&lt;p&gt;I went about scouring the web for better Deseret fonts. I had a lot of trouble finding a good sans-serif font. The primary resource for these and the serif fonts I found were by &lt;a href="http://copper.chem.ucla.edu/~jericks/index.html"&gt;Joshua Erickson&lt;/a&gt;, but alas, the entire sans-serif collection has been disabled. Bummer. At least I could use some of his serif fonts that were less harsh on the eyes than the default, and there were a few sans-serif fonts his site led me to. Here are a few font samples:&lt;/p&gt;
+&lt;p&gt;I went about scouring the web for better Deseret fonts. I had a lot of trouble finding a good sans-serif font. The primary resource for these and the serif fonts I found were by &lt;a href="http://www.copper.chem.ucla.edu/~jericks/index.html"&gt;Joshua Erickson&lt;/a&gt;, but alas, the entire sans-serif collection has been disabled. Bummer. At least I could use some of his serif fonts that were less harsh on the eyes than the default, and there were a few sans-serif fonts his site led me to. Here are a few font samples:&lt;/p&gt;
 
 &lt;p class="adamic"&gt;1. 𐐈𐐔𐐈𐐣𐐆𐐗𐐒𐐀： 𐐀𐐁𐐂𐐃𐐄𐐅𐐆𐐇𐐈𐐉𐐊𐐋𐐌𐐍𐐎𐐏𐐐𐐑𐐒𐐓𐐔𐐕𐐖𐐗𐐘𐐙𐐚𐐛𐐜𐐝𐐞𐐠𐐡𐐢𐐣𐐤𐐥𐐦𐐧𐐟 &lt;/p&gt;
 
@@ -1349,7 +1349,7 @@ and Django, and SpringMVC and even jQuery. Let&amp;rsquo;s just come together to
     -deseret.woff
     -deseret.ttf
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Since I&amp;rsquo;m using &lt;a href="https://www.bourbon.io"&gt;Bourbon&lt;/a&gt;, I can use the magnificent &lt;a href="http://bourbon.io/docs/latest"&gt;font-face mixin&lt;/a&gt; (I&amp;rsquo;m also using &lt;a href="https://bitters.bourbon.io"&gt;Bitters&lt;/a&gt;, so I placed these 3 lines at the bottom of the _typography.scss partial):&lt;/p&gt;
+&lt;p&gt;Since I&amp;rsquo;m using &lt;a href="https://www.bourbon.io"&gt;Bourbon&lt;/a&gt;, I can use the magnificent &lt;a href="http://www.bourbon.io/docs/latest"&gt;font-face mixin&lt;/a&gt; (I&amp;rsquo;m also using &lt;a href="https://bitters.bourbon.io"&gt;Bitters&lt;/a&gt;, so I placed these 3 lines at the bottom of the _typography.scss partial):&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre class="highlight scss"&gt;&lt;code&gt;&lt;span class="c1"&gt;// /bitters/_typography.scss
 &lt;/span&gt;&lt;span class="k"&gt;@include&lt;/span&gt; &lt;span class="nd"&gt;font-face&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'Huneybee'&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'/fonts/Huneybee'&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 &lt;span class="k"&gt;@include&lt;/span&gt; &lt;span class="nd"&gt;font-face&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'AdamicBee'&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'/fonts/AdamicBee'&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
@@ -1543,7 +1543,7 @@ and Django, and SpringMVC and even jQuery. Let&amp;rsquo;s just come together to
     <link rel="alternate" href="http://elliotec.com/building-this-site/"/>
     <id>http://elliotec.com/building-this-site/</id>
     <published>2014-05-17T05:26:11-06:00</published>
-    <updated>2019-02-09T23:04:53-07:00</updated>
+    <updated>2019-02-10T00:56:45-07:00</updated>
     <author>
       <name>elliotec | Mike Elliott</name>
     </author>
@@ -1559,7 +1559,7 @@ and Django, and SpringMVC and even jQuery. Let&amp;rsquo;s just come together to
 
 &lt;p&gt;I had Jekyll installed and running on a development server in a minute or two. I was able to acquaint myself with the directory structure fairly quickly after going through the docs a bit and looking at some example sites - my favorite of which is &lt;a href="https://quaran.to"&gt;quaran.to&lt;/a&gt;, the personal blog of Nick Quaranto.&lt;/p&gt;
 
-&lt;p&gt;It uses the &lt;a href="https://liquidmarkup.org/"&gt;Liquid Templating Engine&lt;/a&gt;, which is a &amp;ldquo;Ruby library for rendering safe templates which cannot affect the security of the server they are rendered on.&amp;rdquo; It looks remarkably like erb in Handlebars. It didn&amp;rsquo;t take much getting used to, but I was slightly annoyed that a Ruby-driven framework wasn&amp;rsquo;t just using erb.&lt;/p&gt;
+&lt;p&gt;It uses the Liquid Templating Engine, which is a &amp;ldquo;Ruby library for rendering safe templates which cannot affect the security of the server they are rendered on.&amp;rdquo; It looks remarkably like erb in Handlebars. It didn&amp;rsquo;t take much getting used to, but I was slightly annoyed that a Ruby-driven framework wasn&amp;rsquo;t just using erb.&lt;/p&gt;
 
 &lt;p&gt;In addition to that slight inconvenience, I had to use the pre-release version of Jekyll in order to have Sass and CoffeeScript support - not a huge deal until I found the hard way that if hosting on Github pages (one of Jekyll&amp;rsquo;s major selling points), you are limited to the version they use.&lt;/p&gt;
 
@@ -1582,7 +1582,7 @@ and Django, and SpringMVC and even jQuery. Let&amp;rsquo;s just come together to
 
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;&lt;a href="https://github.com/andrewholsted/fajitanachos.com/blob/source/source/posts/2013-08-10-Goodbye-jekyll.html.markdown"&gt;FajitaNachos&amp;rsquo;s post entitled &amp;lsquo;Goodbye Jekyll&amp;rsquo;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href="https://robots.thoughtbot.com/middleman-bourbon-walkthrough"&gt;Thoughtbot&amp;rsquo;s post entitled &amp;lsquo;Styling a Middleman Blog with Bourbon, Neat, and Bitters&amp;rsquo;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href="https://thoughtbot.com/blog/middleman-bourbon-walkthrough"&gt;Thoughtbot&amp;rsquo;s post entitled &amp;lsquo;Styling a Middleman Blog with Bourbon, Neat, and Bitters&amp;rsquo;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;What you see here is the result of this process. In a future post, I&amp;rsquo;ll describe some of the methodology I used in the site&amp;rsquo;s creation and give some code samples and tips I found useful in it&amp;rsquo;s development. In the meantime, check out the code on &lt;a href="https://github.com/elliotec/ellio2"&gt;my Github&lt;/a&gt; if you wish.&lt;/p&gt;

@@ -125,7 +125,7 @@ Another limitation is the lack of a schwa (/ə/) vowel. It sounds like the "e" i
 <a class="anchor" id="code"></a>
 ## Now for the fun part
 
- I went about scouring the web for better Deseret fonts. I had a lot of trouble finding a good sans-serif font. The primary resource for these and the serif fonts I found were by [Joshua Erickson](http://copper.chem.ucla.edu/~jericks/index.html), but alas, the entire sans-serif collection has been disabled. Bummer. At least I could use some of his serif fonts that were less harsh on the eyes than the default, and there were a few sans-serif fonts his site led me to. Here are a few font samples:
+ I went about scouring the web for better Deseret fonts. I had a lot of trouble finding a good sans-serif font. The primary resource for these and the serif fonts I found were by [Joshua Erickson](http://www.copper.chem.ucla.edu/~jericks/index.html), but alas, the entire sans-serif collection has been disabled. Bummer. At least I could use some of his serif fonts that were less harsh on the eyes than the default, and there were a few sans-serif fonts his site led me to. Here are a few font samples:
 
 
 
@@ -193,7 +193,7 @@ Next, FontPrep generates four files when it receives a .ttf- .eot, .svg, .woff, 
     -deseret.ttf
 ```
 
-Since I'm using [Bourbon](https://www.bourbon.io), I can use the magnificent [font-face mixin](http://bourbon.io/docs/latest) (I'm also using [Bitters](https://bitters.bourbon.io), so I placed these 3 lines at the bottom of the _typography.scss partial):
+Since I'm using [Bourbon](https://www.bourbon.io), I can use the magnificent [font-face mixin](http://www.bourbon.io/docs/latest) (I'm also using [Bitters](https://bitters.bourbon.io), so I placed these 3 lines at the bottom of the _typography.scss partial):
 
 ```scss
 // /bitters/_typography.scss

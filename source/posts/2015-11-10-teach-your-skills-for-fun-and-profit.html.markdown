@@ -36,7 +36,7 @@ Teaching also happens to be an excellent cure for an endemic of the tech world: 
 
 ##Start teaching when you start learning
 
-[In an earlier post](https://elliotec.com/how-i-got-a-job-in-web-development), I laid out the steps I took in getting a job in my current field of web/software development. It is notable that quite early in the process, I was getting paid to teach people what I had been learning, almost in tandem. I recall my instructor at the course I was enrolled in mention something in passing about learning by teaching and I really took it to heart.
+[In an earlier post](https://elliotec.com/how-i-got-a-job-in-web-development/), I laid out the steps I took in getting a job in my current field of web/software development. It is notable that quite early in the process, I was getting paid to teach people what I had been learning, almost in tandem. I recall my instructor at the course I was enrolled in mention something in passing about learning by teaching and I really took it to heart.
 
 I started a gig as a personal tutor for a Computer Science grad student at UW in Ruby on Rails before finishing the course, and then was an assistant instructor for the courses following mine. I believe these two jobs were an early immunization for the impostor syndrome I may have had if I didn't do them. It might have been a little too far on the ego boost, but thats another problem.
 
@@ -67,7 +67,7 @@ It's usually humbling. It's often lucrative. And it's always going to be a bette
 
 ###Other references and sources
 
-[The LdL Approach](https://en.wikipedia.org/wiki/Learning_by_teaching#The_LdL_approach)
+[The LdL Approach](https://en.wikipedia.org/wiki/Learning_by_teaching)
 
 [Teach what you know](https://lifehacker.com/teach-others-what-you-know-to-make-connections-and-lear-1639560273)
 

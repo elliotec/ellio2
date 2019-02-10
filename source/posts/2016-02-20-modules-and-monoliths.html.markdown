@@ -224,5 +224,5 @@ contributor to the [clusterfuckification of the community](https://xkcd.com/927/
 I'm ranting, but I'm also here to offer solutions. People need to stop making
 JS frameworks, and people also need to stop writing self contained libraries
 that don't conform to any standard but their own. Follow the examples of Rails
-and Django, and SpringMVC and even jQuery. Let's just come together to pick a framework with a high level of abstraction, so we can make the magic happen by piggybacking on the magic the frameworks provide. [It's the future.](https://blog.circleci.com/its-the-future/)
+and Django, and SpringMVC and even jQuery. Let's just come together to pick a framework with a high level of abstraction, so we can make the magic happen by piggybacking on the magic the frameworks provide. [It's the future.](https://circleci.com/blog/its-the-future/)
 
