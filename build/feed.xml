@@ -1012,7 +1012,7 @@ and Django, and SpringMVC and even jQuery. Let&amp;rsquo;s just come together to
     <link rel="alternate" href="http://elliotec.com/writing-in-the-deseret-alphabet/"/>
     <id>http://elliotec.com/writing-in-the-deseret-alphabet/</id>
     <published>2014-06-29T09:08:00-06:00</published>
-    <updated>2019-02-10T00:53:26-07:00</updated>
+    <updated>2019-02-10T01:23:59-07:00</updated>
     <author>
       <name>elliotec | Mike Elliott</name>
     </author>
@@ -1292,7 +1292,7 @@ and Django, and SpringMVC and even jQuery. Let&amp;rsquo;s just come together to
 
 &lt;h2&gt;Now for the fun part&lt;/h2&gt;
 
-&lt;p&gt;I went about scouring the web for better Deseret fonts. I had a lot of trouble finding a good sans-serif font. The primary resource for these and the serif fonts I found were by &lt;a href="http://www.copper.chem.ucla.edu/~jericks/index.html"&gt;Joshua Erickson&lt;/a&gt;, but alas, the entire sans-serif collection has been disabled. Bummer. At least I could use some of his serif fonts that were less harsh on the eyes than the default, and there were a few sans-serif fonts his site led me to. Here are a few font samples:&lt;/p&gt;
+&lt;p&gt;I went about scouring the web for better Deseret fonts. I had a lot of trouble finding a good sans-serif font. The primary resource for these and the serif fonts I found were by &lt;a href="http://www.chem.ucla.edu/~jericks/index.html"&gt;Joshua Erickson&lt;/a&gt;, but alas, the entire sans-serif collection has been disabled. Bummer. At least I could use some of his serif fonts that were less harsh on the eyes than the default, and there were a few sans-serif fonts his site led me to. Here are a few font samples:&lt;/p&gt;
 
 &lt;p class="adamic"&gt;1. 𐐈𐐔𐐈𐐣𐐆𐐗𐐒𐐀： 𐐀𐐁𐐂𐐃𐐄𐐅𐐆𐐇𐐈𐐉𐐊𐐋𐐌𐐍𐐎𐐏𐐐𐐑𐐒𐐓𐐔𐐕𐐖𐐗𐐘𐐙𐐚𐐛𐐜𐐝𐐞𐐠𐐡𐐢𐐣𐐤𐐥𐐦𐐧𐐟 &lt;/p&gt;
 
@@ -1349,7 +1349,7 @@ and Django, and SpringMVC and even jQuery. Let&amp;rsquo;s just come together to
     -deseret.woff
     -deseret.ttf
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Since I&amp;rsquo;m using &lt;a href="https://www.bourbon.io"&gt;Bourbon&lt;/a&gt;, I can use the magnificent &lt;a href="http://www.bourbon.io/docs/latest"&gt;font-face mixin&lt;/a&gt; (I&amp;rsquo;m also using &lt;a href="https://bitters.bourbon.io"&gt;Bitters&lt;/a&gt;, so I placed these 3 lines at the bottom of the _typography.scss partial):&lt;/p&gt;
+&lt;p&gt;Since I&amp;rsquo;m using &lt;a href="https://www.bourbon.io"&gt;Bourbon&lt;/a&gt;, I can use the magnificent &lt;a href="https://www.bourbon.io/docs/latest"&gt;font-face mixin&lt;/a&gt; (I&amp;rsquo;m also using &lt;a href="https://bitters.bourbon.io"&gt;Bitters&lt;/a&gt;, so I placed these 3 lines at the bottom of the _typography.scss partial):&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre class="highlight scss"&gt;&lt;code&gt;&lt;span class="c1"&gt;// /bitters/_typography.scss
 &lt;/span&gt;&lt;span class="k"&gt;@include&lt;/span&gt; &lt;span class="nd"&gt;font-face&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'Huneybee'&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'/fonts/Huneybee'&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 &lt;span class="k"&gt;@include&lt;/span&gt; &lt;span class="nd"&gt;font-face&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'AdamicBee'&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'/fonts/AdamicBee'&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
