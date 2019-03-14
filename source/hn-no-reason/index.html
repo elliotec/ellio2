@@ -10,17 +10,16 @@
   <title>A Hacker News Reader For No Reason</title>
   <style type="text/css">
     body {
-      background-color: #282828;
-      font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
-      font-size: 18px;
-      line-height: 1.6;
-      color: #bdc3c7;
-      margin: 65px 0;
+      color: #CCC;
+      margin: 0 auto;
+      padding: 16px 0;
+      background-color: #222;
+      font-family: "Helvetica Neue", "Helvetica", "Oxygen", "Ubuntu", sans-serif;
     }
     a { text-decoration: none; color: #2ecc71; }
     a:hover { color: #27ae60; }
     header {
-      height: 40px;
+      height: 42px;
       background-color: #333;
       text-align: center;
       width: 100%;
@@ -30,7 +29,9 @@
     }
     header a {
       color: #27ae60;
-      font-size: 22px;
+      font-size: 24px;
+      display: inline-block;
+      padding-top: 4px;
     }
     h2 { text-align: center; }
     h3 { margin: 0; font-size: 22px; }
@@ -66,7 +67,7 @@
       border: 1px solid #444;
       margin-top: 4px;
     }
-    .comment-text { padding: 8px; overflow-x: scroll; }
+    .comment-text { padding-top: 8px; overflow-x: scroll; }
     .toggle-comment { color: #1abc9c; cursor: pointer; }
     .toggle-comment:hover { color: #16a085; }
     .hnLink { color: #e67e22; }
@@ -88,7 +89,7 @@
 <body>
   <header><a href="/">{ elliotec }</a></header>
   <div class="main">
-    <h2><a style="color:#bdc3c7" href='/hn-no-reason/'> A Hacker News Reader For No Reason </a></h2>
+    <h2><a style="color: #CCC; display: inline-block; margin-top: 24px;" href='/hn-no-reason/'> A Hacker News Reader For No Reason </a></h2>
     <div id="hn"></div>
     <div class="copyright">
       <a style="color:#bdc3c7; font-size:18px;" href="https://elliotec.com/a-hacker-news-reader-for-no-reason/">

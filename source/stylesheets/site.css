@@ -1,5 +1,11 @@
+html {
+  background-color: #222 !important;
+}
+
 body {
-  color: #333;
+  color: #CCC;
+  height: 100%;
+  padding: 16px 0;
   font-family: "Helvetica Neue", "Helvetica", "Oxygen", "Ubuntu", sans-serif;
 }
 
@@ -8,20 +14,19 @@ h1, h2 {
 }
 
 header {
-  height: 40px;
+  height: 42px;
   background-color: #333;
   text-align: center;
   width: 100%;
   z-index: 999;
   position: fixed;
   top: 0;
-  line-height: 1.5;
 }
 
 header a {
   color: #27ae60;
   display: inline-block;
-  font-size: 22px;
+  font-size: 24px;
   padding-top: 4px;
   text-decoration: none;
 }
@@ -42,7 +47,7 @@ main {
 }
 
 .home {
-  border-bottom: solid 1px #DDD;
+  border-bottom: solid 1px #CCC;
   margin-top: 64px;
   text-align: center;
   padding-bottom: 32px;
@@ -108,11 +113,11 @@ main {
 }
 
 .posts ul li a {
-  color: #1e8449;
+  color: #2ecc71;
 }
 
 .posts ul li a:hover {
-  color: #2ecc71;
+  color: #1e8449;
   text-decoration: none;
 }
 
@@ -131,11 +136,11 @@ main {
 }
 
 .post a {
-  color: #27ae60;
+  color: #2ecc71;
 }
 
 .post a:hover {
-  color: #2ecc71;
+  color: #27ae60;
   text-decoration: none;
 }
 
@@ -151,21 +156,23 @@ main {
   border-radius: 2px;
   font-family: "Lucida Console", Monaco, monospace, "AdamicBee";
   background-color: #1b1d1e;
-  color: #ddd;
+  color: #DDD;
 }
 
 code {
-  background-color: #465457;
+  background-color: #555;
+  max-width: 696px;
   color: #d7d787;
-  font-size: 14px;
-  padding: 2px 4px;
-  margin: 2px;
-  white-space: nowrap;
+  position: relative;
+  bottom: 2px;
+  font-size: 16px;
+  padding: 1px 3px;
+  font-weight: bold;
 }
 
 .post blockquote {
   border-left: 2px solid #ddd;
-  color: #595959;
+  color: #555;
 }
 
 .post iframe {
