@@ -191,3 +191,5 @@ The speed is what matters and that's good for everyone using your website, and i
 Join the discussion [on Hacker News](https://news.ycombinator.com/item?id=15516957).
 
 _Update 2018-01-26_: This post has been translated into Russian at [HowToRecover.me](https://howtorecover.me/kak-polucit-pokazatel-skorosti-google)
+_Update 2019-3-23_: This post has also been translated into [Uzbek](https://flyclipart.com/uz-middleman-va-nginx-100-ball) by [Transparent Cliparts](https://flyclipart.com)
+
