@@ -20,13 +20,7 @@ configure :build do
   activate :gzip
   activate :asset_hash
   activate :imageoptim do |options|
-    # Use a build manifest to prevent re-compressing images between builds
     options.manifest = true
-    # Silence problematic image_optim workers
-    options.skip_missing_workers = true
-    # Cause image_optim to be in shouty-mode
-    options.verbose = false
-    # Setting these to true or nil will let options determine them (recommended)
     options.nice = true
     options.threads = true
     options.pngout = false
