@@ -168,6 +168,7 @@ code {
   font-size: 16px;
   padding: 1px 3px;
   font-weight: bold;
+  word-break: unset;
 }
 
 .post blockquote {
