@@ -1,0 +1,33 @@
+---
+title: elliotec
+---
+
+<main>
+    <section class="home">
+        <%= image_tag("/images/cathatsquaresmall.jpg", alt: "headshot", height: "250", width: "250", style: "border-radius: 50%;") %>
+        <div class="intro">
+            <h1>Mike Elliott</h1>
+            <p>Software Engineering Manager at <a href="https://www.nav.com">Nav</a></p>
+            <nav class="contact">
+                <a class="contact-link" target="_blank" href="mailto:4lfpvcoi">Email</a>
+                <a class="contact-link" target="_blank" href="https://www.linkedin.com/in/elliotec">Linkedin</a>
+                <a class="contact-link" target="_blank" href="https://github.com/elliotec">Github</a>
+                <a class="contact-link" target="_blank" href="https://twitter.com/elliotecweb">Twitter</a>
+                <%= link_to "Resume", "/images/MichaelElliottResume2018.pdf", class: "contact-link", target: "_blank" %>
+            </nav>
+        </div>
+    </section>
+    <section class="posts">
+        <h2>Posts & Projects</h2>
+        <ul>
+            <% blog.articles.each do |post| %>
+                <li class="post-item">
+                    <%= link_to(post.title, post.url)%>
+                </li>
+                <p><%= post.date.strftime('%B %d, %Y') %></p>
+            <% end %>
+        </ul>
+    </section>
+</main>
+<script async src="//squaresend.com/squaresend.js"></script>
+

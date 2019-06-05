@@ -1,0 +1,16 @@
+<header>
+  <div class="menu-wrapper">
+    <%= link_to "{ elliotec }", "/index.html", class: 'logocenter' %>
+  </div>
+</header>
+<section class="posts">
+  <h2>Posts & Projects</h2>
+  <ul>
+    <% blog.articles.each do |post| %>
+    <li class = "post-item">
+      <%= link_to(post.title, post.url)%>
+    </li>
+      <p><%= post.date.strftime('%B %d, %Y') %></p>
+    <% end %>
+  </ul>
+</section>
