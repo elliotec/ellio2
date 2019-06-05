@@ -29,6 +29,7 @@ configure :build do
     # Setting these to true or nil will let options determine them (recommended)
     options.nice = true
     options.threads = true
+    options.pngout = false
   end
 end
 
