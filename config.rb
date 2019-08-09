@@ -18,7 +18,7 @@ configure :build do
   # activate :minify_javascript, inline: true
   activate :minify_html
   activate :gzip
-  activate :asset_hash
+  # activate :asset_hash
   activate :imageoptim do |options|
     options.manifest = true
     options.nice = true
