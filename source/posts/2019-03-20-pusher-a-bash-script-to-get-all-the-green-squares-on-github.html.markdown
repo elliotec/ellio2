@@ -54,7 +54,7 @@ bash ~/pusher/committed.sh
 /usr/bin/git -C ~/pusher push -u https://{MY_GITHUB_USERNAME}:{MY_GITHUB_PASSWORD}@github.com/{MY_GITHUB_USERNAME}/pusher.git master
 ```
 
-6. `cron.txt` - this is a reference file for the actual cron job run by my server which you can edit in a Unix environment with `crontab -e`. Look up how to write cron jobs, I have mine running at 4:20pm every day, because you know, blaze it etc.
+6. `cron.txt` - this is a reference file for the actual cron job run by my server which you can edit in a Unix environment with `crontab -e`. Look up how to write cron jobs, here you see I have mine running on the 20th minute of the 16th hour of every day 🔥
 
 ```crontab
 20 16 * * * bash ~/pusher/push.sh

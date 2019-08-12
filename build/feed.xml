@@ -5,10 +5,71 @@
   <id>http://elliotec.com/</id>
   <link href="http://elliotec.com/"/>
   <link href="http://elliotec.com/feed.xml" rel="self"/>
-  <updated>2018-10-12T11:17:00-06:00</updated>
+  <updated>2019-03-20T14:52:00-06:00</updated>
   <author>
     <name>elliotec | Mike Elliott</name>
   </author>
+  <entry>
+    <title>Pusher - A Bash script to get all the green squares on Github</title>
+    <link rel="alternate" href="http://elliotec.com/pusher-a-bash-script-to-get-all-the-green-squares-on-github/"/>
+    <id>http://elliotec.com/pusher-a-bash-script-to-get-all-the-green-squares-on-github/</id>
+    <published>2019-03-20T14:52:00-06:00</published>
+    <updated>2019-08-12T16:19:52-06:00</updated>
+    <author>
+      <name>elliotec | Mike Elliott</name>
+    </author>
+    <content type="html">&lt;h2&gt;Get that green&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src="/images/pusher.png" alt="green squares"/&gt;
+&lt;em&gt;Heh, 4,303 contributions? Yeah&amp;hellip;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;I remember when first starting out in development, people would tell me that hiring managers and recruiters &lt;em&gt;really cared&lt;/em&gt; about those little green contribution squares on Github. It shows how active you are, they said. The more squares you have the better, they told me.&lt;/p&gt;
+
+&lt;p&gt;At first I believed them and genuinely tried to commit code near-daily to make sure my public image at least seemed prolific enough to be noticed. Pretty quickly I realized how easily this could be automated. I didn&amp;rsquo;t think much about how to do that yet, and it felt a bit dirty, especially when I was looking for my first dev job.&lt;/p&gt;
+
+&lt;p&gt;With a bit more experience and a few fewer shits to give, I figured I&amp;rsquo;d give it a shot for a little scripting practice and fun.&lt;/p&gt;
+
+&lt;h2&gt;Pusher&lt;/h2&gt;
+
+&lt;p&gt;The first thing I needed was some content to actually commit. The obvious choice was Unix&amp;rsquo;s &lt;a href="https://en.wikipedia.org/wiki/Fortune_(Unix)"&gt;&lt;code&gt;fortune&lt;/code&gt;&lt;/a&gt;, which generates a psuedorandom quote based on parameters you give it. I used shorter fortunes for commit messages and longer ones for the file contents.&lt;/p&gt;
+
+&lt;p&gt;Then I needed to write the script to automatically generate the files based on the fortunes, commit a random number of changes daily (for the different shades of green on the squares), and push them to a Github repo. Nothing a tiny bash script and cron job can&amp;rsquo;t handle.&lt;/p&gt;
+
+&lt;p&gt;There are 6 files involved in this:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;README.md&lt;/code&gt; - totally unnecessary. I just use it as a disclaimer to make it clear I&amp;rsquo;m bullshitting.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;.gitignore&lt;/code&gt; - absolutely essential to ignore the file which contains your Github credentials, in my case &lt;code&gt;push.sh&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;file.txt&lt;/code&gt; - the only file that ever changes, contents are replaced by the fortune command on each commit.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;committed.sh&lt;/code&gt; - the file that generates the fortunes, replaces the contents of &lt;code&gt;file.txt&lt;/code&gt;, and commits up to &lt;a href="https://en.wikipedia.org/wiki/23_enigma"&gt;23&lt;/a&gt; (but no fewer than 1) changes.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre class="highlight shell"&gt;&lt;code&gt;&lt;span class="c"&gt;#!/bin/bash&lt;/span&gt;
+&lt;span class="nv"&gt;NUMBER&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;$((&lt;/span&gt;&lt;span class="nv"&gt;$RANDOM&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="m"&gt;23&lt;/span&gt;&lt;span class="k"&gt;))&lt;/span&gt;
+
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="o"&gt;((&lt;/span&gt;&lt;span class="nv"&gt;run&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;1&lt;span class="p"&gt;;&lt;/span&gt; run &amp;lt;&lt;span class="o"&gt;=&lt;/span&gt; NUMBER + 1&lt;span class="p"&gt;;&lt;/span&gt; run++&lt;span class="o"&gt;))&lt;/span&gt;
+&lt;span class="k"&gt;do
+  &lt;/span&gt;&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="sb"&gt;`&lt;/span&gt;/usr/games/fortune&lt;span class="sb"&gt;`&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; ~/pusher/file.txt
+  /usr/bin/git &lt;span class="nt"&gt;-C&lt;/span&gt; ~/pusher/ add &lt;span class="nb"&gt;.&lt;/span&gt; &lt;span class="nt"&gt;-A&lt;/span&gt;
+  /usr/bin/git &lt;span class="nt"&gt;-C&lt;/span&gt; ~/pusher/ commit &lt;span class="nt"&gt;-m&lt;/span&gt; &lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="sb"&gt;`&lt;/span&gt;/usr/games/fortune &lt;span class="nt"&gt;-sn&lt;/span&gt; 32&lt;span class="sb"&gt;`&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;
+&lt;span class="k"&gt;done&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;push.sh&lt;/code&gt; - the file that runs the &lt;code&gt;commited&lt;/code&gt; script and pushes to Github with your credentials. &lt;strong&gt;Do not commit this file.&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre class="highlight shell"&gt;&lt;code&gt;&lt;span class="c"&gt;#!/bin/bash&lt;/span&gt;
+bash ~/pusher/committed.sh
+/usr/bin/git &lt;span class="nt"&gt;-C&lt;/span&gt; ~/pusher push &lt;span class="nt"&gt;-u&lt;/span&gt; https://&lt;span class="o"&gt;{&lt;/span&gt;MY_GITHUB_USERNAME&lt;span class="o"&gt;}&lt;/span&gt;:&lt;span class="o"&gt;{&lt;/span&gt;MY_GITHUB_PASSWORD&lt;span class="o"&gt;}&lt;/span&gt;@github.com/&lt;span class="o"&gt;{&lt;/span&gt;MY_GITHUB_USERNAME&lt;span class="o"&gt;}&lt;/span&gt;/pusher.git master
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;cron.txt&lt;/code&gt; - this is a reference file for the actual cron job run by my server which you can edit in a Unix environment with &lt;code&gt;crontab -e&lt;/code&gt;. Look up how to write cron jobs, I have mine running at 4:20pm every day, because you know, blaze it etc.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre class="highlight plaintext"&gt;&lt;code&gt;20 16 * * * bash ~/pusher/push.sh
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;That&amp;rsquo;s it. Super tiny, totally works, totally tricked a recruiter or two maybe.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="https://github.com/elliotec/pusher"&gt;Here&amp;rsquo;s the repo for reference.&lt;/a&gt;&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title>Building a non-boring 404 page with CSS animations</title>
     <link rel="alternate" href="http://elliotec.com/building-a-fun-404-page-with-css-animations/"/>
