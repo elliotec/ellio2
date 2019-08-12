@@ -14,7 +14,7 @@
     <link rel="alternate" href="http://elliotec.com/pusher-a-bash-script-to-get-all-the-green-squares-on-github/"/>
     <id>http://elliotec.com/pusher-a-bash-script-to-get-all-the-green-squares-on-github/</id>
     <published>2019-03-20T14:52:00-06:00</published>
-    <updated>2019-08-12T16:19:52-06:00</updated>
+    <updated>2019-08-12T16:40:08-06:00</updated>
     <author>
       <name>elliotec | Mike Elliott</name>
     </author>
@@ -61,7 +61,7 @@ bash ~/pusher/committed.sh
 /usr/bin/git &lt;span class="nt"&gt;-C&lt;/span&gt; ~/pusher push &lt;span class="nt"&gt;-u&lt;/span&gt; https://&lt;span class="o"&gt;{&lt;/span&gt;MY_GITHUB_USERNAME&lt;span class="o"&gt;}&lt;/span&gt;:&lt;span class="o"&gt;{&lt;/span&gt;MY_GITHUB_PASSWORD&lt;span class="o"&gt;}&lt;/span&gt;@github.com/&lt;span class="o"&gt;{&lt;/span&gt;MY_GITHUB_USERNAME&lt;span class="o"&gt;}&lt;/span&gt;/pusher.git master
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;ol&gt;
-&lt;li&gt;&lt;code&gt;cron.txt&lt;/code&gt; - this is a reference file for the actual cron job run by my server which you can edit in a Unix environment with &lt;code&gt;crontab -e&lt;/code&gt;. Look up how to write cron jobs, I have mine running at 4:20pm every day, because you know, blaze it etc.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;cron.txt&lt;/code&gt; - this is a reference file for the actual cron job run by my server which you can edit in a Unix environment with &lt;code&gt;crontab -e&lt;/code&gt;. Look up how to write cron jobs, here you see I have mine running on the 20th minute of the 16th hour of every day 🔥&lt;/li&gt;
 &lt;/ol&gt;
 &lt;div class="highlight"&gt;&lt;pre class="highlight plaintext"&gt;&lt;code&gt;20 16 * * * bash ~/pusher/push.sh
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
