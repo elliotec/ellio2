@@ -7,5 +7,14 @@ published: false
 
 ---
 
-### Rewrites are overrated
+- how buildings learn comparisons
+- physical world rebuilds
+- this site
+- pip
+- ostk
+- management hard sell for good reason
+- balancing using new stuff
+- quotes on designing flexible software
 
+### Rewrites are overrated
+Everyone has been in a situation where
