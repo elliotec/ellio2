@@ -5,21 +5,10 @@
   <id>http://elliotec.com/</id>
   <link href="http://elliotec.com/"/>
   <link href="http://elliotec.com/feed.xml" rel="self"/>
-  <updated>2019-08-13T10:13:00-06:00</updated>
+  <updated>2019-03-20T14:52:00-06:00</updated>
   <author>
     <name>elliotec | Mike Elliott</name>
   </author>
-  <entry>
-    <title>Maintain software for a while</title>
-    <link rel="alternate" href="http://elliotec.com/maintain-software-for-a-while/"/>
-    <id>http://elliotec.com/maintain-software-for-a-while/</id>
-    <published>2019-08-13T10:13:00-06:00</published>
-    <updated>2019-08-13T10:13:55-06:00</updated>
-    <author>
-      <name>elliotec | Mike Elliott</name>
-    </author>
-    <content type="html"></content>
-  </entry>
   <entry>
     <title>Pusher - A Bash script to get all the green squares on Github</title>
     <link rel="alternate" href="http://elliotec.com/pusher-a-bash-script-to-get-all-the-green-squares-on-github/"/>
