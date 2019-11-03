@@ -5,10 +5,21 @@
   <id>http://elliotec.com/</id>
   <link href="http://elliotec.com/"/>
   <link href="http://elliotec.com/feed.xml" rel="self"/>
-  <updated>2019-03-20T14:52:00-06:00</updated>
+  <updated>2019-08-13T10:13:00-06:00</updated>
   <author>
     <name>elliotec | Mike Elliott</name>
   </author>
+  <entry>
+    <title>Maintain software for a while</title>
+    <link rel="alternate" href="http://elliotec.com/maintain-software-for-a-while/"/>
+    <id>http://elliotec.com/maintain-software-for-a-while/</id>
+    <published>2019-08-13T10:13:00-06:00</published>
+    <updated>2019-08-13T10:13:55-06:00</updated>
+    <author>
+      <name>elliotec | Mike Elliott</name>
+    </author>
+    <content type="html"></content>
+  </entry>
   <entry>
     <title>Pusher - A Bash script to get all the green squares on Github</title>
     <link rel="alternate" href="http://elliotec.com/pusher-a-bash-script-to-get-all-the-green-squares-on-github/"/>
@@ -75,7 +86,7 @@ bash ~/pusher/committed.sh
     <link rel="alternate" href="http://elliotec.com/building-a-fun-404-page-with-css-animations/"/>
     <id>http://elliotec.com/building-a-fun-404-page-with-css-animations/</id>
     <published>2018-10-12T11:17:00-06:00</published>
-    <updated>2019-08-12T13:29:45-06:00</updated>
+    <updated>2019-08-13T10:15:46-06:00</updated>
     <author>
       <name>elliotec | Mike Elliott</name>
     </author>
@@ -83,7 +94,7 @@ bash ~/pusher/committed.sh
 
 &lt;h2&gt;Every site should have a custom 404 page&lt;/h2&gt;
 
-&lt;p&gt;Don&amp;rsquo;t you hate it when you hit a dead end on a website and you get the ugly and menacing default 404 page? Well I do.
+&lt;p&gt;Don&amp;rsquo;t you hate it when you hit a dead end on a website and you get the ugly and menacing default 404 page? Well yeah it&amp;rsquo;s usually not that big of a deal but it&amp;rsquo;s always nice to see something a little more creative.
 I wanted to make a 404 page that wasn&amp;rsquo;t boring but also not too gimmicky. There are &lt;a href="https://blog.hubspot.com/blog/tabid/6307/bid/33766/10-clever-website-error-messages-from-creative-companies.aspx"&gt;a bunch of clever ideas for these error pages&lt;/a&gt;, so I thought I&amp;rsquo;d throw in my own take.&lt;/p&gt;
 
 &lt;h2&gt;CSS animations are hard&lt;/h2&gt;
