@@ -9,7 +9,7 @@ published: true
 
 ## Every site should have a custom 404 page
 
-Don't you hate it when you hit a dead end on a website and you get the ugly and menacing default 404 page? Well I do.
+Don't you hate it when you hit a dead end on a website and you get the ugly and menacing default 404 page? Well yeah it's usually not that big of a deal but it's always nice to see something a little more creative.
 I wanted to make a 404 page that wasn't boring but also not too gimmicky. There are [a bunch of clever ideas for these error pages](https://blog.hubspot.com/blog/tabid/6307/bid/33766/10-clever-website-error-messages-from-creative-companies.aspx), so I thought I'd throw in my own take.
 
 ## CSS animations are hard
