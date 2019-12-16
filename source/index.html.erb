@@ -3,31 +3,27 @@ title: elliotec
 ---
 
 <main>
-    <section class="home">
-        <%= image_tag("/images/me2.jpg", alt: "headshot", height: "160", width: "160", style: "border-radius: 50%;") %>
-        <div class="intro">
-            <h1>Mike Elliott</h1>
-            <p>Engineering Manager at <a href="https://www.dutchie.com" class="dutchie">dutchie</a></p>
-            <nav class="contact">
-                <a class="contact-link" target="_blank" href="mailto:4lfpvcoi">Email</a>
-                <a class="contact-link" target="_blank" href="https://www.linkedin.com/in/elliotec">Linkedin</a>
-                <a class="contact-link" target="_blank" href="https://github.com/elliotec">Github</a>
-                <a class="contact-link" target="_blank" href="https://twitter.com/elliotecweb">Twitter</a>
-                <%= link_to "Resume", "/images/MichaelElliottResume.pdf", class: "contact-link", target: "_blank" %>
-            </nav>
-        </div>
-    </section>
-    <section class="posts">
-        <h2>Posts & Projects</h2>
-        <ul>
-            <% blog.articles.each do |post| %>
-                <li class="post-item">
-                    <%= link_to(post.title, post.url)%>
-                </li>
-                <p><%= post.date.strftime('%B %d, %Y') %></p>
-            <% end %>
-        </ul>
-    </section>
+  <section class="home">
+    <%= image_tag("/images/meopt.jpg", alt: "headshot", height: "178", width: "160", style: "border-radius: 50%;") %>
+    <div class="intro">
+      <h1>Mike Elliott</h1>
+      <p>Engineering Manager at <a href="https://www.dutchie.com" class="dutchie">dutchie</a></p>
+      <nav class="contact">
+        <a class="contact-link" target="_blank" rel="noopener noreferrer" href="mailto:4lfpvcoi">Email</a>
+        <a class="contact-link" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/elliotec">Linkedin</a>
+        <a class="contact-link" target="_blank" rel="noopener noreferrer" href="https://github.com/elliotec">Github</a>
+        <a class="contact-link" target="_blank" rel="noopener noreferrer" href="https://twitter.com/elliotecweb">Twitter</a>
+        <%#= link_to "Resume", "/images/MichaelElliottResume.pdf", class: "contact-link", target: "_blank" %>
+      </nav>
+    </div>
+  </section>
+  <section class="posts">
+    <h2>Posts & Projects</h2>
+    <% blog.articles.each do |post| %>
+      <%= link_to(post.title, post.url, class: "post-item") %>
+      <p><%= post.date.strftime('%B %d, %Y') %></p>
+    <% end %>
+  </section>
 </main>
 <script async src="//squaresend.com/squaresend.js"></script>
 

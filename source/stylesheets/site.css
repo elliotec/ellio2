@@ -103,25 +103,24 @@ main {
   padding: 16px;
 }
 
-.posts ul {
+.posts {
   padding: 0;
 }
 
-.posts ul li {
-  list-style-type: none;
+.posts {
   font-size: 18px;
 }
 
-.posts ul li a {
+.posts a {
   color: #2ecc71;
 }
 
-.posts ul li a:hover {
+.posts a:hover {
   color: #1e8449;
   text-decoration: none;
 }
 
-.posts ul p {
+.posts p {
   font-size: 12px;
   font-style: italic;
 }
@@ -133,6 +132,7 @@ main {
 }
 .post h1 {
   padding: 8px 0;
+  border-bottom: none;
 }
 
 .post a {
@@ -203,5 +203,9 @@ code {
 }
 .dutchie {
   color: #61a58b;
+}
+.dutchie:hover {
+  color:#2ecc71;
+  text-decoration: none;
 }
 
