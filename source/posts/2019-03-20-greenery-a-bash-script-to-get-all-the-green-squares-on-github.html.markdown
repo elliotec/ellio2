@@ -1,6 +1,6 @@
 ---
 
-title: Pusher - A Bash script to get all the green squares on Github
+title: Greenery - A Bash script to get all the green squares on Github
 date: 2019-03-20 14:52 MDT
 tags: bash, script, github
 published: true
@@ -18,7 +18,7 @@ At first I believed them and genuinely tried to commit code near-daily to make s
 
 With a bit more experience and a few fewer shits to give, I figured I'd give it a shot for a little scripting practice and fun.
 
-## Pusher
+## Greenery
 
 The first thing I needed was some content to actually commit. The obvious choice was Unix's [`fortune`](https://en.wikipedia.org/wiki/Fortune_(Unix)), which generates a psuedorandom quote based on parameters you give it. I used shorter fortunes for commit messages and longer ones for the file contents.
 
@@ -40,9 +40,9 @@ NUMBER=$(($RANDOM % 23))
 
 for ((run=1; run <= NUMBER + 1; run++))
 do
-  echo `/usr/games/fortune` > ~/pusher/file.txt
-  /usr/bin/git -C ~/pusher/ add . -A
-  /usr/bin/git -C ~/pusher/ commit -m "`/usr/games/fortune -sn 32`"
+  echo `/usr/games/fortune` > ~/greenery/file.txt
+  /usr/bin/git -C ~/greenery/ add . -A
+  /usr/bin/git -C ~/greenery/ commit -m "`/usr/games/fortune -sn 32`"
 done
 ```
 
@@ -50,17 +50,17 @@ done
 
 ```sh
 #!/bin/bash
-bash ~/pusher/committed.sh
-/usr/bin/git -C ~/pusher push -u https://{MY_GITHUB_USERNAME}:{MY_GITHUB_PASSWORD}@github.com/{MY_GITHUB_USERNAME}/pusher.git master
+bash ~/greenery/committed.sh
+/usr/bin/git -C ~/greenery push -u https://{MY_GITHUB_USERNAME}:{MY_GITHUB_PASSWORD}@github.com/{MY_GITHUB_USERNAME}/greenery.git master
 ```
 
 6. `cron.txt` - this is a reference file for the actual cron job run by my server which you can edit in a Unix environment with `crontab -e`. Look up how to write cron jobs, here you see I have mine running on the 20th minute of the 16th hour of every day 🔥
 
 ```crontab
-20 16 * * * bash ~/pusher/push.sh
+20 16 * * * bash ~/greenery/push.sh
 ```
 That's it. Super tiny, totally works, totally tricked a recruiter or two maybe.
 
-[Here's the repo for reference.](https://github.com/elliotec/pusher)
+[Here's the repo for reference.](https://github.com/elliotec/greenery)
 
 
