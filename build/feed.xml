@@ -10,11 +10,11 @@
     <name>elliotec | Mike Elliott</name>
   </author>
   <entry>
-    <title>Pusher - A Bash script to get all the green squares on Github</title>
-    <link rel="alternate" href="http://elliotec.com/pusher-a-bash-script-to-get-all-the-green-squares-on-github/"/>
-    <id>http://elliotec.com/pusher-a-bash-script-to-get-all-the-green-squares-on-github/</id>
+    <title>Greenery - A Bash script to get all the green squares on Github</title>
+    <link rel="alternate" href="http://elliotec.com/greenery-a-bash-script-to-get-all-the-green-squares-on-github/"/>
+    <id>http://elliotec.com/greenery-a-bash-script-to-get-all-the-green-squares-on-github/</id>
     <published>2019-03-20T14:52:00-06:00</published>
-    <updated>2019-08-12T16:40:08-06:00</updated>
+    <updated>2020-08-07T00:18:35-06:00</updated>
     <author>
       <name>elliotec | Mike Elliott</name>
     </author>
@@ -29,7 +29,7 @@
 
 &lt;p&gt;With a bit more experience and a few fewer shits to give, I figured I&amp;rsquo;d give it a shot for a little scripting practice and fun.&lt;/p&gt;
 
-&lt;h2&gt;Pusher&lt;/h2&gt;
+&lt;h2&gt;Greenery&lt;/h2&gt;
 
 &lt;p&gt;The first thing I needed was some content to actually commit. The obvious choice was Unix&amp;rsquo;s &lt;a href="https://en.wikipedia.org/wiki/Fortune_(Unix)"&gt;&lt;code&gt;fortune&lt;/code&gt;&lt;/a&gt;, which generates a psuedorandom quote based on parameters you give it. I used shorter fortunes for commit messages and longer ones for the file contents.&lt;/p&gt;
 
@@ -48,26 +48,26 @@
 
 &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="o"&gt;((&lt;/span&gt;&lt;span class="nv"&gt;run&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;1&lt;span class="p"&gt;;&lt;/span&gt; run &amp;lt;&lt;span class="o"&gt;=&lt;/span&gt; NUMBER + 1&lt;span class="p"&gt;;&lt;/span&gt; run++&lt;span class="o"&gt;))&lt;/span&gt;
 &lt;span class="k"&gt;do
-  &lt;/span&gt;&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="sb"&gt;`&lt;/span&gt;/usr/games/fortune&lt;span class="sb"&gt;`&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; ~/pusher/file.txt
-  /usr/bin/git &lt;span class="nt"&gt;-C&lt;/span&gt; ~/pusher/ add &lt;span class="nb"&gt;.&lt;/span&gt; &lt;span class="nt"&gt;-A&lt;/span&gt;
-  /usr/bin/git &lt;span class="nt"&gt;-C&lt;/span&gt; ~/pusher/ commit &lt;span class="nt"&gt;-m&lt;/span&gt; &lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="sb"&gt;`&lt;/span&gt;/usr/games/fortune &lt;span class="nt"&gt;-sn&lt;/span&gt; 32&lt;span class="sb"&gt;`&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;
+  &lt;/span&gt;&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="sb"&gt;`&lt;/span&gt;/usr/games/fortune&lt;span class="sb"&gt;`&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; ~/greenery/file.txt
+  /usr/bin/git &lt;span class="nt"&gt;-C&lt;/span&gt; ~/greenery/ add &lt;span class="nb"&gt;.&lt;/span&gt; &lt;span class="nt"&gt;-A&lt;/span&gt;
+  /usr/bin/git &lt;span class="nt"&gt;-C&lt;/span&gt; ~/greenery/ commit &lt;span class="nt"&gt;-m&lt;/span&gt; &lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="sb"&gt;`&lt;/span&gt;/usr/games/fortune &lt;span class="nt"&gt;-sn&lt;/span&gt; 32&lt;span class="sb"&gt;`&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;
 &lt;span class="k"&gt;done&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;code&gt;push.sh&lt;/code&gt; - the file that runs the &lt;code&gt;commited&lt;/code&gt; script and pushes to Github with your credentials. &lt;strong&gt;Do not commit this file.&lt;/strong&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;div class="highlight"&gt;&lt;pre class="highlight shell"&gt;&lt;code&gt;&lt;span class="c"&gt;#!/bin/bash&lt;/span&gt;
-bash ~/pusher/committed.sh
-/usr/bin/git &lt;span class="nt"&gt;-C&lt;/span&gt; ~/pusher push &lt;span class="nt"&gt;-u&lt;/span&gt; https://&lt;span class="o"&gt;{&lt;/span&gt;MY_GITHUB_USERNAME&lt;span class="o"&gt;}&lt;/span&gt;:&lt;span class="o"&gt;{&lt;/span&gt;MY_GITHUB_PASSWORD&lt;span class="o"&gt;}&lt;/span&gt;@github.com/&lt;span class="o"&gt;{&lt;/span&gt;MY_GITHUB_USERNAME&lt;span class="o"&gt;}&lt;/span&gt;/pusher.git master
+bash ~/greenery/committed.sh
+/usr/bin/git &lt;span class="nt"&gt;-C&lt;/span&gt; ~/greenery push &lt;span class="nt"&gt;-u&lt;/span&gt; https://&lt;span class="o"&gt;{&lt;/span&gt;MY_GITHUB_USERNAME&lt;span class="o"&gt;}&lt;/span&gt;:&lt;span class="o"&gt;{&lt;/span&gt;MY_GITHUB_PASSWORD&lt;span class="o"&gt;}&lt;/span&gt;@github.com/&lt;span class="o"&gt;{&lt;/span&gt;MY_GITHUB_USERNAME&lt;span class="o"&gt;}&lt;/span&gt;/greenery.git master
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;code&gt;cron.txt&lt;/code&gt; - this is a reference file for the actual cron job run by my server which you can edit in a Unix environment with &lt;code&gt;crontab -e&lt;/code&gt;. Look up how to write cron jobs, here you see I have mine running on the 20th minute of the 16th hour of every day 🔥&lt;/li&gt;
 &lt;/ol&gt;
-&lt;div class="highlight"&gt;&lt;pre class="highlight plaintext"&gt;&lt;code&gt;20 16 * * * bash ~/pusher/push.sh
+&lt;div class="highlight"&gt;&lt;pre class="highlight plaintext"&gt;&lt;code&gt;20 16 * * * bash ~/greenery/push.sh
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;That&amp;rsquo;s it. Super tiny, totally works, totally tricked a recruiter or two maybe.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href="https://github.com/elliotec/pusher"&gt;Here&amp;rsquo;s the repo for reference.&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/elliotec/greenery"&gt;Here&amp;rsquo;s the repo for reference.&lt;/a&gt;&lt;/p&gt;
 </content>
   </entry>
   <entry>
@@ -75,7 +75,7 @@ bash ~/pusher/committed.sh
     <link rel="alternate" href="http://elliotec.com/building-a-fun-404-page-with-css-animations/"/>
     <id>http://elliotec.com/building-a-fun-404-page-with-css-animations/</id>
     <published>2018-10-12T11:17:00-06:00</published>
-    <updated>2019-08-13T10:15:46-06:00</updated>
+    <updated>2020-08-07T00:05:20-06:00</updated>
     <author>
       <name>elliotec | Mike Elliott</name>
     </author>
@@ -323,7 +323,7 @@ I wanted to make a 404 page that wasn&amp;rsquo;t boring but also not too gimmic
     <link rel="alternate" href="http://elliotec.com/how-to-find-and-replace-in-project-with-vim/"/>
     <id>http://elliotec.com/how-to-find-and-replace-in-project-with-vim/</id>
     <published>2018-04-13T18:03:00-06:00</published>
-    <updated>2019-07-27T12:03:45-06:00</updated>
+    <updated>2020-08-07T00:05:20-06:00</updated>
     <author>
       <name>elliotec | Mike Elliott</name>
     </author>
@@ -379,7 +379,7 @@ I wanted to make a 404 page that wasn&amp;rsquo;t boring but also not too gimmic
     <link rel="alternate" href="http://elliotec.com/a-hacker-news-reader-for-no-reason/"/>
     <id>http://elliotec.com/a-hacker-news-reader-for-no-reason/</id>
     <published>2017-11-18T13:23:00-07:00</published>
-    <updated>2019-07-27T12:03:45-06:00</updated>
+    <updated>2020-08-07T00:05:20-06:00</updated>
     <author>
       <name>elliotec | Mike Elliott</name>
     </author>
@@ -544,7 +544,7 @@ but since it&amp;rsquo;s only 99 lines, I&amp;rsquo;ve posted the contents of JS
     <link rel="alternate" href="http://elliotec.com/how-to-get-100-google-page-speed-score/"/>
     <id>http://elliotec.com/how-to-get-100-google-page-speed-score/</id>
     <published>2017-10-17T12:01:00-06:00</published>
-    <updated>2019-07-27T12:03:45-06:00</updated>
+    <updated>2020-08-07T00:05:20-06:00</updated>
     <author>
       <name>elliotec | Mike Elliott</name>
     </author>
@@ -732,7 +732,7 @@ The speed is what matters and that&amp;rsquo;s good for everyone using your webs
     <link rel="alternate" href="http://elliotec.com/coding-for-rookies/"/>
     <id>http://elliotec.com/coding-for-rookies/</id>
     <published>2017-06-24T12:58:00-06:00</published>
-    <updated>2019-08-12T13:18:49-06:00</updated>
+    <updated>2020-08-07T00:05:20-06:00</updated>
     <author>
       <name>elliotec | Mike Elliott</name>
     </author>
@@ -748,7 +748,7 @@ The speed is what matters and that&amp;rsquo;s good for everyone using your webs
     <link rel="alternate" href="http://elliotec.com/force-directed-artist-relationship-graph-with-d3-js-and-the-spotify-api/"/>
     <id>http://elliotec.com/force-directed-artist-relationship-graph-with-d3-js-and-the-spotify-api/</id>
     <published>2017-01-30T22:13:00-07:00</published>
-    <updated>2019-07-27T12:03:45-06:00</updated>
+    <updated>2020-08-07T00:05:20-06:00</updated>
     <author>
       <name>elliotec | Mike Elliott</name>
     </author>
@@ -789,7 +789,7 @@ The speed is what matters and that&amp;rsquo;s good for everyone using your webs
     <link rel="alternate" href="http://elliotec.com/modules-and-monoliths/"/>
     <id>http://elliotec.com/modules-and-monoliths/</id>
     <published>2016-02-20T20:06:00-07:00</published>
-    <updated>2019-07-27T12:03:45-06:00</updated>
+    <updated>2020-08-07T00:05:20-06:00</updated>
     <author>
       <name>elliotec | Mike Elliott</name>
     </author>
@@ -1022,7 +1022,7 @@ and Django, and SpringMVC and even jQuery. Let&amp;rsquo;s just come together to
     <link rel="alternate" href="http://elliotec.com/teach-your-skills-for-fun-and-profit/"/>
     <id>http://elliotec.com/teach-your-skills-for-fun-and-profit/</id>
     <published>2015-11-10T13:49:00-07:00</published>
-    <updated>2019-07-27T12:03:45-06:00</updated>
+    <updated>2020-08-07T00:05:20-06:00</updated>
     <author>
       <name>elliotec | Mike Elliott</name>
     </author>
@@ -1102,7 +1102,7 @@ and Django, and SpringMVC and even jQuery. Let&amp;rsquo;s just come together to
     <link rel="alternate" href="http://elliotec.com/art-music-web-clojure/"/>
     <id>http://elliotec.com/art-music-web-clojure/</id>
     <published>2015-05-27T00:17:00-06:00</published>
-    <updated>2019-07-27T12:03:45-06:00</updated>
+    <updated>2020-08-07T00:05:20-06:00</updated>
     <author>
       <name>elliotec | Mike Elliott</name>
     </author>
@@ -1114,7 +1114,7 @@ and Django, and SpringMVC and even jQuery. Let&amp;rsquo;s just come together to
     <link rel="alternate" href="http://elliotec.com/how-i-got-a-job-in-web-development/"/>
     <id>http://elliotec.com/how-i-got-a-job-in-web-development/</id>
     <published>2015-01-27T06:12:00-07:00</published>
-    <updated>2019-07-27T12:03:45-06:00</updated>
+    <updated>2020-08-07T00:05:20-06:00</updated>
     <author>
       <name>elliotec | Mike Elliott</name>
     </author>
@@ -1285,7 +1285,7 @@ and Django, and SpringMVC and even jQuery. Let&amp;rsquo;s just come together to
     <link rel="alternate" href="http://elliotec.com/using-sass-in-visual-studio/"/>
     <id>http://elliotec.com/using-sass-in-visual-studio/</id>
     <published>2014-11-12T10:10:00-07:00</published>
-    <updated>2019-07-27T12:03:45-06:00</updated>
+    <updated>2020-08-07T00:05:20-06:00</updated>
     <author>
       <name>elliotec | Mike Elliott</name>
     </author>
@@ -1321,7 +1321,7 @@ and Django, and SpringMVC and even jQuery. Let&amp;rsquo;s just come together to
     <link rel="alternate" href="http://elliotec.com/writing-in-the-deseret-alphabet/"/>
     <id>http://elliotec.com/writing-in-the-deseret-alphabet/</id>
     <published>2014-06-29T09:08:00-06:00</published>
-    <updated>2019-07-27T12:03:45-06:00</updated>
+    <updated>2020-08-07T00:05:20-06:00</updated>
     <author>
       <name>elliotec | Mike Elliott</name>
     </author>
@@ -1783,7 +1783,7 @@ and Django, and SpringMVC and even jQuery. Let&amp;rsquo;s just come together to
     <link rel="alternate" href="http://elliotec.com/using-variables-in-yaml-front-matter/"/>
     <id>http://elliotec.com/using-variables-in-yaml-front-matter/</id>
     <published>2014-05-30T09:08:00-06:00</published>
-    <updated>2019-07-27T12:03:45-06:00</updated>
+    <updated>2020-08-07T00:05:20-06:00</updated>
     <author>
       <name>elliotec | Mike Elliott</name>
     </author>
@@ -1852,7 +1852,7 @@ and Django, and SpringMVC and even jQuery. Let&amp;rsquo;s just come together to
     <link rel="alternate" href="http://elliotec.com/building-this-site/"/>
     <id>http://elliotec.com/building-this-site/</id>
     <published>2014-05-17T05:26:11-06:00</published>
-    <updated>2019-07-27T12:03:45-06:00</updated>
+    <updated>2020-08-07T00:05:20-06:00</updated>
     <author>
       <name>elliotec | Mike Elliott</name>
     </author>
