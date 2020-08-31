@@ -9,10 +9,6 @@ body {
   font-family: "Helvetica Neue", "Helvetica", "Oxygen", "Ubuntu", sans-serif;
 }
 
-h1, h2 {
-  line-height: 1.25;
-}
-
 header {
   height: 42px;
   background-color: #333;
@@ -48,7 +44,7 @@ main {
 
 .home {
   border-bottom: solid 1px #CCC;
-  margin-top: 64px;
+  margin: 64px auto 0;
   text-align: center;
   padding-bottom: 32px;
 }
@@ -79,19 +75,21 @@ main {
   }
 }
 
-.home .contact-link {
+.home .contact-link, input[type=submit]{
   line-height: 1;
   padding: 8px;
   margin: 8px;
   color: #2ecc71;
   border-radius: 2px;
   border: 1px solid #2ecc71;
+  background-color: #222;
 }
 
-.home .contact-link:hover, .home .contact-link:focus {
+.home .contact-link:hover, .home .contact-link:focus, input[type=submit]:hover, input[type=submit]:focus{
   border-color: #27ae60;
   color: #1e8449;
   text-decoration: none;
+  background: #222;
 }
 
 .posts {
@@ -146,11 +144,11 @@ main {
 
 .highlight > pre {
   word-wrap: normal;
-  overflow-x: scroll;
+  overflow-x: auto;
 }
 
 .post pre code {
-  overflow-x: scroll;
+  overflow-x: auto;
   white-space: pre;
   padding: 8px;
   border-radius: 2px;
@@ -208,4 +206,51 @@ code {
   color:#2ecc71;
   text-decoration: none;
 }
+#contactForm {
+  z-index: 2;
+  margin: 48px 8px 8px;
+  padding: 0 16px 16px;
+  color: #2ecc71;
+  border-radius: 2px;
+  border: 1px solid #2ecc71;
+  background-color: #222;
 
+	overflow-y: hidden;
+	max-height: 600px; /* approximate max height */
+	transition-property: all;
+	transition-duration: .5s;
+	transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+}
+#contactForm.closed {
+  max-height: 0;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+.hide-form {
+  color: #CCC;
+  cursor: pointer;
+  float: right;
+  margin: 20px 0;
+  font-size: 20px;
+}
+.field {
+  display: block;
+  margin-top: 16px;
+}
+input[type=text], input[type=email], textarea {
+  background: #444;
+  display: block;
+  border: 1px solid #2ecc71;
+  border-radius: 2px;
+  color: #CCC;
+  width: 100%;
+}
+textarea {
+  min-height: 120px;
+}
+input[type=submit] {
+  display: block;
+  margin: 32px auto 8px;
+  width: 100%;
+}

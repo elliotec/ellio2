@@ -1,0 +1,8 @@
+#showContactForm {
+  display: none;
+  height: 250px;
+  width: 50%;
+  position: relative;
+  z-index: 2;
+  margin: 100px auto;
+}
