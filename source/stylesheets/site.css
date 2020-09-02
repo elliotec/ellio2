@@ -254,3 +254,11 @@ input[type=submit] {
   margin: 32px auto 8px;
   width: 100%;
 }
+.thanks {
+  text-align: center;
+  color: #CCC;
+  border: none;
+}
+.thanks.hidden {
+  display: none;
+}

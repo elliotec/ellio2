@@ -9,7 +9,7 @@ title: elliotec
       <h1>Mike Elliott</h1>
       <p>Engineering Manager at <a href="https://www.dutchie.com" class="dutchie">dutchie</a></p>
       <nav class="contact">
-        <button onclick="toggleForm()" class="contact-link" target="_blank" rel="noopener noreferrer">Contact</button>
+        <button onclick="toggleForm()" class="contact-link" target="_blank" rel="noopener noreferrer" id="anchor">Contact</button>
         <a class="contact-link" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/elliotec">Linkedin</a>
         <a class="contact-link" target="_blank" rel="noopener noreferrer" href="https://github.com/elliotec">Github</a>
         <a class="contact-link" target="_blank" rel="noopener noreferrer" href="https://twitter.com/elliotecdev">Twitter</a>
@@ -17,11 +17,7 @@ title: elliotec
       </nav>
     </div>
   </section>
-  <a href="#" id="anchor" style="display: hidden;"></a>
-  <form id="contactForm"
-        action="http://138.68.236.200/contact/"
-        method="POST"
-        class="closed">
+  <form id="contactForm" action="http://elliotec.email" method="POST" class="closed">
     <div class="hide-form" onclick="toggleForm()">&#10006</div>
     <h3 class="title">Get in touch!</h3>
     <div class="field">
@@ -40,7 +36,8 @@ title: elliotec
       <label for="email">Email address</label>
       <input name="email" id="email" type="email" required>
     </div>
-    <div><input type="submit" value="Send message"></div>
+    <div><input onclick="sayThanks()" type="submit" value="Send message" id="submit" disabled></div>
+  <h2 class="thanks hidden" id="thanks">Thanks, I'll get back to you soon!</h2>
   </form>
   <section class="posts">
     <h2>Posts & Projects</h2>
@@ -51,8 +48,14 @@ title: elliotec
   </section>
 </main>
   <script type="text/javascript">
+    const thanks = document.getElementById("thanks");
     const form = document.getElementById("contactForm");
+    const email = document.getElementById("email");
+    const submit = document.getElementById("submit");
     const anchor = document.getElementById("anchor");
+    email.addEventListener('keyup', (e) => {
+      email.checkValidity() ? submit.disabled = false : submit.disabled = true;
+    })
     const toggleForm = () => {
       if (form.classList.contains('closed')) {
         form.classList.remove('closed')
@@ -60,5 +63,8 @@ title: elliotec
         form.classList.add('closed')
       }
       anchor.scrollIntoView({ behavior: 'smooth'})
+    }
+    const sayThanks = () => {
+      thanks.classList.remove('hidden')
     }
   </script>
