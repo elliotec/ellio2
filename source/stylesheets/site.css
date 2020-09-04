@@ -238,7 +238,7 @@ code {
   display: block;
   margin-top: 16px;
 }
-input[type=text], input[type=email], textarea {
+input.text, input[type=email], textarea {
   background: #333;
   display: block;
   border: 1px solid #2ecc71;
