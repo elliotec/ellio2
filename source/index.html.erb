@@ -9,36 +9,14 @@ title: elliotec
       <h1>Mike Elliott</h1>
       <p>Engineering Manager at <a href="https://www.dutchie.com" class="dutchie">dutchie</a></p>
       <nav class="contact">
-        <button onclick="toggleForm()" class="contact-link" target="_blank" rel="noopener noreferrer" id="anchor">Contact</button>
-        <a class="contact-link" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/elliotec">Linkedin</a>
-        <a class="contact-link" target="_blank" rel="noopener noreferrer" href="https://github.com/elliotec">Github</a>
+        <a class="contact-link" target="_blank" rel="noopener noreferrer" href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#109;&#101;&#64;&#101;&#108;&#108;&#105;&#111;&#116;&#101;&#99;&#46;&#99;&#111;&#109;">Email</a>
+        <a class="contact-link" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/elliotec">LinkedIn</a>
+        <a class="contact-link" target="_blank" rel="noopener noreferrer" href="https://github.com/elliotec">GitHub</a>
         <a class="contact-link" target="_blank" rel="noopener noreferrer" href="https://twitter.com/elliotecdev">Twitter</a>
         <%#= link_to "Resume", "/images/MichaelElliottResume.pdf", class: "contact-link", target: "_blank" %>
       </nav>
     </div>
   </section>
-  <form id="contactForm" action="https://elliotec.email" method="POST" class="closed">
-    <div class="hide-form" onclick="toggleForm()">&#10006</div>
-    <h3 class="title">Get in touch!</h3>
-    <div class="field">
-      <label for="subject">Subject</label>
-      <input name="subject" id="subject" class="text" required>
-    </div>
-    <div class="field">
-      <label for="message">Message</label>
-      <textarea name="message" required></textarea>
-    </div>
-    <div class="field">
-      <label for="name">Your name</label>
-      <input name="name" id="name" class="text" required>
-    </div>
-    <div class="field">
-      <label for="email">Email address</label>
-      <input name="email" id="email" type="email" required>
-    </div>
-    <div><input onclick="sayThanks()" type="submit" value="Send message" id="submit" disabled></div>
-  <h2 class="thanks hidden" id="thanks">Thanks, I'll get back to you soon!</h2>
-  </form>
   <section class="posts">
     <h2>Posts & Projects</h2>
     <% blog.articles.each do |post| %>
@@ -47,24 +25,3 @@ title: elliotec
     <% end %>
   </section>
 </main>
-  <script type="text/javascript">
-    const thanks = document.getElementById("thanks");
-    const form = document.getElementById("contactForm");
-    const email = document.getElementById("email");
-    const submit = document.getElementById("submit");
-    const anchor = document.getElementById("anchor");
-    email.addEventListener('keyup', (e) => {
-      email.checkValidity() ? submit.disabled = false : submit.disabled = true;
-    })
-    const toggleForm = () => {
-      if (form.classList.contains('closed')) {
-        form.classList.remove('closed')
-      } else {
-        form.classList.add('closed')
-      }
-      anchor.scrollIntoView({ behavior: 'smooth'})
-    }
-    const sayThanks = () => {
-      thanks.classList.remove('hidden')
-    }
-  </script>
