@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="author" content="Michael Elliott" />
     <meta name="description" content="elliotec | A software blog by Mike Elliott" />
+    <meta property="og:title" content="elliotec<%= ' | ' + current_article.title unless current_article.nil? %>" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://elliotec.com/<%= current_article.url unless current_article.nil? %>" />
+    <meta property="og:image" content="https://elliotec.com/images/meopt.jpg" />
     <meta name="msvalidate.01" content="7B2214FD9C6E6C4B63E8D61D4C7B5DF7" />
     <meta name="google-site-verification" content="MFyo9_KaHWW1rrf6ct225HChB1FOm1Cf9o6Y60qyYtU" />
     <%= feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "elliotec" %>
@@ -13,6 +17,16 @@
     <style><%= sprockets.find_asset('marx').to_s %></style>
     <style><%= sprockets.find_asset('rouge').to_s %></style>
     <style><%= sprockets.find_asset('site').to_s %></style>
+    <script defer data-domain="elliotec.com" src="https://plausible.io/js/plausible.js"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-46276194-3"></script>
+    <script>
+      if(navigator.userAgent.indexOf("Speed Insights") == -1) {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-46276194-3');
+      }
+    </script>
   </head>
   <body data-instant-intensity="mousedown">
     <header>
@@ -38,14 +52,6 @@
       ]
     }
     </script>
-    <script>
-      if(navigator.userAgent.indexOf("Speed Insights") == -1) {
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-        ga('create', 'UA-46276194-3', 'elliotec.com');ga('send', 'pageview');}
-    </script>
-    <script src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+    <script src="//instant.page/5.1.0" type="module" integrity="sha384-by67kQnR+pyfy8yWP4kPO12fHKRLHZPfEsiSXR8u2IKcTdxD805MGUXBzVPnkLHw"></script>
   </body>
 </html>
