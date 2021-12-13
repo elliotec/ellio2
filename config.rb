@@ -46,7 +46,7 @@ activate :syntax, line_numbers: false
 
 activate :deploy do |deploy|
   deploy.deploy_method = :git
-  deploy.remote = 'https://github.com/elliotec/ellio2.git'
+  deploy.remote = 'git@github.com:elliotec/ellio2.git'
   deploy.branch = 'master'
 end
 
