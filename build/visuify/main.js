@@ -236,5 +236,4 @@ if (window.location.href.indexOf("access_token") == -1){
       var matches = location.hash.match(new RegExp(key+'=([^&]*)'));
       return matches ? matches[1] : null;
     }
-}
-;
+};

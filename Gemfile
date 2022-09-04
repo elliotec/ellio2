@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 gem 'builder', '~> 3.0'
 gem 'middleman', '~> 4.2'
-gem 'middleman-autoprefixer', '~> 2.7'
+gem 'middleman-autoprefixer', '~> 3.0'
 gem 'middleman-blog'
 gem 'middleman-deploy', '~> 2.0.0.pre.alpha'
 gem 'middleman-imageoptim', git: 'https://github.com/plasticine/middleman-imageoptim',

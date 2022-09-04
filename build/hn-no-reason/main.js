@@ -96,5 +96,4 @@ function renderComments(comments, storyId) {
     if (comment.kids) return fetchComments(comment.kids.toString(), storyId)
   })
 }
-fetchTopStories()
-;
+fetchTopStories();
