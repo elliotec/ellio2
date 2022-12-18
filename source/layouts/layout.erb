@@ -4,12 +4,12 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="author" content="Michael Elliott" />
+    <meta name="author" content="Mike Elliott" />
     <meta name="description" content="elliotec | A software blog by Mike Elliott" />
     <meta property="og:title" content="elliotec<%= ' | ' + current_article.title unless current_article.nil? %>" />
     <meta property="og:type" content="article" />
     <meta property="og:url" content="https://elliotec.com/<%= current_article.url unless current_article.nil? %>" />
-    <meta property="og:image" content="https://elliotec.com/images/meopt.jpg" />
+    <meta property="og:image" content="https://elliotec.com/images/headshotMonsteraSquareSmall.jpeg" />
     <meta name="msvalidate.01" content="7B2214FD9C6E6C4B63E8D61D4C7B5DF7" />
     <meta name="google-site-verification" content="MFyo9_KaHWW1rrf6ct225HChB1FOm1Cf9o6Y60qyYtU" />
     <%= feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "elliotec" %>
@@ -17,14 +17,7 @@
     <style><%= sprockets.find_asset('marx').to_s %></style>
     <style><%= sprockets.find_asset('rouge').to_s %></style>
     <style><%= sprockets.find_asset('site').to_s %></style>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-46276194-3"></script>
     <script defer data-domain="elliotec.com" src="https://plausible.io/js/plausible.js"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'UA-46276194-3');
-    </script>
   </head>
   <body data-instant-intensity="mousedown">
     <header>
