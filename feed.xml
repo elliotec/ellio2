@@ -5,10 +5,102 @@
   <id>http://elliotec.com/</id>
   <link href="http://elliotec.com/"/>
   <link href="http://elliotec.com/feed.xml" rel="self"/>
-  <updated>2020-12-31T23:11:00-07:00</updated>
+  <updated>2023-11-13T00:42:00-07:00</updated>
   <author>
     <name>elliotec | Mike Elliott</name>
   </author>
+  <entry>
+    <title>Introducing my "now page"</title>
+    <link rel="alternate" href="http://elliotec.com/introducing-the-now-page/"/>
+    <id>http://elliotec.com/introducing-the-now-page/</id>
+    <published>2023-11-13T00:42:00-07:00</published>
+    <updated>2023-11-13T01:16:01-07:00</updated>
+    <author>
+      <name>elliotec | Mike Elliott</name>
+    </author>
+    <content type="html">&lt;h2&gt;What&amp;rsquo;s a now page?&lt;/h2&gt;
+
+&lt;p&gt;It&amp;rsquo;s a movement started and popularized by &lt;a href="https://sive.rs/"&gt;Derek Sivers&lt;/a&gt; - &lt;a href="https://nownownow.com/about"&gt;learn all about it at this link&lt;/a&gt;. In short, it&amp;rsquo;s a page that tells the world what&amp;rsquo;s going on with me at this point in my life. I&amp;rsquo;m using it as double duty for it&amp;rsquo;s own sake as well as for an &amp;ldquo;about&amp;rdquo; page for now, but that will come too eventually.&lt;/p&gt;
+
+&lt;h2&gt;Why now?&lt;/h2&gt;
+
+&lt;p&gt;I&amp;rsquo;ve been wanting to update my site for a while, and meaning to do the now page in particular since I found out about it in like 2016. Now that I have some motivation and help with childcare, the time is right for updating this site, and a now page seemed like a natural place to start because a lot of time has passed since my last post here.&lt;/p&gt;
+
+&lt;h2&gt;Where is it?&lt;/h2&gt;
+
+&lt;p&gt;My now page will have a permalink at &lt;a href="https://elliotec.com/now"&gt;elliotec.com/now&lt;/a&gt;. The first update ever goes out today with this post, and I don&amp;rsquo;t know if or how I plan to archive updates to it (aside from git I suppose), so I&amp;rsquo;m going to post the contents of the first update below.&lt;/p&gt;
+
+&lt;h2&gt;First update:&lt;/h2&gt;
+
+&lt;p&gt;Updated November 12, 2023, from my home in Salt Lake City.&lt;/p&gt;
+
+&lt;h2&gt;Work&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;For my day job, I work as a &lt;strong&gt;&lt;em&gt;Director of Engineering at &lt;a href="https://ezcater.com"&gt;ezCater&lt;/a&gt;&lt;/em&gt;&lt;/strong&gt;, the largest online marketplace for catering and corporate food solutions. I&amp;rsquo;ve been in this role for a bit over a year now, and it&amp;rsquo;s a blast.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;My primary focus is overseeing the Demand Product Engineering organization building the ecommerce marketplace, ML-powered recommendation engines, and account management tools for our highest value customers.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;I spend most of my time setting and communicating the vision for technical strategy on company product development goals, their execution plans, portfolio stewardship, and org design.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;I work remotely and go to the headquarters in Boston for a few days every couple months.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;Home&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;My wife and I (and a bunch of contractors) completed a &lt;strong&gt;&lt;em&gt;major house addition and remodel&lt;/em&gt;&lt;/strong&gt;. We started design in mid 2020 and moved in early 2023. It took longer and was more expensive than expected, but we are very happy with the result.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;&lt;em&gt;We have a daughter!&lt;/em&gt;&lt;/strong&gt; She&amp;rsquo;s 2 now, and the best thing in the world. This is the realest reason why I haven&amp;rsquo;t made any posts on this site lately. She&amp;rsquo;s where I spend most of my time, but it&amp;rsquo;s time well spent. We had an Au Pair from Germany move in a month ago to help out, and it&amp;rsquo;s been amazing.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;We&amp;rsquo;ve been traveling a ton. Roughly 12 countries in Asia, Europe, and Oceania, and about the same number of US states over the past few years. Covid lockdowns and living in a very small house with 2 dogs, a cat, and a baby during the remodel gave us some serious cabin fever.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;Self&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;I&amp;rsquo;ve been &lt;strong&gt;&lt;em&gt;studying German in earnest&lt;/em&gt;&lt;/strong&gt; for the last 5 years. I&amp;rsquo;ve had a teacher from Vienna during this time who I&amp;rsquo;ve been meeting with weekly. I&amp;rsquo;m relatively fluent now. My wife&amp;rsquo;s family is from Austria and Switzerland, so they all speak German, and we&amp;rsquo;re teaching it to our daughter.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;I started the &lt;strong&gt;&lt;em&gt;Keto&lt;/em&gt;&lt;/strong&gt; diet in mid-2022 for brain health and lost a bunch of excess covid weight too. It remains my primary diet, though I ditch it now and then for vacations and special occasions.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;I&amp;rsquo;ve been working with a personal trainer over the past few months to improve strength and especially mobility, inspired by reading Peter Atilla&amp;rsquo;s book &lt;a href="https://peterattiamd.com/outlive/"&gt;Outlive&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;I&amp;rsquo;ve taken most of the month of November off of alcohol, until Thanksgiving. I do this once or twice a year. It&amp;rsquo;s a lot easier with the buddy system, and my friend &lt;a href="https://squidtree.com"&gt;Shaine&lt;/a&gt; has joined me this time.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href="https://en.wikipedia.org/wiki/Oneironautics"&gt;Oneironautics&lt;/a&gt; - I&amp;rsquo;ve found a renewed interest in &lt;strong&gt;&lt;em&gt;dreams and lucid dreaming&lt;/em&gt;&lt;/strong&gt; lately, inspired by the books &lt;a href="https://www.goodreads.com/en/book/show/26485097"&gt;&amp;ldquo;Dream Yoga&amp;rdquo;&lt;/a&gt; and &lt;a href="https://www.goodreads.com/book/show/316781.Exploring_the_World_of_Lucid_Dreaming"&gt;&amp;ldquo;Exploring the World of Lucid Dreaming&amp;rdquo;&lt;/a&gt;. I&amp;rsquo;ve made a lot of progress and use the app &lt;a href="https://apps.apple.com/us/app/shape-lucid-dream-coach/id1577026266"&gt;Shape&lt;/a&gt; as a helpful tool for dream journaling and state checks.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;I got a bunch of cool tattoos :D&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;Hobbies&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;&lt;em&gt;Pickleball!&lt;/em&gt;&lt;/strong&gt; A group of friends have been playing roughly weekly for most of this year. It&amp;rsquo;s super fun and we&amp;rsquo;re getting better.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;My &lt;a href="https://www.synology.com/en-us/products/DS723+"&gt;Synology NAS&lt;/a&gt;. Inspired by my previously mentioned friend Shaine and the idea of &lt;strong&gt;&lt;em&gt;Tech Independence&lt;/em&gt;&lt;/strong&gt;, I&amp;rsquo;ve been developing and improving it, usually with Shaine&amp;rsquo;s help and not enough documenting of the process, for a few years. I use it for a number of things, including:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;A file store, network-wide accessible media server, and Dropbox replacement, including auto-uploading pictures from my phone&lt;/li&gt;
+&lt;li&gt;A note-taking center, &lt;a href="https://www.buildingasecondbrain.com/"&gt;Second Brain&lt;/a&gt; style (with Neovim,Vimwiki, and &lt;a href="https://1writerapp.com/"&gt;1Writer&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Self-hosted privacy front ends for Youtube and Google with &lt;a href="https://invidious.io/"&gt;Invidious&lt;/a&gt; and &lt;a href="https://github.com/benbusby/whoogle-search"&gt;Whoogle&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://pi-hole.net/"&gt;Pi-hole&lt;/a&gt; for network-level tracker and ad blocking, DNS sinkhole, and DHCP server&lt;/li&gt;
+&lt;li&gt;An RSS/Atom feed aggregator and reader with &lt;a href="https://freshrss.org/index.html"&gt;FreshRSS&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;A Minecraft server that my friends wanted but haven&amp;rsquo;t used yet&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://nginxproxymanager.com/"&gt;Nginx Proxy Manager&lt;/a&gt; so all these things can have domain names and SSL within my network&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.synology.com/en-global/surveillance"&gt;Surveillance Station&lt;/a&gt; with Reolink PoE cameras for my home security system&lt;/li&gt;
+&lt;li&gt;My primary &lt;a href="https://www.synology.com/en-global/dsm/feature/mailplus"&gt;email server&lt;/a&gt;, and hopefully soon personal calendar as well&lt;/li&gt;
+&lt;li&gt;Not yet hosting this site, but that&amp;rsquo;s the next goal&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;&lt;em&gt;&lt;a href="https://onewheel.com/"&gt;OneWheel&lt;/a&gt;&lt;/em&gt;&lt;/strong&gt;. I got a Pint early-pandemic, and recently upgraded to the GT as a birthday present from my wife this year. I love that thing. I have clocked about 150 miles on it in 2 months, and counting. It&amp;rsquo;s like snowboarding (my winter hobby), but you can go uphill and all around the city.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Music. I play &lt;strong&gt;&lt;em&gt;guitar or drums&lt;/em&gt;&lt;/strong&gt; almost every day that I&amp;rsquo;m home, and started self-directed piano courses with &lt;a href="https://flowkey"&gt;Flowkey&lt;/a&gt;. I travel a lot and have been thinking about portable ways to make music, carting around my harmonica before realizing I&amp;rsquo;m in a hotel room and nobody in the building wants to hear that. I&amp;rsquo;ve started playing around with Garageband on the iPad and would like to see where I can get with it.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;Reading&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Recently finished the audiobook for &lt;a href="https://www.goodreads.com/book/show/21343.The_Five_Dysfunctions_of_a_Team"&gt;The Five Dysfunctions of a Team&lt;/a&gt; for work&lt;/li&gt;
+&lt;li&gt;Constantly referring to &lt;a href="https://www.goodreads.com/book/show/44135420-team-topologies"&gt;Team Topologies&lt;/a&gt; at work&lt;/li&gt;
+&lt;li&gt;Started listening to the &lt;a href="https://www.goodreads.com/book/show/25499718-children-of-time"&gt;Children of Time series&lt;/a&gt; (again) at my wife&amp;rsquo;s persistent request&lt;/li&gt;
+&lt;li&gt;Started reading &lt;a href="https://www.goodreads.com/book/show/530415.The_Art_of_Doing_Science_and_Engineering"&gt;The Art of Doing Science and Engineering&lt;/a&gt; (again) with more diligence&lt;/li&gt;
+&lt;li&gt;Began flipping through physical copies of &lt;a href="https://www.goodreads.com/book/show/23503006-unflattening"&gt;Unflattening&lt;/a&gt; and &lt;a href="https://howtorebuildcivilization.com/products/the-book"&gt;The Book&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;I started using &lt;a href="https://howtorebuildcivilization.com/products/the-book"&gt;Libro.fm&lt;/a&gt; for audiobooks to replace Audible, and my Kindle library is so huge it&amp;rsquo;s daunting to look for an alternative for e-books but I want one.&lt;/li&gt;
+&lt;li&gt;I also want to start updating and reviewing on my &lt;a href="https://www.goodreads.com/user/show/11256894"&gt;Goodreads account&lt;/a&gt; again, maybe I&amp;rsquo;ll get around to it.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;This website&lt;/h2&gt;
+
+&lt;p&gt;This website has existed roughly in it&amp;rsquo;s current form for over a decade. I&amp;rsquo;ve had a bunch of thoughts around building my own SSG for the sake of it, but honestly &lt;strong&gt;&lt;em&gt;the current set up is still working very well&lt;/em&gt;&lt;/strong&gt; and it&amp;rsquo;s tough to justify a change. Maybe I&amp;rsquo;ll do some design updates, and definitely will move the server to my NAS from Digital Ocean. Other than that, I&amp;rsquo;m going to try to update this page and make more posts. See ya soon!&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title>Can't end 2020 without a single blog post!</title>
     <link rel="alternate" href="http://elliotec.com/cant-end-2020-without/"/>
