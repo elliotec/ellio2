@@ -1,10 +1,11 @@
 <main class="post">
+<article>
 
 # What I'm doing now
 
-_This is a [Now page](https://nownownow.com/about), which I intend to update semi-regularly._
+<em class="date">_This is a [Now page](https://nownownow.com/about), which I intend to update semi-regularly._
 
-Updated November 12, 2023, from my home in Salt Lake City.
+Updated November 12, 2023, from my home in Salt Lake City.</em>
 
 
 ## Work
@@ -73,5 +74,6 @@ Updated November 12, 2023, from my home in Salt Lake City.
 
 This website has existed roughly in it's current form for over a decade. I've had a bunch of thoughts around building my own SSG for the sake of it, but honestly **_the current set up is still working very well_** and it's tough to justify a change. Maybe I'll do some design updates, and definitely will move the server to my NAS from Digital Ocean. Other than that, I'm going to try to update this page and make more posts. See ya soon!
 
+</article>
 </main>
 
