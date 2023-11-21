@@ -3,7 +3,7 @@
 
 # What I'm doing now
 
-<em class="date">_This is a [Now page](https://nownownow.com/about), which I intend to update semi-regularly._
+<em class="date">This is a [Now page](https://nownownow.com/about), which I intend to update semi-regularly. This page can also always be found at the permanent URL in the [Now page directory](https://nownownow.com/p/ZMe5).
 
 Updated November 12, 2023, from my home in Salt Lake City.</em>
 
