@@ -126,7 +126,7 @@ GEM
     middleman-syntax (3.2.0)
       middleman-core (>= 3.2)
       rouge (~> 3.2)
-    minitest (5.18.0)
+    minitest (5.15.0)
     net-sftp (3.0.0)
       net-ssh (>= 5.0.0, < 7.0.0)
     net-ssh (6.1.0)
@@ -184,4 +184,4 @@ DEPENDENCIES
   redcarpet (~> 3.5)
 
 BUNDLED WITH
-   2.3.21
+   2.3.27
