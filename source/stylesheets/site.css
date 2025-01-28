@@ -3,7 +3,7 @@ html {
 }
 
 body {
-  color: #CCC;
+  color: #ccc;
   height: 100%;
   padding: 16px 0;
   font-family: "Helvetica Neue", "Helvetica", "Oxygen", "Ubuntu", sans-serif;
@@ -43,10 +43,19 @@ main {
 }
 
 .home {
-  border-bottom: solid 1px #CCC;
+  border-bottom: solid 1px #ccc;
   margin: 64px auto 0;
   text-align: center;
   padding-bottom: 32px;
+}
+
+.home a {
+  color: #2ecc71;
+}
+
+.home a:hover {
+  color: #27ae60;
+  text-decoration: none;
 }
 
 .home .intro {
@@ -75,7 +84,8 @@ main {
   }
 }
 
-.home .contact-link, input[type=submit]{
+.home .contact-link,
+input[type="submit"] {
   line-height: 1;
   padding: 8px;
   margin: 8px;
@@ -85,7 +95,10 @@ main {
   background-color: #222;
 }
 
-.home .contact-link:hover, .home .contact-link:focus, input[type=submit]:hover, input[type=submit]:focus{
+.home .contact-link:hover,
+.home .contact-link:focus,
+input[type="submit"]:hover,
+input[type="submit"]:focus {
   border-color: #27ae60;
   color: #1e8449;
   text-decoration: none;
@@ -154,7 +167,7 @@ main {
   border-radius: 2px;
   font-family: "Lucida Console", Monaco, monospace, "AdamicBee";
   background-color: #1b1d1e;
-  color: #DDD;
+  color: #ddd;
 }
 
 code {
@@ -197,7 +210,7 @@ code {
   color: #27ae60;
 }
 .rss a:hover {
-  color:#2ecc71;
+  color: #2ecc71;
 }
 .field {
   display: block;
