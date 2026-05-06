@@ -1,10 +1,8 @@
 ---
-
 title: "Psychedelic Realism and Sisyphean Empiricism: A Case for Ontological Pluralism"
 date: 2026-05-06 02:51 MDT
 tags: psychedelics, capitalism, empiricism, ontology
-published: false
-
+published: true
 ---
 
 >_Science has failed our world_
